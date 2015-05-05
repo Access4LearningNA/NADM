@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--version 3.02.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:altova="http://www.altova.com/xml-schema-extensions" elementFormDefault="qualified">
+	<xs:include schemaLocation="../SIFglobal.xsd"/>
+	<xs:complexType name="financialReportType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Financial Report</elementName>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+			</xs:appinfo>
+			<xs:documentation>A flat-file layout report for financial education information that follows the education Chart of Accounts methodology. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSIF_ReportType">
+				<xs:sequence>
+					<xs:element name="reportDate" type="xs:date">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Report Date</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Date on which snapshot was generated (e.g., 6/30/14)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="stateProvinceId" type="gStateProvinceType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>State/Province Identifier</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>State assigned reporting ID for district or agency (e.g., 00180000)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fiscalYear">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Fiscal Year</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The calendar year in which the last day of the fiscal year falls. Similar to school year in that the value contains one and only one four digit year. </xs:documentation>
+							<xs:appinfo>
+								<altova:exampleValues>
+									<altova:example value="2015"/>
+								</altova:exampleValues>
+							</xs:appinfo>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:length value="4"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="reportPeriod">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Report Period</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The period for the report. For example, the start and end dates for a fiscal year, or for a month.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="startDate" type="xs:date">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Start Date</elementName>
+											<sifChar>M</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Start date of the period, inclusive.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="endDate" type="xs:date">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>End Date</elementName>
+											<sifChar>M</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>End date of the period, inclusive.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="recordList">
+						<xs:annotation>
+							<xs:documentation>The details for the financial report.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="record" minOccurs="0" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="accountId" type="gCodedElementType">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Financial Account Id</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>A coded field that indicates the account classification. See the code set for up-to-date values and definitions. For example, 1 Current asset, 2 Long term asset, 3 Other asset, 4 Current Liability, 5 Long term liability, 6 Other liability, 7 Fund balance, 8 Revenue, 9 Expenditure</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="fund" type="gCodedElementType">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Financial Fund</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>From NCES:  A fund is a separate fiscal and accounting entity with a self-balancing set of accounts recording cash and other financial resources, together with all related liabilities and residual equities or balances, or changes therein. Current fund classifications:  1 General, 2 Special Revenue, 3 Capital Projects, 4 Debt Service, 5 Permanent, 6 Enterprise, 7 Internal Service, 8 Trust, 9 Agency</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="levelOfInstruction" type="gCodedElementType" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Level of Instruction</elementName>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>FROM NCES:  This classification permits expenditures to be segregated by instructional level.  Current level classifications:  10 Elementary, 11 Prekindergarten, 12 Kindergarten, 19, Other Elementary, 20 Middle, 30 Secondary, 37 Elementary and Secondary combined, 40 Postsecondary, 41 Programs for Adult/Continuing, 42 Community/Junior College, 50 School-wide</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="function" type="gCodedElementType" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Function</elementName>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>From NCES:  Function
+The function describes the activity for which a service or material object is acquired. The functions of a school district are classified into five broad areas: instruction, support services, operation of noninstructional services, facilities acquisition and construction, and debt service. Functions are further classified into subfunctions.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="object" type="gCodedElementType" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName/>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>From NCES:  This classification is used to describe the service or commodity obtained as the result of a specific expenditure.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="program" type="gCodedElementType" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName/>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>From NCES:  A program is a plan of activities and procedures designed to accomplish a predetermined objective or set of objectives.  Current broad classifications:  100 Regular elementary/secondary education programs, 200 Special programs, 300 Vocational and technical programs, 400 Other instructional programs--elementary/secondary, 500 Nonpublic school programs, 600 Adult/continuing education programs, 700 Community/Junior college education programs, 800 Community services programs, Cocurricular and extracurricular activities</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="facility" type="gCodedElementType" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName/>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>District-assigned operational unit or cost objective.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="project" type="gCodedElementType" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName/>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>From NCES:  The project/reporting code permits school districts to accumulate expenditures to meet a variety of specialized reporting requirements at local, state, and federal levels.  Current ranges:  010-190 Local Projects, 200-390 State Projects, 400-990 Federal Projects, 000 Noncategorical.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="source" type="gCodedElementType" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName/>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>From NCES:  These codes are for recording revenue and other receivables by source.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="amount">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName/>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>Amount of a transaction or a summarized amount.</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:decimal">
+														<xs:fractionDigits value="2"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="financialReport" type="financialReportType"/>
+</xs:schema>

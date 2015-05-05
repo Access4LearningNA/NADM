@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--version 3.01.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:include schemaLocation="../SIFglobal.xsd"/>
+	<xs:complexType name="studentCoreType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Student Core</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>Represents core or basic information about a student. This object supports events and consumers can request change events, but not create or delete events.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSIF_CompositeType">
+				<xs:sequence>
+					<xs:element name="name" type="gNameOfRecordType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Name of Record</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Name of student.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gradeLevel" type="gYearGroupType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Grade Level</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The active grade level from studentSchoolAssociation.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="localId" type="gLocalIdType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Local Id</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The local student number.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="stateId" type="gLocalIdType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>State Id</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The state student identifier.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sex" type="gSexusType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Sex</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="birthDate" type="xs:date">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Birth Date</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="enrollmentOperation" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Enrollment Operation</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The enrollment action to take.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="register"/>
+								<xs:enumeration value="enroll"/>
+								<xs:enumeration value="withdraw"/>
+								<xs:enumeration value="suspend"/>
+								<xs:enumeration value="transfer"/>
+								<xs:enumeration value="no show"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="studentRefId" type="gRefIdPointerType" nillable="true" minOccurs="1">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Student RefId</elementName>
+								<sifChar>R</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The RefId of the associated student object instance.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="studentSchoolAssociationRefId" type="gRefIdPointerType" minOccurs="1">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Student-School Association RefId</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The RefId of the active studentSchoolAssociation instance used for the elements in this object based on the date of the get operation or publication of an event. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolRefId" type="gRefIdPointerType" minOccurs="1">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>School RefId</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>RefId of the school instance based upon the studentSchoolAssociation instance.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolName" minOccurs="1">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>School Name</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Name of the referenced school instance.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="entryDate" type="xs:date" minOccurs="1">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Entry Date</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="exitDate" type="xs:date" nillable="true" minOccurs="1">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Exit Date</elementName>
+								<sifChar>R</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="transferFromSchoolRefId" type="gRefIdPointerType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Transfer-From School RefId</elementName>
+								<sifChar>MC</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>To support transfer from one school to another. Only present when enrollment operation is = transfer.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="concurrentSchoolList" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Concurrent School List</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Other schools the student is enrolled in.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="concurrentSchool" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Concurrent School</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation/>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="operation">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Operation</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The enrollment action to take.</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:token">
+														<xs:enumeration value="enroll"/>
+														<xs:enumeration value="withdraw"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="entryDate" type="xs:date" minOccurs="1">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Entry Date</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation/>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="exitDate" type="xs:date" nillable="true" minOccurs="1">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Exit Date</elementName>
+														<sifChar>R</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation/>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="schoolRefId" type="gRefIdPointerType">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>School RefId</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>RefId of the school instance based upon the studentSchoolAssociation instance.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="schoolName">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>School Name</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>Name of the referenced school instance.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="studentSchoolAssociationRefId" type="gRefIdPointerType">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Student-School Association RefId</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The RefId of the active studentSchoolAssociation instance used for the elements in this object based on the date of the get operation or publication of an event. </xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded">
+												<xs:annotation>
+													<xs:documentation>SIF extention point</xs:documentation>
+												</xs:annotation>
+											</xs:any>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="studentCore" type="studentCoreType"/>
+</xs:schema>

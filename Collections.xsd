@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--version 3.02.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.3" targetNamespace="http://www.sifassociation.org/datamodel/na/3.3" elementFormDefault="qualified">
+	<xs:include schemaLocation="Entity/SIFNAEntityObjects.xsd"/>
+	<xs:include schemaLocation="Composite/SIFNACompositeObjects.xsd"/>
+	<xs:include schemaLocation="Report/SIFNAReportObjects.xsd"/>
+	<!--This file is made up of the so-called Collection Objects. Each Collection is a wrapper for multiple instances of a single object. This is done to make REST calls more REST-like. -->
+	<!--Entity Objects-->
+	<xs:complexType name="applicationCollectionType">
+		<xs:sequence>
+			<xs:element name="application" type="gApplicationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="applications" type="applicationCollectionType"/>
+	<xs:complexType name="authenticationCollectionType">
+		<xs:sequence>
+			<xs:element name="authentication" type="gAuthenticationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="authentications" type="authenticationCollectionType"/>
+	<xs:complexType name="authorizationCollectionType">
+		<xs:sequence>
+			<xs:element name="authorization" type="gAuthorizationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="authorizations" type="authorizationCollectionType"/>
+	<xs:complexType name="userOrganizationAssociationCollectionType">
+		<xs:sequence>
+			<xs:element name="userOrganizationAssociation" type="userOrganizationAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="userOrganizationAssociations" type="userOrganizationAssociationCollectionType"/>
+	<xs:complexType name="contactPersonCollectionType">
+		<xs:sequence>
+			<xs:element name="contactPerson" type="contactPersonType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="contactPersons" type="contactPersonCollectionType"/>
+	<xs:complexType name="personCollectionType">
+		<xs:sequence>
+			<xs:element name="person" type="personType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="persons" type="personCollectionType"/>
+	<xs:complexType name="personRoleAssociationCollectionType">
+		<xs:sequence>
+			<xs:element ref="personRoleAssociation" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="personRoleAssociations" type="personRoleAssociationCollectionType"/>
+	<xs:complexType name="staffPersonCollectionType">
+		<xs:sequence>
+			<xs:element name="staffPerson" type="staffPersonType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="staffPersons" type="staffPersonCollectionType"/>
+	<xs:complexType name="studentCollectionType">
+		<xs:sequence>
+			<xs:element name="student" type="studentType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="students" type="studentCollectionType"/>
+	<xs:complexType name="leaCollectionType">
+		<xs:sequence>
+			<xs:element name="lea" type="leaType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="leas" type="leaCollectionType"/>
+	<xs:complexType name="schoolCollectionType">
+		<xs:sequence>
+			<xs:element name="school" type="schoolType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="schools" type="schoolCollectionType"/>
+	<xs:complexType name="seaCollectionType">
+		<xs:sequence>
+			<xs:element name="sea" type="seaType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="seas" type="seaCollectionType"/>
+	<xs:complexType name="sectionCollectionType">
+		<xs:sequence>
+			<xs:element name="section" type="sectionType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="sections" type="sectionCollectionType"/>
+	<xs:complexType name="courseCollectionType">
+		<xs:sequence>
+			<xs:element name="course" type="courseType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="courses" type="courseCollectionType"/>
+	<xs:complexType name="learningResourceCollectionType">
+		<xs:sequence>
+			<xs:element name="learningResource" type="learningResourceType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="learningResources" type="learningResourceCollectionType"/>
+	<xs:complexType name="learningStandardDocumentCollectionType">
+		<xs:sequence>
+			<xs:element name="learningStandardDocument" type="learningStandardDocumentType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="learningStandardDocuments" type="learningStandardDocumentCollectionType"/>
+	<xs:complexType name="learningStandardItemCollectionType">
+		<xs:sequence>
+			<xs:element name="learningStandardItem" type="learningStandardItemType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="learningStandardItems" type="learningStandardItemCollectionType"/>
+	<xs:complexType name="programCollectionType">
+		<xs:sequence>
+			<xs:element name="program" type="programType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="programs" type="programCollectionType"/>
+	<xs:complexType name="addressCollectionType">
+		<xs:sequence>
+			<xs:element name="address" type="addressType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="addresss" type="addressCollectionType"/>
+	<xs:complexType name="schoolCalendarItemCollectionType">
+		<xs:sequence>
+			<xs:element name="schoolCalendarItem" type="schoolCalendarItemType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="schoolCalendarItems" type="schoolCalendarItemCollectionType"/>
+	<xs:complexType name="schoolCalendarCollectionType">
+		<xs:sequence>
+			<xs:element name="schoolCalendar" type="schoolCalendarType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="schoolCalendars" type="schoolCalendarCollectionType"/>
+	<xs:complexType name="crisisIncidentCollectionType">
+		<xs:sequence>
+			<xs:element name="crisisIncident" type="crisisIncidentType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="crisisIncidents" type="crisisIncidentCollectionType"/>
+	<xs:complexType name="disciplineIncidentCollectionType">
+		<xs:sequence>
+			<xs:element name="disciplineIncident" type="disciplineIncidentType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="disciplineIncidents" type="disciplineIncidentCollectionType"/>
+	<xs:complexType name="facilityCollectionType">
+		<xs:sequence>
+			<xs:element name="facility" type="facilityType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="facilitys" type="facilityCollectionType"/>
+	<xs:complexType name="termCollectionType">
+		<xs:sequence>
+			<xs:element name="term" type="termType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="terms" type="termCollectionType"/>
+	<xs:complexType name="contactPersonAssociationCollectionType">
+		<xs:sequence>
+			<xs:element name="contactPersonAssociation" type="contactPersonAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="contactPersonAssociations" type="contactPersonAssociationCollectionType"/>
+	<xs:complexType name="partyAddressAssociationCollectionType">
+		<xs:sequence>
+			<xs:element name="partyAddressAssociation" type="partyAddressAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="partyAddressAssociations" type="partyAddressAssociationCollectionType"/>
+	<xs:complexType name="partyOrganizationAssociationCollectionType">
+		<xs:sequence>
+			<xs:element name="partyOrganizationAssociation" type="partyOrganizationAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="partyOrganizationAssociations" type="partyOrganizationAssociationCollectionType"/>
+	<xs:complexType name="staffPersonAssignmentCollectionType">
+		<xs:sequence>
+			<xs:element name="staffPersonAssignment" type="staffPersonAssignmentType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="staffPersonAssignments" type="staffPersonAssignmentCollectionType"/>
+	<xs:complexType name="studentProgramAssociationCollectionType">
+		<xs:sequence>
+			<xs:element name="studentProgramAssociation" type="studentProgramAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="studentProgramAssociations" type="studentProgramAssociationCollectionType"/>
+	<xs:complexType name="studentSchoolAssociationCollectionType">
+		<xs:sequence>
+			<xs:element name="studentSchoolAssociation" type="studentSchoolAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="studentSchoolAssociations" type="studentSchoolAssociationCollectionType"/>
+	<xs:complexType name="studentSectionAssociationCollectionType">
+		<xs:sequence>
+			<xs:element name="studentSectionAssociation" type="studentSectionAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="studentSectionAssociations" type="studentSectionAssociationCollectionType"/>
+	<xs:complexType name="staffSectionAssociationCollectionType">
+		<xs:sequence>
+			<xs:element name="staffSectionAssociation" type="staffSectionAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="staffSectionAssociations" type="staffSectionAssociationCollectionType"/>
+	<xs:complexType name="personGroupAssociationCollectionType">
+		<xs:sequence>
+			<xs:element name="personGroupAssociation" type="personGroupAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="personGroupAssociations" type="personGroupAssociationCollectionType"/>
+	<xs:complexType name="organizationOrganizationAssociationCollectionType">
+		<xs:sequence>
+			<xs:element name="organizationOrganizationAssociation" type="organizationOrganizationAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="organizationOrganizationAssociations" type="organizationOrganizationAssociationCollectionType"/>
+	<xs:complexType name="learningStandardAssociationCollectionType">
+		<xs:sequence>
+			<xs:element name="learningStandardAssociation" type="learningStandardAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="learningStandardAssociations" type="learningStandardAssociationCollectionType"/>
+	<xs:complexType name="assessmentCollectionType">
+		<xs:sequence>
+			<xs:element name="assessment" type="assessmentType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessments" type="assessmentCollectionType"/>
+	<xs:complexType name="assessmentFormCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentForm" type="assessmentFormType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentForms" type="assessmentFormCollectionType"/>
+	<xs:complexType name="assessmentSectionCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentSection" type="assessmentSectionType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentSections" type="assessmentSectionCollectionType"/>
+	<xs:complexType name="assessmentItemCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentItem" type="assessmentItemType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentItems" type="assessmentItemCollectionType"/>
+	<xs:complexType name="assessmentSubTestCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentSubTest" type="assessmentSubTestType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentSubTests" type="assessmentSubTestCollectionType"/>
+	<xs:complexType name="assessmentAdministrationCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentAdministration" type="assessmentAdministrationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentAdministrations" type="assessmentAdministrationCollectionType"/>
+	<xs:complexType name="assessmentAssetCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentAsset" type="assessmentAssetType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentAssets" type="assessmentAssetCollectionType"/>
+	<xs:complexType name="assessmentRegistrationCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentRegistration" type="assessmentRegistrationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentRegistrations" type="assessmentRegistrationCollectionType"/>
+	<xs:complexType name="assessmentSessionCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentSession" type="assessmentSessionType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentSessions" type="assessmentSessionCollectionType"/>
+	<xs:complexType name="assessmentResponseSetCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentResponseSet" type="assessmentResponseSetType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentResponseSets" type="assessmentResponseSetCollectionType"/>
+	<xs:complexType name="assessmentScoreSetCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentScoreSet" type="assessmentScoreSetType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentScoreSets" type="assessmentScoreSetCollectionType"/>
+	<xs:complexType name="assessmentItemAssociationCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentItemAssociation" type="assessmentItemAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentItemAssociations" type="assessmentItemAssociationCollectionType"/>
+	<xs:complexType name="assessmentRubricCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentRubric" type="assessmentRubricType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentRubrics" type="assessmentRubricCollectionType"/>
+	<xs:complexType name="assessmentScoreTableCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentScoreTable" type="assessmentScoreTableType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentScoreTables" type="assessmentScoreTableCollectionType"/>
+	<!--Composite Objects-->
+	<xs:complexType name="studentCoreCollectionType">
+		<xs:sequence>
+			<xs:element name="studentCore" type="studentCoreType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="studentCores" type="studentCoreCollectionType"/>
+	<!--Report Objects-->
+	<xs:complexType name="assessmentSummaryCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentSummary" type="assessmentSummaryType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentSummarys" type="assessmentSummaryCollectionType"/>
+	<xs:complexType name="sreCollectionType">
+		<xs:sequence>
+			<xs:element name="sre" type="sreType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="sres" type="sreCollectionType"/>
+	<xs:complexType name="financialReportCollectionType">
+		<xs:sequence>
+			<xs:element name="financialReport" type="financialReportType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="financialReports" type="financialReportCollectionType"/>
+	<xs:complexType name="sectionRosterReportCollectionType">
+		<xs:sequence>
+			<xs:element name="sectionRosterReport" type="sectionRosterReportType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="sectionRosterReports" type="sectionRosterReportCollectionType"/>
+	<!--SIF xPress Objects-->
+	<!-- Student -->
+	<xs:complexType name="xStudentCollectionType">
+		<xs:sequence>
+			<xs:element name="xStudent" type="xStudentType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="xStudents" type="xStudentCollectionType"/>
+	<!-- Student Contact -->
+	<xs:complexType name="xContactCollectionType">
+		<xs:sequence>
+			<xs:element name="xContact" type="xContactType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="xContacts" type="xContactCollectionType"/>
+	<!-- Student Health -->
+	<!-- Staff -->
+	<xs:complexType name="xStaffCollectionType">
+		<xs:sequence>
+			<xs:element name="xStaff" type="xStaffType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="xStaffs" type="xStaffCollectionType"/>
+	<!-- Lea -->
+	<xs:complexType name="xLeaCollectionType">
+		<xs:sequence>
+			<xs:element name="xLea" type="xLeaType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="xLeas" type="xLeaCollectionType"/>
+	<!-- School -->
+	<xs:complexType name="xSchoolCollectionType">
+		<xs:sequence>
+			<xs:element name="xSchool" type="xSchoolType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="xSchools" type="xSchoolCollectionType"/>
+	<!-- School Calendar-->
+	<xs:complexType name="xCalendarCollectionType">
+		<xs:sequence>
+			<xs:element name="xCalendar" type="xCalendarType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="xCalendars" type="xCalendarCollectionType"/>
+	<!-- Roster -->
+	<xs:complexType name="xRosterCollectionType">
+		<xs:sequence>
+			<xs:element name="xRoster" type="xRosterType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="xRosters" type="xRosterCollectionType"/>
+	<!-- Course -->
+	<xs:complexType name="xCourseCollectionType">
+		<xs:sequence>
+			<xs:element name="xCourse" type="xCourseType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="xCourses" type="xCourseCollectionType"/>
+	<!--CEDS Objects were removed as of 3.3-->
+	
+</xs:schema>

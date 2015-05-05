@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--version 3.02.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<!--The types in this file are SIF North American-specific types.  -->
+
+	<xs:simpleType name="ssnType">
+		<xs:annotation>
+			<xs:documentation>A social security number, without dashes. </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:length value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>

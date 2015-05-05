@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--version 3.01.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:include schemaLocation="../SIFglobal.xsd"/>
+	<xs:complexType name="assessmentSummaryType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Assessment Summary</elementName>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+			</xs:appinfo>
+			<xs:documentation>A spreadsheet-like object that transmits aggregate or calculated assessment information</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSIF_ReportType">
+				<xs:sequence>
+					<xs:element name="summaryContext">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Assessment Summary Context</elementName>
+								<sifChar/>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Provides context information for the spreadsheet.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="assessmentId">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Assessment Identifier</elementName>
+											<sifChar>M</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>A text or numeric identifier for the assessment.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="assessmentName" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Assessment Name</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Name of the assessment.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="schoolYear">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>School Year</elementName>
+											<sifChar>M</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>School year in which the assessment was administered.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="unitOfAnalysis" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Unit of Analysis</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>A description of the contents of spreadsheet but not how it is measured. See the enumerated values for examples. </xs:documentation>
+									</xs:annotation>
+									<xs:simpleType>
+										<xs:restriction base="xs:token">
+											<xs:enumeration value="item"/>
+											<xs:enumeration value="subTest"/>
+											<xs:enumeration value="strand"/>
+											<xs:enumeration value="section"/>
+											<xs:enumeration value="learningStandard"/>
+											<xs:enumeration value="benchmark"/>
+											<!--total scores are included in subTest -->
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="State" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>State</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Name, abbreviation, or identifier of the state.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="LEA" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>LEA</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Name or identifier of the LEA or district.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="School" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>School</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Name or identifier of the school.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="columnList">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Column List</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>A list of column headers. This structure holds the column header information only.  The actual data is in the row structure.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="column" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Column</elementName>
+											<sifChar>OR</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>A single column header.</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="columnLetter">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Column Letter </elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>A letter designation (similar to a spreadsheet) of the column.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="columnLabel" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Column Label</elementName>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>A optional descriptive name for the column.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="metric" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Metric</elementName>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The type of measure used to express the magnitude of the unit of measure. The value for this element could be count, scale score, percent correct, etc.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="columnGroupName" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Column-Group Name</elementName>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>An optional identifier that can be used to categorize columns into groups or subheadings.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="numberOfColumns">
+								<xs:annotation>
+									<xs:appinfo>
+										<elementName>Number of Columns</elementName>
+										<sifChar>M</sifChar>
+										<cedsId/>
+										<cedsURL/>
+									</xs:appinfo>
+									<xs:documentation>A count of the number of columns</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="rowList">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Row List</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>A list of the rows in the spreadsheet along with the contents of each cell in the row.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="row" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Row</elementName>
+											<sifChar>MR</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>A single row in the spreadsheet.</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="rowNumber">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Row Number</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>An integer identifier for the row. This also orders the rows.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="rowLabel" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName/>
+														<sifChar/>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>An optional descriptive name for the row.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:sequence>
+												<xs:element name="cellList">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName/>
+															<sifChar/>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>A list of cells in the row. The order and number of cells must match the columns specified in the column element.</xs:documentation>
+													</xs:annotation>
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="cell" minOccurs="0" maxOccurs="unbounded">
+																<xs:annotation>
+																	<xs:appinfo>
+																		<elementName>Cell</elementName>
+																		<sifChar>OR</sifChar>
+																		<cedsId/>
+																		<cedsURL/>
+																	</xs:appinfo>
+																	<xs:documentation>A single cell in the spreadsheet.</xs:documentation>
+																</xs:annotation>
+																<xs:complexType/>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="assessmentSummary" type="assessmentSummaryType"/>
+</xs:schema>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--version 3.02.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:include schemaLocation="../SIFglobal.xsd"/>
+	<xs:complexType name="libraryPatronStatusType">
+		<xs:annotation>
+			<xs:documentation>This object reports the current library status for the requested student or staff member.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSIF_ReportType">
+				<xs:sequence>
+					<xs:element name="libraryType">
+						<xs:annotation>
+							<xs:documentation>A library-defined language-independent value that refers to a specific patron type.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="patronRefId" type="gGenericRefIdPointerType">
+						<xs:annotation>
+							<xs:documentation>The SIF refId identifier of a student or teacher.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="electronicIdList" type="gElectronicIdList">
+						<xs:annotation>
+							<xs:documentation>List of electronic identifiers associated with the patron.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="transactionList" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>List of Library transactions.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="transaction" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:documentation>Contains information about library transactions for the referenced student/patron. These include items that are checked out or have fines or holds placed on them.</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="item" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>If this transaction has an item associated with it, this element contains the information about the item. Most Transaction elements will contain this element. However, certain types of fines assessed to the student like "talking in class", "running in library", etc. do not have a corresponding item so that Transaction instance would not contain an Item.</xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="title" type="xs:string">
+															<xs:annotation>
+																<xs:documentation>The title of the item being referenced by this Transaction.</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="author" type="xs:string" nillable="true" minOccurs="0">
+															<xs:annotation>
+																<xs:documentation>The author of the item being referenced by this Transaction.</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="electronicId" type="gElectronicIdType" nillable="true" minOccurs="0">
+															<xs:annotation>
+																<xs:documentation>Electronic identifier associated with this Transaction.</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="callNumber" type="xs:string" nillable="true" minOccurs="0">
+															<xs:annotation>
+																<xs:documentation>The library call number, if any, assigned to this item.</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="price" nillable="true" minOccurs="0">
+															<xs:annotation>
+																<xs:documentation>The cost of this item. </xs:documentation>
+															</xs:annotation>
+															<xs:simpleType>
+																<xs:restriction base="xs:decimal">
+																	<xs:fractionDigits value="2"/>
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:element>
+													</xs:sequence>
+													<xs:attribute name="type" use="required">
+														<xs:annotation>
+															<xs:documentation>Type of item being referenced.</xs:documentation>
+														</xs:annotation>
+														<xs:simpleType>
+															<xs:restriction base="xs:token">
+																<xs:enumeration value="Asset"/>
+																<xs:enumeration value="LibraryMaterial"/>
+																<xs:enumeration value="Media"/>
+																<xs:enumeration value="Textbook"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:attribute>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="checkout" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>If the item is currently checked out to this person, this element contains the date and time that the item is due to be returned.</xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="returnBy" type="xs:dateTime">
+															<xs:annotation>
+																<xs:documentation>The date and time that this item is due to be returned.</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="fineList" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>List of fines assessed.</xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="fine" minOccurs="0" maxOccurs="unbounded">
+															<xs:annotation>
+																<xs:documentation>If the item has a fine assessed to this person, this element will contain the information about the fine.</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="dateAssessed" type="xs:dateTime">
+																		<xs:annotation>
+																			<xs:documentation>The date and time that this fine was assessed to the patron.</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="description" type="xs:string" nillable="true" minOccurs="0">
+																		<xs:annotation>
+																			<xs:documentation>More detailed information concerning the assessed fine or refund.</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="amount">
+																		<xs:annotation>
+																			<xs:documentation>The current balance of the fine expressed as a positive number. </xs:documentation>
+																		</xs:annotation>
+																		<xs:simpleType>
+																			<xs:restriction base="xs:decimal">
+																				<xs:fractionDigits value="2"/>
+																			</xs:restriction>
+																		</xs:simpleType>
+																	</xs:element>
+																	<xs:element name="reference" type="xs:string" nillable="true" minOccurs="0">
+																		<xs:annotation>
+																			<xs:documentation>An application-specific reference identifier for the fine being assessed, paid, or refunded.  It is intended to identify a specific fine transaction allowing consumers to include this information in Billing or Payment events sent to the library application.</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																</xs:sequence>
+																<xs:attribute name="type" use="required">
+																	<xs:annotation>
+																		<xs:documentation>Type of fine assessed to this patron and item.  A corresponding ItemInfo is required for all FineInfo types except "Other" and "Refund" where it is permissible to omit the ItemInfo element if there isn't an item associated with the fine.</xs:documentation>
+																	</xs:annotation>
+																	<xs:simpleType>
+																		<xs:restriction base="xs:token">
+																			<xs:enumeration value="Damaged"/>
+																			<xs:enumeration value="Lost"/>
+																			<xs:enumeration value="Overdue"/>
+																			<xs:enumeration value="Refund"/>
+																			<xs:enumeration value="Other"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:attribute>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="holdList" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>List of holds placed.</xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="hold" minOccurs="0" maxOccurs="unbounded">
+															<xs:annotation>
+																<xs:documentation>If the item has a hold placed on it by a patron, this element will contain the information about the hold.</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="datePlaced" type="xs:date">
+																		<xs:annotation>
+																			<xs:documentation>The date that the patron placed the hold.</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="dateNeeded" type="xs:date" nillable="true" minOccurs="0">
+																		<xs:annotation>
+																			<xs:documentation>The date that the patron needs this item by.</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="dateAvailable" type="xs:date" nillable="true" minOccurs="0">
+																		<xs:annotation>
+																			<xs:documentation>The date that this item became available for the patron to pick up.</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="expires" type="xs:date" nillable="true" minOccurs="0">
+																		<xs:annotation>
+																			<xs:documentation>The date when this ready hold will expire freeing the item to be assigned to another patron.</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																</xs:sequence>
+																<xs:attribute name="type" use="required">
+																	<xs:annotation>
+																		<xs:documentation>The type of hold being referenced.</xs:documentation>
+																	</xs:annotation>
+																	<xs:simpleType>
+																		<xs:restriction base="xs:token">
+																			<xs:enumeration value="Ready">
+																				<xs:annotation>
+																					<xs:documentation>(which means that a previously placed hold is ready for the patron to pick up at the library desk)</xs:documentation>
+																				</xs:annotation>
+																			</xs:enumeration>
+																			<xs:enumeration value="NotReady">
+																				<xs:annotation>
+																					<xs:documentation>(hold has been placed but hasn't been fulfilled yet)</xs:documentation>
+																				</xs:annotation>
+																			</xs:enumeration>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:attribute>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="messageList" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>List of messages for/regarding the patron.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="message" minOccurs="0" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="sent" type="xs:dateTime" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>The date and time that this message was originally sent.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="text" type="xs:string">
+												<xs:annotation>
+													<xs:documentation>The contents of the message.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+										</xs:sequence>
+										<xs:attribute name="priority" use="required">
+											<xs:annotation>
+												<xs:documentation>The level of urgency associated with this message.</xs:documentation>
+											</xs:annotation>
+											<xs:simpleType>
+												<xs:restriction base="xs:token">
+													<xs:enumeration value="Low"/>
+													<xs:enumeration value="Normal"/>
+													<xs:enumeration value="Urgent"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="numberOfCheckouts" type="xs:unsignedInt">
+						<xs:annotation>
+							<xs:documentation>The total number of items that this patron currently has checked out including overdue items.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="numberOfOverdues" type="xs:unsignedInt">
+						<xs:annotation>
+							<xs:documentation>The total number of checkouts that are currently overdue.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="numberOfFines" type="xs:unsignedInt">
+						<xs:annotation>
+							<xs:documentation>The total number of fines currently assessed to this patron.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fineAmount">
+						<xs:annotation>
+							<xs:documentation>The total monetary amount of the fines that this patron currently owes the library expressed as a positive number.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:decimal">
+								<xs:fractionDigits value="2"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="numberOfRefunds" type="xs:unsignedInt" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The total number of refunds currently credited to this patron.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="refundAmount" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The total monetary amount of the refunds that the library currently owes the patron expressed as a positive number.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:decimal">
+								<xs:fractionDigits value="2"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="libraryPatronStatus" type="libraryPatronStatusType"/>
+</xs:schema>

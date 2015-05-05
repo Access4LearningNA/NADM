@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--version 3.02.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:include schemaLocation="../SIFglobal.xsd"/>
+	<xs:complexType name="sectionRosterReportType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Section Roster</elementName>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>An easy-to-use object containing the essential information for a client application that needs information about section rosters and students. Also includes basic information about the section, school, and teachers.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSIF_ReportType">
+				<xs:sequence>
+					<xs:element name="sectionRefId" type="gRefIdPointerType">
+						<xs:annotation>
+							<xs:documentation>The refId of the section entity associated with this Roster.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="localId" type="xs:token">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Local Id</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The local identifier for the section.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="name" type="xs:token">
+						<xs:annotation>
+							<xs:documentation>A short name for the section.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolYear" type="xs:gYear" minOccurs="0"/>
+					<xs:element name="termDescriptor" type="xs:token" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A brief and meaningful token(s) that describes the term or terms for the section.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="meetingTimeDescriptor" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A brief and meaningful token that describes the meeting time(s) for the section (periods/days). </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="staffAssignmentList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The one or more staff members assigned to a section for a particular term.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="staffAssignment" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:documentation>A particular staff member may be assigned to a section more than once with different non-overlapping date ranges. </xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="staffPersonRefId" type="gRefIdPointerType">
+												<xs:annotation>
+													<xs:appinfo>
+														<sifChar>M</sifChar>
+														<cedsId>000364</cedsId>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The Id (GUID) of the teacher for a particular session of a class.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="localId" type="xs:token">
+												<xs:annotation>
+													<xs:documentation>A local agency identifier for the person.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="staffSectionAssociationRefId" type="gRefIdPointerType"/>
+											<xs:element name="name">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="prefix" type="xs:token" minOccurs="0">
+															<xs:annotation>
+																<xs:appinfo>
+																	<sifChar>O</sifChar>
+																	<cedsId/>
+																	<cedsURL/>
+																</xs:appinfo>
+																<xs:documentation/>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="givenName" type="xs:normalizedString">
+															<xs:annotation>
+																<xs:appinfo>
+																	<sifChar>O</sifChar>
+																	<cedsId/>
+																	<cedsURL/>
+																</xs:appinfo>
+																<xs:documentation/>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="middleName" type="xs:normalizedString" minOccurs="0">
+															<xs:annotation>
+																<xs:appinfo>
+																	<sifChar>O</sifChar>
+																	<cedsId/>
+																	<cedsURL/>
+																</xs:appinfo>
+																<xs:documentation/>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="familyName" type="xs:normalizedString">
+															<xs:annotation>
+																<xs:appinfo>
+																	<sifChar>O</sifChar>
+																	<cedsId/>
+																	<cedsURL/>
+																</xs:appinfo>
+																<xs:documentation/>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="suffix" type="xs:token" minOccurs="0">
+															<xs:annotation>
+																<xs:appinfo>
+																	<sifChar>O</sifChar>
+																	<cedsId/>
+																	<cedsURL/>
+																</xs:appinfo>
+																<xs:documentation/>
+															</xs:annotation>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="teacherOfRecord" type="xs:boolean" minOccurs="1">
+												<xs:annotation>
+													<xs:documentation>On a given date, one and only one teacher may be Teacher of Record. </xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="percentResponsible" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>When there is more than one staff member assigned to a section, this is the percent of responsibility that staff member bears for the section.</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:decimal">
+														<xs:minInclusive value="0"/>
+														<xs:maxInclusive value="100"/>
+														<xs:fractionDigits value="2"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="roleList" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation/>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="role" type="xs:token" minOccurs="0" maxOccurs="unbounded">
+															<xs:annotation>
+																<xs:appinfo>
+																	<sifChar>OR</sifChar>
+																	<cedsId/>
+																	<cedsURL/>
+																</xs:appinfo>
+																<xs:documentation>The source of this field is staffSectionAssociation. Possible Values: LeadTeacher
+    Lead teacher with the primary responsibility for student learning in the assigned class section.
+TeamTeacher
+    Team teacher with shared responsibility for student learning within the assigned class section.
+ContributingProfessional
+    Contributing professional who has been assigned the responsibility to provide additional services that support and increase a student learning. 
+    Paraprofessional, a non-teacher who is assigned to the section.</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="startDate" type="xs:date" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>Start date, inclusive of the association of the staff person with the section.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="endDate" type="xs:date" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>End date, inclusive of the association of the staff person with the section.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="school" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The school where the section is taught.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="schoolRefId" type="gRefIdPointerType" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>School RefId</elementName>
+											<sifChar>M</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>RefId of the school where the section is taught.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="schoolName" type="xs:token">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>School Name</elementName>
+											<sifChar>M</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Name of the referenced school instance.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="course" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="courseRefId" type="gRefIdPointerType">
+									<xs:annotation>
+										<xs:documentation>A reference to the school course for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="courseCode" type="xs:token" minOccurs="0"/>
+								<xs:element name="courseTitle" type="xs:normalizedString"/>
+								<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="studentList">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="student" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:documentation>A particular student may appear more than once in the studentList with different non-overlapping date ranges. For example, a student dropped from the section early in a year and then added back to the section at a later date. </xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="studentRefId" type="gRefIdPointerType" nillable="true">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Student RefId</elementName>
+														<sifChar>R</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The RefId of the associated student object instance.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="name">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Name of Record</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>Name of student.</xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="givenName" type="xs:normalizedString">
+															<xs:annotation>
+																<xs:appinfo>
+																	<sifChar>O</sifChar>
+																	<cedsId/>
+																	<cedsURL/>
+																</xs:appinfo>
+																<xs:documentation/>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="middleName" type="xs:normalizedString" minOccurs="0">
+															<xs:annotation>
+																<xs:appinfo>
+																	<sifChar>O</sifChar>
+																	<cedsId/>
+																	<cedsURL/>
+																</xs:appinfo>
+																<xs:documentation/>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="familyName" type="xs:normalizedString">
+															<xs:annotation>
+																<xs:appinfo>
+																	<sifChar>O</sifChar>
+																	<cedsId/>
+																	<cedsURL/>
+																</xs:appinfo>
+																<xs:documentation/>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="suffix" type="xs:token" minOccurs="0">
+															<xs:annotation>
+																<xs:appinfo>
+																	<sifChar>O</sifChar>
+																	<cedsId/>
+																	<cedsURL/>
+																</xs:appinfo>
+																<xs:documentation/>
+															</xs:annotation>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="localId" type="xs:token">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Local Id</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The local student number.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="stateId" type="xs:token" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>State Id</elementName>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The state student identifier.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="sex" type="gSexusType" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Sex</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation/>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="birthDate" type="xs:date" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Birth Date</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation/>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="gradeLevel" type="xs:token">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Grade Level</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The grade level of the student during the time period associated with this record. </xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="startDate" type="xs:date" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>Start date, inclusive of the association of the student with the section.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="endDate" type="xs:date" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>End date, inclusive of the association of the student with the section.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="sectionRosterReport" type="sectionRosterReportType"/>
+</xs:schema>

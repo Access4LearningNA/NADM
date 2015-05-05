@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--version 3.02.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:altova="http://www.altova.com/xml-schema-extensions" elementFormDefault="qualified">
+	<xs:include schemaLocation="../SIFglobal.xsd"/>
+	<xs:complexType name="energyUsageType">
+		<xs:annotation>
+			<xs:documentation>This object contains energy usage information for an energy location.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSIF_ReportType">
+				<xs:sequence>
+					<xs:element name="usageLocation">
+						<xs:annotation>
+							<xs:documentation>Complex element containing the location of where the measurements apply.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="schoolId" type="xs:anyURI">
+									<xs:annotation>
+										<xs:documentation>urn:school:xxx.yyy.zzz where xxx.yyy.zzz is a structure that reading left to right starts with the most specific identification (school location) and works rightward to identify the higher levels.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="building" type="xs:token" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Name of the School Building.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="energyZone" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Complex element refining and narrowing the location of the contained readings within the School/Building.</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="type">
+												<xs:annotation>
+													<xs:documentation>The facility or location supported by the Energy Zone.</xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="facility" nillable="true" minOccurs="0">
+															<xs:annotation>
+																<xs:documentation>Type of educational facility.  Either the faciity type or the description must be provided.</xs:documentation>
+															</xs:annotation>
+															<xs:simpleType>
+																<xs:restriction base="xs:token">
+																	<xs:enumeration value="Classroom"/>
+																	<xs:enumeration value="Office"/>
+																	<xs:enumeration value="Hall"/>
+																	<xs:enumeration value="Auditorium"/>
+																	<xs:enumeration value="Gymnasium"/>
+																	<xs:enumeration value="Locker Room"/>
+																	<xs:enumeration value="Swimming Pool"/>
+																	<xs:enumeration value="Cafeteria"/>
+																	<xs:enumeration value="Kitchen"/>
+																	<xs:enumeration value="Library"/>
+																	<xs:enumeration value="Study Hall"/>
+																	<xs:enumeration value="Laboratory"/>
+																	<xs:enumeration value="Shop"/>
+																	<xs:enumeration value="Storage"/>
+																	<xs:enumeration value="Home Economics"/>
+																	<xs:enumeration value="Wing"/>
+																	<xs:enumeration value="Floor"/>
+																	<xs:enumeration value="Building"/>
+																	<xs:enumeration value="Campus"/>
+																	<xs:enumeration value="Other"/>
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:element>
+														<xs:element name="description" type="xs:string" nillable="true" minOccurs="0">
+															<xs:annotation>
+																<xs:documentation>Description of type of educational facility.  Either the faciity type or the description must be provided.</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="energyZoneName" type="xs:normalizedString">
+												<xs:annotation>
+													<xs:documentation>Text description of Energy Zone Area to which readings will apply.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="tagList" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>List of energy zone identifiers.</xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="tag" minOccurs="0" maxOccurs="unbounded">
+															<xs:annotation>
+																<xs:documentation>An energy zone identifier. Could include “SensorGroup”, or individual SensorId”, or anything else.</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="name" type="xs:normalizedString">
+																		<xs:annotation>
+																			<xs:documentation>Name of the Tag.</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="value" type="xs:token" nillable="true" minOccurs="0">
+																		<xs:annotation>
+																			<xs:documentation>Value of the Tag.</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="dataSource" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Description of the source of the measurements.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="system" type="xs:token">
+									<xs:annotation>
+										<xs:documentation>Identifier of the reporting system.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="startTime" type="xs:dateTime">
+									<xs:annotation>
+										<xs:documentation>Start time of measurements that follow.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="readingDataList">
+									<xs:annotation>
+										<xs:documentation>List of ReadingData.</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="readingData" minOccurs="0" maxOccurs="unbounded">
+												<xs:annotation>
+													<xs:documentation>A set of parameters that apply to all the actual readings that follow.</xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="measurement">
+															<xs:annotation>
+																<xs:documentation>Measurement type.</xs:documentation>
+															</xs:annotation>
+															<xs:simpleType>
+																<xs:restriction base="xs:token">
+																	<xs:enumeration value="Gas"/>
+																	<xs:enumeration value="Electrical"/>
+																	<xs:enumeration value="Thermometer"/>
+																	<xs:enumeration value="Thermostat"/>
+																	<xs:enumeration value="Cost"/>
+																	<xs:enumeration value="Other"/>
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:element>
+														<xs:element name="sensorId" type="xs:token" nillable="true" minOccurs="0">
+															<xs:annotation>
+																<xs:documentation>Identification of internal meter or data source.</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="interval" type="xs:unsignedInt" nillable="true" minOccurs="0">
+															<xs:annotation>
+																<xs:documentation>Time in seconds between Measurements.</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="energyUnits">
+															<xs:annotation>
+																<xs:documentation>One of enumerated list of unit types for energy readings (temperature, electrical energy usage, gas usage and the price for both). </xs:documentation>
+															</xs:annotation>
+															<xs:simpleType>
+																<xs:restriction base="xs:token">
+																	<xs:enumeration value="DegreeCentigrade"/>
+																	<xs:enumeration value="Kilowatt-Hour"/>
+																	<xs:enumeration value="$/Kilowatt-Hour"/>
+																	<xs:enumeration value="ThousandCubicFeet"/>
+																	<xs:enumeration value="$/ThousandCubicFeet"/>
+																	<xs:enumeration value="Other"/>
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:element>
+														<xs:element name="readingName" type="xs:string" nillable="true" minOccurs="0">
+															<xs:annotation>
+																<xs:documentation>Description of collection of readings.</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="readingList" nillable="true" minOccurs="0">
+															<xs:annotation>
+																<xs:documentation>Collection of reported data readings, in time order.</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="reading" minOccurs="0" maxOccurs="unbounded">
+																		<xs:annotation>
+																			<xs:documentation>Values for the energy readings for each interval.</xs:documentation>
+																		</xs:annotation>
+																		<xs:complexType>
+																			<xs:simpleContent>
+																				<xs:extension base="xs:decimal">
+																					<xs:attribute name="intervalIndex" type="xs:unsignedInt" use="required">
+																						<xs:annotation>
+																							<xs:documentation>Interval number when reading was taken.</xs:documentation>
+																						</xs:annotation>
+																					</xs:attribute>
+																				</xs:extension>
+																			</xs:simpleContent>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+														<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="energyUsage" type="energyUsageType"/>
+</xs:schema>
