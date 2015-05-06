@@ -12,9 +12,10 @@
 				<cedsId/>
 				<cedsURL/>
 				<services>
-					<path xpath="/student[enrollment/leaRefId={}]">leas/{}/students</path>
-					<path xpath="/student[enrollment/schoolRefId={}]">schools/{}/students</path>
-					<path xpath="/student[]">rosters/{}/students</path>
+					<path xpath="/xStudent[enrollment/leaRefId={}]">xLeas/{}/xStudents</path>
+					<path xpath="/xStudent[enrollment/schoolRefId={}]">xSchools/{}/xStudents</path>
+					<path>xRosters/{}/xStudents</path>  <!-- xpath="/xStudent[@refId=/xRoster/students/studentReference/refId and /xRoster/@refId={}]" -->  <!-- XPath cannot handle multiple source object types! -->
+					<xpath xpath="/xStudent[studentContacts/contactPersonRefId={}]">studentContacts/{}/students</xpath>
 				</services>
 			</xs:appinfo>
 			<xs:documentation></xs:documentation>
@@ -204,6 +205,16 @@
 	</xs:complexType>
 	<xs:element name="xStudent" type="xStudentType"/>
 	<xs:complexType name="xStaffType">
+		<xs:annotation>
+			<xs:appinfo>
+				<services>
+					<path xpath="/xStaff[primaryAssignment/leaRefId={} or otherAssignments/staffPersonAssignment/leaRefId={}]">xLeas/{}/xStaffs</path>
+					<path xpath="/xStaff[primaryAssignment/schoolRefId={} or otherAssignments/staffPersonAssignment/schoolRefId={}]">xSchools/{}/xStaffs</path>
+					<path>xRosters/{}/xStaffs</path>
+					<path>xStudents/{}/xStaffs</path>
+				</services>				
+			</xs:appinfo>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
@@ -572,6 +583,16 @@
 	</xs:complexType>
 	<xs:element name="xCourse" type="xCourseType"/>
 	<xs:complexType name="xSchoolType">
+		<xs:annotation>
+			<xs:appinfo>
+				<services>
+					<path xpath="/xSchool[leaRefId={}]">xLeas/{}/xSchools</path>
+					<path>xStaffs/{}/xSchools</path>
+					<path>xStudents/{}/xSchools</path>
+					<path>xStudentContacts/{}/xSchools</path>
+				</services>
+			</xs:appinfo>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
@@ -680,6 +701,13 @@
 	</xs:complexType>
 	<xs:element name="xSchool" type="xSchoolType"/>
 	<xs:complexType name="xCalendarType">
+		<xs:annotation>
+			<xs:appinfo>
+				<services>
+					<path xpath="/xCalendars[schoolRefId={}]">xSchools/{}/xCalendars</path>
+				</services>
+			</xs:appinfo>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
@@ -722,6 +750,17 @@
 	</xs:complexType>
 	<xs:element name="xCalendar" type="xCalendarType"/>
 	<xs:complexType name="xRosterType">
+		<xs:annotation>
+			<xs:appinfo>
+				<services>
+					<path>xLeas/{}/xRosters</path>
+					<path xpath="/xRoster[primaryStaff/staffPersonReference/refId={} or otherStaff/otherStaff/staffPersonReference/refId={}]">xStaffs/{}/xRosters</path>
+					<path xpath="/xRoster[students/studentReferences/refId={}]">xStudents/{}/xRosters</path>
+					<path xpath="/xRoster[courseRefId={}]">xCourses/{}/xRosters</path>
+					<path xpath="/xRoster[sectionRefId={}]">xSections/{}/xRosters</path>
+				</services>
+			</xs:appinfo>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
