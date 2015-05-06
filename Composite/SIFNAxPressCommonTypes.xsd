@@ -663,10 +663,61 @@
 	</xs:simpleType>
 	<xs:complexType name="sEnrollmentType">
 		<xs:sequence>
-			<xs:element name="leaRefId" type="gRefIdPointerType" minOccurs="1"/>
-			<xs:element name="schoolRefId" type="gRefIdPointerType" minOccurs="1"/>
-			<xs:element name="responsibleSchoolType" type="sResponsibleSchoolTypeType"/>
-			<xs:element name="membershipType" type="sMembershipTypeType" minOccurs="1"/>
+			<xs:element name="leaRefId" type="gRefIdPointerType" minOccurs="1">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolRefId" type="gRefIdPointerType" minOccurs="1">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="studentSchoolAssociationRefId" type="gRefIdPointerType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="responsibleSchoolType" type="sResponsibleSchoolTypeType">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="membershipType" type="sMembershipTypeType" minOccurs="1">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="entryDate" type="xs:date">
 				<xs:annotation>
 					<xs:appinfo>
@@ -1813,14 +1864,5 @@
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:restriction base="xs:gYear"/>
-	</xs:simpleType>
-	<xs:simpleType name="sLoginIdType">
-		<xs:annotation>
-			<xs:appinfo>
-				<cedsId>001170</cedsId>
-				<cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
-			</xs:appinfo>
-		</xs:annotation>
-		<xs:restriction base="xs:token"/>
 	</xs:simpleType>
 </xs:schema>
