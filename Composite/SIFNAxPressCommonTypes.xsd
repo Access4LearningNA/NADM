@@ -922,7 +922,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-						<xs:element name="studentSchoolAssociationRefId" type="gRefIdPointerType" minOccurs="0">
+			<xs:element name="studentSchoolAssociationRefId" type="gRefIdPointerType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
