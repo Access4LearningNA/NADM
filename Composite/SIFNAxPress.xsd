@@ -15,7 +15,7 @@
 					<path xpath="/xStudent[enrollment/leaRefId={}]">xLeas/{}/xStudents</path>
 					<path xpath="/xStudent[enrollment/schoolRefId={}]">xSchools/{}/xStudents</path>
 					<path>xRosters/{}/xStudents</path>  <!-- xpath="/xStudent[@refId=/xRoster/students/studentReference/refId and /xRoster/@refId={}]" -->  <!-- XPath cannot handle multiple source object types! -->
-					<xpath xpath="/xStudent[studentContacts/contactPersonRefId={}]">studentContacts/{}/students</xpath>
+					<xpath xpath="/xStudent[studentContacts/contactPersonRefId={}]">xStudentContacts/{}/xStudents</xpath>
 				</services>
 			</xs:appinfo>
 			<xs:documentation></xs:documentation>
