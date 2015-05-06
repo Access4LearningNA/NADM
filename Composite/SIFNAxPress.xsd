@@ -11,6 +11,11 @@
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
 				<cedsURL/>
+				<services>
+					<path xpath="/student[enrollment/leaRefId={}]">leas/{}/students</path>
+					<path xpath="/student[enrollment/schoolRefId={}]">schools/{}/students</path>
+					<path xpath="/student[]">rosters/{}/students</path>
+				</services>
 			</xs:appinfo>
 			<xs:documentation></xs:documentation>
 		</xs:annotation>
