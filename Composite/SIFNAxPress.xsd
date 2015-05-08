@@ -11,12 +11,49 @@
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
 				<cedsURL/>
-				<services>
-					<path xpath="/xStudent[enrollment/leaRefId={}]">xLeas/{}/xStudents</path>
-					<path xpath="/xStudent[enrollment/schoolRefId={}]">xSchools/{}/xStudents</path>
-					<path>xRosters/{}/xStudents</path>  <!-- xpath="/xStudent[@refId=/xRoster/students/studentReference/refId and /xRoster/@refId={}]" -->  <!-- XPath cannot handle multiple source object types! -->
-					<xpath xpath="/xStudent[studentContacts/contactPersonRefId={}]">xStudentContacts/{}/xStudents</xpath>
-				</services>
+				<servicePaths>
+					<service>
+						<path>xLeas/{}/xStudents</path>
+						<description>Returns information for all students associated with their LEA.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							/xStudent[enrollment/leaRefId={}
+							]]>
+						</xquery>
+					</service>
+					<service>
+						<path>xSchools/{}/xStudents</path>
+						<description>Returns information for all students based on school enrollment.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							/xStudent[enrollment/schoolRefId={}]
+							]]>
+						</xquery>
+					</service>
+					<service>
+						<path>xRosters/{}/xStudents</path>
+						<description>Returns information for all students present in a roster/section.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							(: The below line probably doesn't work! :)
+							/xStudent[@refId=/xRoster/students/studentReference/refId and /xRoster/@refId={}]
+							]]>
+						</xquery>
+					</service>
+					<service>
+						<path>xStudentContacts/{}/xStudents</path>
+						<description>Returns information for all students related to a contact.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							/xStudent[studentContacts/contactPersonRefId={}]
+							]]>
+						</xquery>
+					</service>
+				</servicePaths>
 			</xs:appinfo>
 			<xs:documentation></xs:documentation>
 		</xs:annotation>
