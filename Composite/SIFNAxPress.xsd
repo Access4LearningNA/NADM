@@ -14,7 +14,7 @@
 				<servicePaths>
 					<servicePath>
 						<path>xLeas/{}/xStudents</path>
-						<description>Returns information for all students associated with their LEA.</description>
+						<description>Returns information for all students associated with the LEA specified.</description>
 						<xquery>
 							<![CDATA[
 							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
@@ -38,8 +38,10 @@
 						<xquery>
 							<![CDATA[
 							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
-							(: The below line probably doesn't work! :)
-							/xStudent[@refId=/xRoster/students/studentReference/refId and /xRoster/@refId="{}"]
+							for $roster in /xRoster[@refId="{}"]
+							for $student in /xStudent
+							where $student/@refId = $roster/students/studentReference/refId
+							return $student
 							]]>
 						</xquery>
 					</servicePath>
@@ -244,12 +246,58 @@
 	<xs:complexType name="xStaffType">
 		<xs:annotation>
 			<xs:appinfo>
-				<services>
-					<path xpath="/xStaff[primaryAssignment/leaRefId={} or otherAssignments/staffPersonAssignment/leaRefId={}]">xLeas/{}/xStaffs</path>
-					<path xpath="/xStaff[primaryAssignment/schoolRefId={} or otherAssignments/staffPersonAssignment/schoolRefId={}]">xSchools/{}/xStaffs</path>
-					<path>xRosters/{}/xStaffs</path>
-					<path>xStudents/{}/xStaffs</path>
-				</services>				
+				<servicePaths>
+					<servicePath>
+						<path>xLeas/{}/xStaffs</path>
+						<description>Returns information for all staff associated with the LEA specified.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							/xStaff[primaryAssignment/leaRefId="{}" or otherAssignments/staffPersonAssignment/leaRefId="{}"]
+							]]>
+						</xquery>
+					</servicePath>
+					<servicePath>
+						<path>xSchools/{}/xStaffs</path>
+						<description>Returns information for all staff assigned to the specified school.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							/xStaff[primaryAssignment/schoolRefId="{}" or otherAssignments/staffPersonAssignment/schoolRefId="{}"]
+							]]>
+						</xquery>
+					</servicePath>
+					<servicePath>
+						<path>xRosters/{}/xStaffs</path>
+						<description>Returns information for all staff present in a roster/section.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							for $roster in /xRoster[@refId="{}"]
+							for $staff in /xStaff
+							where $staff/@refId = $roster/primaryStaff/staffPersonReference/refId or $staff/@refId = $roster/otherStaff/otherStaff/staffPersonReference/refId
+							return $staff
+							]]>
+						</xquery>
+					</servicePath>
+					<servicePath>
+						<path>xStudents/{}/xStaffs</path>
+						<description>Returns information for all staff connected to a student.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							let $refIdList := 
+							    for $roster in /xRoster[students/studentReference/refId="{}"]
+							    for $staff in /xStaff
+							    where $staff/@refId = $roster/primaryStaff/staffPersonReference/refId or $staff/@refId = $roster/otherStaff/otherStaff/staffPersonReference/refId
+							    return $staff/@refId
+							for $staff in /xStaff
+							for $staffRefId in distinct-values($refIdList)
+							return $staff[@refId = $staffRefId]
+							]]>
+						</xquery>
+					</servicePath>
+				</servicePaths>				
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:complexContent>
@@ -622,12 +670,63 @@
 	<xs:complexType name="xSchoolType">
 		<xs:annotation>
 			<xs:appinfo>
-				<services>
-					<path xpath="/xSchool[leaRefId={}]">xLeas/{}/xSchools</path>
-					<path>xStaffs/{}/xSchools</path>
-					<path>xStudents/{}/xSchools</path>
-					<path>xStudentContacts/{}/xSchools</path>
-				</services>
+				<servicePaths>					
+					<servicePath>
+						<path>xLeas/{}/xSchools</path>
+						<description>Returns information for all schools in the LEA specified.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							/xSchool[leaRefId="{}"]
+							]]>
+						</xquery>
+					</servicePath>
+					<servicePath>
+						<path>xStaffs/{}/xSchools</path>
+						<description>Returns information for all schools associated with the staff specified.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							for $staff in /xStaff[@refId="{}"]
+							for $school in /xSchool
+							where $school/@refId = $staff/primaryAssignment/schoolRefId or $school/@refId = $staff/otherAssignments/staffPersonAssignment/schoolRefId
+							return $school
+							]]>
+						</xquery>
+					</servicePath>
+					<servicePath>
+						<path>xStudents/{}/xSchools</path>
+						<description>Returns information for all schools in which the specified student is enrolled.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							for $student in /xStudent[@refId="{}"]
+							for $school in /xSchool
+							where $school/@refId = $student/enrollment/schoolRefId or $school/@refId = $student/otherEnrollments/enrollment/schoolRefId
+							return $school
+							]]>
+						</xquery>
+					</servicePath>
+					<servicePath>
+						<path>xContacts/{}/xSchools</path>
+						<description>Returns information for all schools associated with the contact specified.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							let $refIdList :=
+								for $contact in /xContact[@refId="{}"]
+								for $student in /xStudent
+								where $student/@refId = $contact/relationships/relationship/studentRefId
+								return $student/@refId
+							for $school in /xSchool
+							for $studentRefId in distinct-values($refIdList)
+							for $student in /xStudent[@refId = $studentRefId]
+							where $school/@refId = $student/enrollment/schoolRefId or $school/@refId = $student/otherEnrollments/enrollment/schoolRefId
+							return $school
+							]]>
+						</xquery>
+					</servicePath>
+				</servicePaths>
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:complexContent>
