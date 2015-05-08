@@ -12,47 +12,47 @@
 				<cedsId/>
 				<cedsURL/>
 				<servicePaths>
-					<service>
+					<servicePath>
 						<path>xLeas/{}/xStudents</path>
 						<description>Returns information for all students associated with their LEA.</description>
 						<xquery>
 							<![CDATA[
 							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
-							/xStudent[enrollment/leaRefId={}
+							/xStudent[enrollment/leaRefId="{}"]
 							]]>
 						</xquery>
-					</service>
-					<service>
+					</servicePath>
+					<servicePath>
 						<path>xSchools/{}/xStudents</path>
 						<description>Returns information for all students based on school enrollment.</description>
 						<xquery>
 							<![CDATA[
 							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
-							/xStudent[enrollment/schoolRefId={}]
+							/xStudent[enrollment/schoolRefId="{}"]
 							]]>
 						</xquery>
-					</service>
-					<service>
+					</servicePath>
+					<servicePath>
 						<path>xRosters/{}/xStudents</path>
 						<description>Returns information for all students present in a roster/section.</description>
 						<xquery>
 							<![CDATA[
 							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
 							(: The below line probably doesn't work! :)
-							/xStudent[@refId=/xRoster/students/studentReference/refId and /xRoster/@refId={}]
+							/xStudent[@refId=/xRoster/students/studentReference/refId and /xRoster/@refId="{}"]
 							]]>
 						</xquery>
-					</service>
-					<service>
+					</servicePath>
+					<servicePath>
 						<path>xStudentContacts/{}/xStudents</path>
 						<description>Returns information for all students related to a contact.</description>
 						<xquery>
 							<![CDATA[
 							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
-							/xStudent[studentContacts/contactPersonRefId={}]
+							/xStudent[studentContacts/contactPersonRefId="{}"]
 							]]>
 						</xquery>
-					</service>
+					</servicePath>
 				</servicePaths>
 			</xs:appinfo>
 			<xs:documentation></xs:documentation>
