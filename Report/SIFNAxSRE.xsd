@@ -117,10 +117,10 @@
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
-								<xs:element name="healthTests" minOccurs="0">
+								<xs:element name="screenings" minOccurs="0">
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="healthTest" type="sreHealthTestType" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:element name="screening" type="sreScreeningType" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
