@@ -2376,7 +2376,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="staffPersonReference" type="sPersonReferenceType">
-				<!-- resume here  ************ -->
+				<!-- resume here  ************ this is a test -->
 			</xs:element>
 			<xs:element name="teacherOfRecord" type="xs:boolean"/>
 			<xs:element name="percentResponsible" type="xs:decimal"/>
