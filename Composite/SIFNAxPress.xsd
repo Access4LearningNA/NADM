@@ -34,7 +34,7 @@
 					</servicePath>
 					<servicePath>
 						<path>xRosters/{}/xStudents</path>
-						<description>Returns information for all students present in a roster/section.</description>
+						<description>Returns information for all students present in a roster.</description>
 						<xquery>
 							<![CDATA[
 							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
@@ -269,7 +269,7 @@
 					</servicePath>
 					<servicePath>
 						<path>xRosters/{}/xStaffs</path>
-						<description>Returns information for all staff present in a roster/section.</description>
+						<description>Returns information for all staff present in a roster.</description>
 						<xquery>
 							<![CDATA[
 							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
@@ -839,9 +839,18 @@
 	<xs:complexType name="xCalendarType">
 		<xs:annotation>
 			<xs:appinfo>
-				<services>
-					<path xpath="/xCalendars[schoolRefId={}]">xSchools/{}/xCalendars</path>
-				</services>
+				<servicePathss>
+					<servicePath>
+						<path>xSchools/{}/xCalendars</path>
+						<description>Returns the calendar of sessions for a school by school year.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							/xCalendar[schoolRefId="{}"]
+							]]>
+						</xquery>
+					</servicePath>
+				</servicePathss>
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:complexContent>
@@ -888,13 +897,61 @@
 	<xs:complexType name="xRosterType">
 		<xs:annotation>
 			<xs:appinfo>
-				<services>
-					<path>xLeas/{}/xRosters</path>
-					<path xpath="/xRoster[primaryStaff/staffPersonReference/refId={} or otherStaff/otherStaff/staffPersonReference/refId={}]">xStaffs/{}/xRosters</path>
-					<path xpath="/xRoster[students/studentReferences/refId={}]">xStudents/{}/xRosters</path>
-					<path xpath="/xRoster[courseRefId={}]">xCourses/{}/xRosters</path>
-					<path xpath="/xRoster[sectionRefId={}]">xSections/{}/xRosters</path>
-				</services>
+				<servicePaths>
+					<servicePath>
+						<path>xLeas/{}/xRosters</path>
+						<description>Returns the rosters/sections in the specified LEA.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							for $school in /xSchool[leaRefId="{}"]
+							for $roster in /xRoster
+							where $roster/schoolRefId = $school/@refId
+							return $roster
+							]]>
+						</xquery>
+					</servicePath>
+					<servicePath>
+						<path>xStaffs/{}/xRosters</path>
+						<description>Returns the rosters/sections assigned to the given staff memeber.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							/xRoster[primaryStaff/staffPersonReference/refId="{}" or otherStaff/otherStaff/staffPersonReference/refId="{}"]
+							]]>
+						</xquery>
+					</servicePath>
+					<servicePath>
+						<path>xStudents/{}/xRosters</path>
+						<description>Returns the rosters/sections for which the specified student is enrolled.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							/xRoster[students/studentReference/refId="{}"]
+							]]>
+						</xquery>
+					</servicePath>
+					<servicePath>
+						<path>xCourses/{}/xRosters</path>
+						<description>Returns the rosters/sections of the specified course.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							/xRoster[courseRefId="{}"]
+							]]>
+						</xquery>
+					</servicePath>
+					<servicePath>
+						<path>xSections/{}/xRosters</path>
+						<description>Returns the rosters for a particular section.</description>
+						<xquery>
+							<![CDATA[
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							/xRoster[sectionRefId="{}"]
+							]]>
+						</xquery>
+					</servicePath>					
+				</servicePaths>
 			</xs:appinfo>
 		</xs:annotation>
 		<xs:complexContent>
