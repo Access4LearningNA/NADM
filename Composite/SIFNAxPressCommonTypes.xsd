@@ -391,7 +391,7 @@
 	</xs:simpleType>
 	<xs:complexType name="sPersonAddressType">
 		<xs:sequence>
-			<xs:element name="addressType" type="sAddressTypeForLearnerOrFamilyType">
+			<xs:element name="addressType" type="sAddressTypeForLearnerOrFamilyType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -402,7 +402,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="line1" type="xs:normalizedString">
+			<xs:element name="line1" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -413,7 +413,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="line2" type="xs:normalizedString">
+			<xs:element name="line2" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -424,7 +424,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="city" type="xs:normalizedString">
+			<xs:element name="city" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -435,7 +435,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="stateProvince" type="sStateCodeUSType">
+			<xs:element name="stateProvince" type="sStateCodeUSType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -446,7 +446,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="countryCode" type="sCountryCodeType">
+			<xs:element name="countryCode" type="sCountryCodeType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -457,7 +457,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="postalCode" type="xs:normalizedString">
+			<xs:element name="postalCode" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -697,7 +697,7 @@
 	</xs:simpleType>
 	<xs:complexType name="sDemographicsType">
 		<xs:sequence>
-			<xs:element name="raceList" type="sRaceListType">
+			<xs:element name="raceList" type="sRaceListType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -708,7 +708,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="hispanicLatinoEthnicity" type="xs:boolean">
+			<xs:element name="hispanicLatinoEthnicity" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<cedsId>000144</cedsId>
@@ -933,7 +933,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="responsibleSchoolType" type="sResponsibleSchoolTypeType">
+			<xs:element name="responsibleSchoolType" type="sResponsibleSchoolTypeType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -944,7 +944,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="membershipType" type="sMembershipTypeType" minOccurs="1">
+			<xs:element name="membershipType" type="sMembershipTypeType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -966,7 +966,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="exitDate" type="xs:date">
+			<xs:element name="exitDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -977,7 +977,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="homeRoomNumber" type="xs:token">
+			<xs:element name="homeRoomNumber" type="xs:token" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -992,7 +992,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="yearGroup" type="sGradeLevelType">
+			<xs:element name="yearGroup" type="sGradeLevelType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1007,7 +1007,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="projectedGraduationYear" type="xs:gYear">
+			<xs:element name="projectedGraduationYear" type="xs:gYear" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1069,7 +1069,7 @@
 			<xs:documentation/>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="cumulativeWeightedGpa" type="xs:decimal">
+			<xs:element name="cumulativeWeightedGpa" type="xs:decimal" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1080,7 +1080,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="termWeightedGpa" type="xs:decimal">
+			<xs:element name="termWeightedGpa" type="xs:decimal" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1091,7 +1091,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="classRank" type="xs:integer">
+			<xs:element name="classRank" type="xs:integer" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<cedsId>000041</cedsId>
@@ -1112,7 +1112,7 @@
 			<xs:documentation/>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="contactPersonRefId" type="gRefIdPointerType" maxOccurs="unbounded">
+			<xs:element name="contactPersonRefId" type="gRefIdPointerType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1687,7 +1687,7 @@
 			<xs:documentation/>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="language" type="sLanguageType" maxOccurs="unbounded">
+			<xs:element name="language" type="sLanguageType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1757,7 +1757,7 @@
 			<xs:documentation/>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="staffPersonAssignment" type="sStaffPersonAssignmentType" maxOccurs="unbounded">
+			<xs:element name="staffPersonAssignment" type="sStaffPersonAssignmentType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1866,7 +1866,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="restrictions" type="xs:string">
+			<xs:element name="restrictions" type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1877,7 +1877,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="livesWith" type="xs:boolean">
+			<xs:element name="livesWith" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1888,7 +1888,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="primaryContactIndicator" type="xs:boolean">
+			<xs:element name="primaryContactIndicator" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1899,7 +1899,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="emergencyContactIndicator" type="xs:boolean">
+			<xs:element name="emergencyContactIndicator" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1910,7 +1910,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="financialResponsibilityIndicator" type="xs:boolean">
+			<xs:element name="financialResponsibilityIndicator" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1924,7 +1924,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="custodialIndicator" type="xs:boolean">
+			<xs:element name="custodialIndicator" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1938,7 +1938,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="communicationsIndicator" type="xs:boolean">
+			<xs:element name="communicationsIndicator" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1952,7 +1952,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="contactSequence" type="xs:integer">
+			<xs:element name="contactSequence" type="xs:integer" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -1976,7 +1976,7 @@
 			<xs:documentation/>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="relationship" type="sContactStudentRelationshipType" maxOccurs="unbounded">
+			<xs:element name="relationship" type="sContactStudentRelationshipType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -2648,7 +2648,7 @@
 			<xs:documentation/>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="otherId" type="sOtherPersonIdType" maxOccurs="unbounded">
+			<xs:element name="otherId" type="sOtherPersonIdType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
