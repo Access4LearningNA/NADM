@@ -2376,23 +2376,73 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="staffPersonReference" type="sPersonReferenceType">
-				<!-- resume here  ************ this is a test -->
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
 			</xs:element>
-			<xs:element name="teacherOfRecord" type="xs:boolean"/>
-			<xs:element name="percentResponsible" type="xs:decimal"/>
+			<xs:element name="teacherOfRecord" type="xs:boolean">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="percentResponsible" type="xs:decimal">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="sStaffReferenceListType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="otherStaff" type="sStaffReferenceType" maxOccurs="unbounded"/>
+			<xs:element name="otherStaff" type="sStaffReferenceType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="sPersonNameTypeType">
 		<xs:annotation>
 			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
 				<cedsId>000634</cedsId>
 				<cedsURL>https://ceds.ed.gov/element/000634</cedsURL>
 			</xs:appinfo>
+			<xs:documentation/>
 		</xs:annotation>
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="Alias"/>
@@ -2407,11 +2457,32 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="sPersonNameType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="type" type="sPersonNameTypeType" minOccurs="0"/>
+			<xs:element name="type" type="sPersonNameTypeType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="prefix" type="xs:token" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
 						<cedsId>000212</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000212</cedsURL>
 					</xs:appinfo>
@@ -2421,6 +2492,8 @@
 			<xs:element name="familyName" type="xs:normalizedString" minOccurs="1">
 				<xs:annotation>
 					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
 						<cedsId>000172</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000172</cedsURL>
 					</xs:appinfo>
@@ -2430,6 +2503,8 @@
 			<xs:element name="givenName" type="xs:normalizedString">
 				<xs:annotation>
 					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
 						<cedsId>000115</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000115</cedsURL>
 					</xs:appinfo>
@@ -2439,6 +2514,8 @@
 			<xs:element name="middleName" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
 						<cedsId>000184</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000184</cedsURL>
 					</xs:appinfo>
@@ -2448,6 +2525,8 @@
 			<xs:element name="suffix" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
 						<cedsId>000121</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000121</cedsURL>
 					</xs:appinfo>
@@ -2457,19 +2536,50 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="sOtherPersonNameListType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="name" type="sPersonNameType" maxOccurs="unbounded"/>
+			<xs:element name="name" type="sPersonNameType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="sPersonIdType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
 		<xs:restriction base="xs:token"/>
 	</xs:simpleType>
 	<xs:simpleType name="sPersonIdSystemType">
 		<xs:annotation>
 			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
 				<cedsId>001571</cedsId>
 				<cedsURL>https://ceds.ed.gov/element/001571</cedsURL>
 			</xs:appinfo>
+			<xs:documentation/>
 		</xs:annotation>
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="Alias"/>
@@ -2493,31 +2603,85 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="sOtherPersonIdType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="type" type="sPersonIdSystemType"/>
-			<xs:element name="id" type="sPersonIdType"/>
+			<xs:element name="type" type="sPersonIdSystemType">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="id" type="sPersonIdType">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="sOtherPersonIdListType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="otherId" type="sOtherPersonIdType" maxOccurs="unbounded"/>
+			<xs:element name="otherId" type="sOtherPersonIdType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="sCourseIdType">
 		<xs:annotation>
 			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
 				<cedsId>000055</cedsId>
 				<cedsURL>https://ceds.ed.gov/element/000055</cedsURL>
 			</xs:appinfo>
+			<xs:documentation/>
 		</xs:annotation>
 		<xs:restriction base="xs:token"/>
 	</xs:simpleType>
 	<xs:simpleType name="sCourseCodeSystemType">
 		<xs:annotation>
 			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
 				<cedsId>000056</cedsId>
 				<cedsURL>https://ceds.ed.gov/element/000056</cedsURL>
 			</xs:appinfo>
+			<xs:documentation/>
 		</xs:annotation>
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="Intermediate"/>
@@ -2531,36 +2695,169 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="sOtherCourseIdType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="type" type="sCourseCodeSystemType"/>
-			<xs:element name="id" type="sCourseIdType"/>
+			<xs:element name="type" type="sCourseCodeSystemType">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="id" type="sCourseIdType">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="sOtherCourseIdListType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="otherId" type="sOtherCourseIdType" maxOccurs="unbounded"/>
+			<xs:element name="otherId" type="sOtherCourseIdType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="sYearGroupListType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="yearGroup" type="sGradeLevelType" maxOccurs="unbounded"/>
+			<xs:element name="yearGroup" type="sGradeLevelType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="sOtherOrganizationIdType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="type" type="sOrganizationIdentificationSystemType"/>
-			<xs:element name="id" type="xs:token"/>
+			<xs:element name="type" type="sOrganizationIdentificationSystemType">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="id" type="xs:token">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="sOtherOrganizationIdListType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="otherId" type="sOtherOrganizationIdType" maxOccurs="unbounded"/>
+			<xs:element name="otherId" type="sOtherOrganizationIdType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="sOrganizationIdType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
 		<xs:restriction base="xs:token"/>
 	</xs:simpleType>
 	<xs:simpleType name="sOrganizationIdentificationSystemType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+			</xs:appinfo>
+			<xs:documentation/>
+		</xs:annotation>
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="School"/>
 			<xs:enumeration value="ACT"/>
@@ -2578,20 +2875,28 @@
 	<xs:simpleType name="sSubjectType">
 		<xs:annotation>
 			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 				<sifMapping target="SIF" version="3.2">
 					<targetElement idType="XPath">course/subjectAreaList/subjectArea/code/otherCodeList/otherCode</targetElement>
 					<!-- CEDS does not have an informal concept for identifying a course subject; it uses SCED which is more rigorous than what is desired here -->
 				</sifMapping>
 			</xs:appinfo>
+			<xs:documentation/>
 		</xs:annotation>
 		<xs:restriction base="xs:token"/>
 	</xs:simpleType>
 	<xs:simpleType name="sSchoolYearType">
 		<xs:annotation>
 			<xs:appinfo>
+				<elementName/>
+				<sifChar/>
 				<cedsId>000243</cedsId>
 				<cedsURL>https://ceds.ed.gov/element/000243</cedsURL>
 			</xs:appinfo>
+			<xs:documentation/>
 		</xs:annotation>
 		<xs:restriction base="xs:gYear"/>
 	</xs:simpleType>
@@ -2601,66 +2906,66 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Time Table Day</elementName>
-						<sifChar></sifChar>
+						<sifChar/>
 						<cedsId>000523</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000523</cedsURL>
 					</xs:appinfo>
-					<xs:documentation></xs:documentation>
+					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="classMeetingDays" type="sDayListType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Class Meeting Days</elementName>
-						<sifChar></sifChar>
+						<sifChar/>
 						<cedsId>000521</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000521</cedsURL>
 					</xs:appinfo>
-					<xs:documentation></xs:documentation>
+					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="timeTablePeriod" type="xs:token" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Time Table Period</elementName>
-						<sifChar></sifChar>
+						<sifChar/>
 						<cedsId>000522</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000522</cedsURL>
 					</xs:appinfo>
-					<xs:documentation></xs:documentation>
+					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="roomNumber" type="xs:token" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Room Number</elementName>
-						<sifChar></sifChar>
+						<sifChar/>
 						<cedsId>000364</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000364</cedsURL>
 					</xs:appinfo>
-					<xs:documentation></xs:documentation>
+					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="classBeginningTime" type="xs:time" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Class Beginning Time</elementName>
-						<sifChar></sifChar>
+						<sifChar/>
 						<cedsId>000519</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000519</cedsURL>
 					</xs:appinfo>
-					<xs:documentation></xs:documentation>
+					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="classEndingTime" type="xs:time" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Class Ending Time</elementName>
-						<sifChar></sifChar>
+						<sifChar/>
 						<cedsId>000520</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000520</cedsURL>
 					</xs:appinfo>
-					<xs:documentation></xs:documentation>
+					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2676,7 +2981,17 @@
 			<xs:documentation/>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="meetingTime" type="sMeetingTimeType" maxOccurs="unbounded"/>
+			<xs:element name="meetingTime" type="sMeetingTimeType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar/>
+						<cedsId/>
+						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
