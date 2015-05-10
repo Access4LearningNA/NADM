@@ -462,7 +462,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="leaCourseId" type="sCourseIdType">
+					<xs:element name="leaCourseId" type="sCourseIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -495,7 +495,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="description" type="xs:normalizedString">
+					<xs:element name="description" type="xs:normalizedString" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Description</elementName>
@@ -506,7 +506,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="subject" type="sSubjectType">
+					<xs:element name="subject" type="sSubjectType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -517,7 +517,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="applicableEducationLevels" type="sApplicableEducationLevelListType">
+					<xs:element name="applicableEducationLevels" type="sApplicableEducationLevelListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -528,7 +528,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="scedCourseCode" type="xs:token">
+					<xs:element name="scedCourseCode" type="xs:token" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>SCED Course Code</elementName>
@@ -539,7 +539,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="scedCourseLevelCode" type="xs:token">
+					<xs:element name="scedCourseLevelCode" type="xs:token" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>SCED Course Level Code</elementName>
@@ -550,7 +550,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="scedCourseSubjectAreaCode" type="xs:token">
+					<xs:element name="scedCourseSubjectAreaCode" type="xs:token" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>SCED Course Subject Area Code</elementName>
@@ -581,7 +581,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="localId" type="sOrganizationIdType">
+					<xs:element name="localId" type="sOrganizationIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -592,7 +592,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="stateProvinceId" type="sOrganizationIdType">
+					<xs:element name="stateProvinceId" type="sOrganizationIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -603,7 +603,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherIds" type="sOtherOrganizationIdListType">
+					<xs:element name="otherIds" type="sOtherOrganizationIdListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -625,7 +625,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="yearGroups" type="sYearGroupListType">
+					<xs:element name="yearGroups" type="sYearGroupListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -636,7 +636,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="address" type="sOrganizationAddressType">
+					<xs:element name="address" type="sOrganizationAddressType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -647,7 +647,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="phoneNumber" type="sTelephoneType">
+					<xs:element name="phoneNumber" type="sTelephoneType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -658,7 +658,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherPhoneNumbers" type="sTelephoneListType">
+					<xs:element name="otherPhoneNumbers" type="sTelephoneListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -700,7 +700,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="sessions" type="sSessionListType">
+					<xs:element name="sessions" type="sSessionListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -720,7 +720,7 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
-					<xs:element name="courseRefId" type="gRefIdPointerType">
+					<xs:element name="courseRefId" type="gRefIdPointerType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -742,7 +742,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="sectionRefId" type="gRefIdPointerType">
+					<xs:element name="sectionRefId" type="gRefIdPointerType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -753,7 +753,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="subject" type="sSubjectType">
+					<xs:element name="subject" type="sSubjectType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -786,7 +786,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolYear" type="sSchoolYearType">
+					<xs:element name="schoolYear" type="sSchoolYearType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -797,7 +797,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="sessionCode" type="xs:token">
+					<xs:element name="sessionCode" type="xs:token" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Session Code</elementName>
@@ -808,7 +808,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolCalendarRefId" type="gRefIdPointerType">
+					<xs:element name="schoolCalendarRefId" type="gRefIdPointerType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -830,7 +830,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="students" type="sStudentReferenceListType">
+					<xs:element name="students" type="sStudentReferenceListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -841,7 +841,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="primaryStaff" type="sStaffReferenceType">
+					<xs:element name="primaryStaff" type="sStaffReferenceType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -852,7 +852,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherStaff" type="sStaffReferenceListType">
+					<xs:element name="otherStaffs" type="sStaffReferenceListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -872,7 +872,7 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
-					<xs:element name="localId" type="sOrganizationIdType">
+					<xs:element name="localId" type="sOrganizationIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -883,7 +883,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="leaRefId" type="gRefIdPointerType">
+					<xs:element name="leaRefId" type="gRefIdPointerType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -894,7 +894,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="stateProvinceId" type="sOrganizationIdType">
+					<xs:element name="stateProvinceId" type="sOrganizationIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -905,7 +905,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="ncesId" type="sOrganizationIdType">
+					<xs:element name="ncesId" type="sOrganizationIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -927,7 +927,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="address" type="sOrganizationAddressType">
+					<xs:element name="address" type="sOrganizationAddressType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Organization Address Type</elementName>
@@ -938,7 +938,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="phoneNumber" type="sTelephoneType">
+					<xs:element name="phoneNumber" type="sTelephoneType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -949,7 +949,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherPhoneNumbers" type="sTelephoneListType">
+					<xs:element name="otherPhoneNumbers" type="sTelephoneListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
