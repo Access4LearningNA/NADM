@@ -102,7 +102,7 @@
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
-							<xs:documentation>Other phone numbers for the student. </xs:documentation>
+							<xs:documentation>Other phone numbers for the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="email" type="sEmailType" minOccurs="0">
@@ -146,7 +146,7 @@
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
-							<xs:documentation>Current enrollment information for the student. </xs:documentation>
+							<xs:documentation>Current enrollment information for the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="otherEnrollments" type="sEnrollmentListType" minOccurs="0">
@@ -295,146 +295,6 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="xStaff" type="xStaffType"/>
-	<xs:complexType name="xContactType">
-		<xs:complexContent>
-			<xs:extension base="gSIF_CompositeType">
-				<xs:sequence>
-					<xs:element name="name" type="sPersonNameType">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Person Name</elementName>
-								<sifChar>R</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Name of the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="otherNames" type="sOtherPersonNameListType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Other Names</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Other names of the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="localId" type="sPersonIdType">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Local Id</elementName>
-								<sifChar>R</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="otherIds" type="sOtherPersonIdListType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Other Ids</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Other Ids of the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="address" type="sPersonAddressType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Address</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Address of the student.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="phoneNumber" type="sTelephoneType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Phone Number</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Phone number of the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="otherPhoneNumbers" type="sTelephoneListType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Other Phone Numbers</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Other phone numbers for the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="email" type="sEmailType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Email</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Email of the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="otherEmails" type="sEmailListType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Other Emails</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Other emails of the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="sex" type="sSexType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Sex</elementName>
-								<sifChar>O</sifChar>
-								<cedsId>000255</cedsId>
-								<cedsURL>https://ceds.ed.gov/element/000255</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>The concept describing the biological traits that distinguish the males and females of a species.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="employerType" type="sEmployerType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Employer Type</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>A code that defines the employer type.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="relationships" type="sContactStudentRelationshipListType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Contact Relationship List</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Relationships that this contact has with the student.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:element name="xContact" type="xContactType"/>
 	<xs:complexType name="xCourseType">
 		<xs:complexContent>
@@ -578,7 +438,7 @@
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
-							<xs:documentation>Refid of the LEA of which the school is a part. </xs:documentation>
+							<xs:documentation>Refid of the LEA of which the school is a part.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="localId" type="sOrganizationIdType" minOccurs="0">
