@@ -1138,6 +1138,17 @@
 							<xs:documentation>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="loginId" type="sLoginIdType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Login Id</elementName>
+								<sifChar>001170</sifChar>
+								<cedsId>R</cedsId>
+								<cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>The login identifier for the person.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="otherIds" type="sOtherPersonIdListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
@@ -3145,4 +3156,13 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:simpleType name="sLoginIdType">
+		<xs:annotation>
+			<xs:appinfo>
+				<cedsId>001170</cedsId>
+				<cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token"/>
+	</xs:simpleType>
 </xs:schema>
