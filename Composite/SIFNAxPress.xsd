@@ -9,23 +9,23 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
-					<xs:element name="name" type="sPersonNameType"/>
-					<xs:element name="otherNames" type="sOtherPersonNameListType"/>
-					<xs:element name="localId" type="sPersonIdType"/>
-					<xs:element name="stateProvinceId" type="sPersonIdType"/>
-					<xs:element name="loginId" type="sLoginIdType"/>
-					<xs:element name="otherIds" type="sOtherPersonIdListType"/>
-					<xs:element name="address" type="sPersonAddressType"/>
-					<xs:element name="phoneNumber" type="sTelephoneType"/>
-					<xs:element name="otherPhoneNumbers" type="sTelephoneListType"/>
-					<xs:element name="email" type="sEmailType"/>
-					<xs:element name="otherEmails" type="sEmailListType"/>
-					<xs:element name="demographics" type="sDemographicsType"/>
-					<xs:element name="enrollment" type="sEnrollmentType"/>
-					<xs:element name="otherEnrollments" type="sEnrollmentListType"/>
-					<xs:element name="academicSummary" type="sAcademicSummaryType"/>
-					<xs:element name="studentContacts" type="sStudentContactListType"/>
-					<xs:element name="languages" type="sLanguageListType"/>
+					<xs:element name="name" type="xPersonNameType"/>
+					<xs:element name="otherNames" type="xOtherPersonNameListType"/>
+					<xs:element name="localId" type="xPersonIdType"/>
+					<xs:element name="stateProvinceId" type="xPersonIdType"/>
+					<xs:element name="loginId" type="xLoginIdType"/>
+					<xs:element name="otherIds" type="xOtherPersonIdListType"/>
+					<xs:element name="address" type="xPersonAddressType"/>
+					<xs:element name="phoneNumber" type="xTelephoneType"/>
+					<xs:element name="otherPhoneNumbers" type="xTelephoneListType"/>
+					<xs:element name="email" type="xEmailType"/>
+					<xs:element name="otherEmails" type="xEmailListType"/>
+					<xs:element name="demographics" type="xDemographicsType"/>
+					<xs:element name="enrollment" type="xEnrollmentType"/>
+					<xs:element name="otherEnrollments" type="xEnrollmentListType"/>
+					<xs:element name="academicSummary" type="xAcademicSummaryType"/>
+					<xs:element name="studentContacts" type="xStudentContactListType"/>
+					<xs:element name="languages" type="xLanguageListType"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -35,15 +35,15 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
-					<xs:element name="name" type="sPersonNameType"/>
-					<xs:element name="localId" type="sPersonIdType"/>
-					<xs:element name="stateProvinceId" type="sPersonIdType" minOccurs="0"/>
-					<xs:element name="loginId" type="sLoginIdType"/>
-					<xs:element name="otherIds" type="sOtherPersonIdListType"/>
-					<xs:element name="sexus" type="sSexType"/>
-					<xs:element name="email" type="sEmailType"/>
-					<xs:element name="primaryAssignment" type="sStaffPersonAssignmentType"/>
-					<xs:element name="otherAssignments" type="sStaffPersonAssignmentListType"/>
+					<xs:element name="name" type="xPersonNameType"/>
+					<xs:element name="localId" type="xPersonIdType"/>
+					<xs:element name="stateProvinceId" type="xPersonIdType" minOccurs="0"/>
+					<xs:element name="loginId" type="xLoginIdType"/>
+					<xs:element name="otherIds" type="xOtherPersonIdListType"/>
+					<xs:element name="sexus" type="xSexType"/>
+					<xs:element name="email" type="xEmailType"/>
+					<xs:element name="primaryAssignment" type="xStaffPersonAssignmentType"/>
+					<xs:element name="otherAssignments" type="xStaffPersonAssignmentListType"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -55,9 +55,9 @@
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
 					<xs:element name="schoolRefId" type="gRefIdPointerType"/>
-					<xs:element name="schoolCourseId" type="sCourseIdType"/>
-					<xs:element name="leaCourseId" type="sCourseIdType"/>
-					<xs:element name="otherIds" type="sOtherCourseIdListType"/>
+					<xs:element name="schoolCourseId" type="xCourseIdType"/>
+					<xs:element name="leaCourseId" type="xCourseIdType"/>
+					<xs:element name="otherIds" type="xOtherCourseIdListType"/>
 					<xs:element name="courseTitle" type="xs:token">
 						<xs:annotation>
 							<xs:appinfo>
@@ -74,8 +74,8 @@
 							</xs:appinfo>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="subject" type="sSubjectType"/>
-					<xs:element name="applicableEducationLevels" type="sApplicableEducationLevelListType"/>
+					<xs:element name="subject" type="xSubjectType"/>
+					<xs:element name="applicableEducationLevels" type="xApplicableEducationLevelListType"/>
 					<xs:element name="scedCourseCode" type="xs:token">
 						<xs:annotation>
 							<xs:appinfo>
@@ -110,9 +110,9 @@
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
 					<xs:element name="leaRefId" type="gRefIdPointerType"/>
-					<xs:element name="localId" type="sOrganizationIdType"/>
-					<xs:element name="stateProvinceId" type="sOrganizationIdType"/>
-					<xs:element name="otherIds" type="sOtherOrganizationIdListType"/>
+					<xs:element name="localId" type="xOrganizationIdType"/>
+					<xs:element name="stateProvinceId" type="xOrganizationIdType"/>
+					<xs:element name="otherIds" type="xOtherOrganizationIdListType"/>
 					<xs:element name="schoolName" type="xs:string">
 						<xs:annotation>
 							<xs:appinfo>
@@ -121,10 +121,10 @@
 							</xs:appinfo>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="yearGroups" type="sYearGroupListType"/>
-					<xs:element name="address" type="sOrganizationAddressType"/>
-					<xs:element name="phoneNumber" type="sTelephoneType"/>
-					<xs:element name="otherPhoneNumbers" type="sTelephoneListType"/>
+					<xs:element name="yearGroups" type="xYearGroupListType"/>
+					<xs:element name="address" type="xOrganizationAddressType"/>
+					<xs:element name="phoneNumber" type="xTelephoneType"/>
+					<xs:element name="otherPhoneNumbers" type="xTelephoneListType"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -135,8 +135,8 @@
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
 					<xs:element name="schoolRefId" type="gRefIdPointerType"/>
-					<xs:element name="schoolYear" type="sSchoolYearType"/>
-					<xs:element name="sessions" type="sSessionListType"/>
+					<xs:element name="schoolYear" type="xSchoolYearType"/>
+					<xs:element name="sessions" type="xSessionListType"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -156,7 +156,7 @@
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="sectionRefId" type="gRefIdPointerType"/>
-					<xs:element name="subject" type="sSubjectType"/>
+					<xs:element name="subject" type="xSubjectType"/>
 					<xs:element name="schoolRefId" type="gRefIdPointerType"/>
 					<xs:element name="schoolSectionId" type="xs:token">
 						<xs:annotation>
@@ -166,7 +166,7 @@
 							</xs:appinfo>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolYear" type="sSchoolYearType"/>
+					<xs:element name="schoolYear" type="xSchoolYearType"/>
 					<xs:element name="sessionCode" type="xs:token">
 						<xs:annotation>
 							<xs:appinfo>
@@ -184,7 +184,7 @@
 							</xs:appinfo>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="classMeetingDays" type="sDayListType">
+					<xs:element name="classMeetingDays" type="xDayListType">
 						<xs:annotation>
 							<xs:appinfo>
 								<cedsId>000521</cedsId>
@@ -224,9 +224,9 @@
 							</xs:appinfo>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="students" type="sStudentReferenceListType"/>
-					<xs:element name="primaryStaff" type="sStaffReferenceType"/>
-					<xs:element name="otherStaff" type="sStaffReferenceListType"/>
+					<xs:element name="students" type="xStudentReferenceListType"/>
+					<xs:element name="primaryStaff" type="xStaffReferenceType"/>
+					<xs:element name="otherStaff" type="xStaffReferenceListType"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -236,10 +236,10 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
-					<xs:element name="localId" type="sOrganizationIdType"/>
+					<xs:element name="localId" type="xOrganizationIdType"/>
 					<xs:element name="leaRefId" type="gRefIdPointerType"/>
-					<xs:element name="stateProvinceId" type="sOrganizationIdType"/>
-					<xs:element name="ncesId" type="sOrganizationIdType"/>
+					<xs:element name="stateProvinceId" type="xOrganizationIdType"/>
+					<xs:element name="ncesId" type="xOrganizationIdType"/>
 					<xs:element name="leaName" type="xs:string">
 						<xs:annotation>
 							<xs:appinfo>
@@ -248,9 +248,9 @@
 							</xs:appinfo>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="address" type="sOrganizationAddressType"/>
-					<xs:element name="phoneNumber" type="sTelephoneType"/>
-					<xs:element name="otherPhoneNumbers" type="sTelephoneListType"/>
+					<xs:element name="address" type="xOrganizationAddressType"/>
+					<xs:element name="phoneNumber" type="xTelephoneType"/>
+					<xs:element name="otherPhoneNumbers" type="xTelephoneListType"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

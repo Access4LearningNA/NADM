@@ -10,7 +10,7 @@
           <xs:documentation>The school of instruction for this transcript term.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="schoolYear" type="sSchoolYearType" minOccurs="0">
+      <xs:element name="schoolYear" type="xSchoolYearType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>SchoolYear</elementName>
@@ -21,8 +21,8 @@
           <xs:documentation>The year for a reported school term/session.  For academic years that span a calendar year this is the four digit year-end. E.g. 2013 for 2012-2013.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="session" type="sSessionType" minOccurs="0"/>
-      <xs:element name="gradeLevel" type="sGradeLevelType" minOccurs="0">
+      <xs:element name="session" type="xSessionType" minOccurs="0"/>
+      <xs:element name="gradeLevel" type="xGradeLevelType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>GradeLevelWhenCourseTaken</elementName>
@@ -63,7 +63,7 @@
                           <xs:documentation>The number of credits a student earned for completing a given course.</xs:documentation>
                         </xs:annotation>
                       </xs:element>
-                      <xs:element name="creditTypeEarned" type="sCreditTypeEarnedType" minOccurs="0">
+                      <xs:element name="creditTypeEarned" type="xCreditTypeEarnedType" minOccurs="0">
                         <xs:annotation>
                           <xs:appinfo>
                             <elementName>CreditTypeEarned</elementName>
@@ -140,7 +140,7 @@
                           <xs:documentation>A unique number or alphanumeric code assigned to an institution by a school, school system, a state, or other agency or entity for a particular class-section.</xs:documentation>
                         </xs:annotation>
                       </xs:element>
-                      <xs:element name="courseLevelCharacteristic" type="sCourseLevelCharacteristicType" minOccurs="0">
+                      <xs:element name="courseLevelCharacteristic" type="xCourseLevelCharacteristicType" minOccurs="0">
                         <xs:annotation>
                           <xs:appinfo>
                             <sifChar>O</sifChar>
@@ -220,7 +220,7 @@
   </xs:complexType>
   <xs:complexType name="sreAcademicSummaryType">
     <xs:complexContent>
-      <xs:extension base="sAcademicSummaryType">
+      <xs:extension base="xAcademicSummaryType">
         <xs:sequence>
           <xs:element name="achievements" minOccurs="0">
             <xs:complexType>
@@ -418,7 +418,7 @@
   </xs:complexType>
   <xs:complexType name="sreSubjectAreaType">
     <xs:sequence>
-      <xs:element name="subjectArea" type="sCourseSubjectAreaType" minOccurs="0">
+      <xs:element name="subjectArea" type="xCourseSubjectAreaType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>SecondaryCourseSubjectArea</elementName>
@@ -490,7 +490,7 @@
           <xs:documentation>Date and time the assessment actually ended.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="studentGradeLevel" type="sGradeLevelType" minOccurs="0">
+      <xs:element name="studentGradeLevel" type="xGradeLevelType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>GradeLevelWhenAssessed</elementName>
@@ -550,7 +550,7 @@
   </xs:complexType>
   <xs:complexType name="sreAssessmentScoreSetType">
     <xs:sequence>
-      <xs:element name="assessmentGradeLevel" type="sGradeLevelType" minOccurs="0">
+      <xs:element name="assessmentGradeLevel" type="xGradeLevelType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>AssessmentLevelForWhichDesigned</elementName>
@@ -561,7 +561,7 @@
           <xs:documentation>The grade or level at which the student is to be tested. This element should be omitted unless the student is being tested out-of-level.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="academicSubject" type="sAcademicSubjectType" minOccurs="0">
+      <xs:element name="academicSubject" type="xAcademicSubjectType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>AssessmentAcademicSubject</elementName>
@@ -604,7 +604,7 @@
   </xs:complexType>
   <xs:complexType name="sreAssessmentScoreType">
     <xs:sequence>
-      <xs:element name="metric" type="sSubtestScoreMetricType" minOccurs="0">
+      <xs:element name="metric" type="xSubtestScoreMetricType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>AssessmentSubtestScoreMetricType</elementName>
@@ -631,7 +631,7 @@
   </xs:complexType>
   <xs:complexType name="sreAccommodationType">
     <xs:sequence>
-      <xs:element name="category" type="sAssessmentAccommodationCategory" minOccurs="0">
+      <xs:element name="category" type="xAssessmentAccommodationCategory" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>AssessmentAccommodationCategory</elementName>
@@ -642,7 +642,7 @@
           <xs:documentation/>
         </xs:annotation>
       </xs:element>
-      <xs:element name="type" type="sAssessmentAccommodationType" minOccurs="0">
+      <xs:element name="type" type="xAssessmentAccommodationType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>AssessmentAccommodationType</elementName>
@@ -746,7 +746,7 @@
           <xs:documentation>The year, month and day on which the person ceased to participate in a program.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="exitReason" type="sSpecialEducationExitReasonType" minOccurs="0">
+      <xs:element name="exitReason" type="xSpecialEducationExitReasonType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>SpecialEducationExitReason</elementName>
@@ -777,7 +777,7 @@
           </xs:appinfo>
         </xs:annotation>
       </xs:element>
-      <xs:element name="primaryDisability" type="sDisabilityType" minOccurs="0">
+      <xs:element name="primaryDisability" type="xDisabilityType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>PrimaryDisabilityType</elementName>
@@ -788,7 +788,7 @@
           <xs:documentation>The major or overriding disability condition that best describes a person's impairment.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="secondaryExceptionality" type="sDisabilityType" minOccurs="0">
+      <xs:element name="secondaryExceptionality" type="xDisabilityType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>PrimaryDisabilityType</elementName>
@@ -810,7 +810,7 @@
           <xs:documentation>The ratio between the hours of work expected in a special education capacity and the hours of work normally expected in a full-time placement in the same setting.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="ideaEnvironmentEarlyChildhoodType" type="sIdeaEnvironmentEarlyChildhoodType" minOccurs="0">
+      <xs:element name="ideaEnvironmentEarlyChildhoodType" type="xIdeaEnvironmentEarlyChildhoodType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>IDEAEducationalEnvironmentForEarlyChildhood</elementName>
@@ -843,7 +843,7 @@
   </xs:complexType>
   <xs:complexType name="sreSpecialEducationServiceType">
     <xs:sequence>
-      <xs:element name="ideaEnvironment" type="sIdeaEnvironmentSchoolAgeType" minOccurs="0">
+      <xs:element name="ideaEnvironment" type="xIdeaEnvironmentSchoolAgeType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>IDEA Educational Environment For School Age</elementName>
@@ -865,7 +865,7 @@
           <xs:documentation>A representation or characterization of the setting in which children ages 6 through 21, receive special education and related services.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="serviceType" type="sStudentSupportServiceType" minOccurs="0">
+      <xs:element name="serviceType" type="xStudentSupportServiceType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>StudentSupportServiceType</elementName>
@@ -984,7 +984,7 @@
           </xs:appinfo>
         </xs:annotation>
       </xs:element>
-      <xs:element name="gradeLevels" type="sYearGroupListType" nillable="true" minOccurs="0">
+      <xs:element name="gradeLevels" type="xYearGroupListType" nillable="true" minOccurs="0">
         <xs:annotation>
           <xs:documentation>Collection of grade levels applicable to this co-curricular or extra-curricular activity.</xs:documentation>
         </xs:annotation>
@@ -1079,7 +1079,7 @@
           <xs:documentation>An indication that students have Limited English Proficiency according to the definition in the Carl D. Perkins Career and Technical Education Act of 2006, which is "a secondary student, an adult, or an out-of-school youth, who has limited ability in speaking, reading, writing, or understanding English language, and (a) whose native language is a language other than English, or (b) who lives in a family or community environment in which a language other than English is the dominant language.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="title3AcountabilityProgressStatus" type="sTitle3AccountabilityProgressStatusType" minOccurs="0">
+      <xs:element name="title3AcountabilityProgressStatus" type="xTitle3AccountabilityProgressStatusType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>TitleIIIAccountabilityProgressStatus</elementName>
@@ -1205,7 +1205,7 @@
           <xs:documentation>Migrant Education Program Enrollment Date: The year, month and day on which the person began to participate in a program.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="enrollmentType" type="sMigrantEnrollmentType" minOccurs="0">
+      <xs:element name="enrollmentType" type="xMigrantEnrollmentType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>MigrantEducationProgramEnrollmentType</elementName>
@@ -1232,7 +1232,7 @@
   </xs:complexType>
   <xs:complexType name="sreFoodServiceType">
     <xs:sequence>
-      <xs:element name="eligibilityStatus" type="sFoodServiceEligibilityType" minOccurs="0">
+      <xs:element name="eligibilityStatus" type="xFoodServiceEligibilityType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>EligibilityStatusForSchoolFoodServicePrograms</elementName>
@@ -1243,7 +1243,7 @@
           <xs:documentation>An indication of a student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="enrollmentStatus" type="sFoodServiceEnrollmentType" minOccurs="0">
+      <xs:element name="enrollmentStatus" type="xFoodServiceEnrollmentType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>ParticipationInSchoolFoodServicePrograms</elementName>
@@ -1259,7 +1259,7 @@
   </xs:complexType>
   <xs:complexType name="sreImmunizationType">
     <xs:sequence>
-      <xs:element name="type" type="sImmunizationType" minOccurs="0">
+      <xs:element name="type" type="xImmunizationType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>ImmunizationType</elementName>
@@ -1324,7 +1324,7 @@
   </xs:complexType>
   <xs:complexType name="sreDisciplineIncidentType">
     <xs:sequence>
-      <xs:element name="incidentBehavior" type="sIncidentBehaviorType" minOccurs="0">
+      <xs:element name="incidentBehavior" type="xIncidentBehaviorType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>IncidentBehavior</elementName>
@@ -1357,7 +1357,7 @@
           <xs:documentation> The year, month and day on which the incident occurred.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="weaponType" type="sWeaponType" minOccurs="0">
+      <xs:element name="weaponType" type="xWeaponType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>WeaponType</elementName>
@@ -1389,7 +1389,7 @@
   </xs:complexType>
   <xs:complexType name="sreDisciplineActionType">
     <xs:sequence>
-      <xs:element name="actionCode" type="sDisciplinaryActionCodeType" minOccurs="0">
+      <xs:element name="actionCode" type="xDisciplinaryActionCodeType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>DisciplinaryActionTaken</elementName>
@@ -1451,7 +1451,7 @@
           <xs:documentation>The date of the scheduled or unscheduled event.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="dailyAttendanceStatus" type="sAttendanceStatusType" minOccurs="0">
+      <xs:element name="dailyAttendanceStatus" type="xAttendanceStatusType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <sifChar>O</sifChar>
@@ -1461,7 +1461,7 @@
           <xs:documentation>The status of a student's attendance during a given day while school is in session.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="attendanceEventType" type="sAttendanceEventType" minOccurs="0">
+      <xs:element name="attendanceEventType" type="xAttendanceEventType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <sifChar>O</sifChar>
@@ -1471,7 +1471,7 @@
           <xs:documentation>The type of attendance event.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="absentAttendanceCategory" type="sAbsentAttendanceCategoryType" minOccurs="0">
+      <xs:element name="absentAttendanceCategory" type="xAbsentAttendanceCategoryType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <sifChar>O</sifChar>
@@ -1481,7 +1481,7 @@
           <xs:documentation>The category that describes how the student spends his or her time not physically present on school grounds and not participating in instruction or instruction-related activities at an approved off-grounds location.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="presentAttendanceCategory" type="sPresentAttendanceCategoryType" minOccurs="0">
+      <xs:element name="presentAttendanceCategory" type="xPresentAttendanceCategoryType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <sifChar>O</sifChar>
@@ -1592,7 +1592,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:simpleType name="sIncidentBehaviorType" final="">
+  <xs:simpleType name="xIncidentBehaviorType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="04618">
         <xs:annotation>
@@ -1746,7 +1746,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sSubtestScoreMetricType" final="">
+  <xs:simpleType name="xSubtestScoreMetricType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="00512">
         <xs:annotation>
@@ -1900,7 +1900,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sWeaponType" final="">
+  <xs:simpleType name="xWeaponType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="Firearm" />
       <xs:enumeration value="Handgun" />
@@ -1919,7 +1919,7 @@
       <xs:enumeration value="Unknown" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sCreditTypeEarnedType" final="">
+  <xs:simpleType name="xCreditTypeEarnedType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="00585">
         <xs:annotation>
@@ -2003,7 +2003,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sCourseSubjectAreaType" final="">
+  <xs:simpleType name="xCourseSubjectAreaType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="01">
         <xs:annotation>
@@ -2117,7 +2117,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sImmunizationType" final="">
+  <xs:simpleType name="xImmunizationType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="HaemophilusInfluenzae" />
       <xs:enumeration value="HepatitisA" />
@@ -2139,7 +2139,7 @@
       <xs:enumeration value="ParentOptOut" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sDisabilityType" final="">
+  <xs:simpleType name="xDisabilityType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="AUT">
         <xs:annotation>
@@ -2208,7 +2208,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sDisciplinaryActionCodeType" final="">
+  <xs:simpleType name="xDisciplinaryActionCodeType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="03071">
         <xs:annotation>
@@ -2442,7 +2442,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sAttendanceEventType" final="">
+  <xs:simpleType name="xAttendanceEventType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="DailyAttendance">
         <xs:annotation>
@@ -2466,7 +2466,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sAttendanceStatusType" final="">
+  <xs:simpleType name="xAttendanceStatusType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="Present">
         <xs:annotation>
@@ -2495,7 +2495,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sPresentAttendanceCategoryType" final="">
+  <xs:simpleType name="xPresentAttendanceCategoryType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="13290">
         <xs:annotation>
@@ -2524,7 +2524,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sIdeaEnvironmentEarlyChildhoodType" final="">
+  <xs:simpleType name="xIdeaEnvironmentEarlyChildhoodType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="REC09YOTHLOC">
         <xs:annotation>
@@ -2573,7 +2573,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sIdeaEnvironmentSchoolAgeType" final="">
+  <xs:simpleType name="xIdeaEnvironmentSchoolAgeType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="RC80">
         <xs:annotation>
@@ -2617,7 +2617,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sStudentSupportServiceType" final="">
+  <xs:simpleType name="xStudentSupportServiceType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="00290">
         <xs:annotation>
@@ -2931,7 +2931,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sSpecialEducationExitReasonType" final="">
+  <xs:simpleType name="xSpecialEducationExitReasonType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="HighSchoolDiploma">
         <xs:annotation>
@@ -3015,7 +3015,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sTitle3AccountabilityProgressStatusType" final="">
+  <xs:simpleType name="xTitle3AccountabilityProgressStatusType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="PROGRESS">
         <xs:annotation>
@@ -3034,7 +3034,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sFoodServiceEnrollmentType" final="">
+  <xs:simpleType name="xFoodServiceEnrollmentType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="FreeBreakfast">
         <xs:annotation>
@@ -3113,7 +3113,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sFoodServiceEligibilityType" final="">
+  <xs:simpleType name="xFoodServiceEligibilityType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="Free">
         <xs:annotation>
@@ -3137,7 +3137,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sMigrantEnrollmentType" final="">
+  <xs:simpleType name="xMigrantEnrollmentType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="01">
         <xs:annotation>
@@ -3171,7 +3171,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sAssessmentAccommodationType" final="">
+  <xs:simpleType name="xAssessmentAccommodationType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="03513">
         <xs:annotation>
@@ -3665,7 +3665,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sAssessmentAccommodationCategory" final="">
+  <xs:simpleType name="xAssessmentAccommodationCategory" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="Scheduling">
         <xs:annotation>
@@ -3714,7 +3714,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sAbsentAttendanceCategoryType" final="">
+  <xs:simpleType name="xAbsentAttendanceCategoryType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="13297">
         <xs:annotation>
@@ -3773,7 +3773,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sAcademicSubjectType" final="">
+  <xs:simpleType name="xAcademicSubjectType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="13371">
         <xs:annotation>
@@ -3867,7 +3867,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="sCourseLevelCharacteristicType" final="">
+  <xs:simpleType name="xCourseLevelCharacteristicType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="00568">
         <xs:annotation>
