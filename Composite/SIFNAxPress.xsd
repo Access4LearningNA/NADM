@@ -814,7 +814,7 @@
 	<xs:complexType name="xLeaType">
 		<xs:annotation>
 			<xs:appinfo>
-				<elementName>xCourse Type</elementName>
+				<elementName>xLea Type</elementName>
 				<events>yes</events>
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
