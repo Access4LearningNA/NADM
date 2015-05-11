@@ -560,6 +560,14 @@
 					</xs:appinfo>
 				</xs:annotation>
 			</xs:element>
+      <xs:element name="countryOfBirth" type="xCountryCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:appinfo>
+            <cedsId>000050</cedsId>
+            <cedsURL>https://ceds.ed.gov/element/000050</cedsURL>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
 			<xs:element name="usCitizenshipStatus" type="gCitizenshipStatusType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -781,7 +789,7 @@
 		<xs:choice maxOccurs="unbounded">
 			<xs:element name="contactPersonRefId" type="gRefIdPointerType"/>
 			<xs:element name="xContact" type="xContactType"/>
-			<!-- included to support requirement for SRE to carry the full payload of the contact -->
+			<!-- included to support requirement for Sre to carry the full payload of the contact -->
 		</xs:choice>
 	</xs:complexType>
 	<xs:simpleType name="xLanguageCodeType">

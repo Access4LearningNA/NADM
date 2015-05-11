@@ -3,7 +3,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:include schemaLocation="../Entity/SIFNAxPressCommonTypes.xsd"/>
   <xs:include schemaLocation="../Composite/SIFNAxPress.xsd"/>
-  <xs:complexType name="sreTranscriptTermType">
+  <xs:complexType name="xTranscriptTermType">
     <xs:sequence>
       <xs:element name="school" type="xSchoolType" minOccurs="0">
         <xs:annotation>
@@ -158,13 +158,13 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:element name="academicSummary" type="sreAcademicSummaryType" minOccurs="0"/>
+      <xs:element name="academicSummary" type="xAcademicSummaryType" minOccurs="0"/>
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreCompetencyType">
+  <xs:complexType name="xCompetencyType">
     <xs:sequence>
-      <xs:element name="learningStandardItemURL" type="xs:anyURI">
+      <xs:element name="learningStandardItemUrl" type="xs:anyURI">
         <xs:annotation>
           <xs:appinfo>
             <elmentName>LearningStandardItemUrl</elmentName>
@@ -218,21 +218,21 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreAcademicSummaryType">
+  <xs:complexType name="xSreAcademicSummaryType">
     <xs:complexContent>
       <xs:extension base="xAcademicSummaryType">
         <xs:sequence>
           <xs:element name="achievements" minOccurs="0">
             <xs:complexType>
               <xs:sequence>
-                <xs:element name="achievement" type="sreAchievementType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="achievement" type="xAchievementType" minOccurs="0" maxOccurs="unbounded"/>
               </xs:sequence>
             </xs:complexType>
           </xs:element>
           <xs:element name="graduationRequirements" minOccurs="0">
             <xs:complexType>
               <xs:sequence>
-                <xs:element name="graduationRequirement" type="sreGraduationRequirementType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="graduationRequirement" type="xGraduationRequirementType" minOccurs="0" maxOccurs="unbounded"/>
               </xs:sequence>
             </xs:complexType>
           </xs:element>
@@ -247,7 +247,7 @@
               <xs:documentation>The scale of equivalents, if applicable, for grades awarded as indicators of performance in schoolwork. For example, numerical equivalents for letter grades used in determining a student's Grade Point Average (A=4, B=3, C=2, D=1 in a four-point system) or letter equivalents for percentage grades (90-100%=A, 80-90%=B, etc.).</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element name="termUnweightedGpa" type="xs:decimal" minOccurs="0">
+          <xs:element name="termGpa" type="xs:decimal" minOccurs="0">
             <xs:annotation>
               <xs:appinfo>
                 <elementName>GPAGivenSession</elementName>
@@ -255,10 +255,10 @@
                 <cedsId>000129</cedsId>
                 <cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3129</cedsURL>
               </xs:appinfo>
-              <xs:documentation>An unweighted measure of average performance in all courses taken by a person during a given term/session. This is obtained by dividing the total unweighted grade points received by the number of credits attempted for the same session.</xs:documentation>
+              <xs:documentation>An measure of average performance in all courses taken by a person during a given term/session. This is obtained by dividing the total unweighted grade points received by the number of credits attempted for the same session.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element name="cumulativeUnweightedGpa" type="xs:decimal" minOccurs="0">
+          <xs:element name="cumulativeGpa" type="xs:decimal" minOccurs="0">
             <xs:annotation>
               <xs:appinfo>
                 <elementName>GPACumulative</elementName>
@@ -267,6 +267,17 @@
                 <cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3128</cedsURL>
               </xs:appinfo>
               <xs:documentation>A measure of average performance in all courses taken by a person during his or her school career as determined for record-keeping purposes. This is obtained by dividing the unweighted total grade points received by the total number of credits attempted. This usually includes grade points received and credits attempted in his or her current school as well as those transferred from schools in which the person was previously enrolled.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="gpaType" type="xs:normalizedString" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <elementName></elementName>
+                <sifChar>O</sifChar>
+                <cedsId></cedsId>
+                <cedsURL></cedsURL>
+              </xs:appinfo>
+              <xs:documentation>A descrition of the GPA scale how it is totaled.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element name="termCreditsEarned" type="xs:decimal" minOccurs="0">
@@ -291,7 +302,7 @@
               <xs:documentation>The total number of credits a person attempts to earn by taking courses during a given term/session.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element name="cumulativeCreditsEarned" type="xs:decimal" minOccurs="0">
+          <xs:element name="totalCreditsEarned" type="xs:decimal" minOccurs="0">
             <xs:annotation>
               <xs:appinfo>
                 <elementName>NumberOfCreditsEarned</elementName>
@@ -302,7 +313,7 @@
               <xs:documentation>The cumulative number of credits a person earns by completing courses or examinations during his or her enrollment in the current school as well as those credits transferred from schools in which the person had been previously enrolled.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element name="cumulativeCreditsAttempted" type="xs:decimal" minOccurs="0">
+          <xs:element name="totalCreditsAttempted" type="xs:decimal" minOccurs="0">
             <xs:annotation>
               <xs:appinfo>
                 <elementName>NumberOfCreditsAttempted</elementName>
@@ -313,7 +324,7 @@
               <xs:documentation>The cumulative number of credits a person attempts to earn by taking courses during his or her enrollment in the current school as well as those credits transferred from schools in which the person had been previously enrolled.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element name="classRankTotalNumber" type="xs:unsignedInt" minOccurs="0">
+          <xs:element name="classTotalNumber" type="xs:unsignedInt" minOccurs="0">
             <xs:annotation>
               <xs:appinfo>
                 <elementName>TotalNumberInClass</elementName>
@@ -329,14 +340,14 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="sreAchievementType">
+  <xs:complexType name="xAchievementType">
     <xs:sequence>
       <xs:element name="school" type="xSchoolType">
         <xs:annotation>
           <xs:documentation>The school where the achievement was earned.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="achievementCategory" type="xs:token" minOccurs="0">
+      <xs:element name="category" type="xs:token" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>AchievementCategoryType</elementName>
@@ -372,7 +383,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreGraduationRequirementType">
+  <xs:complexType name="xGraduationRequirementType">
     <xs:sequence>
       <xs:element name="programOfFocus" type="xs:token" minOccurs="0">
         <xs:annotation>
@@ -400,7 +411,7 @@
       <xs:element name="subjectAreas" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="subjectArea" type="sreSubjectAreaType" maxOccurs="unbounded">
+            <xs:element name="subjectArea" type="xSubjectAreaType" maxOccurs="unbounded">
               <xs:annotation>
                 <xs:appinfo>
                   <elementName/>
@@ -416,7 +427,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreSubjectAreaType">
+  <xs:complexType name="xSubjectAreaType">
     <xs:sequence>
       <xs:element name="subjectArea" type="xCourseSubjectAreaType" minOccurs="0">
         <xs:annotation>
@@ -455,7 +466,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreAssessmentType">
+  <xs:complexType name="xAssessmentType">
     <xs:sequence>
       <xs:element name="name" type="xs:normalizedString" minOccurs="0">
         <xs:annotation>
@@ -468,7 +479,7 @@
           <xs:documentation>The title or name of the assessment.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="startDateTime" type="xs:dateTime" minOccurs="0">
+      <xs:element name="actualStartDateTime" type="xs:dateTime" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>AssessmentSessionActualStartDateTime</elementName>
@@ -479,7 +490,7 @@
           <xs:documentation>Date and time the assessment actually began.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="finishDateTime" type="xs:dateTime" minOccurs="0">
+      <xs:element name="actualEndDateTime" type="xs:dateTime" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>AssessmentSessionActualEndDateTime</elementName>
@@ -515,7 +526,7 @@
       <xs:element name="accommodations" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="accommodation" type="sreAccommodationType" maxOccurs="unbounded">
+            <xs:element name="accommodation" type="xAccommodationType" maxOccurs="unbounded">
               <xs:annotation>
                 <xs:appinfo>
                   <elementName/>
@@ -532,7 +543,7 @@
       <xs:element name="scoreSets" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="scoreSet" type="sreAssessmentScoreSetType" maxOccurs="unbounded">
+            <xs:element name="scoreSet" type="xAssessmentScoreSetType" maxOccurs="unbounded">
               <xs:annotation>
                 <xs:appinfo>
                   <elementName/>
@@ -548,7 +559,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreAssessmentScoreSetType">
+  <xs:complexType name="xAssessmentScoreSetType">
     <xs:sequence>
       <xs:element name="assessmentGradeLevel" type="xGradeLevelType" minOccurs="0">
         <xs:annotation>
@@ -561,7 +572,7 @@
           <xs:documentation>The grade or level at which the student is to be tested. This element should be omitted unless the student is being tested out-of-level.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="academicSubject" type="xAcademicSubjectType" minOccurs="0">
+      <xs:element name="subTestSubjectArea" type="xAcademicSubjectType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>AssessmentAcademicSubject</elementName>
@@ -586,7 +597,7 @@
       <xs:element name="scores" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="score" type="sreAssessmentScoreType" maxOccurs="unbounded">
+            <xs:element name="score" type="xAssessmentScoreType" maxOccurs="unbounded">
               <xs:annotation>
                 <xs:appinfo>
                   <elementName/>
@@ -602,7 +613,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreAssessmentScoreType">
+  <xs:complexType name="xAssessmentScoreType">
     <xs:sequence>
       <xs:element name="metric" type="xSubtestScoreMetricType" minOccurs="0">
         <xs:annotation>
@@ -629,7 +640,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreAccommodationType">
+  <xs:complexType name="xAccommodationType">
     <xs:sequence>
       <xs:element name="category" type="xAssessmentAccommodationCategory" minOccurs="0">
         <xs:annotation>
@@ -667,7 +678,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreSpecialEducationType">
+  <xs:complexType name="xSpecialEducationType">
     <xs:sequence>
       <xs:element name="schoolYear" type="xs:gYear" minOccurs="0">
         <xs:annotation>
@@ -777,27 +788,54 @@
           </xs:appinfo>
         </xs:annotation>
       </xs:element>
-      <xs:element name="primaryDisability" type="xDisabilityType" minOccurs="0">
+      <xs:element name="disabilityStatus" type="gYesNoUnknownType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
-            <elementName>PrimaryDisabilityType</elementName>
+            <elementName>DisabilityStatus</elementName>
             <sifChar>O</sifChar>
-            <cedsId>000218</cedsId>
-            <cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3218</cedsURL>
+            <cedsId>000577</cedsId>
+            <cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24884</cedsURL>
           </xs:appinfo>
-          <xs:documentation>The major or overriding disability condition that best describes a person's impairment.</xs:documentation>
+          <xs:documentation>An indication of whether a person is classified as disabled under the American's with Disability Act (ADA).</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="secondaryExceptionality" type="xDisabilityType" minOccurs="0">
+      <xs:element name="section504Status" type="gYesNoUnknownType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
-            <elementName>PrimaryDisabilityType</elementName>
+            <elementName>Section504Status</elementName>
             <sifChar>O</sifChar>
-            <cedsId>000218</cedsId>
-            <cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3218</cedsURL>
+            <cedsId>000249</cedsId>
+            <cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24810</cedsURL>
           </xs:appinfo>
-          <xs:documentation>A minor or underriding disability condition that best describes a person's impairment.</xs:documentation>
+          <xs:documentation>Individuals with disabilities who are being provided with related aids and services under Section 504 of the Rehabilitation Act of 1973, as amended.</xs:documentation>
         </xs:annotation>
+      </xs:element>
+      <xs:element name="awaitingInitialIdeaEvaluation" type="gYesNoUnknownType" minOccurs="0">
+        <xs:annotation>
+          <xs:appinfo>
+            <elementName>AwaitingInitialIDEAEvaluationStatus</elementName>
+            <sifChar>O</sifChar>
+            <cedsId>000031</cedsId>
+            <cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=23994</cedsURL>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="disabilities" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="disability" type="xDisabilityType" minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:appinfo>
+                  <elementName>PrimaryDisabilityType</elementName>
+                  <sifChar>O</sifChar>
+                  <cedsId>000218</cedsId>
+                  <cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3218</cedsURL>
+                </xs:appinfo>
+                <xs:documentation>The major or overriding disability condition that best describes a person's impairment.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
       </xs:element>
       <xs:element name="fteRatio" type="xs:decimal" minOccurs="0">
         <xs:annotation>
@@ -810,22 +848,10 @@
           <xs:documentation>The ratio between the hours of work expected in a special education capacity and the hours of work normally expected in a full-time placement in the same setting.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="ideaEnvironmentEarlyChildhoodType" type="xIdeaEnvironmentEarlyChildhoodType" minOccurs="0">
-        <xs:annotation>
-          <xs:appinfo>
-            <elementName>IDEAEducationalEnvironmentForEarlyChildhood</elementName>
-            <sifChar>O</sifChar>
-            <cedsId>000559</cedsId>
-            <cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3550</cedsURL>
-          </xs:appinfo>
-          <xs:documentation>The program in which children ages 3 through 5 attend and in which these children receive special education and related services.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <!--xs:element name="services" minOccurs="0"-->
       <xs:element name="services" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="service" type="sreSpecialEducationServiceType" minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="service" type="xSpecialEducationServiceType" minOccurs="0" maxOccurs="unbounded">
               <xs:annotation>
                 <xs:appinfo>
                   <elementName/>
@@ -841,20 +867,31 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreSpecialEducationServiceType">
+  <xs:complexType name="xSpecialEducationServiceType">
     <xs:sequence>
-      <xs:element name="ideaEnvironment" type="xIdeaEnvironmentSchoolAgeType" minOccurs="0">
+      <xs:element name="ideaIndicator" type="gYesNoUnknownType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
-            <elementName>IDEA Educational Environment For School Age</elementName>
+            <elementName>IDEAIndicator</elementName>
             <sifChar>O</sifChar>
             <cedsId>000535</cedsId>
             <cedsURL/>
           </xs:appinfo>
+          <xs:documentation>A person having intellectual disability; hearing impairment, including deafness; speech or language impairment; visual impairment, including blindness; serious emotional disturbance (hereafter referred to as emotional disturbance); orthopedic impairment; autism; traumatic brain injury; developmental delay; other health impairment; specific learning disability; deaf-blindness; or multiple disabilities and who, by reason thereof, receive special education and related services under the Individuals with Disabilities Education Act (IDEA) according to an Individualized Education Program (IEP), Individual Family Service Plan (IFSP), or service plan.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ideaEnvironmentEarlyChildhood" type="xIdeaEnvironmentSchoolAgeType" minOccurs="0">
+        <xs:annotation>
+          <xs:appinfo>
+            <elementName>IDEAEducationalEnvironmentForEarlyChildhood</elementName>
+            <sifChar>O</sifChar>
+            <cedsId>000559</cedsId>
+            <cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=23660 </cedsURL>
+          </xs:appinfo>
           <xs:documentation>The setting in which children ages 6 through 21, receive special education and related services.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="serviceSettingDescription" type="xs:string" minOccurs="0">
+      <xs:element name="ideaEnvironmentSchoolAge" type="xs:string" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>IDEAEducationalEnvironmentForSchoolAge</elementName>
@@ -956,7 +993,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreActivityType">
+  <xs:complexType name="xActivityType">
     <xs:sequence>
       <xs:element name="title" type="xs:normalizedString" minOccurs="0">
         <xs:annotation>
@@ -1055,7 +1092,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreLepType">
+  <xs:complexType name="xLepType">
     <xs:sequence>
       <xs:element name="lepStatus" type="gYesNoUnknownType" minOccurs="0">
         <xs:annotation>
@@ -1068,7 +1105,7 @@
           <xs:documentation>Used to indicate persons (A) who are ages 3 through 21; (B) who are enrolled or preparing to enroll in an elementary school or a secondary school; (C ) (who are I, ii, or iii) (i) who were not born in the United States or whose native languages are languages other than English; (ii) (who are I and II) (I) who are a Native American or Alaska Native, or a native resident of the outlying areas; and (II) who come from an environment where languages other than English have a significant impact on their level of language proficiency; or (iii) who are migratory, whose native languages are languages other than English, and who come from an environment where languages other than English are dominant; and (D) whose difficulties in speaking, reading, writing, or understanding the English language may be sufficient to deny the individuals (who are denied I or ii or iii) (i) the ability to meet the state's proficient level of achievement on state assessments described in section 1111(b)(3); (ii) the ability to successfully achieve in classrooms where the language of instruction is English; or (iii) the opportunity to participate fully in society.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="perkinsLEPStatus" type="gYesNoUnknownType" minOccurs="0">
+      <xs:element name="perkinsLepStatus" type="gYesNoUnknownType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>PerkinsLEPStatus</elementName>
@@ -1090,7 +1127,7 @@
           <xs:documentation>An indication of the progress made by a student toward English proficiency.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="title3LEPParticipationStatus" type="gYesNoUnknownType" minOccurs="0">
+      <xs:element name="title3LepParticipationStatus" type="gYesNoUnknownType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>TitleIIILEPParticipationStatus</elementName>
@@ -1101,7 +1138,7 @@
           <xs:documentation>An indication that a limited English proficient (LEP) student is served by an English language instruction educational program supported with Title III of ESEA funds.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="participationStartDate" type="xs:date" minOccurs="0">
+      <xs:element name="entryDate" type="xs:date" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>ProgramParticipationStartDate</elementName>
@@ -1137,7 +1174,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreMigrantType">
+  <xs:complexType name="xMigrantType">
     <xs:sequence>
       <xs:element name="lastQualifyingMoveDate" type="xs:date" minOccurs="0">
         <xs:annotation>
@@ -1230,7 +1267,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreFoodServiceType">
+  <xs:complexType name="xFoodServiceType">
     <xs:sequence>
       <xs:element name="eligibilityStatus" type="xFoodServiceEligibilityType" minOccurs="0">
         <xs:annotation>
@@ -1257,9 +1294,9 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreImmunizationType">
+  <xs:complexType name="xImmunizationType">
     <xs:sequence>
-      <xs:element name="type" type="xImmunizationType" minOccurs="0">
+      <xs:element name="immunizationType" type="xImmunizationTypeType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>ImmunizationType</elementName>
@@ -1270,7 +1307,7 @@
           <xs:documentation>An indication of the type of immunization that an individual has satisfactorily received. (Note: The International Classification of Diseases (ICD) is maintained by the World Health Organization. The ICD is revised periodically to incorporate changes in the medical field, the most updated and detailed list of International Statistical Classification of Diseases and Related Health Problems can be found at http://www.who.int/classifications/apps/icd/icd10online).</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="date" type="xs:date" minOccurs="0">
+      <xs:element name="immunizationDate" type="xs:date" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>ImmunizationDate</elementName>
@@ -1284,7 +1321,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreScreeningType">
+  <xs:complexType name="xScreeningType">
     <xs:sequence>
       <xs:element name="type" type="gLaxCodedElementType" minOccurs="0">
         <xs:annotation>
@@ -1308,7 +1345,7 @@
           <xs:documentation>The year, month and day the person received the medical or health-related test.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="result" type="xs:string" minOccurs="0">
+      <xs:element name="status" type="xScreeningStatus" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName/>
@@ -1322,9 +1359,9 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreDisciplineIncidentType">
+  <xs:complexType name="xDisciplineIncidentType">
     <xs:sequence>
-      <xs:element name="incidentBehavior" type="xIncidentBehaviorType" minOccurs="0">
+      <xs:element name="incidentCategory" type="xIncidentBehaviorType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>IncidentBehavior</elementName>
@@ -1357,6 +1394,17 @@
           <xs:documentation> The year, month and day on which the incident occurred.</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="incidentTime" type="xs:time" minOccurs="0">
+        <xs:annotation>
+          <xs:appinfo>
+            <elementName>IncidentTime</elementName>
+            <sifChar>O</sifChar>
+            <cedsId>000503</cedsId>
+            <cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24043</cedsURL>
+          </xs:appinfo>
+          <xs:documentation>An indication of the time of day the incident took place.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="weaponType" type="xWeaponType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
@@ -1371,7 +1419,7 @@
       <xs:element name="actions" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="action" type="sreDisciplineActionType" maxOccurs="unbounded">
+            <xs:element name="action" type="xDisciplineActionType" maxOccurs="unbounded">
               <xs:annotation>
                 <xs:appinfo>
                   <elementName/>
@@ -1387,9 +1435,9 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreDisciplineActionType">
+  <xs:complexType name="xDisciplineActionType">
     <xs:sequence>
-      <xs:element name="actionCode" type="xDisciplinaryActionCodeType" minOccurs="0">
+      <xs:element name="code" type="xDisciplinaryActionCodeType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>DisciplinaryActionTaken</elementName>
@@ -1400,7 +1448,7 @@
           <xs:documentation>( Disciplinary Action Taken) Identifies the consequences of an incident for the student(s) involved in an incident as perpetrator(s).</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="actionStartDate" type="xs:date" minOccurs="0">
+      <xs:element name="startDate" type="xs:date" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>DisciplinaryActionStartDate</elementName>
@@ -1411,7 +1459,7 @@
           <xs:documentation>( Disciplinary Action Start Date) The year, month and day on which a discipline action begins.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="actionEndDate" type="xs:date" minOccurs="0">
+      <xs:element name="endDate" type="xs:date" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName/>
@@ -1422,7 +1470,7 @@
           <xs:documentation>( Disciplinary Action End Date) The year, month and day on which a discipline action ends.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="actionDuration" type="xs:decimal" minOccurs="0">
+      <xs:element name="duration" type="xs:decimal" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName/>
@@ -1437,7 +1485,7 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreAttendanceEventType">
+  <xs:complexType name="xAttendanceEventType">
     <xs:sequence>
       <xs:element name="school" type="xSchoolType" minOccurs="0"/>
       <xs:element name="calendarEventDate" type="xs:string" minOccurs="0">
@@ -1461,7 +1509,7 @@
           <xs:documentation>The status of a student's attendance during a given day while school is in session.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="attendanceEventType" type="xAttendanceEventType" minOccurs="0">
+      <xs:element name="attendanceEventType" type="xAttendanceEventTypeType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <sifChar>O</sifChar>
@@ -1491,7 +1539,7 @@
           <xs:documentation>The category that describes how the student spends his or her time when attending an instructional program approved by the state and/or school.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="attendanceAmount" type="xs:decimal" minOccurs="0">
+      <xs:element name="attendanceValue" type="xs:decimal" minOccurs="0">
         <xs:annotation>
           <xs:documentation>A percentage representing the amount of time for this event. For example, if the student was in attendance for half of the day, this value would be 0.5.</xs:documentation>
         </xs:annotation>
@@ -1499,11 +1547,29 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreAttendanceSummaryType">
+  <xs:complexType name="xAttendanceSummaryType">
     <xs:sequence>
       <xs:element name="school" type="xSchoolType" minOccurs="0"/>
-      <xs:element name="startDate" minOccurs="0"/>
-      <xs:element name="endDate" minOccurs="0"/>
+      <xs:element name="startDate" minOccurs="0">
+        <xs:annotation>
+          <xs:appinfo>
+            <sifChar>O</sifChar>
+            <cedsId></cedsId>
+            <cedsURL></cedsURL>
+          </xs:appinfo>
+          <xs:documentation>The starting date for the presented attendance reporting period.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="endDate" minOccurs="0">
+        <xs:annotation>
+          <xs:appinfo>
+            <sifChar>O</sifChar>
+            <cedsId></cedsId>
+            <cedsURL></cedsURL>
+          </xs:appinfo>
+          <xs:documentation>The ending date for the presented attendance reporting period.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="daysInAttendance" type="xs:string" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
@@ -1537,9 +1603,9 @@
       <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="sreProgramSummaryType">
+  <xs:complexType name="xProgramSummaryType">
     <xs:sequence>
-      <xs:element name="specialEducation" type="sreSpecialEducationType" minOccurs="0">
+      <xs:element name="specialEducation" type="xSpecialEducationType" minOccurs="0">
         <xs:annotation>
           <xs:documentation>Special education information, including eligibility, placement, and services.</xs:documentation>
         </xs:annotation>
@@ -1547,12 +1613,12 @@
       <xs:element name="activities" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="activity" type="sreActivityType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="activity" type="xActivityType" minOccurs="0" maxOccurs="unbounded"/>
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:element name="lep" type="sreLepType" minOccurs="0"/>
-      <xs:element name="migrant" type="sreMigrantType" minOccurs="0"/>
+      <xs:element name="lep" type="xLepType" minOccurs="0"/>
+      <xs:element name="migrant" type="xMigrantType" minOccurs="0"/>
       <xs:element name="homeless" type="gYesNoUnknownType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
@@ -1564,7 +1630,7 @@
           <xs:documentation>Homeless Servicesd Indicator: An indication of whether homeless children and youth were served by a McKinney-Vento program in the state.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="foodService" type="sreFoodServiceType" minOccurs="0">
+      <xs:element name="foodService" type="xFoodServiceType" minOccurs="0">
         <xs:annotation>
           <xs:appinfo>
             <elementName>EligibilityStatusForSchoolFoodServicePrograms</elementName>
@@ -2117,7 +2183,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="xImmunizationType" final="">
+  <xs:simpleType name="xImmunizationTypeType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="HaemophilusInfluenzae" />
       <xs:enumeration value="HepatitisA" />
@@ -2442,7 +2508,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  <xs:simpleType name="xAttendanceEventType" final="">
+  <xs:simpleType name="xAttendanceEventTypeType" final="">
     <xs:restriction base="xs:token">
       <xs:enumeration value="DailyAttendance">
         <xs:annotation>
@@ -3710,6 +3776,20 @@
       <xs:enumeration value="Other">
         <xs:annotation>
           <xs:appinfo>Other</xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="xScreeningStatus" final="">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="Passed">
+        <xs:annotation>
+          <xs:appinfo>Passed</xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FurtherEvaluation">
+        <xs:annotation>
+          <xs:appinfo>Further Evaluation Needed</xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
