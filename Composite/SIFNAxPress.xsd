@@ -275,7 +275,7 @@
 							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
 							for $roster in /xRoster[@refId="{}"]
 							for $staff in /xStaff
-							where $staff/@refId = $roster/primaryStaff/staffPersonReference/refId or $staff/@refId = $roster/otherStaff/otherStaff/staffPersonReference/refId
+							where $staff/@refId = $roster/primaryStaff/staffPersonReference/refId or $staff/@refId = $roster/otherStaffs/otherStaff/staffPersonReference/refId
 							return $staff
 							]]>
 						</xquery>
@@ -289,7 +289,7 @@
 							let $refIdList := 
 							    for $roster in /xRoster[students/studentReference/refId="{}"]
 							    for $staff in /xStaff
-							    where $staff/@refId = $roster/primaryStaff/staffPersonReference/refId or $staff/@refId = $roster/otherStaff/otherStaff/staffPersonReference/refId
+							    where $staff/@refId = $roster/primaryStaff/staffPersonReference/refId or $staff/@refId = $roster/otherStaffs/otherStaff/staffPersonReference/refId
 							    return $staff/@refId
 							for $staff in /xStaff
 							for $staffRefId in distinct-values($refIdList)
@@ -917,7 +917,7 @@
 						<xquery>
 							<![CDATA[
 							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
-							/xRoster[primaryStaff/staffPersonReference/refId="{}" or otherStaff/otherStaff/staffPersonReference/refId="{}"]
+							/xRoster[primaryStaff/staffPersonReference/refId="{}" or otherStaffs/otherStaff/staffPersonReference/refId="{}"]
 							]]>
 						</xquery>
 					</servicePath>
