@@ -2470,10 +2470,10 @@
 			<xs:element name="type" type="sPersonNameTypeType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
+						<elementName>Person Name Type</elementName>
 						<sifChar/>
-						<cedsId/>
-						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+						<cedsId>000634</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000634 </cedsURL>
 					</xs:appinfo>
 					<xs:documentation/>
 				</xs:annotation>
@@ -2540,7 +2540,7 @@
 			<xs:appinfo>
 				<elementName/>
 				<sifChar/>
-				<cedsId/>
+				<cedsId></cedsId>
 				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 			</xs:appinfo>
 			<xs:documentation/>
@@ -2551,8 +2551,8 @@
 					<xs:appinfo>
 						<elementName/>
 						<sifChar/>
-						<cedsId/>
-						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+						<cedsId>000634</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000634</cedsURL>
 					</xs:appinfo>
 					<xs:documentation/>
 				</xs:annotation>

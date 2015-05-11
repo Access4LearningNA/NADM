@@ -20,19 +20,19 @@
 					<xs:element name="name" type="sPersonNameType">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Name</elementName>
+								<sifChar>R</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
-							<xs:documentation/>
+							<xs:documentation>Name of Student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="otherNames" type="sOtherPersonNameListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Other Names of Student</elementName>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -42,10 +42,10 @@
 					<xs:element name="localId" type="sPersonIdType">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+								<elementName>Local Id</elementName>
+								<sifChar>001071</sifChar>
+								<cedsId>R</cedsId>
+								<cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
 							</xs:appinfo>
 							<xs:documentation/>
 						</xs:annotation>
@@ -53,10 +53,10 @@
 					<xs:element name="stateProvinceId" type="sPersonIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+								<elementName>State-Province Id</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>001071</cedsId>
+								<cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
 							</xs:appinfo>
 							<xs:documentation/>
 						</xs:annotation>
@@ -64,8 +64,8 @@
 					<xs:element name="otherIds" type="sOtherPersonIdListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Other Ids</elementName>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -75,8 +75,8 @@
 					<xs:element name="address" type="sPersonAddressType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Address</elementName>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -86,8 +86,8 @@
 					<xs:element name="phoneNumber" type="sTelephoneType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Phone Number</elementName>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -97,8 +97,8 @@
 					<xs:element name="otherPhoneNumbers" type="sTelephoneListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Other Phone Numbers</elementName>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -108,8 +108,8 @@
 					<xs:element name="email" type="sEmailType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Email</elementName>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -119,8 +119,8 @@
 					<xs:element name="otherEmails" type="sEmailListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Other Emails</elementName>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -130,8 +130,8 @@
 					<xs:element name="demographics" type="sDemographicsType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Demographics</elementName>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -141,8 +141,8 @@
 					<xs:element name="enrollment" type="sEnrollmentType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Enrollment</elementName>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -152,8 +152,8 @@
 					<xs:element name="otherEnrollments" type="sEnrollmentListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Other Enrollments</elementName>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -163,8 +163,8 @@
 					<xs:element name="academicSummary" type="sAcademicSummaryType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Academic Summary</elementName>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -174,8 +174,8 @@
 					<xs:element name="studentContacts" type="sStudentContactListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Student Contacts</elementName>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -185,8 +185,8 @@
 					<xs:element name="languages" type="sLanguageListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName/>
-								<sifChar/>
+								<elementName>Languages</elementName>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
