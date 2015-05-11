@@ -17,7 +17,7 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
-					<xs:element name="name" type="sPersonNameType">
+					<xs:element name="name" type="sPersonNameType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Name</elementName>
@@ -39,7 +39,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="localId" type="sPersonIdType">
+					<xs:element name="localId" type="sPersonIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Local Id</elementName>
@@ -202,7 +202,7 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
-					<xs:element name="name" type="sPersonNameType">
+					<xs:element name="name" type="sPersonNameType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Person Name</elementName>
@@ -213,7 +213,7 @@
 							<xs:documentation>Name of the staff person.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="localId" type="sPersonIdType">
+					<xs:element name="localId" type="sPersonIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -311,7 +311,7 @@
 							<xs:documentation>Refid of the school in which the course is delivered.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolCourseId" type="sCourseIdType">
+					<xs:element name="schoolCourseId" type="sCourseIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School-Course Id</elementName>
@@ -474,7 +474,7 @@
 							<xs:documentation>A list of other Ids for the school.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolName" type="xs:string">
+					<xs:element name="schoolName" type="xs:string" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School Name</elementName>
@@ -549,7 +549,7 @@
 							<xs:documentation>The refid to which this calendar applies.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolYear" type="sSchoolYearType">
+					<xs:element name="schoolYear" type="sSchoolYearType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School Year</elementName>
@@ -591,7 +591,7 @@
 							<xs:documentation>RefId of the course for this section.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="courseTitle" type="xs:token">
+					<xs:element name="courseTitle" type="xs:token" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Course Title</elementName>
@@ -635,7 +635,7 @@
 							<xs:documentation>RefId of the school.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolSectionId" type="xs:token">
+					<xs:element name="schoolSectionId" type="xs:token" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School Section Id</elementName>
@@ -776,7 +776,7 @@
 							<xs:documentation>A unique number or alphanumeric code assigned to a local education agency by NCES.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="leaName" type="xs:string">
+					<xs:element name="leaName" type="xs:string" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>LEA Name</elementName>

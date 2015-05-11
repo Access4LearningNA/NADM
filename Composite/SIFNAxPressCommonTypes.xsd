@@ -1127,7 +1127,7 @@
 							<xs:documentation>Other names of the contact.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="localId" type="sPersonIdType">
+					<xs:element name="localId" type="sPersonIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Local Id</elementName>
@@ -2006,7 +2006,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="relationshipCode" type="sPersonRelationshipToLearnerType">
+			<xs:element name="relationshipCode" type="sPersonRelationshipToLearnerType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -2467,7 +2467,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="givenName" type="xs:normalizedString">
+			<xs:element name="givenName" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -2478,7 +2478,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="familyName" type="xs:normalizedString">
+			<xs:element name="familyName" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -2640,7 +2640,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="familyName" type="xs:normalizedString" minOccurs="1">
+			<xs:element name="familyName" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
@@ -2651,7 +2651,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="givenName" type="xs:normalizedString">
+			<xs:element name="givenName" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName/>
