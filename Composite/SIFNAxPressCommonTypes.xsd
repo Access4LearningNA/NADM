@@ -809,7 +809,7 @@
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Race Type</elementName>
-				<cedsURL></cedsURL>
+				<cedsURL/>
 			</xs:appinfo>
 			<xs:documentation>Indicates the racial origins of a person.</xs:documentation>
 		</xs:annotation>
@@ -820,7 +820,7 @@
 						<elementName>Race</elementName>
 						<sifChar>M</sifChar>
 						<cedsId/>
-						<cedsURL></cedsURL>
+						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>Indicates the racial origins of a person. The possible values are: AmericanIndianOrAlaskaNative, Asian, BlackOrAfricanAmerican, NativeHawaiianOrOtherPacificIslander, White, DemographicRaceTwoOrMoreRaces.</xs:documentation>
 				</xs:annotation>
@@ -835,7 +835,7 @@
 						<elementName>Race</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
-						<cedsURL></cedsURL>
+						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>Indicates the racial origins of a person.</xs:documentation>
 				</xs:annotation>
@@ -847,7 +847,7 @@
 			<xs:appinfo>
 				<elementName>Membership Type</elementName>
 				<cedsId/>
-				<cedsURL></cedsURL>
+				<cedsURL/>
 				<sifMapping target="SIF" version="2.7M">
 					<targetElement idType="XPath">StudentSchoolEnrollment/@MembershipType</targetElement>
 					<!-- this was mapped to SIF 2.7M because there do not appear to be standard codesets defined in SIF 3.2, nor is there an analog in CEDS -->
@@ -884,7 +884,7 @@
 			<xs:appinfo>
 				<elementName>Enrollment</elementName>
 				<cedsId/>
-				<cedsURL></cedsURL>
+				<cedsURL/>
 			</xs:appinfo>
 			<xs:documentation>Type of enrollment.</xs:documentation>
 		</xs:annotation>
@@ -895,7 +895,7 @@
 						<elementName>LEA RefId</elementName>
 						<sifChar>M</sifChar>
 						<cedsId/>
-						<cedsURL></cedsURL>
+						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>RefId of the LEA</xs:documentation>
 				</xs:annotation>
@@ -906,7 +906,7 @@
 						<elementName>School RefId</elementName>
 						<sifChar>M</sifChar>
 						<cedsId/>
-						<cedsURL></cedsURL>
+						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>RefId of the school.</xs:documentation>
 				</xs:annotation>
@@ -917,7 +917,7 @@
 						<elementName>Student-School Association RefId</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
-						<cedsURL></cedsURL>
+						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>RefId of the SIF Student-School Association object.</xs:documentation>
 				</xs:annotation>
@@ -939,7 +939,7 @@
 						<elementName>Membership Type</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
-						<cedsURL></cedsURL>
+						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>The student's type of membership in the system.</xs:documentation>
 				</xs:annotation>
@@ -972,7 +972,7 @@
 						<elementName>Home Room Number</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
-						<cedsURL></cedsURL>
+						<cedsURL/>
 						<sifMapping target="SIF" version="3.2">
 							<targetElement idType="XPath">studentSchoolAssociation/homeRoomRefId</targetElement>
 							<!-- This is not a direct mapping since the intent is to communicate the local room identifiers, not RefIds for rooms -->
@@ -987,7 +987,7 @@
 						<elementName>Grade Level</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
-						<cedsURL></cedsURL>
+						<cedsURL/>
 						<sifMapping target="SIF" version="2.7M">
 							<targetElement idType="XPath">StudentPersonal/MostRecent/GradeLevel</targetElement>
 							<!-- CEDS appears to have entry and exit grade level, but not a current grade level -->
@@ -1013,7 +1013,7 @@
 						<elementName>Counselor RefId</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
-						<cedsURL></cedsURL>
+						<cedsURL/>
 						<sifMapping target="SIF" version="3.2">
 							<targetElement idType="XPath">studentSchoolAssociation/counselor</targetElement>
 						</sifMapping>
@@ -1028,7 +1028,7 @@
 			<xs:appinfo>
 				<elementName>Enrollment List</elementName>
 				<cedsId/>
-				<cedsURL></cedsURL>
+				<cedsURL/>
 			</xs:appinfo>
 			<xs:documentation>A list of enrollments.</xs:documentation>
 		</xs:annotation>
@@ -1039,7 +1039,7 @@
 						<elementName>Enrollment</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
-						<cedsURL></cedsURL>
+						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>Enrollment information for the student.</xs:documentation>
 				</xs:annotation>
@@ -1051,7 +1051,7 @@
 			<xs:appinfo>
 				<elementName>Academic Summary</elementName>
 				<cedsId/>
-				<cedsURL></cedsURL>
+				<cedsURL/>
 			</xs:appinfo>
 			<xs:documentation>Academic information for the student.</xs:documentation>
 		</xs:annotation>
@@ -1101,7 +1101,7 @@
 								<elementName>Person Name</elementName>
 								<sifChar>M</sifChar>
 								<cedsId/>
-								<cedsURL></cedsURL>
+								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>Name of the contact.</xs:documentation>
 						</xs:annotation>
@@ -1112,7 +1112,7 @@
 								<elementName>Other Names</elementName>
 								<sifChar>O</sifChar>
 								<cedsId/>
-								<cedsURL></cedsURL>
+								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>Other names of the contact.</xs:documentation>
 						</xs:annotation>
@@ -1123,7 +1123,7 @@
 								<elementName>Local Id</elementName>
 								<sifChar>O</sifChar>
 								<cedsId/>
-								<cedsURL></cedsURL>
+								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</xs:documentation>
 						</xs:annotation>
@@ -1145,7 +1145,7 @@
 								<elementName>Other Ids</elementName>
 								<sifChar>O</sifChar>
 								<cedsId/>
-								<cedsURL></cedsURL>
+								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>Other Ids of the contact.</xs:documentation>
 						</xs:annotation>
@@ -1156,7 +1156,7 @@
 								<elementName>Address</elementName>
 								<sifChar>O</sifChar>
 								<cedsId/>
-								<cedsURL></cedsURL>
+								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>Address of the student.</xs:documentation>
 						</xs:annotation>
@@ -1167,7 +1167,7 @@
 								<elementName>Phone Number</elementName>
 								<sifChar>O</sifChar>
 								<cedsId/>
-								<cedsURL></cedsURL>
+								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>Phone number of the contact.</xs:documentation>
 						</xs:annotation>
