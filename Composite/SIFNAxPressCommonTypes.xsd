@@ -989,8 +989,7 @@
 					<xs:documentation>Home Room number</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="homeRoomTeacher" type="xPersonReferenceType" minOccurs="0">
-			</xs:element>
+			<xs:element name="homeRoomTeacher" type="xPersonReferenceType" minOccurs="0"/>
 			<xs:element name="yearGroup" type="xGradeLevelType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>

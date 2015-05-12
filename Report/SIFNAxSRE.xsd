@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<!-- edited with XMLSpy v2015 rel. 3 sp1 (x64) (http://www.altova.com) by Matt Harris (CDS) -->
 <!--version 3.03.01-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
@@ -35,7 +34,7 @@
 						</xs:annotation>
 						<xs:complexType>
 							<xs:sequence>
-								<xs:element name="assessment" type="sreAssessmentType" minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="assessment" type="xAssessmentType" minOccurs="0" maxOccurs="unbounded">
 									<xs:annotation>
 										<xs:appinfo>
 											<elementName/>
@@ -58,14 +57,14 @@
 								<xs:element name="summaries" minOccurs="0">
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="summary" type="sreAttendanceSummaryType" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:element name="summary" type="xAttendanceSummaryType" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
 								<xs:element name="events" minOccurs="0">
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="event" type="sreAttendanceEventType" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:element name="event" type="xAttendanceEventType" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
@@ -78,11 +77,11 @@
 						</xs:annotation>
 						<xs:complexType>
 							<xs:sequence>
-								<xs:element name="disciplineIncident" type="sreDisciplineIncidentType" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:element name="disciplineIncident" type="xDisciplineIncidentType" minOccurs="0" maxOccurs="unbounded"/>
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
-					<xs:element name="transcriptTerm" type="sreTranscriptTermType" minOccurs="0">
+					<xs:element name="transcriptTerm" type="xTranscriptTermType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>Current term transcript information.</xs:documentation>
 						</xs:annotation>
@@ -93,14 +92,14 @@
 						</xs:annotation>
 						<xs:complexType>
 							<xs:sequence>
-								<xs:element name="transcriptTerm" type="sreTranscriptTermType" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:element name="transcriptTerm" type="xTranscriptTermType" minOccurs="0" maxOccurs="unbounded"/>
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
 					<xs:element name="competencies" minOccurs="0">
 						<xs:complexType>
 							<xs:sequence>
-								<xs:element name="competency" type="sreCompetencyType" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:element name="competency" type="xCompetencyType" minOccurs="0" maxOccurs="unbounded"/>
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
@@ -113,14 +112,14 @@
 								<xs:element name="immunizations" minOccurs="0">
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="immunization" type="sreImmunizationType" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:element name="immunization" type="xImmunizationType" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
 								<xs:element name="screenings" minOccurs="0">
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="screening" type="sreScreeningType" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:element name="screening" type="xScreeningType" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
@@ -128,7 +127,7 @@
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
-					<xs:element name="programs" type="sreProgramSummaryType" minOccurs="0">
+					<xs:element name="programs" type="xProgramSummaryType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>Information about the student's participation in various state and federal programs.</xs:documentation>
 						</xs:annotation>
