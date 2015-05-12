@@ -159,7 +159,7 @@
         </xs:complexType>
       </xs:element>
       <xs:element name="academicSummary" type="xAcademicSummaryType" minOccurs="0"/>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xCompetencyType">
@@ -215,7 +215,7 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xSreAcademicSummaryType">
@@ -335,7 +335,7 @@
               <xs:documentation>The total number of students in the student's high school graduating class.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -380,7 +380,7 @@
           <xs:documentation>The year, month and day or year and month on which the achievement was recognized.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xGraduationRequirementType">
@@ -424,7 +424,7 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xSubjectAreaType">
@@ -463,7 +463,7 @@
         </xs:annotation>
       </xs:element>
       <xs:element name="schoolOfEnrollment" type="xSchoolType" minOccurs="0"/>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xAssessmentType">
@@ -556,7 +556,7 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xAssessmentScoreSetType">
@@ -610,7 +610,7 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xAssessmentScoreType">
@@ -637,7 +637,7 @@
           <xs:documentation>A meaningful raw score, derived score, or statistical expression of the performance of a person on an assessment. The type of result is indicated by the Metric Type element. The results can be expressed as a number, percentile, range, level, etc. The score relates to all scored items or a sub test scoring one aspect of performance on the test. This value may or may not correspond to one or more Performance Levels.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xAccommodationType">
@@ -675,7 +675,7 @@
           <xs:documentation/>
         </xs:annotation>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xSpecialEducationType">
@@ -864,7 +864,7 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xSpecialEducationServiceType">
@@ -990,7 +990,7 @@
           <xs:documentation>The number of minutes per week that a student with disabilities is served in a regular classroom with his or her non-disabled peers.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xActivityType">
@@ -1089,7 +1089,7 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xLepType">
@@ -1171,7 +1171,7 @@
           <xs:documentation>The school that managed or administered the program.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xMigrantType">
@@ -1264,7 +1264,7 @@
           <xs:documentation>The school that managed or administered the program.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xFoodServiceType">
@@ -1291,7 +1291,7 @@
           <xs:documentation>An indication of a student's participation in free, reduced price, full price breakfast, lunch, snack, supper, and milk programs.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xImmunizationType">
@@ -1318,7 +1318,7 @@
           <xs:documentation>The year, month and day of an immunization.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xScreeningType">
@@ -1356,7 +1356,7 @@
           <xs:documentation>The result of the medical or health-related test that a person received.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xDisciplineIncidentType">
@@ -1432,7 +1432,7 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xDisciplineActionType">
@@ -1482,7 +1482,7 @@
         </xs:annotation>
       </xs:element>
       <xs:element name="reportingSchool" type="xSchoolType" minOccurs="0"/>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xAttendanceEventType">
@@ -1544,7 +1544,7 @@
           <xs:documentation>A percentage representing the amount of time for this event. For example, if the student was in attendance for half of the day, this value would be 0.5.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xAttendanceSummaryType">
@@ -1600,7 +1600,7 @@
           <xs:documentation>The number of school days during the regular school year (plus summer, if applicable, if part of implementing the restart, transformation, or turnaround model) the student attended school divided by the maximum number of days the student could have attend</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="xProgramSummaryType">
@@ -1655,7 +1655,7 @@
         </xs:annotation>
       </xs:element>
       <xs:element name="vocationalConcentrator" type="gYesNoUnknownType" minOccurs="0"/>
-      <xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="xIncidentBehaviorType" final="">
