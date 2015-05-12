@@ -981,6 +981,8 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="homeRoomTeacher" type="sPersonReferenceType" minOccurs="0">
+			</xs:element>
 			<xs:element name="yearGroup" type="sGradeLevelType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
