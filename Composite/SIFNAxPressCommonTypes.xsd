@@ -120,7 +120,7 @@
 			</xs:appinfo>
 			<xs:documentation/>
 		</xs:annotation>
-		<xs:union memberTypes="sStateCodeUSType"/>
+		<xs:union memberTypes="xStateCodeUSType"/>
 		<!-- used to aggregate multiple state/province codes if needed -->
 	</xs:simpleType>
 	<xs:simpleType name="xCountryCodeType">
