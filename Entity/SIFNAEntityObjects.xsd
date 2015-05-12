@@ -373,7 +373,7 @@
 					</xs:element>
 					<xs:element name="studentActivityLevel" type="xs:normalizedString" nillable="true" minOccurs="0">
 						<xs:annotation>
-							<xs:documentation>A description of the separation of level in the activity (e.g., </xs:documentation>
+							<xs:documentation> A description of the level of the activity (e.g., Varsity, Junior Varsity, Honors).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="gradeLevels" type="gYearGroupList" nillable="true" minOccurs="0">
