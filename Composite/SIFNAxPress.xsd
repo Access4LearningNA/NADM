@@ -62,7 +62,7 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
-					<xs:element name="name" type="sPersonNameType" minOccurs="0">
+					<xs:element name="name" type="xPersonNameType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Name</elementName>
@@ -73,7 +73,7 @@
 							<xs:documentation>Name of Student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherNames" type="sOtherPersonNameListType" minOccurs="0">
+					<xs:element name="otherNames" type="xOtherPersonNameListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Other Names of Student</elementName>
@@ -84,7 +84,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="localId" type="sPersonIdType" minOccurs="0">
+					<xs:element name="localId" type="xPersonIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Local Id</elementName>
@@ -95,7 +95,7 @@
 							<xs:documentation>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="loginId" type="sLoginIdType" minOccurs="0">
+					<xs:element name="loginId" type="xLoginIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Login Id</elementName>
@@ -106,7 +106,7 @@
 							<xs:documentation>The login identifier for the person.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="stateProvinceId" type="sPersonIdType" minOccurs="0">
+					<xs:element name="stateProvinceId" type="xPersonIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>State-Province Id</elementName>
@@ -117,7 +117,7 @@
 							<xs:documentation>A unique number or alphanumeric code assigned to a student by a state.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherIds" type="sOtherPersonIdListType" minOccurs="0">
+					<xs:element name="otherIds" type="xOtherPersonIdListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Other Ids</elementName>
@@ -128,7 +128,7 @@
 							<xs:documentation>Other Ids for the student</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="address" type="sPersonAddressType" minOccurs="0">
+					<xs:element name="address" type="xPersonAddressType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Address</elementName>
@@ -139,7 +139,7 @@
 							<xs:documentation>Address of the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="phoneNumber" type="sTelephoneType" minOccurs="0">
+					<xs:element name="phoneNumber" type="xTelephoneType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Phone Number</elementName>
@@ -150,7 +150,7 @@
 							<xs:documentation>Phone number of the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherPhoneNumbers" type="sTelephoneListType" minOccurs="0">
+					<xs:element name="otherPhoneNumbers" type="xTelephoneListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Other Phone Numbers</elementName>
@@ -161,7 +161,7 @@
 							<xs:documentation>Other phone numbers for the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="email" type="sEmailType" minOccurs="0">
+					<xs:element name="email" type="xEmailType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Email</elementName>
@@ -172,7 +172,7 @@
 							<xs:documentation>Email of the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherEmails" type="sEmailListType" minOccurs="0">
+					<xs:element name="otherEmails" type="xEmailListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Other Emails</elementName>
@@ -183,7 +183,7 @@
 							<xs:documentation>Other emails for the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="demographics" type="sDemographicsType" minOccurs="0">
+					<xs:element name="demographics" type="xDemographicsType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Demographics</elementName>
@@ -194,7 +194,7 @@
 							<xs:documentation>Demographic information about the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="enrollment" type="sEnrollmentType" minOccurs="0">
+					<xs:element name="enrollment" type="xEnrollmentType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Enrollment</elementName>
@@ -205,7 +205,7 @@
 							<xs:documentation>Current enrollment information for the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherEnrollments" type="sEnrollmentListType" minOccurs="0">
+					<xs:element name="otherEnrollments" type="xEnrollmentListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Other Enrollments</elementName>
@@ -216,7 +216,7 @@
 							<xs:documentation>Other enrollment information for the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="academicSummary" type="sAcademicSummaryType" minOccurs="0">
+					<xs:element name="academicSummary" type="xAcademicSummaryType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Academic Summary</elementName>
@@ -227,7 +227,7 @@
 							<xs:documentation>Summary academic information for the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="studentContacts" type="sStudentContactListType" minOccurs="0">
+					<xs:element name="studentContacts" type="xStudentContactListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Student Contacts</elementName>
@@ -238,7 +238,7 @@
 							<xs:documentation>Persons that may be contacted regarding the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="languages" type="sLanguageListType" minOccurs="0">
+					<xs:element name="languages" type="xLanguageListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Languages</elementName>
@@ -320,7 +320,7 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
-					<xs:element name="name" type="sPersonNameType" minOccurs="0">
+					<xs:element name="name" type="xPersonNameType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Person Name</elementName>
@@ -331,7 +331,7 @@
 							<xs:documentation>Name of the staff person.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="localId" type="sPersonIdType" minOccurs="0">
+					<xs:element name="localId" type="xPersonIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -342,7 +342,7 @@
 							<xs:documentation>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="loginId" type="sLoginIdType" minOccurs="0">
+					<xs:element name="loginId" type="xLoginIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Login Id</elementName>
@@ -353,7 +353,7 @@
 							<xs:documentation>The login identifier for the person.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="stateProvinceId" type="sPersonIdType" minOccurs="0">
+					<xs:element name="stateProvinceId" type="xPersonIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>State-Province Id</elementName>
@@ -364,7 +364,7 @@
 							<xs:documentation>A unique number or alphanumeric code assigned to a staff member by a state.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherIds" type="sOtherPersonIdListType" minOccurs="0">
+					<xs:element name="otherIds" type="xOtherPersonIdListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Other Id List</elementName>
@@ -375,7 +375,7 @@
 							<xs:documentation>Other Ids for the person.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="sex" type="sSexType" minOccurs="0">
+					<xs:element name="sex" type="xSexType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Sex</elementName>
@@ -386,7 +386,7 @@
 							<xs:documentation>The concept describing the biological traits that distinguish the males and females of a species.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="email" type="sEmailType" minOccurs="0">
+					<xs:element name="email" type="xEmailType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Email</elementName>
@@ -397,7 +397,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="primaryAssignment" type="sStaffPersonAssignmentType" minOccurs="0">
+					<xs:element name="primaryAssignment" type="xStaffPersonAssignmentType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Primary Assignment</elementName>
@@ -408,7 +408,7 @@
 							<xs:documentation>The primary district, school, and function to which the person is assigned.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherAssignments" type="sStaffPersonAssignmentListType" minOccurs="0">
+					<xs:element name="otherAssignments" type="xStaffPersonAssignmentListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Other Assignments</elementName>
@@ -461,7 +461,7 @@
 							<xs:documentation>Refid of the school in which the course is delivered.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolCourseId" type="sCourseIdType" minOccurs="0">
+					<xs:element name="schoolCourseId" type="xCourseIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School-Course Id</elementName>
@@ -472,7 +472,7 @@
 							<xs:documentation>The actual code that identifies the organization of subject matter and related learning experiences provided for the instruction of students.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="leaCourseId" type="sCourseIdType" minOccurs="0">
+					<xs:element name="leaCourseId" type="xCourseIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>LEA Course Id</elementName>
@@ -483,7 +483,7 @@
 							<xs:documentation>The actual code that identifies the organization of subject matter and related learning experiences provided for the instruction of students.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherIds" type="sOtherCourseIdListType" minOccurs="0">
+					<xs:element name="otherIds" type="xOtherCourseIdListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Other Course Ids</elementName>
@@ -516,7 +516,7 @@
 							<xs:documentation>A description of the course content and/or goals. Reference may be made to state or national content standards.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="subject" type="sSubjectType" minOccurs="0">
+					<xs:element name="subject" type="xSubjectType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Course Subject</elementName>
@@ -527,7 +527,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="applicableEducationLevels" type="sApplicableEducationLevelListType" minOccurs="0">
+					<xs:element name="applicableEducationLevels" type="xApplicableEducationLevelListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Applicable Education Levels</elementName>
@@ -658,7 +658,7 @@
 							<xs:documentation>Refid of the LEA of which the school is a part.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="localId" type="sOrganizationIdType" minOccurs="0">
+					<xs:element name="localId" type="xOrganizationIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Local Id</elementName>
@@ -669,7 +669,7 @@
 							<xs:documentation>A unique number or alphanumeric code assigned to a school by a district or LEA.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="stateProvinceId" type="sOrganizationIdType" minOccurs="0">
+					<xs:element name="stateProvinceId" type="xOrganizationIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>State Id</elementName>
@@ -680,7 +680,7 @@
 							<xs:documentation>A unique number or alphanumeric code assigned to a school by a state.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherIds" type="sOtherOrganizationIdListType" minOccurs="0">
+					<xs:element name="otherIds" type="xOtherOrganizationIdListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Other Ids</elementName>
@@ -702,7 +702,7 @@
 							<xs:documentation>The full legally accepted name of the institution.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="yearGroups" type="sYearGroupListType" minOccurs="0">
+					<xs:element name="yearGroups" type="xYearGroupListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Year Groups</elementName>
@@ -713,7 +713,7 @@
 							<xs:documentation>The specific grade or combination of grades offered by an education institution.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="address" type="sOrganizationAddressType" minOccurs="0">
+					<xs:element name="address" type="xOrganizationAddressType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Address</elementName>
@@ -724,7 +724,7 @@
 							<xs:documentation>Address of the school.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="phoneNumber" type="sTelephoneType" minOccurs="0">
+					<xs:element name="phoneNumber" type="xTelephoneType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Phone Number</elementName>
@@ -735,7 +735,7 @@
 							<xs:documentation>Phone number of the school.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherPhoneNumbers" type="sTelephoneListType" minOccurs="0">
+					<xs:element name="otherPhoneNumbers" type="xTelephoneListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Other Phone Numbers</elementName>
@@ -788,7 +788,7 @@
 							<xs:documentation>The refid to which this calendar applies.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolYear" type="sSchoolYearType" minOccurs="0">
+					<xs:element name="schoolYear" type="xSchoolYearType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School Year</elementName>
@@ -799,7 +799,7 @@
 							<xs:documentation>The school year for the calendar.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="sessions" type="sSessionListType" minOccurs="0">
+					<xs:element name="sessions" type="xSessionListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Sessions</elementName>
@@ -917,7 +917,7 @@
 							<xs:documentation>RefId of the section.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="subject" type="sSubjectType" minOccurs="0">
+					<xs:element name="subject" type="xSubjectType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Subject</elementName>
@@ -950,7 +950,7 @@
 							<xs:documentation>A unique number or alphanumeric code assigned by an institution, school, school system, state, or other agency or entity for a particular course-section.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolYear" type="sSchoolYearType" minOccurs="0">
+					<xs:element name="schoolYear" type="xSchoolYearType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School Year</elementName>
@@ -983,7 +983,7 @@
 							<xs:documentation>The RefId of the school calendar.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="meetingTimes" type="sMeetingTimeListType" minOccurs="0">
+					<xs:element name="meetingTimes" type="xMeetingTimeListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Meeting Times</elementName>
@@ -994,7 +994,7 @@
 							<xs:documentation>A list of meeting times for the section.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="students" type="sStudentReferenceListType" minOccurs="0">
+					<xs:element name="students" type="xStudentReferenceListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Students</elementName>
@@ -1005,7 +1005,7 @@
 							<xs:documentation>A list of students associated with the roster.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="primaryStaff" type="sStaffReferenceType" minOccurs="0">
+					<xs:element name="primaryStaff" type="xStaffReferenceType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Primary Staff</elementName>
@@ -1016,7 +1016,7 @@
 							<xs:documentation>The primary staff person for the section.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherStaffs" type="sStaffReferenceListType" minOccurs="0">
+					<xs:element name="otherStaffs" type="xStaffReferenceListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Other Staffs</elementName>
@@ -1046,7 +1046,7 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
-					<xs:element name="localId" type="sOrganizationIdType" minOccurs="0">
+					<xs:element name="localId" type="xOrganizationIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Local id</elementName>
@@ -1068,7 +1068,7 @@
 							<xs:documentation>The refId for the LEA.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="stateProvinceId" type="sOrganizationIdType" minOccurs="0">
+					<xs:element name="stateProvinceId" type="xOrganizationIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>State-Province Id</elementName>
@@ -1079,7 +1079,7 @@
 							<xs:documentation>A unique number or alphanumeric code assigned to a local education agency by a state.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="ncesId" type="sOrganizationIdType" minOccurs="0">
+					<xs:element name="ncesId" type="xOrganizationIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>NCES Id</elementName>
@@ -1101,7 +1101,7 @@
 							<xs:documentation>The name of a non-person entity such as an organization, institution, agency or business; in this case, a Local Education Agency.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="address" type="sOrganizationAddressType" minOccurs="0">
+					<xs:element name="address" type="xOrganizationAddressType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Organization Address</elementName>
@@ -1112,7 +1112,7 @@
 							<xs:documentation>The address of the LEA.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="phoneNumber" type="sTelephoneType" minOccurs="0">
+					<xs:element name="phoneNumber" type="xTelephoneType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Phone Number</elementName>
@@ -1123,7 +1123,7 @@
 							<xs:documentation>The phone number of the LEA.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherPhoneNumbers" type="sTelephoneListType" minOccurs="0">
+					<xs:element name="otherPhoneNumbers" type="xTelephoneListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Other Phone Numbers</elementName>
