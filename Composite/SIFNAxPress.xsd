@@ -262,7 +262,6 @@
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
 				<cedsURL/>
-
 				<servicePaths>
 					<servicePath>
 						<path>xLeas/{}/xStaffs</path>
@@ -317,7 +316,6 @@
 				</servicePaths>	
 			</xs:appinfo>
 			<xs:documentation>xStaff is a composite object that provides a view of the most commonly used core data elements for teachers and non-teaching staff. The refId of a xStaff object coincides with the refId of a corresponding staff object.</xs:documentation>
-
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
@@ -581,13 +579,11 @@
 	<xs:complexType name="xSchoolType">
 		<xs:annotation>
 			<xs:appinfo>
-
 				<elementName>xSchool Type</elementName>
 				<events>yes</events>
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
 				<cedsURL/>
-
 				<servicePaths>					
 					<servicePath>
 						<path>xLeas/{}/xSchools</path>
@@ -647,7 +643,6 @@
 				</servicePaths>
 			</xs:appinfo>
 			<xs:documentation>xSchool is a composite object that provides essential information about a school building or campus. The refId of a xSchool object coincides with the refId of a corresponding school object.</xs:documentation>
-
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
@@ -764,7 +759,6 @@
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
 				<cedsURL/>
-
 				<servicePaths>
 					<servicePath>
 						<path>xSchools/{}/xCalendars</path>
@@ -886,7 +880,6 @@
 				</servicePaths>
 			</xs:appinfo>
 			<xs:documentation>xRoster is a composite object that provides a consolidated view of information related to a course section or class, including student enrollment and assigned staff. The refId of a xRoster object coincides with the refId of a corresponding section object.</xs:documentation>
-
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
