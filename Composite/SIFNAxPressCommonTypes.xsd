@@ -733,6 +733,14 @@
 					<xs:documentation>The year, month and day on which a person was born.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="countryOfBirth" type="xCountryCodeType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<cedsId>000050</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000050</cedsURL>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="usCitizenshipStatus" type="gCitizenshipStatusType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
