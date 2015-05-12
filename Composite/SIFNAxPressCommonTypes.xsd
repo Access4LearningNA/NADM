@@ -2,7 +2,7 @@
 <!-- SIF xPress Common Type Definitions -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
-	<xs:simpleType name="sAddressTypeForLearnerOrFamilyType">
+	<xs:simpleType name="xAddressTypeForLearnerOrFamilyType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Address Type For Learner Or Family Type</elementName>
@@ -25,7 +25,7 @@
 			<xs:enumeration value="GuardianAddress"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="sAddressTypeForOrganizationType">
+	<xs:simpleType name="xAddressTypeForOrganizationType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Address Type For Organization Type</elementName>
@@ -40,7 +40,7 @@
 			<xs:enumeration value="Shipping"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="sStateCodeUSType">
+	<xs:simpleType name="xStateCodeUSType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>State Code US Type</elementName>
@@ -111,7 +111,7 @@
 			<xs:enumeration value="WY"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="sStateSuperCodeType">
+	<xs:simpleType name="xStateSuperCodeType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>State Super Code Type</elementName>
@@ -123,7 +123,7 @@
 		<xs:union memberTypes="sStateCodeUSType"/>
 		<!-- used to aggregate multiple state/province codes if needed -->
 	</xs:simpleType>
-	<xs:simpleType name="sCountryCodeType">
+	<xs:simpleType name="xCountryCodeType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Country Code</elementName>
@@ -384,7 +384,7 @@
 			<xs:enumeration value="ZW"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sPersonAddressType">
+	<xs:complexType name="xPersonAddressType">
 		<xs:sequence>
 			<xs:element name="addressType" type="xAddressTypeForLearnerOrFamilyType" minOccurs="0">
 				<xs:annotation>
@@ -465,7 +465,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sOrganizationAddressType">
+	<xs:complexType name="xOrganizationAddressType">
 		<xs:sequence>
 			<xs:element name="addressType" type="xAddressTypeForOrganizationType" minOccurs="0">
 				<xs:annotation>
@@ -546,7 +546,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sTelephoneTypeType">
+	<xs:simpleType name="xTelephoneTypeType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Telephone Type</elementName>
@@ -564,7 +564,7 @@
 			<xs:enumeration value="Text"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sTelephoneType">
+	<xs:complexType name="xTelephoneType">
 		<xs:sequence>
 			<xs:element name="phoneNumberType" type="xTelephoneTypeType" minOccurs="0">
 				<xs:annotation>
@@ -601,7 +601,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sTelephoneListType">
+	<xs:complexType name="xTelephoneListType">
 		<xs:sequence>
 			<xs:element name="phoneNumber" type="xTelephoneType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
@@ -616,7 +616,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sEmailTypeType">
+	<xs:simpleType name="xEmailTypeType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Email Type</elementName>
@@ -632,7 +632,7 @@
 			<xs:enumeration value="Other"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sEmailType">
+	<xs:complexType name="xEmailType">
 		<xs:sequence>
 			<xs:element name="emailType" type="xEmailTypeType" minOccurs="0">
 				<xs:annotation>
@@ -658,7 +658,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sEmailListType">
+	<xs:complexType name="xEmailListType">
 		<xs:sequence>
 			<xs:element name="email" type="xEmailType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
@@ -673,7 +673,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sSexType">
+	<xs:simpleType name="xSexType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Sex</elementName>
@@ -687,7 +687,7 @@
 			<xs:enumeration value="Female"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sDemographicsType">
+	<xs:complexType name="xDemographicsType">
 		<xs:sequence>
 			<xs:element name="raceList" type="xRaceListType" minOccurs="0">
 				<xs:annotation>
@@ -754,7 +754,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sRaceTypeType">
+	<xs:simpleType name="xRaceTypeType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Race Type</elementName>
@@ -813,7 +813,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sRaceType">
+	<xs:complexType name="xRaceType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Race Type</elementName>
@@ -835,7 +835,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sRaceListType">
+	<xs:complexType name="xRaceListType">
 		<xs:sequence>
 			<xs:element name="race" type="xRaceType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
@@ -850,7 +850,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sMembershipTypeType">
+	<xs:simpleType name="xMembershipTypeType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Membership Type</elementName>
@@ -869,7 +869,7 @@
 			<xs:enumeration value="Summer"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="sResponsibleSchoolTypeType">
+	<xs:simpleType name="xResponsibleSchoolTypeType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Responsible School Type</elementName>
@@ -887,7 +887,7 @@
 			<xs:enumeration value="Transportation"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sEnrollmentType">
+	<xs:complexType name="xEnrollmentType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Enrollment</elementName>
@@ -1033,7 +1033,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sEnrollmentListType">
+	<xs:complexType name="xEnrollmentListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Enrollment List</elementName>
@@ -1056,7 +1056,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sAcademicSummaryType">
+	<xs:complexType name="xAcademicSummaryType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Academic Summary</elementName>
@@ -1252,7 +1252,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="sStudentContactListType">
+	<xs:complexType name="xStudentContactListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Student Contact List</elementName>
@@ -1286,7 +1286,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sLanguageCodeType">
+	<xs:simpleType name="xLanguageCodeType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Language Code</elementName>
@@ -1782,7 +1782,7 @@
 			<xs:enumeration value="zza"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="sLanguageTypeType">
+	<xs:simpleType name="xLanguageTypeType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Language Type</elementName>
@@ -1800,7 +1800,7 @@
 			<xs:enumeration value="Other"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sLanguageType">
+	<xs:complexType name="xLanguageType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Language</elementName>
@@ -1834,7 +1834,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sLanguageListType">
+	<xs:complexType name="xLanguageListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Language List</elementName>
@@ -1857,7 +1857,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sStaffPersonAssignmentType">
+	<xs:complexType name="xStaffPersonAssignmentType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Staff Person Assignment</elementName>
@@ -1902,7 +1902,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sStaffPersonAssignmentListType">
+	<xs:complexType name="xStaffPersonAssignmentListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Staff Person Assignment List</elementName>
@@ -1925,7 +1925,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sEducationStaffClassificationType">
+	<xs:simpleType name="xEducationStaffClassificationType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Education Staff Classification Type</elementName>
@@ -1963,7 +1963,7 @@
 			<xs:enumeration value="Ungraded Teachers"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="sEmployerType">
+	<xs:simpleType name="xEmployerType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Employer</elementName>
@@ -1986,7 +1986,7 @@
 			<xs:enumeration value="Other_9999"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sContactStudentRelationshipType">
+	<xs:complexType name="xContactStudentRelationshipType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Contact-Student Relationship</elementName>
@@ -2117,7 +2117,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sContactStudentRelationshipListType">
+	<xs:complexType name="xContactStudentRelationshipListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Contact-Student Relationship List</elementName>
@@ -2140,7 +2140,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sPersonRelationshipToLearnerType">
+	<xs:simpleType name="xPersonRelationshipToLearnerType">
 		<xs:annotation>
 			<xs:appinfo>
 				<cedsId>000425</cedsId>
@@ -2181,7 +2181,7 @@
 			<xs:enumeration value="Wife"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="sGradeLevelType">
+	<xs:simpleType name="xGradeLevelType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Grade Level</elementName>
@@ -2214,7 +2214,7 @@
 			<xs:enumeration value="Other"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sApplicableEducationLevelListType">
+	<xs:complexType name="xApplicableEducationLevelListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Applicable Education Level List</elementName>
@@ -2237,7 +2237,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sSessionTypeType">
+	<xs:simpleType name="xSessionTypeType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Session Type</elementName>
@@ -2260,7 +2260,7 @@
 			<xs:enumeration value="Other"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sSessionType">
+	<xs:complexType name="xSessionType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Session</elementName>
@@ -2360,7 +2360,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sSessionListType">
+	<xs:complexType name="xSessionListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Session List</elementName>
@@ -2383,7 +2383,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sDayOfWeekType">
+	<xs:simpleType name="xDayOfWeekType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Days of the Week</elementName>
@@ -2402,7 +2402,7 @@
 			<xs:enumeration value="Saturday"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sDayListType">
+	<xs:complexType name="xDayListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Day List</elementName>
@@ -2425,7 +2425,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sPersonReferenceType">
+	<xs:complexType name="xPersonReferenceType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Person Reference</elementName>
@@ -2481,7 +2481,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sStudentReferenceListType">
+	<xs:complexType name="xStudentReferenceListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Student Reference List</elementName>
@@ -2504,7 +2504,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sStaffReferenceType">
+	<xs:complexType name="xStaffReferenceType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Staff Reference</elementName>
@@ -2549,7 +2549,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sStaffReferenceListType">
+	<xs:complexType name="xStaffReferenceListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Staff Reference List</elementName>
@@ -2572,7 +2572,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sPersonNameTypeType">
+	<xs:simpleType name="xPersonNameTypeType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2594,7 +2594,7 @@
 			<!-- the following enumeration has been added to generalize the name type structure to support passing the primary name as legal name -->
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sPersonNameType">
+	<xs:complexType name="xPersonNameType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2673,7 +2673,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sOtherPersonNameListType">
+	<xs:complexType name="xOtherPersonNameListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2697,7 +2697,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sPersonIdType">
+	<xs:simpleType name="xPersonIdType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2709,7 +2709,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:token"/>
 	</xs:simpleType>
-	<xs:simpleType name="sPersonIdSystemType">
+	<xs:simpleType name="xPersonIdSystemType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2740,7 +2740,7 @@
 			<!-- additional enumerations may be desirable for application identifiers -->
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sOtherPersonIdType">
+	<xs:complexType name="xOtherPersonIdType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2775,7 +2775,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sOtherPersonIdListType">
+	<xs:complexType name="xOtherPersonIdListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2799,7 +2799,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sCourseIdType">
+	<xs:simpleType name="xCourseIdType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2811,7 +2811,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:token"/>
 	</xs:simpleType>
-	<xs:simpleType name="sCourseCodeSystemType">
+	<xs:simpleType name="xCourseCodeSystemType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2832,7 +2832,7 @@
 			<xs:enumeration value="University"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="sOtherCourseIdType">
+	<xs:complexType name="xOtherCourseIdType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2867,7 +2867,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sOtherCourseIdListType">
+	<xs:complexType name="xOtherCourseIdListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2891,7 +2891,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sYearGroupListType">
+	<xs:complexType name="xYearGroupListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2915,7 +2915,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sOtherOrganizationIdType">
+	<xs:complexType name="xOtherOrganizationIdType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2950,7 +2950,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sOtherOrganizationIdListType">
+	<xs:complexType name="xOtherOrganizationIdListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2974,7 +2974,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sOrganizationIdType">
+	<xs:simpleType name="xOrganizationIdType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -2986,7 +2986,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:token"/>
 	</xs:simpleType>
-	<xs:simpleType name="sOrganizationIdentificationSystemType">
+	<xs:simpleType name="xOrganizationIdentificationSystemType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -3010,7 +3010,7 @@
 			<xs:enumeration value="Vendor"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="sSubjectType">
+	<xs:simpleType name="xSubjectType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -3026,7 +3026,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:token"/>
 	</xs:simpleType>
-	<xs:simpleType name="sSchoolYearType">
+	<xs:simpleType name="xSchoolYearType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -3038,7 +3038,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:gYear"/>
 	</xs:simpleType>
-	<xs:complexType name="sMeetingTimeType">
+	<xs:complexType name="xMeetingTimeType">
 		<xs:sequence>
 			<xs:element name="timeTableDay" type="xs:token" minOccurs="0">
 				<xs:annotation>
@@ -3108,7 +3108,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="sMeetingTimeListType">
+	<xs:complexType name="xMeetingTimeListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName/>
@@ -3132,7 +3132,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="sLoginIdType">
+	<xs:simpleType name="xLoginIdType">
 		<xs:annotation>
 			<xs:appinfo>
 				<cedsId>001170</cedsId>
