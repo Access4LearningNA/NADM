@@ -10,7 +10,7 @@
 				<cedsId>000010</cedsId>
 				<cedsURL>https://ceds.ed.gov/element/000010</cedsURL>
 			</xs:appinfo>
-			<xs:documentation/>
+			<xs:documentation>The type of address listed for a learner or a parent, guardian, family member or related person.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="Mailing"/>
@@ -34,7 +34,7 @@
 				<cedsId>001066</cedsId>
 				<cedsURL>https://ceds.ed.gov/element/001066</cedsURL>
 			</xs:appinfo>
-			<xs:documentation/>
+			<xs:documentation>The type of address listed for an organization. Generally the mailing address.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="Mailing"/>
@@ -394,78 +394,78 @@
 			<xs:element name="addressType" type="sAddressTypeForLearnerOrFamilyType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
-						<cedsId/>
-						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+						<elementName>Address Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000010</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000010</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>The type of address listed for a learner or a parent, guardian, family member or related person.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="line1" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
+						<elementName>Address Line1</elementName>
+						<sifChar>O</sifChar>
 						<cedsId>000269</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000269</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>The first line of the address.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="line2" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
+						<elementName>Address Line 2</elementName>
+						<sifChar>O</sifChar>
 						<cedsId>000019</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000019</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>The second line of the address.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="city" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
+						<elementName>City</elementName>
+						<sifChar>O</sifChar>
 						<cedsId>00040</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/00040</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>The name of the city in which an address is located.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="stateProvince" type="sStateCodeUSType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
-						<cedsId/>
-						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+						<elementName>State-Province</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000267</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000267</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>The abbreviation for the state, province or outlying area in which an address is located.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="countryCode" type="sCountryCodeType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
-						<cedsId/>
-						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+						<elementName>Country Code</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000050</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000050</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>The unique two character International Organization for Standardization (ISO) code for the country in which an address is located.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="postalCode" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
+						<elementName>Postal Code</elementName>
+						<sifChar>O</sifChar>
 						<cedsId>000214</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000214</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>A number that identifies each postal delivery area in the locale used as a portion of an address.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2471,66 +2471,66 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Person Name Type</elementName>
-						<sifChar/>
+						<sifChar>O</sifChar>
 						<cedsId>000634</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000634 </cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>The types of previous, alternate or other names for a person. Generally the "LegalName" for the primary name.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="prefix" type="xs:token" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
+						<elementName>Prefix</elementName>
+						<sifChar>O</sifChar>
 						<cedsId>000212</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000212</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>An appellation, if any, used to denote rank, placement, or status (e.g., Mr., Ms., Reverend, Sister, Dr., Colonel).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="familyName" type="xs:normalizedString" minOccurs="1">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
+						<elementName>Family Name</elementName>
+						<sifChar>R</sifChar>
 						<cedsId>000172</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000172</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>The full legal last name borne in common by members of a family.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="givenName" type="xs:normalizedString">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
+						<elementName>Given Name</elementName>
+						<sifChar>R</sifChar>
 						<cedsId>000115</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000115</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>The full legal first name given to a person at birth, baptism, or through legal change.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="middleName" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
+						<elementName>Middle Name</elementName>
+						<sifChar>O</sifChar>
 						<cedsId>000184</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000184</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>A full legal middle name given to a person at birth, baptism, or through legal change.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="suffix" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
+						<elementName>Suffix</elementName>
+						<sifChar>O</sifChar>
 						<cedsId>000121</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000121</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>An appendage, if any, used to denote a person's generation in his family (e.g., Jr., Sr., III).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -2540,7 +2540,7 @@
 			<xs:appinfo>
 				<elementName/>
 				<sifChar/>
-				<cedsId></cedsId>
+				<cedsId/>
 				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 			</xs:appinfo>
 			<xs:documentation/>
@@ -2616,23 +2616,23 @@
 			<xs:element name="type" type="sPersonIdSystemType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
-						<cedsId/>
-						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+						<elementName>Id Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001075</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001075</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to a student.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="id" type="sPersonIdType">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
-						<sifChar/>
-						<cedsId/>
-						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+						<elementName>Id</elementName>
+						<sifChar>R</sifChar>
+						<cedsId>001071</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>A unique number or alphanumeric code assigned to a student by a school, school system, a state, or other agency or entity.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
