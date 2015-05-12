@@ -21,7 +21,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Name</elementName>
-								<sifChar>R</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -227,7 +227,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Person Name</elementName>
-								<sifChar>R</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -357,7 +357,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School Refid</elementName>
-								<sifChar>R</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -368,7 +368,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School-Course Id</elementName>
-								<sifChar>R</sifChar>
+								<sifChar>O</sifChar>
 								<cedsId>000055</cedsId>
 								<cedsURL>https://ceds.ed.gov/element/000055</cedsURL>
 							</xs:appinfo>
@@ -497,7 +497,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>LEA Refid</elementName>
-								<sifChar>R</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -626,7 +626,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School Year</elementName>
-								<sifChar>R</sifChar>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -678,7 +678,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Course Title</elementName>
-								<sifChar>R</sifChar>
+								<sifChar>O</sifChar>
 								<cedsId>000067</cedsId>
 								<cedsURL>https://ceds.ed.gov/element/000067</cedsURL>
 							</xs:appinfo>
@@ -711,7 +711,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School RefId</elementName>
-								<sifChar>R</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
@@ -722,7 +722,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School Section Id</elementName>
-								<sifChar>R</sifChar>
+								<sifChar>O</sifChar>
 								<cedsId>000978</cedsId>
 								<cedsURL>https://ceds.ed.gov/element/000978</cedsURL>
 							</xs:appinfo>
@@ -873,7 +873,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>LEA Name</elementName>
-								<sifChar>R</sifChar>
+								<sifChar>O</sifChar>
 								<cedsId>000204</cedsId>
 								<cedsURL>https://ceds.ed.gov/element/000204</cedsURL>
 							</xs:appinfo>
