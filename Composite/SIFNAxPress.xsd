@@ -12,12 +12,12 @@
 				<cedsId/>
 				<cedsURL/>
 			</xs:appinfo>
-			<xs:documentation/>
+			<xs:documentation>xStudent is a composite object that provides a view of the most commonly used core data elements for students, and references to important associated objects like contacts. The refId of a xStudent object coincides with the refId of a corresponding student object.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
-					<xs:element name="name" type="sPersonNameType">
+					<xs:element name="name" type="sPersonNameType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Name</elementName>
@@ -39,7 +39,7 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="localId" type="sPersonIdType">
+					<xs:element name="localId" type="sPersonIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Local Id</elementName>
@@ -48,6 +48,17 @@
 								<cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
 							</xs:appinfo>
 							<xs:documentation>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="loginId" type="sLoginIdType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Login Id</elementName>
+								<sifChar>001170</sifChar>
+								<cedsId>R</cedsId>
+								<cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>The login identifier for the person.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="stateProvinceId" type="sPersonIdType" minOccurs="0">
@@ -102,7 +113,7 @@
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
-							<xs:documentation>Other phone numbers for the student. </xs:documentation>
+							<xs:documentation>Other phone numbers for the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="email" type="sEmailType" minOccurs="0">
@@ -146,7 +157,7 @@
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
-							<xs:documentation>Current enrollment information for the student. </xs:documentation>
+							<xs:documentation>Current enrollment information for the student.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="otherEnrollments" type="sEnrollmentListType" minOccurs="0">
@@ -199,10 +210,20 @@
 	</xs:complexType>
 	<xs:element name="xStudent" type="xStudentType"/>
 	<xs:complexType name="xStaffType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>xStaff Type</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>xStaff is a composite object that provides a view of the most commonly used core data elements for teachers and non-teaching staff. The refId of a xStaff object coincides with the refId of a corresponding staff object.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
-					<xs:element name="name" type="sPersonNameType">
+					<xs:element name="name" type="sPersonNameType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Person Name</elementName>
@@ -213,7 +234,7 @@
 							<xs:documentation>Name of the staff person.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="localId" type="sPersonIdType">
+					<xs:element name="localId" type="sPersonIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
@@ -222,6 +243,17 @@
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
 							<xs:documentation>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="loginId" type="sLoginIdType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Login Id</elementName>
+								<sifChar>001170</sifChar>
+								<cedsId>R</cedsId>
+								<cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>The login identifier for the person.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="stateProvinceId" type="sPersonIdType" minOccurs="0">
@@ -295,148 +327,29 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="xStaff" type="xStaffType"/>
-	<xs:complexType name="xContactType">
-		<xs:complexContent>
-			<xs:extension base="gSIF_CompositeType">
-				<xs:sequence>
-					<xs:element name="name" type="sPersonNameType">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Person Name</elementName>
-								<sifChar>R</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Name of the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="otherNames" type="sOtherPersonNameListType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Other Names</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Other names of the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="localId" type="sPersonIdType">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Local Id</elementName>
-								<sifChar>R</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="otherIds" type="sOtherPersonIdListType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Other Ids</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Other Ids of the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="address" type="sPersonAddressType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Address</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Address of the student.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="phoneNumber" type="sTelephoneType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Phone Number</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Phone number of the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="otherPhoneNumbers" type="sTelephoneListType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Other Phone Numbers</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Other phone numbers for the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="email" type="sEmailType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Email</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Email of the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="otherEmails" type="sEmailListType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Other Emails</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Other emails of the contact.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="sex" type="sSexType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Sex</elementName>
-								<sifChar>O</sifChar>
-								<cedsId>000255</cedsId>
-								<cedsURL>https://ceds.ed.gov/element/000255</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>The concept describing the biological traits that distinguish the males and females of a species.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="employerType" type="sEmployerType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Employer Type</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>A code that defines the employer type.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="relationships" type="sContactStudentRelationshipListType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Contact Relationship List</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Relationships that this contact has with the student.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="xContact" type="xContactType"/>
+	<xs:element name="xContact" type="xContactType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>xContact Type</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>xContact is a composite object that provides a view of the most commonly used core data elements for student contacts. A comprehensive list of relationships to students is included. The refId of a xContact object coincides with the refId of a corresponding contactPerson object.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 	<xs:complexType name="xCourseType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>xCourse Type</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>xCourse is a composite object that provides essential information about a course. The refId of a xCourse object coincides with the refId of a corresponding course object.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
@@ -451,7 +364,7 @@
 							<xs:documentation>Refid of the school in which the course is delivered.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolCourseId" type="sCourseIdType">
+					<xs:element name="schoolCourseId" type="sCourseIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School-Course Id</elementName>
@@ -567,6 +480,16 @@
 	</xs:complexType>
 	<xs:element name="xCourse" type="xCourseType"/>
 	<xs:complexType name="xSchoolType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>xSchool Type</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>xSchool is a composite object that provides essential information about a school building or campus. The refId of a xSchool object coincides with the refId of a corresponding school object.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
@@ -578,7 +501,7 @@
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>
-							<xs:documentation>Refid of the LEA of which the school is a part. </xs:documentation>
+							<xs:documentation>Refid of the LEA of which the school is a part.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="localId" type="sOrganizationIdType" minOccurs="0">
@@ -614,7 +537,7 @@
 							<xs:documentation>A list of other Ids for the school.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolName" type="xs:string">
+					<xs:element name="schoolName" type="xs:string" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School Name</elementName>
@@ -675,6 +598,16 @@
 	</xs:complexType>
 	<xs:element name="xSchool" type="xSchoolType"/>
 	<xs:complexType name="xCalendarType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>xCalendar Type</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>xCalendar is a composite object that provides information about sessions held at a particular school during a given school year. The refId of a xCalendar object coincides with the refId of a corresponding schoolCalendar object.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
@@ -689,7 +622,7 @@
 							<xs:documentation>The refid to which this calendar applies.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolYear" type="sSchoolYearType">
+					<xs:element name="schoolYear" type="sSchoolYearType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School Year</elementName>
@@ -717,6 +650,16 @@
 	</xs:complexType>
 	<xs:element name="xCalendar" type="xCalendarType"/>
 	<xs:complexType name="xRosterType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>xRoster Type</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>xRoster is a composite object that provides a consolidated view of information related to a course section or class, including student enrollment and assigned staff. The refId of a xRoster object coincides with the refId of a corresponding section object.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
@@ -731,7 +674,7 @@
 							<xs:documentation>RefId of the course for this section.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="courseTitle" type="xs:token">
+					<xs:element name="courseTitle" type="xs:token" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Course Title</elementName>
@@ -775,7 +718,7 @@
 							<xs:documentation>RefId of the school.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="schoolSectionId" type="xs:token">
+					<xs:element name="schoolSectionId" type="xs:token" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School Section Id</elementName>
@@ -869,6 +812,16 @@
 	</xs:complexType>
 	<xs:element name="xRoster" type="xRosterType"/>
 	<xs:complexType name="xLeaType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>xLea Type</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>xLea is a composite object that provides core information about a Local Educuation Agency (e.g. district, division, intermediate agency). The refId of a xLea object coincides with the refId of a corresponding lea object.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
@@ -916,7 +869,7 @@
 							<xs:documentation>A unique number or alphanumeric code assigned to a local education agency by NCES.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="leaName" type="xs:string">
+					<xs:element name="leaName" type="xs:string" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>LEA Name</elementName>
