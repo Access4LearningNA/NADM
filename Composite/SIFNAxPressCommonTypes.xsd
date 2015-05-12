@@ -120,7 +120,7 @@
 			</xs:appinfo>
 			<xs:documentation/>
 		</xs:annotation>
-		<xs:union memberTypes="sStateCodeUSType"/>
+		<xs:union memberTypes="xStateCodeUSType"/>
 		<!-- used to aggregate multiple state/province codes if needed -->
 	</xs:simpleType>
 	<xs:simpleType name="xCountryCodeType">
@@ -989,8 +989,7 @@
 					<xs:documentation>Home Room number</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="homeRoomTeacher" type="xPersonReferenceType" minOccurs="0">
-			</xs:element>
+			<xs:element name="homeRoomTeacher" type="xPersonReferenceType" minOccurs="0"/>
 			<xs:element name="yearGroup" type="xGradeLevelType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
