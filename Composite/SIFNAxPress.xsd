@@ -480,7 +480,7 @@
 								<cedsId>000055</cedsId>
 								<cedsURL>https://ceds.ed.gov/element/000055</cedsURL>
 							</xs:appinfo>
-							<xs:documentation>The actual code that identifies the organization of subject matter and related learning experiences provided for the instruction of students.</xs:documentation>
+							<xs:documentation>The actual code that identifies the organization of subject matter and related learning experiences provided for the instruction of students as defined at the district level (i.e. district course code).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="otherIds" type="xOtherCourseIdListType" minOccurs="0">
