@@ -1016,10 +1016,10 @@
 					<xs:documentation>The year and month the student is projected to graduate.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="counselorRefId" type="gRefIdPointerType" minOccurs="0">
+			<xs:element name="counselor" type="xPersonReferenceType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>Counselor RefId</elementName>
+						<elementName>Counselor assigned to the student</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
