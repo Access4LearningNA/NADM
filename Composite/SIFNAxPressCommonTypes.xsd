@@ -689,7 +689,7 @@
 	</xs:simpleType>
 	<xs:complexType name="xDemographicsType">
 		<xs:sequence>
-			<xs:element name="raceList" type="xRaceListType" minOccurs="0">
+			<xs:element name="races" type="xRaceListType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Race List</elementName>
