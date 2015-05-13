@@ -2332,7 +2332,7 @@
 						<cedsId/>
 						<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 					</xs:appinfo>
-					<xs:documentation/>
+					<xs:documentation>Enables sessions to be linked (e.g. link a marking term to a scheduling term)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="startDate" type="xs:date">
