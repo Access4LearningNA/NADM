@@ -990,7 +990,7 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="homeRoomTeacher" type="xPersonReferenceType" minOccurs="0"/>
-			<xs:element name="yearGroup" type="xGradeLevelType" minOccurs="0">
+			<xs:element name="gradeLevel" type="xGradeLevelType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Grade Level</elementName>
