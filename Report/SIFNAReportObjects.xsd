@@ -2,6 +2,7 @@
 <!--version 3.02.01-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.3" targetNamespace="http://www.sifassociation.org/datamodel/na/3.3" elementFormDefault="qualified">
 	<xs:include schemaLocation="SIFNAsre.xsd"/>
+	<xs:include schemaLocation="SIFNAxSRE.xsd"/>
 	<xs:include schemaLocation="SIFNAassessmentSummary.xsd"/>
 	<xs:include schemaLocation="SIFNAfinance.xsd"/>
 	<xs:include schemaLocation="SIFNASectionRosterReport.xsd"/>
