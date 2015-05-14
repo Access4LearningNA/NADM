@@ -752,6 +752,7 @@
 					<xs:documentation>An indicator of whether or not the person is a US citizen.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="xRaceTypeType">
@@ -1030,6 +1031,7 @@
 					<xs:documentation>RefId of the counselor.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="xEnrollmentListType">
@@ -1098,6 +1100,7 @@
 					<xs:documentation>The academic rank of a student in relation to his or her high school graduating class (e.g., 1, 2, 3) based on high school GPA.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="xContactType">
