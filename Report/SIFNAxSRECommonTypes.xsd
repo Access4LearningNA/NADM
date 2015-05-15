@@ -12,7 +12,7 @@
 			<xs:element name="schoolYear" type="xSchoolYearType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>SchoolYear</elementName>
+						<elementName>School Year</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000243</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3243</cedsURL>
@@ -24,7 +24,7 @@
 			<xs:element name="gradeLevel" type="xGradeLevelType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>GradeLevelWhenCourseTaken</elementName>
+						<elementName>Grade Level When Course Taken</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000125</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3125</cedsURL>
@@ -43,7 +43,7 @@
 											<xs:element name="creditsAttempted" type="xs:decimal" minOccurs="0">
 												<xs:annotation>
 													<xs:appinfo>
-														<elementName>NumberOfCreditsAttempted</elementName>
+														<elementName>Number of Credits Attempted</elementName>
 														<sifChar>O</sifChar>
 														<cedsId>000199</cedsId>
 														<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3199</cedsURL>
@@ -54,7 +54,7 @@
 											<xs:element name="creditsEarned" type="xs:decimal" minOccurs="0">
 												<xs:annotation>
 													<xs:appinfo>
-														<elementName>NumberOfCreditsEarned</elementName>
+														<elementName>Number of Credits Earned</elementName>
 														<sifChar>O</sifChar>
 														<cedsId>000200</cedsId>
 														<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3200</cedsURL>
@@ -65,7 +65,7 @@
 											<xs:element name="creditTypeEarned" type="xCreditTypeEarnedType" minOccurs="0">
 												<xs:annotation>
 													<xs:appinfo>
-														<elementName>CreditTypeEarned</elementName>
+														<elementName>Credit Type Earned</elementName>
 														<sifChar>O</sifChar>
 														<cedsId>000072</cedsId>
 														<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3072</cedsURL>
@@ -76,7 +76,7 @@
 											<xs:element name="progressGPA" type="xs:decimal" minOccurs="0">
 												<xs:annotation>
 													<xs:appinfo>
-														<elementName>ProgressGpaMarkValue</elementName>
+														<elementName>Progress GPA Mark Value</elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
@@ -87,7 +87,7 @@
 											<xs:element name="progressMark" type="xs:token" minOccurs="0">
 												<xs:annotation>
 													<xs:appinfo>
-														<elementName>MidTermMark</elementName>
+														<elementName>Mid Term Mark</elementName>
 														<sifChar>O</sifChar>
 														<cedsId>000183</cedsId>
 														<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3183</cedsURL>
@@ -120,7 +120,7 @@
 											<xs:element name="finalMarkValue" type="xs:token" minOccurs="0">
 												<xs:annotation>
 													<xs:appinfo>
-														<elementName>GradeEarned</elementName>
+														<elementName>Grade Earned</elementName>
 														<sifChar>O</sifChar>
 														<cedsId>000124</cedsId>
 														<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3124</cedsURL>
@@ -131,7 +131,7 @@
 											<xs:element name="classSectionId" type="xs:token" minOccurs="0">
 												<xs:annotation>
 													<xs:appinfo>
-														<elementName>ClassSectionIdentifier</elementName>
+														<elementName>Class Section Identifier</elementName>
 														<sifChar>O</sifChar>
 														<cedsId>000978</cedsId>
 														<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3979</cedsURL>
@@ -238,7 +238,7 @@
 					<xs:element name="gpaScale" type="xs:token" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName>GradeValueQualifier</elementName>
+								<elementName>Grade Value Qualifier</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>000616</cedsId>
 								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3609</cedsURL>
@@ -249,7 +249,7 @@
 					<xs:element name="termGpa" type="xs:decimal" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName>GPAGivenSession</elementName>
+								<elementName>GPA Given for Session</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>000129</cedsId>
 								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3129</cedsURL>
@@ -260,7 +260,7 @@
 					<xs:element name="cumulativeGpa" type="xs:decimal" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName>GPACumulative</elementName>
+								<elementName>Cumulative GPA</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>000128</cedsId>
 								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3128</cedsURL>
@@ -282,7 +282,7 @@
 					<xs:element name="termCreditsEarned" type="xs:decimal" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName>NumberOfCreditsEarned</elementName>
+								<elementName>Number of Credits Earned During Term</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>000200</cedsId>
 								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3200</cedsURL>
@@ -293,7 +293,7 @@
 					<xs:element name="termCreditsAttempted" type="xs:decimal" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName>NumberOfCreditsAttempted</elementName>
+								<elementName>Number of Credits Attempted During Term</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>000199</cedsId>
 								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3199</cedsURL>
@@ -304,7 +304,7 @@
 					<xs:element name="totalCreditsEarned" type="xs:decimal" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName>NumberOfCreditsEarned</elementName>
+								<elementName>Total Number of Credits Earned</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>000200</cedsId>
 								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3200</cedsURL>
@@ -315,7 +315,7 @@
 					<xs:element name="totalCreditsAttempted" type="xs:decimal" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName>NumberOfCreditsAttempted</elementName>
+								<elementName>Total Number of Credits Attempted</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>000199</cedsId>
 								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3199</cedsURL>
@@ -326,7 +326,7 @@
 					<xs:element name="classTotalNumber" type="xs:unsignedInt" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName>TotalNumberInClass</elementName>
+								<elementName>Total Number in Class</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>000294</cedsId>
 								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3294</cedsURL>
@@ -349,7 +349,7 @@
 			<xs:element name="category" type="xs:token" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AchievementCategoryType</elementName>
+						<elementName>Achievement Category Type</elementName>
 						<sifChar/>
 						<cedsId>000892</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3892</cedsURL>
@@ -360,7 +360,7 @@
 			<xs:element name="description" type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AchievementDescription</elementName>
+						<elementName>Achievement Description</elementName>
 						<sifChar/>
 						<cedsId>000895</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3895</cedsURL>
@@ -371,7 +371,7 @@
 			<xs:element name="achievementDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AchievementDate</elementName>
+						<elementName>Achievement Date</elementName>
 						<sifChar/>
 						<cedsId>000897</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3897</cedsURL>
@@ -414,8 +414,8 @@
 							<xs:annotation>
 								<xs:appinfo>
 									<elementName/>
-									<sifChar>OR</sifChar>/>
-                  <cedsId/>
+									<sifChar>OR</sifChar>
+									<cedsId/>
 									<cedsURL/>
 								</xs:appinfo>
 							</xs:annotation>
@@ -431,7 +431,7 @@
 			<xs:element name="subjectArea" type="xCourseSubjectAreaType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>SecondaryCourseSubjectArea</elementName>
+						<elementName>Secondary Course Subject Area</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000248</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3248</cedsURL>
@@ -453,7 +453,7 @@
 			<xs:element name="creditsEarnedCumulative" type="xs:decimal" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>CreditsEarnedCumulative</elementName>
+						<elementName>Cumulative Credits Earned</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000074</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3074</cedsURL>
@@ -470,7 +470,7 @@
 			<xs:element name="name" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AssessmentTitle</elementName>
+						<elementName>Assessment Title</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000028</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3028</cedsURL>
@@ -481,7 +481,7 @@
 			<xs:element name="actualStartDateTime" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AssessmentSessionActualStartDateTime</elementName>
+						<elementName>Assessment Session Actual Start DateTime</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001021</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4023</cedsURL>
@@ -492,7 +492,7 @@
 			<xs:element name="actualEndDateTime" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AssessmentSessionActualEndDateTime</elementName>
+						<elementName>Assessment Session Actual End DateTime</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001021</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4023</cedsURL>
@@ -503,7 +503,7 @@
 			<xs:element name="studentGradeLevel" type="xGradeLevelType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>GradeLevelWhenAssessed</elementName>
+						<elementName>Grade Level When Assessed</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000126</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3126</cedsURL>
@@ -529,8 +529,8 @@
 							<xs:annotation>
 								<xs:appinfo>
 									<elementName/>
-									<sifChar>OR</sifChar>/>
-                  <cedsId/>
+									<sifChar>OR</sifChar>
+									<cedsId/>
 									<cedsURL/>
 								</xs:appinfo>
 								<xs:documentation/>
@@ -546,8 +546,8 @@
 							<xs:annotation>
 								<xs:appinfo>
 									<elementName/>
-									<sifChar>OR</sifChar>/>
-                  <cedsId/>
+									<sifChar>OR</sifChar>
+									<cedsId/>
 									<cedsURL/>
 								</xs:appinfo>
 							</xs:annotation>
@@ -563,7 +563,7 @@
 			<xs:element name="assessmentGradeLevel" type="xGradeLevelType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AssessmentLevelForWhichDesigned</elementName>
+						<elementName>Assessment Level For Which Designed</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000177</cedsId>
 						<cedsURL>/https://ceds.ed.gov/cedselementdetails.aspx?termid=3177</cedsURL>
@@ -574,7 +574,7 @@
 			<xs:element name="subTestSubjectArea" type="xAcademicSubjectType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AssessmentAcademicSubject</elementName>
+						<elementName>Assessment Academic Subject</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000021</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3021</cedsURL>
@@ -585,7 +585,7 @@
 			<xs:element name="subTestName" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AssessmentSubtestTitle</elementName>
+						<elementName>Assessment Subtest Title</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000275</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3275</cedsURL>
@@ -600,8 +600,8 @@
 							<xs:annotation>
 								<xs:appinfo>
 									<elementName/>
-									<sifChar>OR</sifChar>/>
-                  <cedsId/>
+									<sifChar>OR</sifChar>
+									<cedsId/>
 									<cedsURL/>
 								</xs:appinfo>
 							</xs:annotation>
@@ -617,7 +617,7 @@
 			<xs:element name="metric" type="xSubtestScoreMetricType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AssessmentSubtestScoreMetricType</elementName>
+						<elementName>Assessment Subtest Score Metric Type</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000369</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3368</cedsURL>
@@ -628,7 +628,7 @@
 			<xs:element name="scoreValue" type="xs:token" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AssessmentSubtestResultScoreValue</elementName>
+						<elementName>Assessment Subtest Result Score Value</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000245</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3245</cedsURL>
@@ -644,7 +644,7 @@
 			<xs:element name="category" type="xAssessmentAccommodationCategory" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AssessmentAccommodationCategory</elementName>
+						<elementName>Assessment Accommodation Category</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000383</cedsId>
 						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24833</cedsURL>
@@ -655,7 +655,7 @@
 			<xs:element name="type" type="xAssessmentAccommodationType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AssessmentAccommodationType</elementName>
+						<elementName>Assessment Accommodation Type</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000385</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3376</cedsURL>
@@ -682,7 +682,7 @@
 			<xs:element name="schoolYear" type="xs:gYear" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>SchoolYear</elementName>
+						<elementName>School Year</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000243</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3243</cedsURL>
@@ -693,7 +693,7 @@
 			<xs:element name="schoolAttended" type="xSchoolType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>School Identifier</elementName>
+						<elementName>School of Attendance Identifier</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001069</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3155</cedsURL>
@@ -704,7 +704,7 @@
 			<xs:element name="residentSchool" type="xSchoolType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>School Identifier</elementName>
+						<elementName>School of Residence Identifier</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001069</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3155</cedsURL>
@@ -737,7 +737,7 @@
 			<xs:element name="startDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>ProgramParticipationStartDate</elementName>
+						<elementName>Program Participation Start Date</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000590</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3583</cedsURL>
@@ -748,7 +748,7 @@
 			<xs:element name="exitDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>ProgramParticipationExitDate</elementName>
+						<elementName>Program Participation Exit Date</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000591</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3584</cedsURL>
@@ -759,7 +759,7 @@
 			<xs:element name="exitReason" type="xSpecialEducationExitReasonType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>SpecialEducationExitReason</elementName>
+						<elementName>Special Education Exit Reason</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000260</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3260</cedsURL>
@@ -790,7 +790,7 @@
 			<xs:element name="disabilityStatus" type="gYesNoUnknownType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>DisabilityStatus</elementName>
+						<elementName>Disability Status</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000577</cedsId>
 						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24884</cedsURL>
@@ -801,7 +801,7 @@
 			<xs:element name="section504Status" type="gYesNoUnknownType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>Section504Status</elementName>
+						<elementName>Section 504 Status</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000249</cedsId>
 						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24810</cedsURL>
@@ -812,7 +812,7 @@
 			<xs:element name="awaitingInitialIdeaEvaluation" type="gYesNoUnknownType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>AwaitingInitialIDEAEvaluationStatus</elementName>
+						<elementName>Awaiting Initial IDEA Evaluation Status</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000031</cedsId>
 						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=23994</cedsURL>
@@ -825,7 +825,7 @@
 						<xs:element name="disability" type="xDisabilityType" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:appinfo>
-									<elementName>PrimaryDisabilityType</elementName>
+									<elementName>Primary Disability Type</elementName>
 									<sifChar>O</sifChar>
 									<cedsId>000218</cedsId>
 									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3218</cedsURL>
@@ -839,7 +839,7 @@
 			<xs:element name="fteRatio" type="xs:decimal" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>StaffFullTimeEquivalency</elementName>
+						<elementName>Staff Full-time Equivalency</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000118</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3118</cedsURL>
@@ -854,8 +854,8 @@
 							<xs:annotation>
 								<xs:appinfo>
 									<elementName/>
-									<sifChar>OR</sifChar>/>
-                  <cedsId/>
+									<sifChar>OR</sifChar>
+									<cedsId/>
 									<cedsURL/>
 								</xs:appinfo>
 							</xs:annotation>
@@ -871,7 +871,7 @@
 			<xs:element name="ideaIndicator" type="gYesNoUnknownType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>IDEAIndicator</elementName>
+						<elementName>IDEA Indicator</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000535</cedsId>
 						<cedsURL/>
@@ -882,7 +882,7 @@
 			<xs:element name="ideaEnvironmentEarlyChildhood" type="xIdeaEnvironmentSchoolAgeType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>IDEAEducationalEnvironmentForEarlyChildhood</elementName>
+						<elementName>IDEA Educational Environment For Early Childhood</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000559</cedsId>
 						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=23660 </cedsURL>
@@ -893,7 +893,7 @@
 			<xs:element name="ideaEnvironmentSchoolAge" type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>IDEAEducationalEnvironmentForSchoolAge</elementName>
+						<elementName>IDEA Educational Environment For School Age</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000535</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3526</cedsURL>
@@ -904,7 +904,7 @@
 			<xs:element name="serviceType" type="xStudentSupportServiceType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>StudentSupportServiceType</elementName>
+						<elementName>Student Support Service Type</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000273</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3273</cedsURL>
@@ -948,7 +948,7 @@
 			<xs:element name="serviceProvider" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>OrganizationName</elementName>
+						<elementName>Organization Name</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>00204,001156</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3204</cedsURL>
@@ -959,7 +959,7 @@
 			<xs:element name="providerPhone" type="gPhoneNumberType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>TelephoneNumber</elementName>
+						<elementName>Telephone Number</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000279,000167,000219</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3279</cedsURL>
@@ -970,7 +970,7 @@
 			<xs:element name="inclusionMinutes" type="xs:unsignedInt" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>IndividualizedProgramInclusionMinutesPerWeek</elementName>
+						<elementName>Individualized Program Inclusion Minutes Per Week</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001234</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4199</cedsURL>
@@ -981,7 +981,7 @@
 			<xs:element name="noninclusionMinutes" type="xs:unsignedInt" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>IndividualizedProgramNonInclusionMinutesPerWeek</elementName>
+						<elementName>Individualized Program Non-inclusion Minutes Per Week</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001233</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4198</cedsURL>
@@ -1013,7 +1013,7 @@
 				<xs:annotation>
 					<xs:documentation>A description of the separation of level in the activity.</xs:documentation>
 					<xs:appinfo>
-						<elementName>LearningStandardItemCode</elementName>
+						<elementName>Learning Standard Item Code</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000692</cedsId>
 						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24241</cedsURL>
@@ -1044,7 +1044,7 @@
 			<xs:element name="school" type="xSchoolType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>School Identifier</elementName>
+						<elementName>School</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001069</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3155</cedsURL>
@@ -1096,7 +1096,7 @@
 			<xs:element name="lepStatus" type="gYesNoUnknownType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>LEPStatus</elementName>
+						<elementName>LEP Status</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000180</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3180</cedsURL>
@@ -1107,7 +1107,7 @@
 			<xs:element name="perkinsLepStatus" type="gYesNoUnknownType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>PerkinsLEPStatus</elementName>
+						<elementName>Perkins LEP Status</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000581</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3574</cedsURL>
@@ -1118,7 +1118,7 @@
 			<xs:element name="title3AcountabilityProgressStatus" type="xTitle3AccountabilityProgressStatusType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>TitleIIIAccountabilityProgressStatus</elementName>
+						<elementName>Title III Accountability Progress Status</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000536</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3527</cedsURL>
@@ -1129,7 +1129,7 @@
 			<xs:element name="title3LepParticipationStatus" type="gYesNoUnknownType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>TitleIIILEPParticipationStatus</elementName>
+						<elementName>Title III LEP Participation Status</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000565</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3557</cedsURL>
@@ -1140,7 +1140,7 @@
 			<xs:element name="entryDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>ProgramParticipationStartDate</elementName>
+						<elementName>Program Participation Start Date</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000590</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3583</cedsURL>
@@ -1151,7 +1151,7 @@
 			<xs:element name="participationEndDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>ProgramParticipationExitDate</elementName>
+						<elementName>Program Participation Exit Date</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000591</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3584</cedsURL>
@@ -1162,7 +1162,7 @@
 			<xs:element name="school" type="xSchoolType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>School Identifier</elementName>
+						<elementName>School</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001069</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3155</cedsURL>
@@ -1178,7 +1178,7 @@
 			<xs:element name="lastQualifyingMoveDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>LastQualifyingMoveDate</elementName>
+						<elementName>Last Qualifying Move Date</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000171</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3171</cedsURL>
@@ -1189,7 +1189,7 @@
 			<xs:element name="moveFromCity" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>QualifyingMoveFromCity</elementName>
+						<elementName>Qualifying Move From City</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000433</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3423</cedsURL>
@@ -1200,7 +1200,7 @@
 			<xs:element name="moveFromState" type="gStateProvinceType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>QualifyingMoveFromState</elementName>
+						<elementName>Qualifying Move From State</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000435</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3425</cedsURL>
@@ -1211,7 +1211,7 @@
 			<xs:element name="moveFromCountry" type="gCountryType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>QualifyingMoveFromCountry</elementName>
+						<elementName>Qualifying Move From Country</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000434</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3424</cedsURL>
@@ -1222,10 +1222,10 @@
 			<xs:element name="eligibilityExpirationDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>https://ceds.ed.gov/cedselementdetails.aspx?termid=3420</elementName>
+						<elementName>Migrant Education Program Eligibility Expiration Date</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000430</cedsId>
-						<cedsURL>MigrantEducationProgramEligibilityExpirationDate</cedsURL>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3420</cedsURL>
 					</xs:appinfo>
 					<xs:documentation>The year, month, and day on which the child is no longer eligible for the Migrant Education Program. This date should initially be a date equal to 36 months from the Qualifying Arrival Date to indicate the end of MEP eligibility or the student reaches 22 years of age, whichever comes first.</xs:documentation>
 				</xs:annotation>
@@ -1233,7 +1233,7 @@
 			<xs:element name="enrollmentDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>ProgramParticipationStartDate</elementName>
+						<elementName>Program Participation Start Date</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000590</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3583</cedsURL>
@@ -1244,7 +1244,7 @@
 			<xs:element name="enrollmentType" type="xMigrantEnrollmentType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>MigrantEducationProgramEnrollmentType</elementName>
+						<elementName>Migrant Education Program Enrollment Type</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000437</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3427</cedsURL>
@@ -1255,7 +1255,7 @@
 			<xs:element name="school" type="xSchoolType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>School Identifier</elementName>
+						<elementName>School</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001069</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3155</cedsURL>
@@ -1271,7 +1271,7 @@
 			<xs:element name="eligibilityStatus" type="xFoodServiceEligibilityType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>EligibilityStatusForSchoolFoodServicePrograms</elementName>
+						<elementName>Eligibility Status for School Food Service Programs</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000092</cedsId>
 						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24744</cedsURL>
@@ -1282,7 +1282,7 @@
 			<xs:element name="enrollmentStatus" type="xFoodServiceEnrollmentType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>ParticipationInSchoolFoodServicePrograms</elementName>
+						<elementName>Participation in School Food Service Programs</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000325</cedsId>
 						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24613</cedsURL>
@@ -1298,7 +1298,7 @@
 			<xs:element name="immunizationType" type="xImmunizationTypeType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>ImmunizationType</elementName>
+						<elementName>Immunization Type</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001248</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4214</cedsURL>
@@ -1309,7 +1309,7 @@
 			<xs:element name="immunizationDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>ImmunizationDate</elementName>
+						<elementName>Immunization Date</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000306</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3306</cedsURL>
@@ -1363,18 +1363,18 @@
 			<xs:element name="incidentCategory" type="xIncidentBehaviorType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>IncidentBehavior</elementName>
+						<elementName>Incident Behavior</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000509</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3500</cedsURL>
 					</xs:appinfo>
-					<xs:documentation>( Incident Behavior) Categories of behavior coded for use in describing an incident.</xs:documentation>
+					<xs:documentation>Categories of behavior coded for use in describing an incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="description" type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>IncidentDescription</elementName>
+						<elementName>Incident Description</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000508</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3499</cedsURL>
@@ -1385,18 +1385,18 @@
 			<xs:element name="incidentDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>IncidentDate</elementName>
+						<elementName>Incident Date</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000502</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3493</cedsURL>
 					</xs:appinfo>
-					<xs:documentation> The year, month and day on which the incident occurred.</xs:documentation>
+					<xs:documentation>The year, month and day on which the incident occurred.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="incidentTime" type="xs:time" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>IncidentTime</elementName>
+						<elementName>Incident Time</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000503</cedsId>
 						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24043</cedsURL>
@@ -1407,12 +1407,12 @@
 			<xs:element name="weaponType" type="xWeaponType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>WeaponType</elementName>
+						<elementName>Weapon Type</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001211</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4178</cedsURL>
 					</xs:appinfo>
-					<xs:documentation> ( Weapon Type) Identifies the type of weapon used during an incident.</xs:documentation>
+					<xs:documentation>Identifies the type of weapon used during an incident.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="actions" minOccurs="0">
@@ -1422,8 +1422,8 @@
 							<xs:annotation>
 								<xs:appinfo>
 									<elementName/>
-									<sifChar>OR</sifChar>/>
-                  <cedsId/>
+									<sifChar>OR</sifChar>
+									<cedsId/>
 									<cedsURL/>
 								</xs:appinfo>
 							</xs:annotation>
@@ -1439,45 +1439,45 @@
 			<xs:element name="code" type="xDisciplinaryActionCodeType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>DisciplinaryActionTaken</elementName>
+						<elementName>Disciplinary Action Taken</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000488</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3479</cedsURL>
 					</xs:appinfo>
-					<xs:documentation>( Disciplinary Action Taken) Identifies the consequences of an incident for the student(s) involved in an incident as perpetrator(s).</xs:documentation>
+					<xs:documentation>Identifies the consequences of an incident for the student(s) involved in an incident as perpetrator(s).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="startDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>DisciplinaryActionStartDate</elementName>
+						<elementName>Disciplinary Action Start Date</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000083</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3083</cedsURL>
 					</xs:appinfo>
-					<xs:documentation>( Disciplinary Action Start Date) The year, month and day on which a discipline action begins.</xs:documentation>
+					<xs:documentation>The year, month and day on which a discipline action begins.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="endDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
+						<elementName>Disciplinary Action End Date</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000082</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3082</cedsURL>
 					</xs:appinfo>
-					<xs:documentation>( Disciplinary Action End Date) The year, month and day on which a discipline action ends.</xs:documentation>
+					<xs:documentation>The year, month and day on which a discipline action ends.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="duration" type="xs:decimal" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName/>
+						<elementName>Duration of Disciplinary Action</elementName>
 						<sifChar>O</sifChar>
-						<cedsId>000000</cedsId>
-						<cedsURL/>
+						<cedsId>000511</cedsId>
+						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24856</cedsURL>
 					</xs:appinfo>
-					<xs:documentation>The duration in days of a discipline action.  </xs:documentation>
+					<xs:documentation>The length, in school days, of the disciplinary action.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="reportingSchool" type="xSchoolType" minOccurs="0"/>
@@ -1621,23 +1621,23 @@
 			<xs:element name="homeless" type="gYesNoUnknownType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>HomelessServicedIndicator</elementName>
+						<elementName>Homeless Serviced Indicator</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000147</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3147</cedsURL>
 					</xs:appinfo>
-					<xs:documentation>Homeless Servicesd Indicator: An indication of whether homeless children and youth were served by a McKinney-Vento program in the state.</xs:documentation>
+					<xs:documentation>An indication of whether homeless children and youth were served by a McKinney-Vento program in the state.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="foodService" type="xFoodServiceType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>EligibilityStatusForSchoolFoodServicePrograms</elementName>
+						<elementName>Eligibility Status For School Food Service Programs</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000092</cedsId>
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3092</cedsURL>
 					</xs:appinfo>
-					<xs:documentation>Eligibility Status for School Food Service Programs: An indication of a student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.</xs:documentation>
+					<xs:documentation>An indication of a student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="title1" type="gYesNoUnknownType" minOccurs="0"/>
