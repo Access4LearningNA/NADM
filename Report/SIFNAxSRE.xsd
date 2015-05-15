@@ -103,29 +103,10 @@
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
-					<xs:element name="health" minOccurs="0">
+					<xs:element name="health" type="xHealthType" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>Health-related information for the student, including immunizations and required tests.</xs:documentation>
 						</xs:annotation>
-						<xs:complexType>
-							<xs:sequence>
-								<xs:element name="immunizations" minOccurs="0">
-									<xs:complexType>
-										<xs:sequence>
-											<xs:element name="immunization" type="xImmunizationType" minOccurs="0" maxOccurs="unbounded"/>
-										</xs:sequence>
-									</xs:complexType>
-								</xs:element>
-								<xs:element name="screenings" minOccurs="0">
-									<xs:complexType>
-										<xs:sequence>
-											<xs:element name="screening" type="xScreeningType" minOccurs="0" maxOccurs="unbounded"/>
-										</xs:sequence>
-									</xs:complexType>
-								</xs:element>
-								<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
-							</xs:sequence>
-						</xs:complexType>
 					</xs:element>
 					<xs:element name="programs" type="xProgramSummaryType" minOccurs="0">
 						<xs:annotation>
