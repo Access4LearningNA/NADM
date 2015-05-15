@@ -20,7 +20,11 @@
 					<xs:documentation>The year for a reported school term/session.  For academic years that span a calendar year this is the four digit year-end. E.g. 2013 for 2012-2013.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="session" type="xSessionType" minOccurs="0"/>
+			<xs:element name="session" type="xSessionType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The school term/session to which this transcript term belongs.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="gradeLevel" type="xGradeLevelType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -33,6 +37,9 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="courses" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Courses taken, attempted or completed, during the term/session.</xs:documentation>
+				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="course" minOccurs="0" maxOccurs="unbounded">
@@ -157,7 +164,11 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="academicSummary" type="xAcademicSummaryType" minOccurs="0"/>
+			<xs:element name="academicSummary" type="xSreAcademicSummaryType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Academic summary metrics for the student during this tem/session.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -208,6 +219,9 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="associatedCourses" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The course(s) in which this competency was mastered or earned.</xs:documentation>
+				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="courseRefId" minOccurs="0" maxOccurs="unbounded"/>
@@ -218,6 +232,9 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="xSreAcademicSummaryType">
+		<xs:annotation>
+			<xs:documentation>Extends the basic xAcademicSummaryType to include more comprehensive academic summary information that may be necessary to complete a successful student record exchange.</xs:documentation>
+		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="xAcademicSummaryType">
 				<xs:sequence>
@@ -334,7 +351,6 @@
 							<xs:documentation>The total number of students in the student's high school graduating class.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -523,6 +539,9 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="accommodations" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A list of accommodations that have been provided to the student as part of the administration of the assessment.</xs:documentation>
+				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="accommodation" type="xAccommodationType" maxOccurs="unbounded">
@@ -1416,6 +1435,9 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="actions" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>A list of consequences or actions taken as a result of an incident.</xs:documentation>
+				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="action" type="xDisciplineActionType" maxOccurs="unbounded">
@@ -1480,7 +1502,11 @@
 					<xs:documentation>The length, in school days, of the disciplinary action.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="reportingSchool" type="xSchoolType" minOccurs="0"/>
+			<xs:element name="reportingSchool" type="xSchoolType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The school that reported the action, which may be different from the student's school of enrollment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
