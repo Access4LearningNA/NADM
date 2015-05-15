@@ -55,6 +55,9 @@
 						<xs:complexType>
 							<xs:sequence>
 								<xs:element name="summaries" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>A list of attendance summaries for specific periods of time, with summary metrics about the student's attendnace during the time period.</xs:documentation>
+									</xs:annotation>
 									<xs:complexType>
 										<xs:sequence>
 											<xs:element name="summary" type="xAttendanceSummaryType" minOccurs="0" maxOccurs="unbounded"/>
@@ -62,6 +65,9 @@
 									</xs:complexType>
 								</xs:element>
 								<xs:element name="events" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>A list of individual attendance events for the student, describing specific attendance or absence events.</xs:documentation>
+									</xs:annotation>
 									<xs:complexType>
 										<xs:sequence>
 											<xs:element name="event" type="xAttendanceEventType" minOccurs="0" maxOccurs="unbounded"/>
@@ -97,6 +103,9 @@
 						</xs:complexType>
 					</xs:element>
 					<xs:element name="competencies" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A set of competencies that represent the student's completion or partial completion of a unit, course, program, degree, certification, or other achievement/award.</xs:documentation>
+						</xs:annotation>
 						<xs:complexType>
 							<xs:sequence>
 								<xs:element name="competency" type="xCompetencyType" minOccurs="0" maxOccurs="unbounded"/>
