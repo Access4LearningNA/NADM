@@ -157,7 +157,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="academicSummary" type="xAcademicSummaryType" minOccurs="0"/>
+			<xs:element name="academicSummary" type="xSreAcademicSummaryType" minOccurs="0"/>
 			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
