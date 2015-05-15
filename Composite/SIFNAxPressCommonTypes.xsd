@@ -1261,7 +1261,7 @@
 				<cedsId/>
 				<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 			</xs:appinfo>
-			<xs:documentation/>
+      <xs:documentation>This data element is meant to be used in one of two ways.  1) Populate the contactPersonRefId field so that the xContact details can be retrieved from an xContact service endpoint.  This allows you to access related xContact data only as needed.  If you use this option, leave the "xContact" element unpopulated. 2) Populate the "xContact."  Use this option if you don't offer an xContact resource endpoint or if one is not appropriate in your use case (e.g. Student Record Exchange).  If this option is used, leave contactPersonRefId unpopulated.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="contactPersonRefId" type="gRefIdPointerType" minOccurs="0" maxOccurs="unbounded">
