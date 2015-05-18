@@ -2904,10 +2904,10 @@
 			<xs:documentation/>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="yearGroup" type="xGradeLevelType" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="gradeLevel" type="xGradeLevelType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName>Year Group</elementName>
+						<elementName>Grade Level</elementName>
 						<sifChar/>
 						<cedsId/>
 						<cedsURL/>
@@ -3018,7 +3018,7 @@
 				<elementName>Subject Type</elementName>
 				<sifChar/>
 				<cedsId/>
-				<cedsURL></cedsURL>
+				<cedsURL/>
 				<sifMapping target="SIF" version="3.2">
 					<targetElement idType="XPath">course/subjectAreaList/subjectArea/code/otherCodeList/otherCode</targetElement>
 					<!-- CEDS does not have an informal concept for identifying a course subject; it uses SCED which is more rigorous than what is desired here -->

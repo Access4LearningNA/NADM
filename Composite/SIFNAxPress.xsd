@@ -678,10 +678,10 @@
 							<xs:documentation>The full legally accepted name of the institution.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="yearGroups" type="xYearGroupListType" minOccurs="0">
+					<xs:element name="gradeLevels" type="xYearGroupListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName>Year Groups</elementName>
+								<elementName>Grade Levels</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>000131</cedsId>
 								<cedsURL>https://ceds.ed.gov/element/000131</cedsURL>
