@@ -326,6 +326,12 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="sres" type="sreCollectionType"/>
+	<xs:complexType name="xSRECollectionType">
+		<xs:sequence>
+			<xs:element name="xSRE" type="xSreType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="xSREs" type="xSRECollectionType"/>
 	<xs:complexType name="financialReportCollectionType">
 		<xs:sequence>
 			<xs:element name="financialReport" type="financialReportType" minOccurs="0" maxOccurs="unbounded"/>
@@ -397,5 +403,4 @@
 	</xs:complexType>
 	<xs:element name="xCourses" type="xCourseCollectionType"/>
 	<!--CEDS Objects were removed as of 3.3-->
-	
 </xs:schema>
