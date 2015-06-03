@@ -84,6 +84,18 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="sections" type="sectionCollectionType"/>
+	<xs:complexType name="groupCollectionType">
+		<xs:sequence>
+			<xs:element name="group" type="groupType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="groups" type="groupCollectionType"/>
+	<xs:complexType name="studentActivityCollectionType">
+		<xs:sequence>
+			<xs:element name="studentActivity" type="studentActivityType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="studentActivitys" type="studentActivityCollectionType"/>
 	<xs:complexType name="courseCollectionType">
 		<xs:sequence>
 			<xs:element name="course" type="courseType" minOccurs="0" maxOccurs="unbounded"/>
@@ -180,6 +192,12 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="staffPersonAssignments" type="staffPersonAssignmentCollectionType"/>
+	<xs:complexType name="staffSectionAssociationCollectionType">
+		<xs:sequence>
+			<xs:element name="staffSectionAssociation" type="staffSectionAssociationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="staffSectionAssociations" type="staffSectionAssociationCollectionType"/>
 	<xs:complexType name="studentProgramAssociationCollectionType">
 		<xs:sequence>
 			<xs:element name="studentProgramAssociation" type="studentProgramAssociationType" minOccurs="0" maxOccurs="unbounded"/>
@@ -198,12 +216,6 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="studentSectionAssociations" type="studentSectionAssociationCollectionType"/>
-	<xs:complexType name="staffSectionAssociationCollectionType">
-		<xs:sequence>
-			<xs:element name="staffSectionAssociation" type="staffSectionAssociationType" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:element name="staffSectionAssociations" type="staffSectionAssociationCollectionType"/>
 	<xs:complexType name="personGroupAssociationCollectionType">
 		<xs:sequence>
 			<xs:element name="personGroupAssociation" type="personGroupAssociationType" minOccurs="0" maxOccurs="unbounded"/>
@@ -222,12 +234,30 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="learningStandardAssociations" type="learningStandardAssociationCollectionType"/>
+	<xs:complexType name="studentActivityParticipationCollectionType">
+		<xs:sequence>
+			<xs:element name="studentActivityParticipation" type="studentActivityParticipationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="studentActivityParticipations" type="studentActivityParticipationCollectionType"/>
 	<xs:complexType name="assessmentCollectionType">
 		<xs:sequence>
 			<xs:element name="assessment" type="assessmentType" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="assessments" type="assessmentCollectionType"/>
+	<xs:complexType name="assessmentAdministrationCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentAdministration" type="assessmentAdministrationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentAdministrations" type="assessmentAdministrationCollectionType"/>
+	<xs:complexType name="assessmentAssetCollectionType">
+		<xs:sequence>
+			<xs:element name="assessmentAsset" type="assessmentAssetType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="assessmentAssets" type="assessmentAssetCollectionType"/>
 	<xs:complexType name="assessmentFormCollectionType">
 		<xs:sequence>
 			<xs:element name="assessmentForm" type="assessmentFormType" minOccurs="0" maxOccurs="unbounded"/>
@@ -252,18 +282,6 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="assessmentSubTests" type="assessmentSubTestCollectionType"/>
-	<xs:complexType name="assessmentAdministrationCollectionType">
-		<xs:sequence>
-			<xs:element name="assessmentAdministration" type="assessmentAdministrationType" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:element name="assessmentAdministrations" type="assessmentAdministrationCollectionType"/>
-	<xs:complexType name="assessmentAssetCollectionType">
-		<xs:sequence>
-			<xs:element name="assessmentAsset" type="assessmentAssetType" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:element name="assessmentAssets" type="assessmentAssetCollectionType"/>
 	<xs:complexType name="assessmentRegistrationCollectionType">
 		<xs:sequence>
 			<xs:element name="assessmentRegistration" type="assessmentRegistrationType" minOccurs="0" maxOccurs="unbounded"/>
@@ -326,6 +344,12 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="sres" type="sreCollectionType"/>
+	<xs:complexType name="xSRECollectionType">
+		<xs:sequence>
+			<xs:element name="xSRE" type="xSreType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="xSREs" type="xSRECollectionType"/>
 	<xs:complexType name="financialReportCollectionType">
 		<xs:sequence>
 			<xs:element name="financialReport" type="financialReportType" minOccurs="0" maxOccurs="unbounded"/>
@@ -338,6 +362,18 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="sectionRosterReports" type="sectionRosterReportCollectionType"/>
+	<xs:complexType name="energyUsageCollectionType">
+		<xs:sequence>
+			<xs:element name="energyUsage" type="energyUsageType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="energyUsages" type="energyUsageCollectionType"/>
+	<xs:complexType name="libraryPatronStatusCollectionType">
+		<xs:sequence>
+			<xs:element name="libraryPatronStatus" type="libraryPatronStatusType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="libraryPatronStatuss" type="libraryPatronStatusCollectionType"/>
 	<!--SIF xPress Objects-->
 	<!-- Student -->
 	<xs:complexType name="xStudentCollectionType">
@@ -397,5 +433,4 @@
 	</xs:complexType>
 	<xs:element name="xCourses" type="xCourseCollectionType"/>
 	<!--CEDS Objects were removed as of 3.3-->
-	
 </xs:schema>
