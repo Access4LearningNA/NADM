@@ -958,7 +958,7 @@
 					<xs:documentation>The name of the organization that is supplying the necessary instructional materials and personnel to deliver the service to the student.  Use code "ServiceProvider" when referring to CEDS element 0011156</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="providerPhone" type="gPhoneNumberType" minOccurs="0">
+			<xs:element name="providerPhone" type="xTelephoneType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Telephone Number</elementName>
