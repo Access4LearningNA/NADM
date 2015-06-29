@@ -1513,7 +1513,7 @@
 	<xs:complexType name="xAttendanceEventType">
 		<xs:sequence>
 			<xs:element name="school" type="xSchoolType" minOccurs="0"/>
-			<xs:element name="calendarEventDate" type="xs:string" minOccurs="0">
+			<xs:element name="calendarEventDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Calendar Event Date</elementName>
@@ -1575,7 +1575,7 @@
 	<xs:complexType name="xAttendanceSummaryType">
 		<xs:sequence>
 			<xs:element name="school" type="xSchoolType" minOccurs="0"/>
-			<xs:element name="startDate" minOccurs="0">
+			<xs:element name="startDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<sifChar>O</sifChar>
@@ -1585,7 +1585,7 @@
 					<xs:documentation>The starting date for the presented attendance reporting period.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="endDate" minOccurs="0">
+			<xs:element name="endDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<sifChar>O</sifChar>
