@@ -1551,7 +1551,7 @@
 					<xs:documentation>The date of the scheduled or unscheduled event.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="dailyAttendanceStatus" type="xAttendanceStatusType" minOccurs="0">
+			<xs:element name="attendanceStatus" type="xAttendanceStatusType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<sifChar>O</sifChar>
