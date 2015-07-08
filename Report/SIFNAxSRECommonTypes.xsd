@@ -609,6 +609,17 @@
 					<xs:documentation>The name or title of the subtest.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="attemptCode" type="xAssessmentAttemptCodeType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Attempt Code</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>A code describing this student's attempt type for this assessment.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="scores" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
@@ -4001,6 +4012,85 @@
 			<xs:enumeration value="Other">
 				<xs:annotation>
 					<xs:appinfo>Other</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="xAssessmentAttemptCodeType" final="">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="TS">
+				<xs:annotation>
+					<xs:appinfo>Tested</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IC">
+				<xs:annotation>
+					<xs:appinfo>Incomplete</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NB">
+				<xs:annotation>
+					<xs:appinfo>No test</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IV">
+				<xs:annotation>
+					<xs:appinfo>Invalidated</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AU">
+				<xs:annotation>
+					<xs:appinfo>Absent Unexcused</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RF">
+				<xs:annotation>
+					<xs:appinfo>Refusal</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PE">
+				<xs:annotation>
+					<xs:appinfo>Partially enrolled</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NN">
+				<xs:annotation>
+					<xs:appinfo>New Non-English Proficient</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ME">
+				<xs:annotation>
+					<xs:appinfo>Medical Exemption</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AX">
+				<xs:annotation>
+					<xs:appinfo>Absent Excused</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PP">
+				<xs:annotation>
+					<xs:appinfo>Previously Passed</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NE">
+				<xs:annotation>
+					<xs:appinfo>Not Enrolled</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OG">
+				<xs:annotation>
+					<xs:appinfo>Off Grade</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BL">
+				<xs:annotation>
+					<xs:appinfo>Blank</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TR">
+				<xs:annotation>
+					<xs:appinfo>Transferred during the test window</xs:appinfo>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
