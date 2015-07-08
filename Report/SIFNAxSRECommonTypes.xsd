@@ -153,6 +153,16 @@
 							<xs:documentation>A unique number or alphanumeric code assigned to an institution by a school, school system, a state, or other agency or entity for a particular class-section.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="timeTablePeriod" type="xs:normalizedString" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000522</cedsId>
+								<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24024</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>An indication of the portion of a typical daily session in which students receive instruction in a specified subject (e.g., morning, sixth period, block period, or AB schedules).</xs:documentation>
+						</xs:annotation>
+					</xs:element>					
 					<xs:element name="courseLevelCharacteristic" type="xCourseLevelCharacteristicType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
