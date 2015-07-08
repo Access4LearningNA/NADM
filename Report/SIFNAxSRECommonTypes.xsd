@@ -1406,6 +1406,17 @@
 	</xs:complexType>
 	<xs:complexType name="xDisciplineIncidentType">
 		<xs:sequence>
+			<xs:element name="localId" type="xs:token" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Local Incident Id</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000501</cedsId>
+						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24041</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A locally assigned unique identifier (within the school or school district) to identify each specific incident or occurrence. The same identifier should be used to document the entire incident even if it included multiple offenses and multiple offenders.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="incidentCategory" type="xIncidentBehaviorType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
