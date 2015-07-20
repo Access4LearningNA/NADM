@@ -153,6 +153,16 @@
 							<xs:documentation>A unique number or alphanumeric code assigned to an institution by a school, school system, a state, or other agency or entity for a particular class-section.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="timeTablePeriod" type="xs:normalizedString" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000522</cedsId>
+								<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24024</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>An indication of the portion of a typical daily session in which students receive instruction in a specified subject (e.g., morning, sixth period, block period, or AB schedules).</xs:documentation>
+						</xs:annotation>
+					</xs:element>					
 					<xs:element name="courseLevelCharacteristic" type="xCourseLevelCharacteristicType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
@@ -597,6 +607,17 @@
 						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3275</cedsURL>
 					</xs:appinfo>
 					<xs:documentation>The name or title of the subtest.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="attemptCode" type="xAssessmentAttemptCodeType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Attempt Code</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>A code describing this student's attempt type for this assessment.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="scores" minOccurs="0">
@@ -1293,6 +1314,33 @@
 			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="xGiftedTalentedType">
+		<xs:sequence>
+			<xs:element name="eligibilityStatus" type="xGiftedTalentedEligibilityType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Eligibility Status for Gifted/Talented program.</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001244</cedsId>
+						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=26695</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>State/local code used to determine a student's eligibility for Gifted/Talented program.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="enrollmentStatus" type="gYesNoUnknownType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName></elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000122</cedsId>
+						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24756</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>An indication that the student is participating in and served by a Gifted/Talented program.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="xHealthType">
 		<xs:sequence>
 			<xs:element name="immunizations" minOccurs="0">
@@ -1379,6 +1427,17 @@
 	</xs:complexType>
 	<xs:complexType name="xDisciplineIncidentType">
 		<xs:sequence>
+			<xs:element name="localId" type="xs:token" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Local Incident Id</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000501</cedsId>
+						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24041</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A locally assigned unique identifier (within the school or school district) to identify each specific incident or occurrence. The same identifier should be used to document the entire incident even if it included multiple offenses and multiple offenders.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="incidentCategory" type="xIncidentBehaviorType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -1524,7 +1583,7 @@
 					<xs:documentation>The date of the scheduled or unscheduled event.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="dailyAttendanceStatus" type="xAttendanceStatusType" minOccurs="0">
+			<xs:element name="attendanceStatus" type="xAttendanceStatusType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<sifChar>O</sifChar>
@@ -1567,6 +1626,16 @@
 			<xs:element name="attendanceValue" type="xs:decimal" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>A percentage representing the amount of time for this event. For example, if the student was in attendance for half of the day, this value would be 0.5.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="timeTablePeriod" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId>000522</cedsId>
+						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24024</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>An indication of the portion of a typical daily session in which students receive instruction in a specified subject (e.g., morning, sixth period, block period, or AB schedules).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
@@ -1688,7 +1757,7 @@
 					<xs:documentation>An indication that the student is participating in and served by programs under Title I, Part A of ESEA as amended.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="giftedTalented" type="gYesNoUnknownType" minOccurs="0">
+			<xs:element name="giftedTalented" type="xGiftedTalentedType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Gifted and Talented Indicator</elementName>
@@ -3291,6 +3360,85 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="xGiftedTalentedEligibilityType" final="">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="13452">
+				<xs:annotation>
+					<xs:appinfo>General Intellectual Aptitude only</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13453">
+				<xs:annotation>
+					<xs:appinfo>Specific Academic Aptitude only</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13454">
+				<xs:annotation>
+					<xs:appinfo>Visual/Performing Arts only</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13456">
+				<xs:annotation>
+					<xs:appinfo>General Intellectual Aptitude & Specific Academic Aptitude</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13457">
+				<xs:annotation>
+					<xs:appinfo>General Intellectual Aptitude & Visual/Performing Arts</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13458">
+				<xs:annotation>
+					<xs:appinfo>General Intellectual Aptitude & Technical/Practical Arts</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13459">
+				<xs:annotation>
+					<xs:appinfo>Specific Academic Aptitude & Visual/Performing Arts</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13460">
+				<xs:annotation>
+					<xs:appinfo>Specific Academic Aptitude & Technical/Practical Arts</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13461">
+				<xs:annotation>
+					<xs:appinfo>Visual/Performing Arts & Technical/Practical Arts</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13462">
+				<xs:annotation>
+					<xs:appinfo>General Intellectual Aptitude, Specific Academic Aptitude, and Visual Performing Arts</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13463">
+				<xs:annotation>
+					<xs:appinfo>General Intellectual Aptitude, Specific Academic Aptitude, & Technical/Practical Arts</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13464">
+				<xs:annotation>
+					<xs:appinfo>Specific Academic Aptitude, Visual/Performing Arts, & Technical/Practical Arts</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="13465">
+				<xs:annotation>
+					<xs:appinfo>General Intellectual & Specific Academic Aptitude, Visual/Performing Arts & Technical/Practical Arts</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="06002">
+				<xs:annotation>
+					<xs:appinfo>Not specified</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="09999">
+				<xs:annotation>
+					<xs:appinfo>Other</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="xMigrantEnrollmentType" final="">
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="01">
@@ -3864,6 +4012,85 @@
 			<xs:enumeration value="Other">
 				<xs:annotation>
 					<xs:appinfo>Other</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="xAssessmentAttemptCodeType" final="">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="TS">
+				<xs:annotation>
+					<xs:appinfo>Tested</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IC">
+				<xs:annotation>
+					<xs:appinfo>Incomplete</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NB">
+				<xs:annotation>
+					<xs:appinfo>No test</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IV">
+				<xs:annotation>
+					<xs:appinfo>Invalidated</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AU">
+				<xs:annotation>
+					<xs:appinfo>Absent Unexcused</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RF">
+				<xs:annotation>
+					<xs:appinfo>Refusal</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PE">
+				<xs:annotation>
+					<xs:appinfo>Partially enrolled</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NN">
+				<xs:annotation>
+					<xs:appinfo>New Non-English Proficient</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ME">
+				<xs:annotation>
+					<xs:appinfo>Medical Exemption</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AX">
+				<xs:annotation>
+					<xs:appinfo>Absent Excused</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PP">
+				<xs:annotation>
+					<xs:appinfo>Previously Passed</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NE">
+				<xs:annotation>
+					<xs:appinfo>Not Enrolled</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OG">
+				<xs:annotation>
+					<xs:appinfo>Off Grade</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BL">
+				<xs:annotation>
+					<xs:appinfo>Blank</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TR">
+				<xs:annotation>
+					<xs:appinfo>Transferred during the test window</xs:appinfo>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
