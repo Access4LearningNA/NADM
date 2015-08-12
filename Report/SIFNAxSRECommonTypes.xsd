@@ -3379,32 +3379,32 @@
 			</xs:enumeration>
 			<xs:enumeration value="13456">
 				<xs:annotation>
-					<xs:appinfo>General Intellectual Aptitude & Specific Academic Aptitude</xs:appinfo>
+					<xs:appinfo>General Intellectual Aptitude &amp; Specific Academic Aptitude</xs:appinfo>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="13457">
 				<xs:annotation>
-					<xs:appinfo>General Intellectual Aptitude & Visual/Performing Arts</xs:appinfo>
+					<xs:appinfo>General Intellectual Aptitude &amp; Visual/Performing Arts</xs:appinfo>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="13458">
 				<xs:annotation>
-					<xs:appinfo>General Intellectual Aptitude & Technical/Practical Arts</xs:appinfo>
+					<xs:appinfo>General Intellectual Aptitude &amp; Technical/Practical Arts</xs:appinfo>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="13459">
 				<xs:annotation>
-					<xs:appinfo>Specific Academic Aptitude & Visual/Performing Arts</xs:appinfo>
+					<xs:appinfo>Specific Academic Aptitude &amp; Visual/Performing Arts</xs:appinfo>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="13460">
 				<xs:annotation>
-					<xs:appinfo>Specific Academic Aptitude & Technical/Practical Arts</xs:appinfo>
+					<xs:appinfo>Specific Academic Aptitude &amp; Technical/Practical Arts</xs:appinfo>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="13461">
 				<xs:annotation>
-					<xs:appinfo>Visual/Performing Arts & Technical/Practical Arts</xs:appinfo>
+					<xs:appinfo>Visual/Performing Arts &amp; Technical/Practical Arts</xs:appinfo>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="13462">
@@ -3414,17 +3414,17 @@
 			</xs:enumeration>
 			<xs:enumeration value="13463">
 				<xs:annotation>
-					<xs:appinfo>General Intellectual Aptitude, Specific Academic Aptitude, & Technical/Practical Arts</xs:appinfo>
+					<xs:appinfo>General Intellectual Aptitude, Specific Academic Aptitude, &amp; Technical/Practical Arts</xs:appinfo>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="13464">
 				<xs:annotation>
-					<xs:appinfo>Specific Academic Aptitude, Visual/Performing Arts, & Technical/Practical Arts</xs:appinfo>
+					<xs:appinfo>Specific Academic Aptitude, Visual/Performing Arts, &amp; Technical/Practical Arts</xs:appinfo>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="13465">
 				<xs:annotation>
-					<xs:appinfo>General Intellectual & Specific Academic Aptitude, Visual/Performing Arts & Technical/Practical Arts</xs:appinfo>
+					<xs:appinfo>General Intellectual &amp; Specific Academic Aptitude, Visual/Performing Arts &amp; Technical/Practical Arts</xs:appinfo>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="06002">
