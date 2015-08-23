@@ -755,7 +755,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>School RefId</elementName>
-								<sifChar>O</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
 							</xs:appinfo>

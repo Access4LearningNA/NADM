@@ -887,7 +887,7 @@
 						<elementName>IDEA Educational Environment For Early Childhood</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000559</cedsId>
-						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=23660 </cedsURL>
+						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=23660</cedsURL>
 					</xs:appinfo>
 					<xs:documentation>The setting in which children ages 6 through 21, receive special education and related services.</xs:documentation>
 				</xs:annotation>

@@ -255,7 +255,7 @@ ContributingProfessional
 												<xs:annotation>
 													<xs:appinfo>
 														<elementName>Student RefId</elementName>
-														<sifChar>R</sifChar>
+														<sifChar>Q</sifChar>
 														<cedsId/>
 														<cedsURL/>
 													</xs:appinfo>

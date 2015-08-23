@@ -943,7 +943,7 @@
 					<xs:element name="schoolRefId" type="gRefIdPointerType">
 						<xs:annotation>
 							<xs:appinfo>
-								<sifChar>O</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>

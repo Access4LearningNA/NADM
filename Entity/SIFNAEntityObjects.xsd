@@ -289,7 +289,7 @@
 						</xs:annotation>
 						<xs:complexType>
 							<xs:sequence>
-								<xs:element ref="address" minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="address" type="gAddressType" minOccurs="0" maxOccurs="unbounded">
 									<xs:annotation>
 										<xs:appinfo>
 											<sifChar>OR</sifChar>
@@ -1075,7 +1075,7 @@
 					<xs:element name="date" type="xs:date">
 						<xs:annotation>
 							<xs:appinfo>
-								<sifChar>O</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
@@ -2248,7 +2248,7 @@
 					<xs:element name="studentRefId" type="gRefIdPointerType">
 						<xs:annotation>
 							<xs:appinfo>
-								<sifChar>R</sifChar>
+								<sifChar>Q</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
@@ -2258,7 +2258,7 @@
 					<xs:element name="programRefId" type="gRefIdPointerType">
 						<xs:annotation>
 							<xs:appinfo>
-								<sifChar>R</sifChar>
+								<sifChar>Q</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
@@ -2268,7 +2268,7 @@
 					<xs:element name="schoolYear" type="xs:gYear">
 						<xs:annotation>
 							<xs:appinfo>
-								<sifChar>O</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
@@ -2511,21 +2511,10 @@ ContributingProfessional
 							<xs:documentation>A URI that establishes uniqueness.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="learningStandardRefId">
+					<xs:element name="learningStandardRefId" type="gRefIdPointerType">
 						<xs:annotation>
 							<xs:documentation>The RefId of a learning standard. The sif_Object attribute value should be either LearningStandardItem or LearningStandardDocument.</xs:documentation>
 						</xs:annotation>
-						<xs:complexType>
-							<xs:simpleContent>
-								<xs:restriction base="gGenericRefIdPointerType">
-									<xs:attribute name="sif_Object" type="gObjectNameType" use="required">
-										<xs:annotation>
-											<xs:documentation>The name of the SIF object that is being refereced by the payload of this element.</xs:documentation>
-										</xs:annotation>
-									</xs:attribute>
-								</xs:restriction>
-							</xs:simpleContent>
-						</xs:complexType>
 					</xs:element>
 					<xs:element name="targetObjectList">
 						<xs:annotation>

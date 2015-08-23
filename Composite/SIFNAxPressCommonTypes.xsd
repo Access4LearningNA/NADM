@@ -1144,8 +1144,8 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Login Id</elementName>
-								<sifChar>001170</sifChar>
-								<cedsId>O</cedsId>
+								<sifChar>O</sifChar>
+								<cedsId>001170</cedsId>
 								<cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
 							</xs:appinfo>
 							<xs:documentation>The login identifier for the person.</xs:documentation>
@@ -3137,6 +3137,8 @@
 	<xs:simpleType name="xLoginIdType">
 		<xs:annotation>
 			<xs:appinfo>
+				<elementName>Login Id Type</elementName>
+				<sifChar>O</sifChar>
 				<cedsId>001170</cedsId>
 				<cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
 			</xs:appinfo>
