@@ -92,7 +92,7 @@
 														<xs:element name="givenName" type="xs:normalizedString">
 															<xs:annotation>
 																<xs:appinfo>
-																	<sifChar>O</sifChar>
+																	<sifChar>M</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 																</xs:appinfo>
@@ -112,7 +112,7 @@
 														<xs:element name="familyName" type="xs:normalizedString">
 															<xs:annotation>
 																<xs:appinfo>
-																	<sifChar>O</sifChar>
+																	<sifChar>M</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 																</xs:appinfo>
@@ -255,7 +255,7 @@ ContributingProfessional
 												<xs:annotation>
 													<xs:appinfo>
 														<elementName>Student RefId</elementName>
-														<sifChar>R</sifChar>
+														<sifChar>Q</sifChar>
 														<cedsId/>
 														<cedsURL/>
 													</xs:appinfo>
@@ -277,7 +277,7 @@ ContributingProfessional
 														<xs:element name="givenName" type="xs:normalizedString">
 															<xs:annotation>
 																<xs:appinfo>
-																	<sifChar>O</sifChar>
+																	<sifChar>M</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 																</xs:appinfo>
@@ -297,7 +297,7 @@ ContributingProfessional
 														<xs:element name="familyName" type="xs:normalizedString">
 															<xs:annotation>
 																<xs:appinfo>
-																	<sifChar>O</sifChar>
+																	<sifChar>M</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 																</xs:appinfo>

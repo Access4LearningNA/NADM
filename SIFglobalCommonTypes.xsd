@@ -228,7 +228,7 @@
 			<xs:element name="familyName" type="xs:normalizedString">
 				<xs:annotation>
 					<xs:appinfo>
-						<sifChar>O</sifChar>
+						<sifChar>M</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
@@ -238,7 +238,7 @@
 			<xs:element name="givenName" type="xs:normalizedString">
 				<xs:annotation>
 					<xs:appinfo>
-						<sifChar>O</sifChar>
+						<sifChar>M</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
@@ -333,7 +333,7 @@
 			<xs:element name="timetableDayIdentifier" type="xs:token">
 				<xs:annotation>
 					<xs:appinfo>
-						<sifChar>O</sifChar>
+						<sifChar>M</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
@@ -1015,7 +1015,7 @@
 			<xs:element name="message" type="xs:string">
 				<xs:annotation>
 					<xs:appinfo>
-						<sifChar>O</sifChar>
+						<sifChar>M</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
@@ -1040,7 +1040,7 @@
 			<xs:element name="timeTableDay" type="xs:token" minOccurs="1">
 				<xs:annotation>
 					<xs:appinfo>
-						<sifChar>O</sifChar>
+						<sifChar>M</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
@@ -1230,7 +1230,7 @@
 			<xs:element name="number" type="xs:token">
 				<xs:annotation>
 					<xs:appinfo>
-						<sifChar>OR</sifChar>
+						<sifChar>MR</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
@@ -1273,7 +1273,7 @@
 			<xs:element name="relatedLearningStandardItemRefId" type="gRefIdPointerType">
 				<xs:annotation>
 					<xs:appinfo>
-						<sifChar>O</sifChar>
+						<sifChar>M</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
@@ -1283,7 +1283,7 @@
 			<xs:element name="relationshipType" type="gLearningStandardsItemRelationshipType">
 				<xs:annotation>
 					<xs:appinfo>
-						<sifChar>O</sifChar>
+						<sifChar>M</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
@@ -1525,7 +1525,7 @@
 			<xs:element name="line1" type="xs:normalizedString">
 				<xs:annotation>
 					<xs:appinfo>
-						<sifChar>O</sifChar>
+						<sifChar>M</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>

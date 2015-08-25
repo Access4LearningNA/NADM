@@ -20,7 +20,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
-								<sifChar>O</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId>000028</cedsId>
 								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3028</cedsURL>
 							</xs:appinfo>
@@ -306,7 +306,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
-								<sifChar>O</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
@@ -317,7 +317,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
-								<sifChar>O</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId>000024</cedsId>
 								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3024</cedsURL>
 							</xs:appinfo>
@@ -351,8 +351,8 @@
 							<xs:appinfo>
 								<elementName/>
 								<sifChar>O</sifChar>
-								<cedsId> </cedsId>
-								<cedsURL> </cedsURL>
+								<cedsId/>
+								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>Indicates whether this assessment (form) is a standard administration or alternate administration (accommodations provided).</xs:documentation>
 						</xs:annotation>
@@ -541,8 +541,8 @@
 										<xs:appinfo>
 											<elementName/>
 											<sifChar>OR</sifChar>
-											<cedsId> </cedsId>
-											<cedsURL> </cedsURL>
+											<cedsId/>
+											<cedsURL/>
 										</xs:appinfo>
 										<xs:documentation>A subtest identified by RefId.</xs:documentation>
 									</xs:annotation>
@@ -576,7 +576,7 @@
 												<xs:annotation>
 													<xs:appinfo>
 														<elementName/>
-														<sifChar>O</sifChar>
+														<sifChar>M</sifChar>
 														<cedsId>980</cedsId>
 														<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3981</cedsURL>
 													</xs:appinfo>
@@ -944,7 +944,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
-								<sifChar>O</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
@@ -1207,7 +1207,7 @@
 												<xs:annotation>
 													<xs:appinfo>
 														<elementName/>
-														<sifChar>O</sifChar>
+														<sifChar>M</sifChar>
 														<cedsId/>
 														<cedsURL/>
 													</xs:appinfo>
@@ -1507,7 +1507,7 @@
 												<xs:annotation>
 													<xs:appinfo>
 														<elementName/>
-														<sifChar>O</sifChar>
+														<sifChar>M</sifChar>
 														<cedsId/>
 														<cedsURL/>
 													</xs:appinfo>
@@ -1950,7 +1950,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
-								<sifChar>O</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
@@ -2137,7 +2137,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
-								<sifChar>O</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
@@ -2958,7 +2958,7 @@
 												<xs:annotation>
 													<xs:appinfo>
 														<elementName/>
-														<sifChar>O</sifChar>
+														<sifChar>M</sifChar>
 														<cedsId/>
 														<cedsURL/>
 													</xs:appinfo>
@@ -3527,7 +3527,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
-								<sifChar>O</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
@@ -3538,7 +3538,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName/>
-								<sifChar>O</sifChar>
+								<sifChar>M</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
@@ -3608,7 +3608,7 @@
 												<xs:annotation>
 													<xs:appinfo>
 														<elementName/>
-														<sifChar>O</sifChar>
+														<sifChar>M</sifChar>
 														<cedsId/>
 														<cedsURL/>
 													</xs:appinfo>

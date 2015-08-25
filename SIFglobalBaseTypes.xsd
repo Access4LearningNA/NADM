@@ -150,7 +150,7 @@
 				<xs:annotation>
 					<xs:documentation>Latitude in decimal degrees.</xs:documentation>
 					<xs:appinfo>
-						<sifChar>O</sifChar>
+						<sifChar>M</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
@@ -168,7 +168,7 @@
 				<xs:annotation>
 					<xs:documentation>Longitude in decimal degrees.</xs:documentation>
 					<xs:appinfo>
-						<sifChar>O</sifChar>
+						<sifChar>M</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>

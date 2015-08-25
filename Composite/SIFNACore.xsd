@@ -107,7 +107,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Student RefId</elementName>
-								<sifChar>R</sifChar>
+								<sifChar>Q</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
@@ -162,7 +162,7 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Exit Date</elementName>
-								<sifChar>R</sifChar>
+								<sifChar>Q</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
@@ -236,7 +236,7 @@
 												<xs:annotation>
 													<xs:appinfo>
 														<elementName>Exit Date</elementName>
-														<sifChar>R</sifChar>
+														<sifChar>Q</sifChar>
 														<cedsId/>
 														<cedsURL/>
 													</xs:appinfo>
