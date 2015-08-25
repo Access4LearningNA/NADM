@@ -80,8 +80,8 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Local Id</elementName>
-								<sifChar>001071</sifChar>
-								<cedsId>R</cedsId>
+								<sifChar>Q</sifChar>
+								<cedsId>001071</cedsId>
 								<cedsURL>https://ceds.ed.gov/element/001071</cedsURL>
 							</xs:appinfo>
 							<xs:documentation>A unique number or alphanumeric code assigned to a staff member by a district or LEA.</xs:documentation>
@@ -91,8 +91,8 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Login Id</elementName>
-								<sifChar>001170</sifChar>
-								<cedsId>R</cedsId>
+								<sifChar>Q</sifChar>
+								<cedsId>001170</cedsId>
 								<cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
 							</xs:appinfo>
 							<xs:documentation>The login identifier for the person.</xs:documentation>
@@ -330,8 +330,8 @@
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Login Id</elementName>
-								<sifChar>001170</sifChar>
-								<cedsId>R</cedsId>
+								<sifChar>Q</sifChar>
+								<cedsId>001170</cedsId>
 								<cedsURL>https://ceds.ed.gov/element/001170</cedsURL>
 							</xs:appinfo>
 							<xs:documentation>The login identifier for the person.</xs:documentation>

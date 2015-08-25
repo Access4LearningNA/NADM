@@ -183,7 +183,7 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elmentName>LearningStandardItemUrl</elmentName>
-						<sifChar>O</sifChar>
+						<sifChar>M</sifChar>
 						<cedsId>000874</cedsId>
 						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=25325</cedsURL>
 					</xs:appinfo>

@@ -1040,7 +1040,7 @@
 			<xs:element name="timeTableDay" type="xs:token" minOccurs="1">
 				<xs:annotation>
 					<xs:appinfo>
-						<sifChar>O</sifChar>
+						<sifChar>M</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
