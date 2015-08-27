@@ -1123,7 +1123,7 @@ CEDS Equivalent: Charter School Indicator 000039, Charter School Type 000710.</x
 			<xs:documentation>The root object of SIF Composite objects.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence minOccurs="0">
-			<xs:any namespace="##other" processContents="strict" maxOccurs="unbounded">
+			<xs:any namespace="##other" processContents="lax" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>SIF extention point</xs:documentation>
 				</xs:annotation>
@@ -1140,7 +1140,7 @@ CEDS Equivalent: Charter School Indicator 000039, Charter School Type 000710.</x
 			<xs:documentation>This is the root entity of SIF entity objects. It is the highest level Entity in the SIF Conceptual Model for Education.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence minOccurs="0">
-			<xs:any namespace="##other" processContents="strict" maxOccurs="unbounded">
+			<xs:any namespace="##other" processContents="lax" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>SIF extention point</xs:documentation>
 				</xs:annotation>
@@ -1153,7 +1153,7 @@ CEDS Equivalent: Charter School Indicator 000039, Charter School Type 000710.</x
 			<xs:documentation>The root object of SIF Report objects. The refId for report-type objects is transient.  That is, its value is generated at the time the object is created and is not expected to have any persistent meaning. </xs:documentation>
 		</xs:annotation>
 		<xs:sequence minOccurs="0">
-			<xs:any namespace="##other" processContents="strict" maxOccurs="unbounded">
+			<xs:any namespace="##other" processContents="lax" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>SIF extention point</xs:documentation>
 				</xs:annotation>

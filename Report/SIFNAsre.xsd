@@ -357,7 +357,7 @@
 													<xs:documentation>The year, month and day or year and month on which the achievement was recognized.</xs:documentation>
 												</xs:annotation>
 											</xs:element>
-											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
@@ -514,7 +514,7 @@
 																<xs:documentation/>
 															</xs:annotation>
 														</xs:element>
-														<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+														<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 													</xs:sequence>
 												</xs:complexType>
 											</xs:element>
@@ -567,7 +567,7 @@
 																			<xs:documentation/>
 																		</xs:annotation>
 																	</xs:element>
-																	<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+																	<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
@@ -710,14 +710,14 @@
 																			<xs:documentation>A meaningful raw score, derived score, or statistical expression of the performance of a person on an assessment. The type of result is indicated by the Metric Type element. The results can be expressed as a number, percentile, range, level, etc. The score relates to all scored items or a sub test scoring one aspect of performance on the test. This value may or may not correspond to one or more Performance Levels.</xs:documentation>
 																		</xs:annotation>
 																	</xs:element>
-																	<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+																	<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
 													</xs:sequence>
 												</xs:complexType>
 											</xs:element>
-											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
@@ -942,18 +942,18 @@
 																						<xs:documentation>( Exit Date) The year, month and day on which the student officially withdrew or graduated, i.e. the date on which the student's enrollment ended.</xs:documentation>
 																					</xs:annotation>
 																				</xs:element>
-																				<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+																				<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
-																	<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+																	<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
 													</xs:sequence>
 												</xs:complexType>
 											</xs:element>
-											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
@@ -1163,18 +1163,18 @@
 																						<xs:documentation>The year, month and day on which the student officially withdrew or graduated, i.e. the date on which the student's enrollment ended.</xs:documentation>
 																					</xs:annotation>
 																				</xs:element>
-																				<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+																				<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
-																	<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+																	<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
 													</xs:sequence>
 												</xs:complexType>
 											</xs:element>
-											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
@@ -1221,7 +1221,7 @@
 																<xs:documentation>The year, month and day of an immunization.</xs:documentation>
 															</xs:annotation>
 														</xs:element>
-														<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+														<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 													</xs:sequence>
 												</xs:complexType>
 											</xs:element>
@@ -1276,7 +1276,7 @@
 																<xs:documentation>The result of the medical or health-related test that a person received.</xs:documentation>
 															</xs:annotation>
 														</xs:element>
-														<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+														<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 													</xs:sequence>
 												</xs:complexType>
 											</xs:element>
@@ -1433,7 +1433,7 @@
 													<xs:documentation>Primary contact information for the person</xs:documentation>
 												</xs:annotation>
 											</xs:element>
-											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
@@ -1567,7 +1567,7 @@
 																<xs:documentation>A unique number or alphanumeric code assigned to a state agency.</xs:documentation>
 															</xs:annotation>
 														</xs:element>
-														<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+														<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 													</xs:sequence>
 												</xs:complexType>
 											</xs:element>
@@ -1676,7 +1676,7 @@
 													<xs:documentation>A unique number or alphanumeric code assigned to a state agency.</xs:documentation>
 												</xs:annotation>
 											</xs:element>
-											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
@@ -1793,7 +1793,7 @@
 													<xs:documentation>A unique number or alphanumeric code assigned to a state agency.</xs:documentation>
 												</xs:annotation>
 											</xs:element>
-											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
@@ -1819,7 +1819,7 @@
 										<xs:documentation>Eligibility Status for School Food Service Programs: An indication of a student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.</xs:documentation>
 									</xs:annotation>
 								</xs:element>
-								<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
@@ -2116,14 +2116,14 @@
 																<xs:documentation>The number of minutes per week that a student with disabilities is served in a regular classroom with his or her non-disabled peers.</xs:documentation>
 															</xs:annotation>
 														</xs:element>
-														<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+														<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 													</xs:sequence>
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
-								<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
@@ -2442,14 +2442,14 @@
 																									<xs:documentation>The system that defines the categories by which an achievement is attributed to the learner.</xs:documentation>
 																								</xs:annotation>
 																							</xs:element>
-																							<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+																							<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 																						</xs:sequence>
 																					</xs:complexType>
 																				</xs:element>
 																			</xs:sequence>
 																		</xs:complexType>
 																	</xs:element>
-																	<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+																	<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
@@ -2541,7 +2541,7 @@
 																<xs:documentation>Contact information for the school.</xs:documentation>
 															</xs:annotation>
 														</xs:element>
-														<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+														<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 													</xs:sequence>
 												</xs:complexType>
 											</xs:element>
@@ -2674,7 +2674,7 @@
 																<xs:documentation>The circumstances under which the student exited from membership in an educational institution.</xs:documentation>
 															</xs:annotation>
 														</xs:element>
-														<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+														<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 													</xs:sequence>
 												</xs:complexType>
 											</xs:element>
@@ -2964,7 +2964,7 @@
 													</xs:sequence>
 												</xs:complexType>
 											</xs:element>
-											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
