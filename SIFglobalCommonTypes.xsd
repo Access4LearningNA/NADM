@@ -209,7 +209,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="message"/>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="messageType"/>
 	</xs:complexType>
@@ -325,7 +325,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gBellPeriodType">
@@ -400,7 +400,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gBellScheduleDayType">
@@ -425,7 +425,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gContactFlagList">
@@ -497,7 +497,7 @@
 					<xs:documentation>The type of credit.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gCreatedType">
@@ -522,7 +522,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gCreatorType">
@@ -547,7 +547,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gCreatorList">
@@ -610,7 +610,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gDemographicsType">
@@ -789,7 +789,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gElectoralDistrictType">
@@ -947,7 +947,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gLanguageType">
@@ -1004,7 +1004,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gMedicalAlertMessageType">
@@ -1022,7 +1022,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="severity" type="gMedicalAlertMessageSeverityType" use="optional">
 			<xs:annotation>
@@ -1057,7 +1057,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gMeetingTimeList">
@@ -1120,7 +1120,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gNameOfRecordType">
@@ -1257,7 +1257,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gRecordClosureReasonType">
@@ -1290,7 +1290,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gRelatedLearningStandardItemList">
@@ -1322,7 +1322,7 @@
 					<xs:sequence>
 						<xs:element name="roomRefId" type="gRefIdPointerType"/>
 						<xs:element name="roomNumber" type="xs:token"/>
-						<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
@@ -1332,7 +1332,7 @@
 		<xs:sequence>
 			<xs:element name="roomRefId" type="gRefIdPointerType"/>
 			<xs:element name="roomNumber" type="xs:token"/>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gSchoolFocusList">
@@ -1371,7 +1371,7 @@
 					<xs:documentation>The role of the staff member with the section.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gSessionScheduleType">
@@ -1416,7 +1416,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gSessionScheduleList">
@@ -1503,7 +1503,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gSpanGapList">
@@ -1652,7 +1652,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gSubjectAreaType">
@@ -1756,7 +1756,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gTimetableDayList">
@@ -1805,7 +1805,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gTimetablePeriodList">
@@ -1844,7 +1844,7 @@
 					<xs:documentation/>
 				</xs:annotation>
 			</xs:element>
-			<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="gYearGroupType">

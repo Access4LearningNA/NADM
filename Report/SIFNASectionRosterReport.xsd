@@ -189,7 +189,7 @@ ContributingProfessional
 													<xs:documentation>End date, inclusive of the association of the staff person with the section.</xs:documentation>
 												</xs:annotation>
 											</xs:element>
-											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
@@ -224,7 +224,7 @@ ContributingProfessional
 										<xs:documentation>Name of the referenced school instance.</xs:documentation>
 									</xs:annotation>
 								</xs:element>
-								<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
@@ -238,7 +238,7 @@ ContributingProfessional
 								</xs:element>
 								<xs:element name="courseCode" type="xs:token" minOccurs="0"/>
 								<xs:element name="courseTitle" type="xs:normalizedString"/>
-								<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+								<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
@@ -382,7 +382,7 @@ ContributingProfessional
 													<xs:documentation>End date, inclusive of the association of the student with the section.</xs:documentation>
 												</xs:annotation>
 											</xs:element>
-											<xs:any namespace="##other" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+											<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
