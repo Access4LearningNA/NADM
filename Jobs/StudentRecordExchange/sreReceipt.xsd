@@ -1,0 +1,100 @@
+<!-- version 3.03.02 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:include schemaLocation="../Entity/SIFglobal.xsd"/>
+	<xs:complexType name="sreReceiptType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Student Record Exchange Receipt Type</elementName>
+				<events>no</events>
+				<isSIFObject>no</isSIFObject>
+			</xs:appinfo>
+			<xs:documentation>
+				Notifies the provider of the status of the record request, with additional receipt codes that the provider may be able to act upon. For example, this object could report that a student has been sucessfully enrolled in a receiving school district.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSIF_FunctionalServiceType">
+				<xs:sequence>
+					<xs:element name="receiptDateTime" type="xs:dateTime" minOccurs="1">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Receipt Datetime</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>
+								Date and time that the record was received by the requester.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="receiverNCESSchoolCode" type="xs:token" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Receiving School NCES Code</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>001069</cedsId>
+								<cedsURL>
+									https://ceds.ed.gov/cedselementdetails.aspx?termid=3155
+								</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>
+								The NCES Code is a unique number or alphanumeric code assigned to an institution by a school, school system, a state, or other agency or entity. In this context, this code represents the school that the student is being enrolled into, if this SRE Job is used to describe a student enrollment transfer.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="receivingNCESLEACode" type="xs:token" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Receiving LEA NCES Code</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>001069</cedsId>
+								<cedsURL>
+									https://ceds.ed.gov/cedselementdetails.aspx?termid=3155
+								</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>
+									The NCES Code is a unique number or alphanumeric code assigned to an institution by a school, school system, a state, or other agency or entity. In this context, this code represents the LEA that the student is being enrolled into, if this SRE Job is used to describe a student enrollment transfer.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="receiptCode" type="receiptCodeType" minOccurs="1">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Receipt Code</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>
+								A code that categorizes how the record was received and/or processed by the requesting organization.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="receiptComments" type="xs:normalizedString" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Receipt Comments</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>
+								Human-readable comments from the requester to the providing organization regarding actions taken during or after receipt of the student record. For example, a registrar may state here that the student has successfully enrolled in their school.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:simpleType name="receiptCodeType" final="restriction">
+						<xs:restriction base="xs:token">
+							<xs:enumeration value="enrollmentTransferComplete" />
+							<xs:enumeration value="recordReceived" />
+							<xs:enumeration value="recordRejectedOrIncomplete" />
+							<xs:enumeration value="other" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="sreReceipt" type="sreReceiptType"/>
+</xs:schema>
