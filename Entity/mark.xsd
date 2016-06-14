@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--version 3.04.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.4" targetNamespace="http://www.sifassociation.org/datamodel/na/3.4" elementFormDefault="qualified">
+	<xs:include schemaLocation="../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../SIFLocale.xsd"/>
+	<xs:complexType name="markType">
+		<xs:annotation>
+			<xs:documentation>This object defines the types of values allowed for a mark and the domain for each mark value.  At least one of the Percentage, Numeric, Letter or Narrative nodes must be used to create a valid MarkValueInfo.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSIF_EntityType">
+				<xs:sequence>
+					<xs:element name="schoolRefId">
+						<xs:annotation>
+							<xs:documentation>The Id (GUID) that uniquely identifies the School that these Mark Values apply to.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolYear" type="xs:gYear"/>
+					<xs:element name="name" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The text name of the value list ("Letter Grades", "Letter Grades (+/-)", "ESU", "Pass/Fail", "Override Grades", "Citizenship Comment Codes", etc.).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="description" type="xs:normalizedString" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Textual description of the type of Mark (e.g. "Marking Period Grade", "Comment 1", "Comment 2", "Conduct", "Effort", "WorkHabits").</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="percentage">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="minimum" type="xs:decimal" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>The minimum percent value accepted for this mark.  If present, the publisher of this object is required to ensure that any values present in the StudentSectionMarks object will not be lower than this value.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="maximum" type="xs:decimal" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>The maximum percent value accepted for this mark.  If present, the publisher of this object is required to ensure that any values present in the StudentSectionMarks object will not be higher than this value.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="isAccepted" type="xs:boolean" use="required">
+								<xs:annotation>
+									<xs:documentation>Indicates whether a percent Mark is accepted and is used in Change events to unambiguously signal whether support for the Mark has changed, especially ended.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="numeric">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="precision" type="xs:unsignedInt" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Number of significant digits.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="scale" type="xs:unsignedInt" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Number of decimal places.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="low" type="xs:decimal" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Lowest Mark in the range (e.g., 98, 3.95).</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="high" type="xs:decimal" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Highest Mark in the range (e.g., 100, 4.0).</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="isAccepted" type="xs:boolean" use="required">
+								<xs:annotation>
+									<xs:documentation>Indicates whether a raw numeric score is accepted and is used in Change events to unambiguously signal whether support for the score has changed, especially ended.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="letter">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="validMark" minOccurs="0" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="code" type="xs:token">
+												<xs:annotation>
+													<xs:documentation>String representing the actual Mark that would appear on the report card (e.g., "A+", "I", "100").</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="numericEquivalent" type="xs:decimal" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>Numeric equivalent for the Mark (e.g., 100, 4.0).</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="description" type="xs:string" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>The description for this code. (e.g. "Excellent", "Participates in Class", "Incomplete", etc...).</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="IsAccepted" type="xs:boolean" use="required">
+								<xs:annotation>
+									<xs:documentation>Indicates whether a letter Mark is accepted and is used in Change events to unambiguously signal whether support for the Mark has changed, especially ended.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="narrative">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="maximumSize" type="xs:unsignedInt" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>An integer value representing the maximum number of Unicode characters for the narrative, the UTF-8 encoding of which may be longer.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="isAccepted" type="xs:boolean" use="required">
+								<xs:annotation>
+									<xs:documentation>Indicates whether a narrative is accepted and is used in Change events to unambiguously signal whether support for a narrative has changed, especially ended.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="mark" type="markType"/>
+</xs:schema>

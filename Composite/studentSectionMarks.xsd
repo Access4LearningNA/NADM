@@ -17,17 +17,6 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
-					<xs:element name="markRefId" type="gRefIdPointerType">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Mark RefId</elementName>
-								<sifChar>M</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation>The Id (GUID) that identifies a mark that was given for this student.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
 					<xs:element name="studentRefId" type="gRefIdPointerType">
 						<xs:annotation>
 							<xs:appinfo>
@@ -83,10 +72,10 @@
 							<xs:documentation>Indicates if the grades are "Final" from the perspective of the teacher or school.  Does not mean that change events will not occur for this item.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="markList">
+					<xs:element name="markScoreList">
 						<xs:complexType>
 							<xs:sequence>
-								<xs:element name="mark" minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="markScore" minOccurs="0" maxOccurs="unbounded">
 									<xs:annotation>
 										<xs:appinfo>
 											<elementName>Mark</elementName>
@@ -150,6 +139,17 @@
 												</xs:annotation>
 											</xs:element>
 										</xs:sequence>
+										<xs:attribute name="markRefId" use="required">
+											<xs:annotation>
+												<xs:appinfo>
+													<elementName>Mark RefId</elementName>
+													<sifChar>M</sifChar>
+													<cedsId/>
+													<cedsURL/>
+												</xs:appinfo>
+												<xs:documentation>The Id (GUID) that identifies a mark that was given for this student.</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
 									</xs:complexType>
 								</xs:element>
 							</xs:sequence>
