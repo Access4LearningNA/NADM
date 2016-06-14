@@ -36,7 +36,7 @@
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
-							<xs:documentation>The GUID reference to the LEAInfo object representing the LEA that employs the staff member.</xs:documentation>
+							<xs:documentation>The GUID reference to the LEA object representing the LEA that employs the staff member.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="active" type="xs:boolean" nillable="true" minOccurs="0">
