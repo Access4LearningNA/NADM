@@ -3,7 +3,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.4" targetNamespace="http://www.sifassociation.org/datamodel/na/3.4" elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
 	<xs:include schemaLocation="../SIFLocale.xsd"/>
-	<xs:complexType name="studentSectionMarksType">
+	<xs:complexType name="studentSectionMarkScoresType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>Student-Section Marks</elementName>
@@ -79,7 +79,7 @@
 									<xs:annotation>
 										<xs:appinfo>
 											<elementName>Mark</elementName>
-											<sifChar>M</sifChar>
+											<sifChar>OR</sifChar>
 											<cedsId/>
 											<cedsURL/>
 										</xs:appinfo>
@@ -159,5 +159,5 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="studentSectionMarks" type="studentSectionMarksType"/>
+	<xs:element name="studentSectionMarkScores" type="studentSectionMarkScoresType"/>
 </xs:schema>

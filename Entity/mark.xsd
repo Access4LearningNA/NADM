@@ -62,6 +62,15 @@
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="percentage">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Percentage</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
 						<xs:complexType>
 							<xs:sequence>
 								<xs:element name="minimum" type="xs:decimal" nillable="true" minOccurs="0">
@@ -86,6 +95,7 @@
 										<xs:documentation>The maximum percent value accepted for this mark.  If present, the publisher of this object is required to ensure that any values present in the StudentSectionMarks object will not be higher than this value.</xs:documentation>
 									</xs:annotation>
 								</xs:element>
+								<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 							</xs:sequence>
 							<xs:attribute name="isAccepted" type="xs:boolean" use="required">
 								<xs:annotation>
@@ -101,6 +111,15 @@
 						</xs:complexType>
 					</xs:element>
 					<xs:element name="numeric">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Numeric</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
 						<xs:complexType>
 							<xs:sequence>
 								<xs:element name="precision" type="xs:unsignedInt" nillable="true" minOccurs="0">
@@ -147,6 +166,7 @@
 										<xs:documentation>Highest Mark in the range (e.g., 100, 4.0).</xs:documentation>
 									</xs:annotation>
 								</xs:element>
+								<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 							</xs:sequence>
 							<xs:attribute name="isAccepted" type="xs:boolean" use="required">
 								<xs:annotation>
@@ -162,9 +182,27 @@
 						</xs:complexType>
 					</xs:element>
 					<xs:element name="letter">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Letter</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
 						<xs:complexType>
 							<xs:sequence>
 								<xs:element name="validMark" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Valid Mark</elementName>
+											<sifChar>OR</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation/>
+									</xs:annotation>
 									<xs:complexType>
 										<xs:sequence>
 											<xs:element name="code" type="xs:token">
@@ -200,6 +238,7 @@
 													<xs:documentation>The description for this code. (e.g. "Excellent", "Participates in Class", "Incomplete", etc...).</xs:documentation>
 												</xs:annotation>
 											</xs:element>
+											<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
@@ -218,6 +257,15 @@
 						</xs:complexType>
 					</xs:element>
 					<xs:element name="narrative">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Narrative</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
 						<xs:complexType>
 							<xs:sequence>
 								<xs:element name="maximumSize" type="xs:unsignedInt" nillable="true" minOccurs="0">
@@ -231,6 +279,7 @@
 										<xs:documentation>An integer value representing the maximum number of Unicode characters for the narrative, the UTF-8 encoding of which may be longer.</xs:documentation>
 									</xs:annotation>
 								</xs:element>
+								<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 							</xs:sequence>
 							<xs:attribute name="isAccepted" type="xs:boolean" use="required">
 								<xs:annotation>

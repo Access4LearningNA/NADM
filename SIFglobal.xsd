@@ -1238,7 +1238,7 @@ CEDS Equivalent: Charter School Indicator 000039, Charter School Type 000710.</x
 				<cedsId/>
 				<cedsURL/>
 			</xs:appinfo>
-			<xs:documentation>This object contains all the personal information related to the student.</xs:documentation>
+			<xs:documentation>NOT USED - This object contains all the personal information related to the student.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gLearnerType">
