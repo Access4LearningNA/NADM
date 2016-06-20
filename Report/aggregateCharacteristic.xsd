@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--version 3.04.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.4" targetNamespace="http://www.sifassociation.org/datamodel/na/3.4" elementFormDefault="qualified">
+	<xs:include schemaLocation="../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../SIFLocale.xsd"/>
+	<xs:complexType name="aggregateCharacteristicType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName/>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>This object defines the attribute of a group of objects that implicitly or explicitly defines a subset of the group.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="description" type="xs:string" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>Describes the supercategory of the characteristic described in the Definition element below.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="definition" type="xs:token">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Definition</elementName>
+						<sifChar>M</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>Defines the aggregate characteristic information.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="elementName" type="xs:token" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Element Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>Reference to SIF elements or external authority (e.g., StudentPersonal/Gender).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="aggregateCharacteristic" type="aggregateCharacteristicType"/>
+</xs:schema>
