@@ -6,7 +6,7 @@
 	<xs:complexType name="markType">
 		<xs:annotation>
 			<xs:appinfo>
-				<elementName>markType</elementName>
+				<elementName>Mark</elementName>
 				<events>yes</events>
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
@@ -33,7 +33,7 @@
 							<xs:appinfo>
 								<elementName>The current school year.</elementName>
 								<sifChar>M</sifChar>
-								<cedsId/>
+								<cedsId>000243</cedsId>
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation/>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--version 3.04.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.4" targetNamespace="http://www.sifassociation.org/datamodel/na/3.4" elementFormDefault="qualified">
+	<xs:include schemaLocation="../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../SIFLocale.xsd"/>
+	<xs:complexType name="studentDailyAttendanceType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Student Daily Attendance</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>This object provides daily attendance information for a particular student in a particular school on a particular date.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gEventType">
+				<xs:sequence>
+					<xs:element name="studentRefId" type="gRefIdPointerType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Student RefId</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (GUID) of the student for whom this attendance information is being reported.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolRefId" type="gRefIdPointerType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>School RefId</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (GUID) of the school for which this attendance information is being reported.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="date" type="xs:date">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Attendance Date</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The calendar date to which this attendance information relates.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolYear" type="xs:token">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>School Year</elementName>
+								<sifChar>M</sifChar>
+								<cedsId>000243</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>School year for which this enrollment is applicable, expressed as the four-digit year in which the school year ends (e.g. 2007 for the 2006-07 school year).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="attendanceCode" type="gCodedElementType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Attendance Code</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The locally-defined attendance code. It is recommended that the codeset for this element include columns for the information shown in the AttendanceCodeInfo object from the SIF 2.7 data model. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="timeIn" type="xs:time" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Time In</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The time the student entered or returned to school.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="timeOut" type="xs:time" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Time Out</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The time the student left school.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="attendanceNote" type="xs:normalizedString" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Attendance Note</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Note related to this particular attendance event.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StudentDailyAttendance" type="studentDailyAttendanceType"/>
+</xs:schema>
