@@ -18,7 +18,25 @@
 			<xs:documentation>Demographic and other information for each person who might be referenced as a contact.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gContactPersonType"/>
+			<xs:extension base="naPersonType">
+				<xs:sequence>
+					<xs:element name="publishIndicator" type="gYesNoUnknownType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Indicates if the contact information can be published in directories and other lists</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="employerType" type="gLaxCodedElementType" minOccurs="0"/>
+					<xs:element name="educationLevel" type="gLaxCodedElementType" minOccurs="0"/>
+					<xs:element name="positionTitle" type="xs:token" minOccurs="0"/>
+					<xs:element name="role" type="gLaxCodedElementType" minOccurs="0"/>
+					<xs:element name="addressRefId" type="gRefIdPointerType" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="contactPerson" type="contactPersonType"/>
@@ -34,7 +52,7 @@
 			<xs:documentation>An individual within an educational setting.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gPersonType"/>
+			<xs:extension base="naPersonType"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="person" type="personType"/>
@@ -50,8 +68,10 @@
 			<xs:documentation>This object contains all the personal information relating to a staff member, who might be a teacher or other employee of the school or district.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gStaffPersonType">
+			<xs:extension base="naPersonType">
 				<xs:sequence>
+					<xs:element name="otherIdList" type="gOtherIdList" minOccurs="0"/>
+					<xs:element name="title" type="xs:token" minOccurs="0"/>
 					<xs:element name="userName" type="xs:token" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The string identifier used to log in to a computer system.</xs:documentation>
@@ -2111,6 +2131,16 @@ Local identifier representing the current or most recent homeroom in which the s
 														<cedsURL/>
 													</xs:appinfo>
 													<xs:documentation>Identifies whether or not this specific victim was physically injured, and if so, identify whether the injury was major or minor.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="appliedForTransfer" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>An indication of whether or not the victim has, as a result of this incident, applied for a transfer to another school. This can be the result of a school choice policy or other policy. </xs:documentation>
 												</xs:annotation>
 											</xs:element>
 										</xs:sequence>

@@ -102,18 +102,6 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="gClientType">
-		<xs:annotation>
-			<xs:appinfo>
-				<cedsId/>
-				<cedsURL/>
-			</xs:appinfo>
-			<xs:documentation>Client is an extension of Person.Someone who is served by an education institution.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="gPersonType"/>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:complexType name="gContactPersonType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -123,7 +111,7 @@
 			<xs:documentation>A person who might be referenced as a contact for some purpose.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gClientType">
+			<xs:extension base="gPersonType">
 				<xs:sequence>
 					<xs:element name="publishIndicator" type="gYesNoUnknownType" minOccurs="0">
 						<xs:annotation>
@@ -359,7 +347,7 @@
 			<xs:documentation/>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gClientType">
+			<xs:extension base="gPersonType">
 				<xs:sequence>
 					<xs:element name="otherIdList" type="gOtherIdList" minOccurs="0"/>
 				</xs:sequence>
@@ -1106,18 +1094,6 @@ CEDS Equivalent: Charter School Indicator 000039, Charter School Type 000710.</x
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="gServiceProviderType">
-		<xs:annotation>
-			<xs:appinfo>
-				<cedsId/>
-				<cedsURL/>
-			</xs:appinfo>
-			<xs:documentation/>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="gPersonType"/>
-		</xs:complexContent>
-	</xs:complexType>
 	<xs:complexType name="gSIF_CompositeType">
 		<xs:annotation>
 			<xs:documentation>The root object of SIF Composite objects.</xs:documentation>
@@ -1170,7 +1146,7 @@ CEDS Equivalent: Charter School Indicator 000039, Charter School Type 000710.</x
 			<xs:documentation/>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gServiceProviderType">
+			<xs:extension base="gPersonType">
 				<xs:sequence>
 					<xs:element name="otherIdList" type="gOtherIdList" minOccurs="0"/>
 					<xs:element name="title" type="xs:token" minOccurs="0"/>
