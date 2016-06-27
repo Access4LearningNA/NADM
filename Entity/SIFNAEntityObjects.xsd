@@ -2634,6 +2634,11 @@ Local identifier representing the current or most recent homeroom in which the s
 		<xs:complexContent>
 			<xs:extension base="gStaffSectionAssociationType">
 				<xs:sequence>
+					<xs:element name="schoolYear" type="xs:gYear" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>School Year to which this record applies.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="teacherOfRecord" type="gYesNoUnknownType" minOccurs="0"/>
 					<xs:element name="roleList" minOccurs="0">
 						<xs:annotation>
