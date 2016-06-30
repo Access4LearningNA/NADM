@@ -964,31 +964,18 @@
 					<xs:documentation>The month, day, and year on which a person enters and begins to receive instructional services in a school, institution, program, or class-section during a given session.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-      <xs:element name="exitDate" type="xs:date" minOccurs="0">
-        <xs:annotation>
-          <xs:appinfo>
-            <elementName>Exit Date</elementName>
-            <sifChar>O</sifChar>
-            <cedsId>000107</cedsId>
-            <cedsURL>https://ceds.ed.gov/element/000107</cedsURL>
-          </xs:appinfo>
-          <xs:documentation>The year, month and day on which the student officially withdrew or graduated, i.e. the date on which the student's enrollment ended.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="exitOrWithdrawalType" type="xs:token" minOccurs="0">
-        <xs:annotation>
-          <xs:appinfo>
-            <elementName>Exit or Withdrawal Date</elementName>
-            <sifChar>O</sifChar>
-            <cedsId>000110</cedsId>
-            <cedsURL>https://ceds.ed.gov/element/000110</cedsURL>
-          </xs:appinfo>
-          <xs:documentation>
-            The circumstances under which the student exited from membership in an educational institution.
-          </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="homeRoomNumber" type="xs:token" minOccurs="0">
+			<xs:element name="exitDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Exit Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000107</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000107</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The year, month and day on which the student officially withdrew or graduated, i.e. the date on which the student's enrollment ended.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="homeRoomNumber" type="xs:token" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Home Room Number</elementName>
@@ -3110,7 +3097,7 @@
 					<xs:documentation>An indication of the time of day the class begins.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="classEndingTime" type="xExitOrWithdrawalType" minOccurs="0">
+			<xs:element name="classEndingTime" type="xs:time" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Class Ending Time</elementName>
@@ -3157,184 +3144,4 @@
 		</xs:annotation>
 		<xs:restriction base="xs:token"/>
 	</xs:simpleType>
-  <xs:simpleType name="xExitOrWithdrawalType" final="">
-    <xs:annotation>
-      <xs:appinfo>
-        <elementName>Exit or Withdrawal Date</elementName>
-        <sifChar>O</sifChar>
-        <cedsId>000110</cedsId>
-        <cedsURL>https://ceds.ed.gov/element/000110</cedsURL>
-      </xs:appinfo>
-      <xs:documentation>
-        The circumstances under which the student exited from membership in an educational institution.
-      </xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="1907">
-        <xs:annotation>
-          <xs:appinfo>Student is in a different public school in the same local education agency</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1908">
-        <xs:annotation>
-          <xs:appinfo>Transferred to a public school in a different local education agency in the same state</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1909">
-        <xs:annotation>
-          <xs:appinfo>Transferred to a public school in a different state</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1910">
-        <xs:annotation>
-          <xs:appinfo>Transferred to a private, non-religiously-affiliated school in the same local education agency</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1911">
-        <xs:annotation>
-          <xs:appinfo>Transferred to a private, non-religiously-affiliated school in a different LEA in the same state</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1912">
-        <xs:annotation>
-          <xs:appinfo>Transferred to a private, non-religiously-affiliated school in a different state</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1913">
-        <xs:annotation>
-          <xs:appinfo>Transferred to a private, religiously-affiliated school in the same local education agency</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1914">
-        <xs:annotation>
-          <xs:appinfo>Transferred to a private, religiously-affiliated school in a different LEA in the same state</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1915">
-        <xs:annotation>
-          <xs:appinfo>Transferred to a private, religiously-affiliated school in a different state</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1916">
-        <xs:annotation>
-          <xs:appinfo>Transferred to a school outside of the country</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1917">
-        <xs:annotation>
-          <xs:appinfo>Transferred to an institution</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1918">
-        <xs:annotation>
-          <xs:appinfo>Transferred to home schooling</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1919">
-        <xs:annotation>
-          <xs:appinfo>Transferred to a charter school</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1921">
-        <xs:annotation>
-          <xs:appinfo>Graduated with regular, advanced, International Baccalaureate, or other type of diploma</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1922">
-        <xs:annotation>
-          <xs:appinfo>Completed school with other credentials</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1923">
-        <xs:annotation>
-          <xs:appinfo>Died or is permanently incapacitated</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1924">
-        <xs:annotation>
-          <xs:appinfo>Withdrawn due to illness</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1925">
-        <xs:annotation>
-          <xs:appinfo>Expelled or involuntarily withdrawn</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1926">
-        <xs:annotation>
-          <xs:appinfo>Reached maximum age for services</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1927">
-        <xs:annotation>
-          <xs:appinfo>Discontinued schooling</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1928">
-        <xs:annotation>
-          <xs:appinfo>Completed grade 12, but did not meet all graduation requirements</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1930">
-        <xs:annotation>
-          <xs:appinfo>Enrolled in a postsecondary early admission program, eligible to return</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="1931">
-        <xs:annotation>
-          <xs:appinfo>Not enrolled, unknown status</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="3499">
-        <xs:annotation>
-          <xs:appinfo>Student is in the same LEA, receiving education services, but is not assigned to a particular school</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="3502">
-        <xs:annotation>
-          <xs:appinfo>Not enrolled, eligible to return</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="3503">
-        <xs:annotation>
-          <xs:appinfo>Enrolled in a foreign exchange program, eligible to return</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="3504">
-        <xs:annotation>
-          <xs:appinfo>Withdrawn from school, under the age for compulsory attendance; eligible to return</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="3505">
-        <xs:annotation>
-          <xs:appinfo>Exited</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="3508">
-        <xs:annotation>
-          <xs:appinfo>Student is in a charter school managed by the same local education agency</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="3509">
-        <xs:annotation>
-          <xs:appinfo>Completed with a state-recognized equivalency certificate</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="73060">
-        <xs:annotation>
-          <xs:appinfo>Officially withdrew and enrolled in ABE, adult secondary education, or adult ESL program</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="73061">
-        <xs:annotation>
-          <xs:appinfo>Officially withdrew and enrolled in a workforce training program</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="9999">
-        <xs:annotation>
-          <xs:appinfo>Other</xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
 </xs:schema>
