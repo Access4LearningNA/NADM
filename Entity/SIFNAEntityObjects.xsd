@@ -576,7 +576,70 @@ Local identifier representing the current or most recent homeroom in which the s
 			<xs:documentation>A setting in which organized instruction of course content is provided to one or more students (including cross-age groupings) for a given period of time.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gSectionType"/>
+			<xs:extension base="gSectionType">
+				<xs:sequence>
+					<xs:annotation>
+						<xs:documentation>3.4:Proposed Elements</xs:documentation>
+					</xs:annotation>
+					<xs:element name="courseOverride" nillable="true" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="courseCode" type="gLaxCodedElementType" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the school-defined course code for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="stateCourseCode" type="gLaxCodedElementType" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the state-defined course code for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="districtCourseCode" type="gLaxCodedElementType" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the district course code for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="subjectArea" type="xs:token" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the subject matter area for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="courseTitle" type="xs:token" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the course title for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="instructionalLevel" type="gInstructionalLevelType" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the instructional level for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="courseCredits" type="gCourseCreditType" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the course credits for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="override" use="required">
+								<xs:annotation>
+									<xs:documentation>Designates whether or not SchoolCourseInfo information has been overridden with different values for this section.</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:enumeration value="Yes"/>
+										<xs:enumeration value="No"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="SectionCode" type="gLaxCodedElementType" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A unique identifier of the section for the school year and across courses (i.e. unique across all courses).  For example, Algebra I sections range from 00122 to 00140 and English II courses range from 00141 to 00152.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="section" type="sectionType"/>
@@ -1217,6 +1280,20 @@ Local identifier representing the current or most recent homeroom in which the s
 							<xs:documentation>The system outlining instructional or non-instructional activities and procedures designed to accomplish a predetermined educational objective or set of objectives or to provide support services to person and/or the community.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:sequence>
+						<xs:annotation>
+							<xs:documentation>3.4: Proposed Elements</xs:documentation>
+						</xs:annotation>
+						<xs:element name="managingSchoolRefId" type="gRefIdPointerType" minOccurs="0"/>
+						<xs:element name="managingSchoolLocalId" type="gLocalIdType" minOccurs="0"/>
+						<xs:element name="fundingSourceList" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="fundingSource" type="gCodedElementType" minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -2583,6 +2660,16 @@ Local identifier representing the current or most recent homeroom in which the s
 							<xs:documentation>An indication of whether the student is enrolled full time or part time.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:sequence>
+						<xs:annotation>
+							<xs:documentation>3.4: Proposed Elements</xs:documentation>
+						</xs:annotation>
+						<xs:element name="placementType" type="gCodedElementType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Provides additional detail concerning enrollment in the program, e.g., Resident, State Placed.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
