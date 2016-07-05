@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--version 3.03.01-->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.3" targetNamespace="http://www.sifassociation.org/datamodel/na/3.3" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.4" targetNamespace="http://www.sifassociation.org/datamodel/na/3.4" elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
 	<xs:include schemaLocation="SIFNAassessment.xsd"/>
 	<xs:include schemaLocation="SIFIdentityManagement.xsd"/>
 	<xs:include schemaLocation="../SIFLocale.xsd"/>
+	<!--3.4 proposed new objects -->
+	<xs:include schemaLocation="mark.xsd"/>
+	<xs:include schemaLocation="studentDailyAttendance.xsd"/>
 	<!--Persons-->
 	<xs:complexType name="contactPersonType">
 		<xs:annotation>
@@ -2481,7 +2484,15 @@ Local identifier representing the current or most recent homeroom in which the s
 			<xs:documentation>The association of a contact person to another person, for example, a student (person) to a parent or guardian (contact person).</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gContactPersonAssociationType"/>
+			<xs:extension base="gContactPersonAssociationType">
+				<xs:sequence>
+					<xs:element name="schoolYear" type="xs:gYear" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>School Year to which this record applies. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="contactPersonAssociation" type="contactPersonAssociationType"/>
