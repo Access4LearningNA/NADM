@@ -12,29 +12,14 @@
 				<cedsId/>
 				<cedsURL/>
 			</xs:appinfo>
-			<xs:documentation>This object defines the attribute of a group of objects that implicitly or explicitly defines a subset of the group.</xs:documentation>
+			<xs:documentation>One of three objects that form a datawarehouse-like star schema. These objects are convenient for transmitting data arranged in spreadsheet format, multi-dimensional crosstab format, or any aggregate-type data.  
+
+This object defines the characteristic by which values are aggregated. Characteristics are often  members of a set. For example, a count of students (fact) aggregated by males (characteristic), where males are a part of the set Gender:(male, female, unknown). </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="description" type="xs:string" nillable="true" minOccurs="0">
+			<xs:element name="superCategory" minOccurs="0">
 				<xs:annotation>
-					<xs:appinfo>
-						<elementName>Description</elementName>
-						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-					</xs:appinfo>
-					<xs:documentation>Describes the supercategory of the characteristic described in the Definition element below.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="definition" type="xs:token">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName>Definition</elementName>
-						<sifChar>M</sifChar>
-						<cedsId/>
-						<cedsURL/>
-					</xs:appinfo>
-					<xs:documentation>Defines the aggregate characteristic information.</xs:documentation>
+					<xs:documentation>E.g., Gender.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="elementName" type="xs:token" nillable="true" minOccurs="0">
@@ -45,7 +30,34 @@
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
-					<xs:documentation>Reference to SIF elements or external authority (e.g., StudentPersonal/Gender).</xs:documentation>
+					<xs:documentation>Reference to SIF elements or external authority (e.g., studentl/Gender).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="superCategoryDescription" type="xs:string" nillable="true" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>Describes the supercategory of the characteristic described in the Definition element below.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name">
+				<xs:annotation>
+					<xs:documentation>Name of the characteristic, e.g., male. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="definition" type="xs:token" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Definition</elementName>
+						<sifChar>M</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>Defines the aggregate characteristic information.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

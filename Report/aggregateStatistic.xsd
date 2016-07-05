@@ -12,7 +12,9 @@
 				<cedsId/>
 				<cedsURL/>
 			</xs:appinfo>
-			<xs:documentation>This object defines the data that is being aggregated as well as the type of measurement that is being performed.</xs:documentation>
+			<xs:documentation>One of three objects that form a datawarehouse-like star schema. These objects are convenient for transmitting data arranged in spreadsheet format, multi-dimensional crosstab format, or any aggregate-type data.  
+
+This object defines the data that is being aggregated as well as the type of measurement that is being performed.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="statisticName" type="xs:token">
