@@ -209,7 +209,7 @@
 												<xs:annotation>
 													<xs:appinfo>
 														<elementName>Code</elementName>
-														<sifChar>O</sifChar>
+														<sifChar>M</sifChar>
 														<cedsId/>
 														<cedsURL/>
 													</xs:appinfo>

@@ -480,7 +480,7 @@
 			<xs:element name="creditValue" type="xs:decimal">
 				<xs:annotation>
 					<xs:appinfo>
-						<sifChar>O</sifChar>
+						<sifChar>M</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
