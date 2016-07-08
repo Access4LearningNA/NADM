@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--version 3.02.01-->
+<!--version 3.04.01-->
+<!--The types in this file are SIF North American-specific types.  -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-	<!--The types in this file are SIF North American-specific types.  -->
-
-	<xs:simpleType name="ssnType">
+	<xs:include schemaLocation="SIFglobal.xsd"/>
+	<!--Simple Types -->
+	<xs:simpleType name="naSSNType">
 		<xs:annotation>
 			<xs:documentation>A social security number, without dashes. </xs:documentation>
 		</xs:annotation>
@@ -11,5 +12,253 @@
 			<xs:length value="9"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
+	<!--Complex Types -->
+	<xs:complexType name="naDemographicsType">
+		<xs:sequence>
+			<xs:element name="ethnicityList" type="gEthnicityList" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>This element is deprecated as of v3.4 in favor of raceList</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="raceList" type="naRaceList" minOccurs="0"/>
+			<xs:element name="HispanicLatino" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="sex" type="gSexusType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId>000255</cedsId>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="birthDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="birthDateVerification" type="gBirthdateVerificationType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="placeOfBirth" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="countyOfBirth" type="gLaxCodedElementType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="stateProvinceOfBirth" type="gStateProvinceType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="countryOfBirth" type="gCountryType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="countryOfCitizenshipList" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="countryOfCitizenship" type="gCountryType" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:appinfo>
+									<sifChar>OR</sifChar>
+									<cedsId/>
+									<cedsURL/>
+								</xs:appinfo>
+								<xs:documentation/>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="countryOfResidency" type="gCountryType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="countryArrivalDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="citizenshipStatus" type="gCitizenshipStatusType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="languageProficiency" type="gLanguageProficiencyType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>English language proficiency.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="languageList" type="gLanguageList" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dwellingArrangement" type="gDwellingArrangementType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="maritalStatus" type="gMaritalStatusType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="naPersonType">
+		<xs:annotation>
+			<xs:appinfo>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>An individual within an educational setting.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gPartyType">
+				<xs:sequence>
+					<xs:element name="addressRefIdList" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="addressRefId" minOccurs="0" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:simpleContent>
+											<xs:extension base="gRefIdPointerType">
+												<xs:attribute name="addressRole">
+													<xs:annotation>
+														<xs:documentation>The type or function of the address, e.g., summer address, mailing address, residential address, etc.</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:extension>
+										</xs:simpleContent>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="name" type="gNameOfRecordType"/>
+					<xs:element name="localId" type="gLocalIdType">
+						<xs:annotation>
+							<xs:documentation>A local agency identifier for the person.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="stateProvinceId" type="xs:token" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The identifier for this entity as assigned by a state or province.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="externalId" type="gExternalIdType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>An external (to the local system) agency identifier for the person. The identifier for this entity as assigned by a government authority (typically state or province in a federal system, national in a centralized system).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="electronicIdList" type="gElectronicIdList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A list of Ids meant to be read and processed by electronic equipment. This includes Barcode, Magstripe, PIN, RFID, etc.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="otherNameList" type="gOtherNameListType" minOccurs="0"/>
+					<xs:element name="demographics" type="naDemographicsType" minOccurs="0"/>
+					<xs:element name="phoneNumberList" type="gPhoneNumberList" minOccurs="0"/>
+					<xs:element name="emailList" type="gEmailList" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="naRaceList">
+		<xs:annotation>
+			<xs:documentation>A list of the races or ethnicities with which a person identifies. </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="race" type="gLaxCodedElementType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>

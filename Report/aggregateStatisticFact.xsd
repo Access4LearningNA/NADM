@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--version 3.04.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:include schemaLocation="../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../SIFLocale.xsd"/>
+	<xs:complexType name="aggregateStatisticFactType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Aggregate Statistic Fact</elementName>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>One of three objects that form a datawarehouse-like star schema. These objects are convenient for transmitting data arranged in spreadsheet format, multi-dimensional crosstab format, or any aggregate-type data.  
+
+This object contains the actual value of the measurement. It is always associated with one statistic and one or more characteristics.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSIF_ReportType">
+				<xs:sequence>
+					<xs:element name="statisticRefId" type="gRefIdPointerType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Statistic RefId</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Reference to the statistic defined by a aggregateStatistic object. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="characteristicRefIdList">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="characteristicRefId" type="gRefIdPointerType" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Characteristic RefId</elementName>
+											<sifChar>OR</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Reference to an aggregateCharacteristic object.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="excluded" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>excluded</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="Yes"/>
+								<xs:enumeration value="No"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="value" type="xs:decimal">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Value</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Value of the fact.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="aggregateStatisticFact" type="aggregateStatisticFactType"/>
+</xs:schema>

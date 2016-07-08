@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--version 3.04.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  elementFormDefault="qualified">
+	<xs:include schemaLocation="../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../SIFLocale.xsd"/>
+	<xs:complexType name="studentSectionMarkScoresType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Student-Section Marks</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>This object contains the marks entered for a student in a class section for a specific marking period.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSIF_CompositeType">
+				<xs:sequence>
+					<xs:element name="studentRefId" type="gRefIdPointerType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Student RefId</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (GUID) that uniquely identifies the Student object that this item refers to.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sectionRefId" type="gRefIdPointerType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Section RefId</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (GUID) that uniquely identifies the Section object that this item refers to.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="termRefId" type="gRefIdPointerType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Term RefId</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (GUID) that identifies the marking period that the following marks are recorded in.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolRefId" type="gRefIdPointerType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>School RefId</elementName>
+								<sifChar/>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (GUID) that uniquely identifies the School that these Mark Values apply to.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="isFinal" type="xs:boolean">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>IsFinal</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Indicates if the grades are "Final" from the perspective of the teacher or school.  Does not mean that change events will not occur for this item.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="markScoreList">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="markScore" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Mark</elementName>
+											<sifChar>OR</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>A grade given by teacher to a student. The result of a formative assessment of student's performance or progress.</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="percentage" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Percentage</elementName>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The percent score for this mark (0.00 - 100.00).</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:decimal">
+														<xs:minInclusive value="0"/>
+														<xs:maxInclusive value="100"/>
+														<xs:fractionDigits value="2"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="numeric" type="xs:decimal" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Numeric</elementName>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The raw numeric score for this mark.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="letter" type="xs:normalizedString" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Letter Grade</elementName>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The letter grade for this mark.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="narrative" type="xs:string" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Narrative</elementName>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The free form text narrative for this mark.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+										<xs:attribute name="markRefId" use="required">
+											<xs:annotation>
+												<xs:appinfo>
+													<elementName>Mark RefId</elementName>
+													<sifChar>M</sifChar>
+													<cedsId/>
+													<cedsURL/>
+												</xs:appinfo>
+												<xs:documentation>The Id (GUID) that identifies a mark that was given for this student.</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="studentSectionMarkScores" type="studentSectionMarkScoresType"/>
+</xs:schema>

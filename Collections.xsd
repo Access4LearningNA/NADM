@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--version 3.02.01-->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.3" targetNamespace="http://www.sifassociation.org/datamodel/na/3.3" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.4" targetNamespace="http://www.sifassociation.org/datamodel/na/3.4" elementFormDefault="qualified">
 	<xs:include schemaLocation="Entity/SIFNAEntityObjects.xsd"/>
 	<xs:include schemaLocation="Composite/SIFNACompositeObjects.xsd"/>
 	<xs:include schemaLocation="Report/SIFNAReportObjects.xsd"/>
@@ -432,5 +432,61 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="xCourses" type="xCourseCollectionType"/>
-	<!--CEDS Objects were removed as of 3.3-->
+	<!--3.4 Proposed Objects. After review these objects will be integrated into the appropriate category.-->
+	<!--studentSectionMarkScores  -->
+	<xs:complexType name="studentSectionMarkScoresCollectionType">
+		<xs:sequence>
+			<xs:element name="studentSectionMarkScores" type="studentSectionMarkScoresType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="studentSectionMarkScoress" type="studentSectionMarkScoresCollectionType"/>
+	<!--mark -->
+	<xs:complexType name="markCollectionType">
+		<xs:sequence>
+			<xs:element name="mark" type="markType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="marks" type="markCollectionType"/>
+	<!--studentDailyAttendance -->
+	<xs:complexType name="studentDailyAttendanceCollectionType">
+		<xs:sequence>
+			<xs:element name="studentDailyAttendance" type="studentDailyAttendanceType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="studentDailyAttendances" type="studentDailyAttendanceCollectionType"/>
+	<!--aggregateCharacteristic -->
+	<xs:complexType name="aggregateCharacteristicCollectionType">
+		<xs:sequence>
+			<xs:element name="aggregateCharacteristic" type="aggregateCharacteristicType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="aggregateCharacteristics" type="aggregateCharacteristicCollectionType"/>
+	<!--aggregateStatistic -->
+	<xs:complexType name="aggregateStatisticCollectionType">
+		<xs:sequence>
+			<xs:element name="aggregateStatistic" type="aggregateStatisticType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="aggregateStatistics" type="aggregateStatisticCollectionType"/>
+	<!--aggregateStatisticFact -->
+	<xs:complexType name="aggregateStatisticFactCollectionType">
+		<xs:sequence>
+			<xs:element name="aggregateStatisticFact" type="aggregateStatisticFactType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="aggregateStatisticFacts" type="aggregateStatisticFactCollectionType"/>
+	<!--employmentRecord -->
+	<xs:complexType name="employmentRecordCollectionType">
+		<xs:sequence>
+			<xs:element name="employmentRecord" type="employmentRecordType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="employmentRecords" type="employmentRecordCollectionType"/>
+	<!--studentAttendanceSummary -->
+	<xs:complexType name="studentAttendanceSummaryCollectionType">
+		<xs:sequence>
+			<xs:element name="studentAttendanceSummary" type="studentAttendanceSummaryType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="studentAttendanceSummarys" type="studentAttendanceSummaryCollectionType"/>
 </xs:schema>

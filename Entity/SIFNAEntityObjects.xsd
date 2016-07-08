@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--version 3.03.01-->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.3" targetNamespace="http://www.sifassociation.org/datamodel/na/3.3" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.4" targetNamespace="http://www.sifassociation.org/datamodel/na/3.4" elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
 	<xs:include schemaLocation="SIFNAassessment.xsd"/>
 	<xs:include schemaLocation="SIFIdentityManagement.xsd"/>
 	<xs:include schemaLocation="../SIFLocale.xsd"/>
+	<!--3.4 proposed new objects -->
+	<xs:include schemaLocation="mark.xsd"/>
+	<xs:include schemaLocation="studentDailyAttendance.xsd"/>
 	<!--Persons-->
 	<xs:complexType name="contactPersonType">
 		<xs:annotation>
@@ -18,7 +21,25 @@
 			<xs:documentation>Demographic and other information for each person who might be referenced as a contact.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gContactPersonType"/>
+			<xs:extension base="naPersonType">
+				<xs:sequence>
+					<xs:element name="publishIndicator" type="gYesNoUnknownType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Indicates if the contact information can be published in directories and other lists</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="employerType" type="gLaxCodedElementType" minOccurs="0"/>
+					<xs:element name="educationLevel" type="gLaxCodedElementType" minOccurs="0"/>
+					<xs:element name="positionTitle" type="xs:token" minOccurs="0"/>
+					<xs:element name="role" type="gLaxCodedElementType" minOccurs="0"/>
+					<xs:element name="addressRefId" type="gRefIdPointerType" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="contactPerson" type="contactPersonType"/>
@@ -34,7 +55,7 @@
 			<xs:documentation>An individual within an educational setting.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gPersonType"/>
+			<xs:extension base="naPersonType"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="person" type="personType"/>
@@ -50,8 +71,10 @@
 			<xs:documentation>This object contains all the personal information relating to a staff member, who might be a teacher or other employee of the school or district.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gStaffPersonType">
+			<xs:extension base="naPersonType">
 				<xs:sequence>
+					<xs:element name="otherIdList" type="gOtherIdList" minOccurs="0"/>
+					<xs:element name="title" type="xs:token" minOccurs="0"/>
 					<xs:element name="userName" type="xs:token" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>The string identifier used to log in to a computer system.</xs:documentation>
@@ -74,12 +97,128 @@
 			<xs:documentation>This object contains all the personal information related to the student.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gStudentType">
+			<xs:extension base="naPersonType">
 				<xs:sequence>
+					<xs:element name="alertMessageList" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="alertMessage" type="gAlertMessageType" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="medicalAlertMessageList" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="medicalAlertMessage" type="gMedicalAlertMessageType" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="projectedGraduationYear" type="xs:gYear" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Currently projected graduation year.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="onTimeGraduationYear" type="xs:gYear" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Graduation year of the student's cohort. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="graduationDate" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The actual graduation date of the student.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="mostRecentEnrollment" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="schoolLocalId" type="gLocalIdType" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Local identifier representing the school in which the student is or was most recently enrolled in the district.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="homeroomLocalId" type="gLocalIdType" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>
+Local identifier representing the current or most recent homeroom in which the student is or was most recently assigned in the district.  Use the value from RoomInfo/HomeroomNumber if supported.  If not supported, use the value from RoomInfo/RoomNumber.  If neither is supported, use the most appropriate value from the agent’s application.
+      </xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="gradeLevel" type="gYearGroupType" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>The current or most recent grade level of the student in the district.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="acceptableUse" type="gYesNoUnknownType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Does the student have a current signed Acceptable Use Policy document for system access?</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="disability" minOccurs="0">
 						<xs:complexType>
 							<xs:sequence>
-								<xs:element name="iDEAIndicator" type="gYesNoUnknownType" minOccurs="0">
+								<xs:element name="ideaIndicator" type="gYesNoUnknownType" minOccurs="0">
 									<xs:annotation>
 										<xs:appinfo>
 											<sifChar>O</sifChar>
@@ -129,7 +268,7 @@
 										<xs:documentation>Awaiting initial evaluation for special education programs and related services under the Individuals with Disabilities Education Act (IDEA).</xs:documentation>
 									</xs:annotation>
 								</xs:element>
-								<xs:element name="iDEAEnvironment" type="gCodedElementType" minOccurs="0">
+								<xs:element name="ideaEnvironment" type="gCodedElementType" minOccurs="0">
 									<xs:annotation>
 										<xs:appinfo>
 											<sifChar>O</sifChar>
@@ -141,6 +280,101 @@
 								</xs:element>
 							</xs:sequence>
 						</xs:complexType>
+					</xs:element>
+					<xs:element name="migrant" type="gYesNoUnknownType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Migrant student status.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="title1" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Title 1 student status.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="giftedTalented" type="gYesNoUnknownType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The student is in gifted/talented programs</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="economicDisadvantage" type="gYesNoUnknownType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The student meets the State criteria for classification as having an economic disadvantage</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ell" type="gYesNoUnknownType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>English language learner student status.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="homeless" type="gYesNoUnknownType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Homeless student status.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="vocationalConcentrator" type="gYesNoUnknownType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Vocational Concentrator student status.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="immigrant" type="gYesNoUnknownType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Immigrant student status.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="neglectedDelinquent" type="gYesNoUnknownType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Neglected/Delinquent student status.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="firstNationalEnrollment" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The date of first enrollment in the education system of the country or nation.</xs:documentation>
+						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
 			</xs:extension>
@@ -345,7 +579,70 @@
 			<xs:documentation>A setting in which organized instruction of course content is provided to one or more students (including cross-age groupings) for a given period of time.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gSectionType"/>
+			<xs:extension base="gSectionType">
+				<xs:sequence>
+					<xs:annotation>
+						<xs:documentation>3.4:Proposed Elements</xs:documentation>
+					</xs:annotation>
+					<xs:element name="courseOverride" nillable="true" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="courseCode" type="gLaxCodedElementType" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the school-defined course code for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="stateCourseCode" type="gLaxCodedElementType" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the state-defined course code for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="districtCourseCode" type="gLaxCodedElementType" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the district course code for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="subjectArea" type="xs:token" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the subject matter area for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="courseTitle" type="xs:token" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the course title for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="instructionalLevel" type="gInstructionalLevelType" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the instructional level for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="courseCredits" type="gCourseCreditType" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Override of the course credits for this section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="override" use="required">
+								<xs:annotation>
+									<xs:documentation>Designates whether or not SchoolCourseInfo information has been overridden with different values for this section.</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:enumeration value="Yes"/>
+										<xs:enumeration value="No"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="SectionCode" type="gLaxCodedElementType" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A unique identifier of the section for the school year and across courses (i.e. unique across all courses).  For example, Algebra I sections range from 00122 to 00140 and English II courses range from 00141 to 00152.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="section" type="sectionType"/>
@@ -986,6 +1283,20 @@
 							<xs:documentation>The system outlining instructional or non-instructional activities and procedures designed to accomplish a predetermined educational objective or set of objectives or to provide support services to person and/or the community.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:sequence>
+						<xs:annotation>
+							<xs:documentation>3.4: Proposed Elements</xs:documentation>
+						</xs:annotation>
+						<xs:element name="managingSchoolRefId" type="gRefIdPointerType" minOccurs="0"/>
+						<xs:element name="managingSchoolLocalId" type="gLocalIdType" minOccurs="0"/>
+						<xs:element name="fundingSourceList" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="fundingSource" type="gCodedElementType" minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -1902,6 +2213,16 @@
 													<xs:documentation>Identifies whether or not this specific victim was physically injured, and if so, identify whether the injury was major or minor.</xs:documentation>
 												</xs:annotation>
 											</xs:element>
+											<xs:element name="appliedForTransfer" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>An indication of whether or not the victim has, as a result of this incident, applied for a transfer to another school. This can be the result of a school choice policy or other policy. </xs:documentation>
+												</xs:annotation>
+											</xs:element>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
@@ -2163,7 +2484,15 @@
 			<xs:documentation>The association of a contact person to another person, for example, a student (person) to a parent or guardian (contact person).</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gContactPersonAssociationType"/>
+			<xs:extension base="gContactPersonAssociationType">
+				<xs:sequence>
+					<xs:element name="schoolYear" type="xs:gYear" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>School Year to which this record applies. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="contactPersonAssociation" type="contactPersonAssociationType"/>
@@ -2342,6 +2671,16 @@
 							<xs:documentation>An indication of whether the student is enrolled full time or part time.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:sequence>
+						<xs:annotation>
+							<xs:documentation>3.4: Proposed Elements</xs:documentation>
+						</xs:annotation>
+						<xs:element name="placementType" type="gCodedElementType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Provides additional detail concerning enrollment in the program, e.g., Resident, State Placed.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -2393,6 +2732,11 @@
 		<xs:complexContent>
 			<xs:extension base="gStaffSectionAssociationType">
 				<xs:sequence>
+					<xs:element name="schoolYear" type="xs:gYear" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>School Year to which this record applies.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="teacherOfRecord" type="gYesNoUnknownType" minOccurs="0"/>
 					<xs:element name="roleList" minOccurs="0">
 						<xs:annotation>
