@@ -1,13 +1,16 @@
-﻿<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:include schemaLocation="../../Composite/SIFNAxPress.xsd"/>
   <xs:complexType name="studentLocatorResultType">
     <xs:annotation>
       <xs:appinfo>
         <elementName>Student Locator Result</elementName>
+        <events>no</events>
+        <isSIFObject>no</isSIFObject>
         <sifChar>O</sifChar>
       </xs:appinfo>
       <xs:documentation>
-        A potential student match to the search critieria you provided.
+        A potential student match to the search critieria you provided.  The results of a search for a student by demographic information are returned in order of confidence in the potential match.  If more than one match is found, all results are returned and each is marked as &quot;ambigious.&quot;  If only one match is found and the provider finds no ambiguities in matches, the match is returned as &quot;confirmed.&quot;  These results are meant to be reviewed by a human who can select and use the proper matching record.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -17,7 +20,7 @@
             <xs:annotation>
               <xs:appinfo>
                 <elementName>Match Confidence</elementName>
-                <sifChar>O</sifChar>
+                <sifChar>M</sifChar>
               </xs:appinfo>
               <xs:documentation>
                 A scoring value that indicates the provider's level of confidence that the this result matches the query.
@@ -25,8 +28,8 @@
             </xs:annotation>
             <xs:simpleType>
               <xs:restriction base="xs:float">
-                <xs:minInclusive value="0" />
-                <xs:maxInclusive value="1" />
+                <xs:minInclusive value="0"/>
+                <xs:maxInclusive value="1"/>
               </xs:restriction>
             </xs:simpleType>
           </xs:element>
@@ -42,22 +45,5 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
-  <xs:complexType name="studentLocatorSearchResults">
-    <xs:annotation>
-      <xs:appinfo>
-        <elementName>Student Locator Search Results Type</elementName>
-        <events>no</events>
-        <isSIFObject>no</isSIFObject>
-      </xs:appinfo>
-      <xs:documentation>
-        The results of a search for a student by demographic information are returned in order of confidence in the potential match.  If more than one match is found, all results are returned and each is marked as "ambigious."  If only one match is found and the provider finds no ambiguities in matches, the match is returned as ""confirmed."  These results are meant to be reviewed by a human who can select and use the proper matching record.
-      </xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="studentLocatorSearchResult" type="studentLocatorSearchResult" minOccurs="1">
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
+  <xs:element name="studentLocationResult" type="studentLocatorResultType"/>
 </xs:schema>
-

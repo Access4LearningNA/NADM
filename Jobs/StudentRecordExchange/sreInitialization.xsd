@@ -1,6 +1,6 @@
 <!-- version 3.03.02 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.3" targetNamespace="http://www.sifassociation.org/datamodel/na/3.3" elementFormDefault="qualified">
-  <xs:include schemaLocation="../SIFglobal.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.4" targetNamespace="http://www.sifassociation.org/datamodel/na/3.4" elementFormDefault="qualified">
+  <xs:include schemaLocation="../../SIFglobal.xsd"/>
   <xs:complexType name="sreInitializationType">
     <xs:annotation>
       <xs:appinfo>
@@ -80,9 +80,7 @@
                 <elementName>Student ID</elementName>
                 <sifChar>M</sifChar>
                 <cedsId>001071</cedsId>
-                <cedsURL>
-                  https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=20775
-                </cedsURL>
+                <cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=20775</cedsURL>
               </xs:appinfo>
               <xs:documentation>
                 The ID of student whose records are being requested that is resolvable by the provider, which is a unique number or alphanumeric code assigned to a student by a school, school system, a state, or other agency or entity.

@@ -1,6 +1,6 @@
 <!-- version 3.03.02 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.3" targetNamespace="http://www.sifassociation.org/datamodel/na/3.3" elementFormDefault="qualified">
-	<xs:include schemaLocation="../SIFglobal.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.4" targetNamespace="http://www.sifassociation.org/datamodel/na/3.4" elementFormDefault="qualified">
+	<xs:include schemaLocation="../../SIFglobal.xsd"/>
 	<xs:complexType name="srePermissionRequestType">
 		<xs:annotation>
 			<xs:appinfo>

@@ -16,7 +16,7 @@
 						<path>xLeas/{}/xStudents</path>
 						<description>Returns information for all students associated with the LEA specified.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							/xStudent[enrollment/leaRefId="{}"]
 							]]></xquery>
 					</servicePath>
@@ -24,7 +24,7 @@
 						<path>xSchools/{}/xStudents</path>
 						<description>Returns information for all students based on school enrollment.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							/xStudent[enrollment/schoolRefId="{}"]
 							]]></xquery>
 					</servicePath>
@@ -32,7 +32,7 @@
 						<path>xRosters/{}/xStudents</path>
 						<description>Returns information for all students present in a roster.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							for $roster in /xRoster[@refId="{}"]
 							for $student in /xStudent
 							where $student/@refId = $roster/students/studentReference/refId
@@ -43,7 +43,7 @@
 						<path>xStudentContacts/{}/xStudents</path>
 						<description>Returns information for all students related to a contact.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							/xStudent[studentContacts/contactPersonRefId="{}"]
 							]]></xquery>
 					</servicePath>
@@ -259,7 +259,7 @@
 						<path>xLeas/{}/xStaffs</path>
 						<description>Returns information for all staff associated with the LEA specified.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							/xStaff[primaryAssignment/leaRefId="{}" or otherAssignments/staffPersonAssignment/leaRefId="{}"]
 							]]></xquery>
 					</servicePath>
@@ -267,7 +267,7 @@
 						<path>xSchools/{}/xStaffs</path>
 						<description>Returns information for all staff assigned to the specified school.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							/xStaff[primaryAssignment/schoolRefId="{}" or otherAssignments/staffPersonAssignment/schoolRefId="{}"]
 							]]></xquery>
 					</servicePath>
@@ -275,7 +275,7 @@
 						<path>xRosters/{}/xStaffs</path>
 						<description>Returns information for all staff present in a roster.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							for $roster in /xRoster[@refId="{}"]
 							for $staff in /xStaff
 							where $staff/@refId = $roster/primaryStaff/staffPersonReference/refId or $staff/@refId = $roster/otherStaffs/otherStaff/staffPersonReference/refId
@@ -286,7 +286,7 @@
 						<path>xStudents/{}/xStaffs</path>
 						<description>Returns information for all staff connected to a student.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							let $refIdList := 
 							    for $roster in /xRoster[students/studentReference/refId="{}"]
 							    for $staff in /xStaff
@@ -573,7 +573,7 @@
 						<path>xLeas/{}/xSchools</path>
 						<description>Returns information for all schools in the LEA specified.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							/xSchool[leaRefId="{}"]
 							]]></xquery>
 					</servicePath>
@@ -581,7 +581,7 @@
 						<path>xStaffs/{}/xSchools</path>
 						<description>Returns information for all schools associated with the staff specified.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							for $staff in /xStaff[@refId="{}"]
 							for $school in /xSchool
 							where $school/@refId = $staff/primaryAssignment/schoolRefId or $school/@refId = $staff/otherAssignments/staffPersonAssignment/schoolRefId
@@ -592,7 +592,7 @@
 						<path>xStudents/{}/xSchools</path>
 						<description>Returns information for all schools in which the specified student is enrolled.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							for $student in /xStudent[@refId="{}"]
 							for $school in /xSchool
 							where $school/@refId = $student/enrollment/schoolRefId or $school/@refId = $student/otherEnrollments/enrollment/schoolRefId
@@ -603,7 +603,7 @@
 						<path>xContacts/{}/xSchools</path>
 						<description>Returns information for all schools associated with the contact specified.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							let $refIdList :=
 								for $contact in /xContact[@refId="{}"]
 								for $student in /xStudent
@@ -751,7 +751,7 @@
 						<path>xSchools/{}/xCalendars</path>
 						<description>Returns the calendar of sessions for a school by school year.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							/xCalendar[schoolRefId="{}"]
 							]]></xquery>
 					</servicePath>
@@ -813,7 +813,7 @@
 						<path>xLeas/{}/xRosters</path>
 						<description>Returns the rosters/sections in the specified LEA.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							for $school in /xSchool[leaRefId="{}"]
 							for $roster in /xRoster
 							where $roster/schoolRefId = $school/@refId
@@ -824,7 +824,7 @@
 						<path>xStaffs/{}/xRosters</path>
 						<description>Returns the rosters/sections assigned to the given staff memeber.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							/xRoster[primaryStaff/staffPersonReference/refId="{}" or otherStaffs/otherStaff/staffPersonReference/refId="{}"]
 							]]></xquery>
 					</servicePath>
@@ -832,7 +832,7 @@
 						<path>xStudents/{}/xRosters</path>
 						<description>Returns the rosters/sections for which the specified student is enrolled.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							/xRoster[students/studentReference/refId="{}"]
 							]]></xquery>
 					</servicePath>
@@ -840,7 +840,7 @@
 						<path>xCourses/{}/xRosters</path>
 						<description>Returns the rosters/sections of the specified course.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							/xRoster[courseRefId="{}"]
 							]]></xquery>
 					</servicePath>
@@ -848,7 +848,7 @@
 						<path>xSections/{}/xRosters</path>
 						<description>Returns the rosters for a particular section.</description>
 						<xquery><![CDATA[
-							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.3";
+							declare default element namespace "http://www.sifassociation.org/datamodel/na/3.4";
 							/xRoster[sectionRefId="{}"]
 							]]></xquery>
 					</servicePath>

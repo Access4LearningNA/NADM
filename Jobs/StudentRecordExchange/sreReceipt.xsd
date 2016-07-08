@@ -1,6 +1,6 @@
 <!-- version 3.03.02 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.3" targetNamespace="http://www.sifassociation.org/datamodel/na/3.3" elementFormDefault="qualified">
-	<xs:include schemaLocation="../SIFglobal.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.4" targetNamespace="http://www.sifassociation.org/datamodel/na/3.4" elementFormDefault="qualified">
+	<xs:include schemaLocation="../../SIFglobal.xsd"/>
 	
   <xs:simpleType name="receiptCodeType" final="restriction">
 		<xs:restriction base="xs:token">
@@ -55,9 +55,7 @@
 								<elementName>Receiving School NCES Code</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>001069</cedsId>
-								<cedsURL>
-									https://ceds.ed.gov/cedselementdetails.aspx?termid=3155
-								</cedsURL>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3155</cedsURL>
 							</xs:appinfo>
 							<xs:documentation>
 								The NCES Code is a unique number or alphanumeric code assigned to an institution by a school, school system, a state, or other agency or entity. In this context, this code represents the school that the student is being enrolled into, if this SRE Job is used to describe a student enrollment transfer.
@@ -70,9 +68,7 @@
 								<elementName>Receiving LEA NCES Code</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>001069</cedsId>
-								<cedsURL>
-									https://ceds.ed.gov/cedselementdetails.aspx?termid=3155
-								</cedsURL>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3155</cedsURL>
 							</xs:appinfo>
 							<xs:documentation>
 									The NCES Code is a unique number or alphanumeric code assigned to an institution by a school, school system, a state, or other agency or entity. In this context, this code represents the LEA that the student is being enrolled into, if this SRE Job is used to describe a student enrollment transfer.
