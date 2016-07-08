@@ -785,7 +785,7 @@
 						<elementName>Special Education Exit Reason</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>000260</cedsId>
-						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3260</cedsURL>
+						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24812</cedsURL>
 					</xs:appinfo>
 					<xs:documentation>The reason children who were in special education at the start of the reporting period, but were not in special education at the end of the reporting period.</xs:documentation>
 				</xs:annotation>
