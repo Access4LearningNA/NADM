@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--version 3.04.01-->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
 	<xs:include schemaLocation="../SIFLocale.xsd"/>
 	<xs:complexType name="markType">
@@ -12,7 +12,7 @@
 				<cedsId/>
 				<cedsURL/>
 			</xs:appinfo>
-			<xs:documentation>This object defines the types of values allowed for a mark and the domain for each mark value.  At least one of the Percentage, Numeric, Letter or Narrative nodes must be used to create a valid MarkValueInfo.</xs:documentation>
+			<xs:documentation>This object defines the types of values allowed for a mark and the domain for each mark value.  At least one of the Percentage, Numeric, Letter or Narrative nodes must be used to create a valid mark.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_EntityType">
