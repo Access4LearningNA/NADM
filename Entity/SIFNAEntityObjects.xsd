@@ -285,7 +285,7 @@ Local identifier representing the current or most recent homeroom in which the s
 						<xs:annotation>
 							<xs:appinfo>
 								<sifChar>O</sifChar>
-								<cedsId/>
+								<cedsId>000189</cedsId>
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>Migrant student status.</xs:documentation>
@@ -340,7 +340,7 @@ Local identifier representing the current or most recent homeroom in which the s
 						<xs:annotation>
 							<xs:appinfo>
 								<sifChar>O</sifChar>
-								<cedsId/>
+								<cedsId>000149</cedsId>
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>Homeless student status.</xs:documentation>
@@ -348,16 +348,31 @@ Local identifier representing the current or most recent homeroom in which the s
 					</xs:element>
 					<xs:element name="homelessNighttimeResidence" type="gCodedElementType" minOccurs="0">
 						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000146</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
 							<xs:documentation>The primary nighttime residence of the students at the time the students are identified as homeless.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="homelessServed" type="gYesNoUnknownType" minOccurs="0">
 						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000147</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
 							<xs:documentation>An indication of whether homeless children and youth were served by a McKinney-Vento program in the state.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="homelessUnaccompanied" type="gYesNoUnknownType" minOccurs="0">
 						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000148</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
 							<xs:documentation>An indication that homeless youths were unaccompanied by parents or legal guardians.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
@@ -375,7 +390,7 @@ Local identifier representing the current or most recent homeroom in which the s
 						<xs:annotation>
 							<xs:appinfo>
 								<sifChar>O</sifChar>
-								<cedsId/>
+								<cedsId>000291</cedsId>
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>Immigrant student status.</xs:documentation>
@@ -385,7 +400,7 @@ Local identifier representing the current or most recent homeroom in which the s
 						<xs:annotation>
 							<xs:appinfo>
 								<sifChar>O</sifChar>
-								<cedsId/>
+								<cedsId>000193</cedsId>
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>Neglected/Delinquent student status.</xs:documentation>
@@ -395,7 +410,7 @@ Local identifier representing the current or most recent homeroom in which the s
 						<xs:annotation>
 							<xs:appinfo>
 								<sifChar>O</sifChar>
-								<cedsId/>
+								<cedsId>000529</cedsId>
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>The date of first enrollment in the education system of the country or nation.</xs:documentation>
@@ -663,6 +678,9 @@ Local identifier representing the current or most recent homeroom in which the s
 							<xs:documentation>A unique identifier of the section for the school year and across courses (i.e. unique across all courses).  For example, Algebra I sections range from 00122 to 00140 and English II courses range from 00141 to 00152.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="mediumOfInstruction" type="gCodedElementType" minOccurs="0"/>
+					<xs:element name="languageOfInstruction" type="gCodedElementType" minOccurs="0"/>
+					<xs:element name="locationOfInstruction" type="gCodedElementType" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -755,6 +773,11 @@ Local identifier representing the current or most recent homeroom in which the s
 					<xs:element name="courseFrequency" type="xs:token" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>An indication of how often the course is offered, e.g., term, 1 year, 2 years, 3 years.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="courseCredits" type="gCourseCreditType" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Credits offered for the course.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -2757,7 +2780,25 @@ Local identifier representing the current or most recent homeroom in which the s
 			<xs:documentation>Represents a student enrollment in a class section. Formerly called Student Section Enrollment.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gStudentSectionEnrollmentType"/>
+			<xs:extension base="gStudentSectionEnrollmentType">
+				<xs:sequence>
+					<xs:element name="creditsEarned" type="gCourseCreditType" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Credits offered for the course.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dualCredit" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Indicates if the course can be offered as dual credit.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cteConcentrator" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Indicates whether the student is a CTE concentrator for this course. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="studentSectionAssociation" type="studentSectionAssociationType"/>

@@ -179,7 +179,11 @@
 		<xs:complexContent>
 			<xs:extension base="gAcademicPlanType">
 				<xs:sequence>
-					<xs:element name="organizationRefId" type="gGenericRefIdPointerType"/>
+					<xs:element name="organizationRefId" type="gGenericRefIdPointerType">
+						<xs:annotation>
+							<xs:documentation>The RefId of the organization offering the course. This also determines whether it is a state, district, or school-level course.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="yearOffered" type="xs:gYear"/>
 					<xs:element name="courseCode" type="gLaxCodedElementType"/>
 					<xs:element name="subjectAreaList" minOccurs="0">
