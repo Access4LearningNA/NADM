@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- SIF xPress Object Definitions -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="undefined" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="undefined"
+	elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
 	<xs:include schemaLocation="SIFNAxPressCommonTypes.xsd"/>
 	<xs:complexType name="xStudentType">
@@ -134,6 +135,18 @@
 								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>Address of the student.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="otherAddresses" type="xOtherPersonAddressListType"
+						minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Other Addresses</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>Address of the student.</xs:documentation>
 						</xs:annotation>
@@ -388,7 +401,8 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="primaryAssignment" type="xStaffPersonAssignmentType" minOccurs="0">
+					<xs:element name="primaryAssignment" type="xStaffPersonAssignmentType"
+						minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Primary Assignment</elementName>
@@ -399,7 +413,8 @@
 							<xs:documentation>The primary district, school, and function to which the person is assigned.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="otherAssignments" type="xStaffPersonAssignmentListType" minOccurs="0">
+					<xs:element name="otherAssignments" type="xStaffPersonAssignmentListType"
+						minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Other Assignments</elementName>
@@ -518,7 +533,8 @@
 							<xs:documentation/>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="applicableEducationLevels" type="xApplicableEducationLevelListType" minOccurs="0">
+					<xs:element name="applicableEducationLevels"
+						type="xApplicableEducationLevelListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Applicable Education Levels</elementName>
@@ -641,18 +657,18 @@
 							<xs:documentation>Refid of the LEA of which the school is a part.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-          <xs:element name="lea" type="xLeaType" minOccurs="0">
-            <xs:annotation>
-              <xs:appinfo>
+					<xs:element name="lea" type="xLeaType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
                 <elementName>Local Education Agency</elementName>
                 <sifChar>O</sifChar>
-                <cedsId></cedsId>
+                <cedsId/>
                 <cedsURL>https://ceds.ed.gov/dataModelEntities.aspx</cedsURL>
               </xs:appinfo>
-              <xs:documentation>An administrative unit within K-12 education at the local level which exists primarily to operate schools or to contract for educational services. These units may or may not be co-extensive with county, city, or town boundaries. </xs:documentation>
-            </xs:annotation>
-          </xs:element>
-          <xs:element name="localId" type="xOrganizationIdType" minOccurs="0">
+							<xs:documentation>An administrative unit within K-12 education at the local level which exists primarily to operate schools or to contract for educational services. These units may or may not be co-extensive with county, city, or town boundaries. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="localId" type="xOrganizationIdType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Local Id</elementName>

@@ -384,6 +384,30 @@
 			<xs:enumeration value="ZW"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:complexType name="xOtherPersonAddressListType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Other Person Address List</elementName>
+				<sifChar/>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>A List of other addresses for the person.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" type="xPersonAddressType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Person Address</elementName>
+						<sifChar>M</sifChar>
+						<cedsId>000010</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000010</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The types of previous, alternate or other address for a person. Generally another residence or mailing address.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="xPersonAddressType">
 		<xs:sequence>
 			<xs:element name="addressType" type="xAddressTypeForLearnerOrFamilyType" minOccurs="0">
