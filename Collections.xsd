@@ -506,13 +506,13 @@
 	</xs:complexType>
 	<xs:element name="marks" type="markCollectionType"/>
 	<!--studentDailyAttendance -->
-	<xs:complexType name="studentDailyAttendanceCollectionType">
+	<xs:complexType name="studentAttendanceEventCollectionType">
 		<xs:sequence>
-			<xs:element name="studentDailyAttendance" type="studentDailyAttendanceType"
+			<xs:element name="studentAttendanceEvent" type="studentAttendanceEventType"
 				minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:element name="studentDailyAttendances" type="studentDailyAttendanceCollectionType"/>
+	<xs:element name="studentAttendanceEvents" type="studentAttendanceEventCollectionType"/>
 	<!--aggregateCharacteristic -->
 	<xs:complexType name="aggregateCharacteristicCollectionType">
 		<xs:sequence>
