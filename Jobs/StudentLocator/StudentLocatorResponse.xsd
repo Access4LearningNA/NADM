@@ -18,7 +18,7 @@
       <xs:extension base="gSIF_ReportType">
         <xs:sequence>
           <xs:element name="match" type="studentLocatorMatchType" minOccurs="1"/>
-          <xs:element name="xStudent" type="xStudentRelaxedType" minOccurs="0"/>
+          <xs:element name="student" type="xStudentRelaxedType" minOccurs="0"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
