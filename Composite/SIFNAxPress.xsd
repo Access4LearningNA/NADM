@@ -52,7 +52,14 @@
 			<xs:documentation>xStudent is a composite object that provides a view of the most commonly used core data elements for students, and references to important associated objects like contacts. The refId of a xStudent object coincides with the refId of a corresponding student object.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gSIF_CompositeType">
+			<xs:restriction base="xStudentRelaxedType">
+				<xs:attribute name="refId" type="gRefIdType" use="required"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="xStudentRelaxedType">
+		<xs:complexContent>
+			<xs:extension base="gSIF_RelaxedType">
 				<xs:sequence>
 					<xs:element name="name" type="xPersonNameType" minOccurs="0">
 						<xs:annotation>

@@ -560,7 +560,7 @@
 				maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:element name="studentLocatorResponses" type="studentLocatorResultCollectionType"/>
+	<xs:element name="studentLocatorResults" type="studentLocatorResultCollectionType"/>
 	<!-- sreInitialization -->
 	<xs:complexType name="sreInitializationCollectionType">
 		<xs:sequence>
@@ -580,8 +580,8 @@
 	<!-- sreReceipt -->
 	<xs:complexType name="sreReceiptCollectionType">
 		<xs:sequence>
-			<xs:element name="sreReceipt" type="sreReceiptType" minOccurs="0"
-				maxOccurs="unbounded"/>
+			<xs:element name="sreReceipt" type="sreReceiptType" minOccurs="0" maxOccurs="unbounded"
+			/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="sreReceipts" type="sreReceiptCollectionType"/>
