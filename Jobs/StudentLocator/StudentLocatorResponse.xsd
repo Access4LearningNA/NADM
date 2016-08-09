@@ -17,48 +17,41 @@
     <xs:complexContent>
       <xs:extension base="gSIF_ReportType">
         <xs:sequence>
-          <xs:element name="match" type="studentLocatorMatchType" minOccurs="1"/>
+          <xs:element name="matchConfidence">
+            <xs:annotation>
+              <xs:appinfo>
+            <elementName>Match Confidence</elementName>
+            <sifChar>M</sifChar>
+          </xs:appinfo>
+              <xs:documentation>
+            A scoring value that indicates the provider's level of confidence that the this result matches the query.
+          </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:float">
+                <xs:minInclusive value="0"/>
+                <xs:maxInclusive value="1"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="links">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="link" maxOccurs="unbounded" minOccurs="0">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element type="xs:token" name="rel"/>
+                      <xs:element type="xs:token" name="href"/>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
           <xs:element name="student" type="xStudentRelaxedType" minOccurs="0"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
-  <xs:complexType name="studentLocatorMatchType">
-    <xs:sequence>
-      <xs:element name="confidence">
-        <xs:annotation>
-          <xs:appinfo>
-            <elementName>Match Confidence</elementName>
-            <sifChar>M</sifChar>
-          </xs:appinfo>
-          <xs:documentation>
-            A scoring value that indicates the provider's level of confidence that the this result matches the query.
-          </xs:documentation>
-        </xs:annotation>
-        <xs:simpleType>
-          <xs:restriction base="xs:float">
-            <xs:minInclusive value="0"/>
-            <xs:maxInclusive value="1"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-      <xs:element minOccurs="0" name="links">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="link" maxOccurs="unbounded" minOccurs="0">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:element type="xs:token" name="rel"/>
-                  <xs:element type="xs:token" name="href"/>
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-
   <xs:element name="studentLocationResult" type="studentLocatorResultType"/>
 </xs:schema>

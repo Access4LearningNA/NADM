@@ -273,7 +273,7 @@
 			<xs:extension base="gUUIDType">
 				<xs:attribute name="sif_Object" type="gObjectNameType" use="required">
 					<xs:annotation>
-						<xs:documentation>The name of the SIF object that is being refereced by the payload of this element.</xs:documentation>
+						<xs:documentation>The name of the SIF object that is being referenced by the payload of this element.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
