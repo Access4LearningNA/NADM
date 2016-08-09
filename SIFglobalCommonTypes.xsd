@@ -491,10 +491,10 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<sifChar>O</sifChar>
-						<cedsId/>
+						<cedsId>000072</cedsId>
 						<cedsURL/>
 					</xs:appinfo>
-					<xs:documentation>The type of credit.</xs:documentation>
+					<xs:documentation>The type of credit, e.g., CEDS Credit Type Earned. CEDS Id: 000072</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>

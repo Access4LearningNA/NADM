@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Vince Paredes (SIF Association) -->
 <!--version 3.04.01-->
 <!--The types in this file are SIF North American-specific types.  -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
@@ -194,6 +195,72 @@
 			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="naLEAType">
+		<xs:annotation>
+			<xs:appinfo>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>This object contains information about a school district, region, or other Local, State or Jurisdiction Educational Authority.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gEducationOrganizationType">
+				<xs:sequence>
+					<xs:element name="localId" type="gLocalIdType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Local agency assigned Id.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="externalIdList" type="gExternalIdList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A list of external agency assigned Ids. For example, State/ProvinceId or NCESId.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="leaName" type="xs:token"/>
+					<xs:element name="leaURL" type="xs:anyURI" minOccurs="0"/>
+					<xs:element name="educationAgencyType" type="gLeaTypeType" minOccurs="0"/>
+					<xs:element name="leaContactList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A list of contacts for the LEA</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="leaContact" type="gContactPersonType" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="phoneNumberList" type="gPhoneNumberList" minOccurs="0"/>
+					<xs:element name="emailList" type="gEmailList" minOccurs="0"/>
+					<xs:element name="yearGroupList" type="gYearGroupList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A list of year groups, aka grade levels (North America).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="operationalStatus" type="gOperationalStatusType" minOccurs="0"/>
+					<xs:element name="electoralDistrict" type="gElectoralDistrictType" minOccurs="0"/>
+					<xs:element name="addressRefIdList" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="addressRefId" minOccurs="0" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:simpleContent>
+											<xs:extension base="gRefIdPointerType">
+												<xs:attribute name="addressRole">
+													<xs:annotation>
+														<xs:documentation>The type or function of the address, e.g., summer address, mailing address, residential address, etc.</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:extension>
+										</xs:simpleContent>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:complexType name="naPersonType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -260,5 +327,79 @@
 		<xs:sequence>
 			<xs:element name="race" type="gLaxCodedElementType" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="naSchoolType">
+		<xs:annotation>
+			<xs:appinfo>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>This object contains information about the school.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gEducationOrganizationType">
+				<xs:sequence>
+					<xs:element name="localId" type="gLocalIdType" minOccurs="0"/>
+					<xs:element name="externalIdList" type="gExternalIdList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A list of external agency assigned Ids. For example, State/ProvinceId or NCESId.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolName" type="xs:token"/>
+					<xs:element name="leaRefId" type="gRefIdPointerType" minOccurs="0"/>
+					<xs:element name="otherLEA" type="gRefIdPointerType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The Id (GUID) of another related education agency, such as a regional service agency.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolType" type="gLaxCodedElementType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>An indication of the level of the educational institution. E.g., CEDS Equivalent: School Level 000241.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolFocusList" type="gSchoolFocusList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The type of educational institution as classified by its focus. E.g., CEDS Equivalent: School Type 000242.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolURL" type="xs:anyURI" minOccurs="0"/>
+					<xs:element name="schoolContactList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A list of contacts for the school.</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="schoolContact" type="gContactPersonType" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="phoneNumberList" type="gPhoneNumberList" minOccurs="0"/>
+					<xs:element name="emailList" type="gEmailList" minOccurs="0"/>
+					<xs:element name="yearGroupList" type="gYearGroupList" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A list of year groups or grade levels (North America)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="operationalStatus" type="gOperationalStatusType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>CEDS Equivalent: School Operational Status 000533.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="electoralDistrict" type="gElectoralDistrictType" minOccurs="0"/>
+					<xs:element name="schoolSector" type="gSchoolSectorType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>School sector of school, e.g. Public/Private.
+CEDS Equivalent: Charter School Indicator 000039, Charter School Type 000710.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="genderOfEntry" type="gGenderOfEntryType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The gender for single-gender schools.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="boardingSchoolStatus" type="gYesNoUnknownType" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 </xs:schema>

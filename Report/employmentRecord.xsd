@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Vince Paredes (SIF Association) -->
 <!--version 3.04.01-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
@@ -39,7 +40,7 @@
 							<xs:documentation>The GUID reference to the LEA object representing the LEA that employs the staff member.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="active" type="xs:boolean" nillable="true" minOccurs="0">
+					<xs:element name="active" type="gYesNoUnknownType" nillable="true" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Active Flag</elementName>
@@ -136,6 +137,28 @@
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>Date employee is tenured.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="separationReason" type="gCodedElementType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Employment Separation Reason</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>000620</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The primary reason for the termination of the employment relationship. See CEDS element Employment Separation Reason for an example codeset.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="employmentStatus" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Employment Status</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>000347</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The current employment status of the person (e.g., terminated, on leave) or the condition under which a person has agreed to serve as an employee (e.g., tenured, temporary). See the CEDS element Employment Status for an example codeset. </xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>

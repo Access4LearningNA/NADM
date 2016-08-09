@@ -16,188 +16,192 @@
 
 This object defines the data that is being aggregated as well as the type of measurement that is being performed.</xs:documentation>
 		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="statisticName" type="xs:token">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName>Statistic Name</elementName>
-						<sifChar>M</sifChar>
-						<cedsId/>
-						<cedsURL/>
-					</xs:appinfo>
-					<xs:documentation>Name of Aggregate Statistic</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="calculationRule" nillable="true" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName>Calculation Rule</elementName>
-						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-					</xs:appinfo>
-					<xs:documentation>Rule for calculating the aggregate statistic</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="xs:string">
+		<xs:complexContent>
+			<xs:extension base="gSIF_ReportType">
+				<xs:sequence>
+					<xs:element name="statisticName" type="xs:token">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Statistic Name</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Name of Aggregate Statistic</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="calculationRule" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Calculation Rule</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Rule for calculating the aggregate statistic</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:simpleContent>
+								<xs:extension base="xs:string">
+									<xs:attribute name="type" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:token">
+												<xs:enumeration value="Description"/>
+												<xs:enumeration value="Formula"/>
+												<xs:enumeration value="URL"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:extension>
+							</xs:simpleContent>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="approvalDate" type="xs:date" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Approval Date</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Date for which the statistic is initially valid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="expirationDate" type="xs:date" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Expiration Date</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Date after which the statistic is no longer valid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="exclusionRuleList" nillable="true" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="exclusionRule" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Exclusion Rule</elementName>
+											<sifChar>OR</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Rule for which statistic may not be reported</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:simpleContent>
+											<xs:extension base="xs:string">
+												<xs:attribute name="type" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:token">
+															<xs:enumeration value="SampleSize"/>
+															<xs:enumeration value="Description"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:extension>
+										</xs:simpleContent>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="source" type="xs:token" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Source</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>System providing the data: i.e., SIS, Transportation,</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="effectiveDate" type="xs:date" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Effective Date</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Effective date of the statistic</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="discontinueDate" type="xs:date" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Discontinue Date</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Discontinue date of the statistic</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="location" nillable="true" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="locationName" type="xs:token" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Location Name</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Name of the location</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="locationRefId" type="gGenericRefIdPointerType" nillable="true" minOccurs="0"/>
+							</xs:sequence>
 							<xs:attribute name="type" use="required">
 								<xs:simpleType>
 									<xs:restriction base="xs:token">
-										<xs:enumeration value="Description"/>
-										<xs:enumeration value="Formula"/>
-										<xs:enumeration value="URL"/>
+										<xs:enumeration value="Classroom"/>
+										<xs:enumeration value="School"/>
+										<xs:enumeration value="District"/>
+										<xs:enumeration value="Campus"/>
+										<xs:enumeration value="IntermediateUnit"/>
+										<xs:enumeration value="StateEducationAgency"/>
 									</xs:restriction>
 								</xs:simpleType>
 							</xs:attribute>
-						</xs:extension>
-					</xs:simpleContent>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="approvalDate" type="xs:date" nillable="true" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName>Approval Date</elementName>
-						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-					</xs:appinfo>
-					<xs:documentation>Date for which the statistic is initially valid</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="expirationDate" type="xs:date" nillable="true" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName>Expiration Date</elementName>
-						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-					</xs:appinfo>
-					<xs:documentation>Date after which the statistic is no longer valid</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="exclusionRuleList" nillable="true" minOccurs="0">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="exclusionRule" minOccurs="0" maxOccurs="unbounded">
-							<xs:annotation>
-								<xs:appinfo>
-									<elementName>Exclusion Rule</elementName>
-									<sifChar>OR</sifChar>
-									<cedsId/>
-									<cedsURL/>
-								</xs:appinfo>
-								<xs:documentation>Rule for which statistic may not be reported</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="xs:string">
-										<xs:attribute name="type" use="required">
-											<xs:simpleType>
-												<xs:restriction base="xs:token">
-													<xs:enumeration value="SampleSize"/>
-													<xs:enumeration value="Description"/>
-												</xs:restriction>
-											</xs:simpleType>
-										</xs:attribute>
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="source" type="xs:token" nillable="true" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName>Source</elementName>
-						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-					</xs:appinfo>
-					<xs:documentation>System providing the data: i.e., SIS, Transportation,</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="effectiveDate" type="xs:date" nillable="true" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName>Effective Date</elementName>
-						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-					</xs:appinfo>
-					<xs:documentation>Effective date of the statistic</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="discontinueDate" type="xs:date" nillable="true" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName>Discontinue Date</elementName>
-						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-					</xs:appinfo>
-					<xs:documentation>Discontinue date of the statistic</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="location" nillable="true" minOccurs="0">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="locationName" type="xs:token" nillable="true" minOccurs="0">
-							<xs:annotation>
-								<xs:appinfo>
-									<elementName>Location Name</elementName>
-									<sifChar>O</sifChar>
-									<cedsId/>
-									<cedsURL/>
-								</xs:appinfo>
-								<xs:documentation>Name of the location</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="locationRefId" type="gGenericRefIdPointerType" nillable="true" minOccurs="0"/>
-					</xs:sequence>
-					<xs:attribute name="type" use="required">
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="measure" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Measure</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Type of the statistic.</xs:documentation>
+						</xs:annotation>
 						<xs:simpleType>
 							<xs:restriction base="xs:token">
-								<xs:enumeration value="Classroom"/>
-								<xs:enumeration value="School"/>
-								<xs:enumeration value="District"/>
-								<xs:enumeration value="Campus"/>
-								<xs:enumeration value="IntermediateUnit"/>
-								<xs:enumeration value="StateEducationAgency"/>
+								<xs:enumeration value="Count"/>
+								<xs:enumeration value="Minimum"/>
+								<xs:enumeration value="Maximum"/>
+								<xs:enumeration value="Percent"/>
+								<xs:enumeration value="Mean"/>
+								<xs:enumeration value="Median"/>
+								<xs:enumeration value="Mode"/>
+								<xs:enumeration value="Sum"/>
+								<xs:enumeration value="StandardDeviation"/>
+								<xs:enumeration value="UnduplicatedCount"/>
+								<xs:enumeration value="FTE"/>
+								<xs:enumeration value="Other"/>
 							</xs:restriction>
 						</xs:simpleType>
-					</xs:attribute>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="measure" nillable="true" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName>Measure</elementName>
-						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-					</xs:appinfo>
-					<xs:documentation>Type of the statistic.</xs:documentation>
-				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:token">
-						<xs:enumeration value="Count"/>
-						<xs:enumeration value="Minimum"/>
-						<xs:enumeration value="Maximum"/>
-						<xs:enumeration value="Percent"/>
-						<xs:enumeration value="Mean"/>
-						<xs:enumeration value="Median"/>
-						<xs:enumeration value="Mode"/>
-						<xs:enumeration value="Sum"/>
-						<xs:enumeration value="StandardDeviation"/>
-						<xs:enumeration value="UnduplicatedCount"/>
-						<xs:enumeration value="FTE"/>
-						<xs:enumeration value="Other"/>
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
-		</xs:sequence>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="aggregateStatistic" type="aggregateStatisticType"/>
 </xs:schema>

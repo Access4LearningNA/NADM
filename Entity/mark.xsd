@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Vince Paredes (SIF Association) -->
 <!--version 3.04.01-->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
 	<xs:include schemaLocation="../SIFLocale.xsd"/>
 	<xs:complexType name="markType">
@@ -12,7 +13,7 @@
 				<cedsId/>
 				<cedsURL/>
 			</xs:appinfo>
-			<xs:documentation>This object defines the types of values allowed for a mark and the domain for each mark value.  At least one of the Percentage, Numeric, Letter or Narrative nodes must be used to create a valid MarkValueInfo.</xs:documentation>
+			<xs:documentation>This object defines the types of values allowed for a mark and the domain for each mark value.  At least one of the Percentage, Numeric, Letter or Narrative nodes must be used to create a valid mark.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_EntityType">
@@ -61,7 +62,7 @@
 							<xs:documentation>Textual description of the type of Mark (e.g. "Marking Period Grade", "Comment 1", "Comment 2", "Conduct", "Effort", "WorkHabits").</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="percentage">
+					<xs:element name="percentage" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Percentage</elementName>
@@ -110,7 +111,7 @@
 							</xs:attribute>
 						</xs:complexType>
 					</xs:element>
-					<xs:element name="numeric">
+					<xs:element name="numeric" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Numeric</elementName>
@@ -181,7 +182,7 @@
 							</xs:attribute>
 						</xs:complexType>
 					</xs:element>
-					<xs:element name="letter">
+					<xs:element name="letter" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Letter</elementName>
@@ -256,7 +257,7 @@
 							</xs:attribute>
 						</xs:complexType>
 					</xs:element>
-					<xs:element name="narrative">
+					<xs:element name="narrative" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Narrative</elementName>

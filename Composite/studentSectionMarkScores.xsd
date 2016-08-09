@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Vince Paredes (SIF Association) -->
 <!--version 3.04.01-->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
 	<xs:include schemaLocation="../SIFLocale.xsd"/>
 	<xs:complexType name="studentSectionMarkScoresType">
@@ -83,7 +84,7 @@
 											<cedsId/>
 											<cedsURL/>
 										</xs:appinfo>
-										<xs:documentation>A grade given by teacher to a student. The result of a formative assessment of student's performance or progress.</xs:documentation>
+										<xs:documentation>A grade given by teacher to a student. The result of a formative assessment of student's performance or progress. At least one element must be present.</xs:documentation>
 									</xs:annotation>
 									<xs:complexType>
 										<xs:sequence>
