@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Vince Paredes (SIF Association) -->
 <!--version 3.04.01-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
@@ -61,7 +62,7 @@
 							<xs:documentation>Textual description of the type of Mark (e.g. "Marking Period Grade", "Comment 1", "Comment 2", "Conduct", "Effort", "WorkHabits").</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="percentage">
+					<xs:element name="percentage" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Percentage</elementName>
@@ -110,7 +111,7 @@
 							</xs:attribute>
 						</xs:complexType>
 					</xs:element>
-					<xs:element name="numeric">
+					<xs:element name="numeric" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Numeric</elementName>
@@ -181,7 +182,7 @@
 							</xs:attribute>
 						</xs:complexType>
 					</xs:element>
-					<xs:element name="letter">
+					<xs:element name="letter" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Letter</elementName>
@@ -256,7 +257,7 @@
 							</xs:attribute>
 						</xs:complexType>
 					</xs:element>
-					<xs:element name="narrative">
+					<xs:element name="narrative" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Narrative</elementName>

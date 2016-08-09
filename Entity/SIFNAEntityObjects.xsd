@@ -434,7 +434,7 @@ Local identifier representing the current or most recent homeroom in which the s
 			<xs:documentation>This object contains information about a school district or other Local Educational Agency.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gLEAType"/>
+			<xs:extension base="naLEAType"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="lea" type="leaType"/>
@@ -450,7 +450,7 @@ Local identifier representing the current or most recent homeroom in which the s
 			<xs:documentation>This object contains information about the school.</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gSchoolType"/>
+			<xs:extension base="naSchoolType"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="school" type="schoolType"/>
@@ -468,7 +468,7 @@ Local identifier representing the current or most recent homeroom in which the s
 		<xs:complexContent>
 			<xs:extension base="gEducationOrganizationType">
 				<xs:sequence>
-					<xs:element name="localId" type="gLocalIdType" minOccurs="1">
+					<xs:element name="localId" type="gLocalIdType">
 						<xs:annotation>
 							<xs:appinfo>
 								<sifChar>M</sifChar>
@@ -488,7 +488,7 @@ Local identifier representing the current or most recent homeroom in which the s
 							<xs:documentation>The NCES-assigned identifier for this SEA.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="seaName" type="xs:normalizedString" minOccurs="1">
+					<xs:element name="seaName" type="xs:normalizedString">
 						<xs:annotation>
 							<xs:appinfo>
 								<sifChar>M</sifChar>
