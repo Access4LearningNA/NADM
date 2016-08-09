@@ -1981,7 +1981,7 @@
 					<xs:appinfo>ACT score</xs:appinfo>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="00494">
+			<xs:enumeration value="00490">
 				<xs:annotation>
 					<xs:appinfo>Age score</xs:appinfo>
 				</xs:annotation>
