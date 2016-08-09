@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--version 3.04.01-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:include schemaLocation="../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../SIFLocale.xsd"/>
+	<xs:complexType name="studentAttendanceEventType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Student Daily Attendance</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>This object provides daily attendance information for a particular student in a particular school on a particular date.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gEventType">
+				<xs:sequence>
+					<xs:element name="studentRefId" type="gRefIdPointerType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Student RefId</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (GUID) of the student for whom this attendance information is being reported.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolRefId" type="gRefIdPointerType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>School RefId</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (GUID) of the school for which this attendance information is being reported.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="calendarEventDate" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Attendance Date</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The calendar date to which this attendance information relates.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolYear" type="xs:token" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>School Year</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>000243</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>School year for which this enrollment is applicable, expressed as the four-digit year in which the school year ends (e.g. 2007 for the 2006-07 school year).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="attendanceStatus" type="gCodedElementType">
+						<xs:annotation>
+							<xs:appinfo>
+						<sifChar>O</sifChar>
+						<cedsId>000076</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3076</cedsURL>
+					</xs:appinfo>
+							<xs:documentation>The status of a student's attendance during a given day while school is in session.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="attendanceEventType"
+						type="attendanceEventTypeType">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000601</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3594</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>The type of attendance event.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="absentAttendanceCategory"
+						type="gCodedElementType">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000599</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3592</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>The category that describes how the student spends his or her time not physically present on school grounds and not participating in instruction or instruction-related activities at an approved off-grounds location.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="presentAttendanceCategory"
+						type="gCodedElementType">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000600</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3593</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>The category that describes how the student spends his or her time when attending an instructional program approved by the state and/or school.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="attendanceValue" type="xs:decimal">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId></cedsId>
+								<cedsURL></cedsURL>
+							</xs:appinfo>							
+							<xs:documentation>A percentage representing the amount of time for this event. For example, if the student was in attendance for half of the day, this value would be 0.5.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element minOccurs="0" name="timeTablePeriod" type="xs:normalizedString">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000522</cedsId>
+								<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24024</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>An indication of the portion of a typical daily session in which students receive instruction in a specified subject (e.g., morning, sixth period, block period, or AB schedules).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StudentAttendanceEvent" type="studentAttendanceEventType"/>
+	<xs:simpleType name="attendanceEventTypeType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="DailyAttendance">
+				<xs:annotation>
+					<xs:appinfo>Daily attendance</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ClassSectionAttendance">
+				<xs:annotation>
+					<xs:appinfo>Class/section attendance</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ProgramAttendance">
+				<xs:annotation>
+					<xs:appinfo>Program attendance</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ExtracurricularAttendance">
+				<xs:annotation>
+					<xs:appinfo>Extracurricular attendance</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
