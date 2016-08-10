@@ -156,10 +156,10 @@
 							<xs:documentation>The total number of days the student was absent (excusedAbsences + unexcusedAbsences) school was in session between the StartDate and EndDate, inclusive.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="excusedAbsences" type="xs:decimal" minOccurs="0">
+					<xs:element name="daysExcused" type="xs:decimal" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName>Number of Excused Absences</elementName>
+								<elementName>Number of Excused Absence Days</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>000201</cedsId>
 								<cedsURL/>
@@ -167,10 +167,10 @@
 							<xs:documentation>The number of days the student was absent from school with a valid excuse when school was in session between the StartDate and EndDate, inclusive.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="unexcusedAbsences" type="xs:decimal" minOccurs="0">
+					<xs:element name="daysUnexcused" type="xs:decimal" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName>Number of Unexcused Absenses</elementName>
+								<elementName>Number of Unexcused Absence Days</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>000201</cedsId>
 								<cedsURL/>
