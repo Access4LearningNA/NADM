@@ -150,7 +150,7 @@
 							<xs:documentation>The primary reason for the termination of the employment relationship. See CEDS element Employment Separation Reason for an example codeset.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="employmentStatus" minOccurs="0">
+					<xs:element name="employmentStatus" type="gCodedElementType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Employment Status</elementName>
