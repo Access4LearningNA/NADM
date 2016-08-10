@@ -1,6 +1,6 @@
 <!-- version 3.03.02 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-	<xs:include schemaLocation="../Entity/SIFglobal.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.4" targetNamespace="http://www.sifassociation.org/datamodel/na/3.4" elementFormDefault="qualified">
+	<xs:include schemaLocation="../../SIFglobal.xsd"/>
 	<xs:complexType name="srePermissionRequestType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -9,40 +9,95 @@
 				<isSIFObject>no</isSIFObject>
 			</xs:appinfo>
 			<xs:documentation>
-				Before a requester can access the sre object for a student, he must have obtained permission. This permission is tracked through this child resource called a "Permission Request", which contains details of the request, the status of the approval, and a token that is used to obtain the sre object in the next step. Because permission approvals will often require human intervention, these are always issued as a SIF delayed request.
-				
-				#TODO Need to add status to this object.
+				Before a requester can access the sre object for a student, he must have obtained permission. This permission is tracked through this child resource called a "Permission Request", which contains details of the request, the status of the approval, and a token that is used to obtain the sre object in the next step. Because permission approvals will often require human intervention, these is likely to be issued as a SIF delayed request (although not required).
 			</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gSIF_FunctionalServiceType">
+			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
+          <xs:element name="jobId" type="gUUIDType" minOccurs="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <elementName>Job Id</elementName>
+                <sifChar>O</sifChar>
+              </xs:appinfo>
+              <xs:documentation>
+                The Sif Infrastructure guid that the srePermissionRequest belongs to.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+					<xs:element name="isActive" type="xs:boolean" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Is Active</elementName>
+								<sifChar>O</sifChar>
+							</xs:appinfo>
+							<xs:documentation>
+								Indicates whether this permission request is the currently active request. SRE Job API Providers should update this value automatically based on the current conditions of the SRE Job.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="isApproved" type="xs:boolean" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Is Approved</elementName>
+								<sifChar>O</sifChar>
+							</xs:appinfo>
+							<xs:documentation>
+								Indicates whether this permission request has been approved by the provider school district. SRE Job API Providers should update this value automatically based on the current conditions of the SRE Job. If this value is not provided, then the request has not yet been approved or denied, and consumers should requery the object later to check for approval.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="requesterComment" type="xs:string" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Requester Comment</elementName>
 								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>
 								Human readable content provided by the requestor that helps clarify the purpose or scope of the request.
 							</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="xQuery" type="xs:string" minOccurs="0">
+					<xs:element name="providerComment" type="xs:string" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-								<elementName>xQuery</elementName>
+								<elementName>Provider Comment</elementName>
 								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>
-								Standard xQuery token. “Everything you have” is default. TODO: Need to define token schema
+								Human readable content that explains the decision or status of accepting or rejecting this request.
 							</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					
+					<xs:element name="requestedData" minOccurs="0">
+						<xs:complexType>
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Requested Data</elementName>
+									<sifChar>O</sifChar>
+								</xs:appinfo>
+								<xs:documentation>
+									A list of xPaths describing the parts of the student record being requested. “Everything you have” is default if this element is not provided. These xPaths will be combined by the provider when returning the SRE response.
+								</xs:documentation>
+							</xs:annotation>
+							<xs:sequence>
+								<xs:element name="xpath" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>xPath</elementName>
+											<sifChar>O</sifChar>
+										</xs:appinfo>
+										<xs:documentation>
+											An xPath for a part of the student record object. For example, "/enrollments".
+										</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

@@ -1,6 +1,16 @@
 <!-- version 3.03.02 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-	<xs:include schemaLocation="../Entity/SIFglobal.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.4" targetNamespace="http://www.sifassociation.org/datamodel/na/3.4" elementFormDefault="qualified">
+	<xs:include schemaLocation="../../SIFglobal.xsd"/>
+	
+  <xs:simpleType name="receiptCodeType" final="restriction">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="enrollmentTransferComplete" />
+			<xs:enumeration value="recordReceived" />
+			<xs:enumeration value="recordRejectedOrIncomplete" />
+			<xs:enumeration value="other" />
+		</xs:restriction>
+	</xs:simpleType>
+  
 	<xs:complexType name="sreReceiptType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -13,8 +23,19 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gSIF_FunctionalServiceType">
+			<xs:extension base="gSIF_CompositeType">
 				<xs:sequence>
+          <xs:element name="jobId" type="gGenericRefIdPointerType" minOccurs="1">
+            <xs:annotation>
+              <xs:appinfo>
+                <elementName>Job Id</elementName>
+                <sifChar>M</sifChar>
+              </xs:appinfo>
+              <xs:documentation>
+                The Sif Infrastructure guid of the job that the sreReceipt belongs to, that is resolvable by the provider.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
 					<xs:element name="receiptDateTime" type="xs:dateTime" minOccurs="1">
 						<xs:annotation>
 							<xs:appinfo>
@@ -34,9 +55,7 @@
 								<elementName>Receiving School NCES Code</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>001069</cedsId>
-								<cedsURL>
-									https://ceds.ed.gov/cedselementdetails.aspx?termid=3155
-								</cedsURL>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3155</cedsURL>
 							</xs:appinfo>
 							<xs:documentation>
 								The NCES Code is a unique number or alphanumeric code assigned to an institution by a school, school system, a state, or other agency or entity. In this context, this code represents the school that the student is being enrolled into, if this SRE Job is used to describe a student enrollment transfer.
@@ -49,9 +68,7 @@
 								<elementName>Receiving LEA NCES Code</elementName>
 								<sifChar>O</sifChar>
 								<cedsId>001069</cedsId>
-								<cedsURL>
-									https://ceds.ed.gov/cedselementdetails.aspx?termid=3155
-								</cedsURL>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3155</cedsURL>
 							</xs:appinfo>
 							<xs:documentation>
 									The NCES Code is a unique number or alphanumeric code assigned to an institution by a school, school system, a state, or other agency or entity. In this context, this code represents the LEA that the student is being enrolled into, if this SRE Job is used to describe a student enrollment transfer.
@@ -84,14 +101,6 @@
 							</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:simpleType name="receiptCodeType" final="restriction">
-						<xs:restriction base="xs:token">
-							<xs:enumeration value="enrollmentTransferComplete" />
-							<xs:enumeration value="recordReceived" />
-							<xs:enumeration value="recordRejectedOrIncomplete" />
-							<xs:enumeration value="other" />
-						</xs:restriction>
-					</xs:simpleType>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

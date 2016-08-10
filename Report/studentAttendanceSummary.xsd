@@ -17,28 +17,6 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_ReportType">
 				<xs:sequence>
-					<xs:element name="schoolRefId" type="gRefIdPointerType">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>School Reference Id</elementName>
-								<sifChar>M</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation>The Id (GUID) of the school for which this attendance information is being reported.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="schoolYear" type="xs:token">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>School Year</elementName>
-								<sifChar>M</sifChar>
-								<cedsId>000243</cedsId>
-								<cedsURL>https://ceds.ed.gov/element/000243</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>School year for which the information is applicable.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
 					<xs:element name="studentRefId" type="gRefIdPointerType">
 						<xs:annotation>
 							<xs:appinfo>
@@ -50,55 +28,77 @@
 							<xs:documentation>The Id (GUID) of the student for whom this attendance information is being reported.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="startDate" type="xs:date">
+					<xs:element name="schoolRefId" type="gRefIdPointerType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>School Reference Id</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (GUID) of the school for which this attendance information is being reported.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolYear" type="xs:token" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>School Year</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>000243</cedsId>
+								<cedsURL>https://ceds.ed.gov/element/000243</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>School year for which the information is applicable.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="startDate" type="xs:date" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Start Date</elementName>
-								<sifChar>M</sifChar>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>The starting date on which the information in this object instance is applicable.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="startDay" type="xs:unsignedInt">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Start Day</elementName>
-								<sifChar>M</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation>Number of the first school day to which this object instance applies.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="endDate" type="xs:date">
+					<xs:element name="endDate" type="xs:date" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>End Date</elementName>
-								<sifChar>M</sifChar>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>The ending date on which the information in this object instance is applicable.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="endDay" type="xs:unsignedInt">
+					<xs:element name="startDay" type="xs:unsignedInt" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Start Day</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Number of the first school day to which this object instance applies.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="endDay" type="xs:unsignedInt" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>End Day</elementName>
-								<sifChar>M</sifChar>
+								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>Number of the last school day to which this object instance applies.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="resident">
+					<xs:element name="resident" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Resident Status</elementName>
-								<sifChar>M</sifChar>
+								<sifChar>O</sifChar>
 								<cedsId>000532</cedsId>
 								<cedsURL>https://ceds.ed.gov/element/000532</cedsURL>
 							</xs:appinfo>
@@ -112,58 +112,73 @@
 							</xs:restriction>
 						</xs:simpleType>
 					</xs:element>
-					<xs:element name="fte" nillable="true" minOccurs="0">
-						<xs:simpleType>
-							<xs:restriction base="xs:decimal">
-								<xs:annotation>
-									<xs:appinfo>
-										<elementName>FTE Value</elementName>
-										<sifChar>O</sifChar>
-										<cedsId/>
-										<cedsURL/>
-									</xs:appinfo>
-									<xs:documentation>Full time equivalent numeric value of the student's course load during the time between the StartDate and EndDate, inclusive.  Expressed in decimal form, where 1.00 represents a full time enrollment.</xs:documentation>
-								</xs:annotation>
-								<xs:minInclusive value="0"/>
-								<xs:maxInclusive value="1"/>
-								<xs:fractionDigits value="2"/>
-							</xs:restriction>
-						</xs:simpleType>
+					<xs:element minOccurs="0" name="daysInMembership" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Resident Status</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Number of ADM days student is enrolled and living in this town district.</xs:documentation>
+						</xs:annotation>
 					</xs:element>
-					<xs:element name="daysAttended" type="xs:decimal">
+					<xs:element name="fte" nillable="true" minOccurs="0" type="fteDecimalType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>FTE Value</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Full time equivalent numeric value of the student's course load during the time between the StartDate and EndDate, inclusive.  Expressed in decimal form, where 1.00 represents a full time enrollment.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="daysInAttendance" type="xs:string" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Number of Days Attended</elementName>
-								<sifChar>M</sifChar>
+								<sifChar>O</sifChar>
 								<cedsId>000202</cedsId>
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>The number of days the student attended school when school was in session between the StartDate and EndDate, inclusive.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="excusedAbsences" type="xs:decimal">
+					<xs:element minOccurs="0" name="daysAbsent" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Total Number of Absences</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>000201</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3201</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>The total number of days the student was absent (excusedAbsences + unexcusedAbsences) school was in session between the StartDate and EndDate, inclusive.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="excusedAbsences" type="xs:string" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Number of Excused Absences</elementName>
-								<sifChar>M</sifChar>
+								<sifChar>O</sifChar>
 								<cedsId>000201</cedsId>
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>The number of days the student was absent from school with a valid excuse when school was in session between the StartDate and EndDate, inclusive.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="unexcusedAbsences" type="xs:decimal">
+					<xs:element name="unexcusedAbsences" type="xs:string" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Number of Unexcused Absenses</elementName>
-								<sifChar>M</sifChar>
+								<sifChar>O</sifChar>
 								<cedsId>000201</cedsId>
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>The number of days the student was absent from school without a valid excuse when school was in session between the StartDate and EndDate, inclusive.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="daysTardy" type="xs:decimal" nillable="true" minOccurs="0">
+					<xs:element name="daysTardy" type="xs:string" nillable="true" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Number of Days Tardy</elementName>
@@ -174,26 +189,15 @@
 							<xs:documentation>The number of days the student was tardy when school was in session between the StartDate and EndDate, inclusive.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="daysInMembership" type="xs:decimal">
+					<xs:element name="studentAttendanceRate" type="xs:decimal" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Number of Days In Membership</elementName>
-								<sifChar>M</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation>The number of days the student was present plus the number of days the student was absent when school was in session during the period between the StartDate and EndDate, inclusive.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="studentSchoolEnrollmentRefId" type="gRefIdPointerType" nillable="true" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>StudentSchoolEnrollment Reference Id</elementName>
 								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
+								<cedsId>000271</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3271</cedsURL>
 							</xs:appinfo>
-							<xs:documentation>RefId (GUID) of the StudentSchoolEnrollment object instance that corresponds to this object instance.</xs:documentation>
+							<xs:documentation>TThe number of school days during the regular school year (plus summer, if applicable, if part of implementing the restart, transformation, or turnaround model) the student attended school divided by the maximum number of days the student could have attend.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -201,4 +205,13 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="studentAttendanceSummary" type="studentAttendanceSummaryType"/>
+
+	<xs:simpleType name="fteDecimalType">
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="1"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+
 </xs:schema>
