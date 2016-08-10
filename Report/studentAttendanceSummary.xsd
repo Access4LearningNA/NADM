@@ -112,7 +112,7 @@
 							</xs:restriction>
 						</xs:simpleType>
 					</xs:element>
-					<xs:element minOccurs="0" name="daysInMembership" type="xs:string">
+					<xs:element minOccurs="0" name="daysInMembership" type="xs:decimal">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Resident Status</elementName>
@@ -134,7 +134,7 @@
 							<xs:documentation>Full time equivalent numeric value of the student's course load during the time between the StartDate and EndDate, inclusive.  Expressed in decimal form, where 1.00 represents a full time enrollment.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="daysInAttendance" type="xs:string" minOccurs="0">
+					<xs:element name="daysInAttendance" type="xs:decimal" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Number of Days Attended</elementName>
@@ -145,7 +145,7 @@
 							<xs:documentation>The number of days the student attended school when school was in session between the StartDate and EndDate, inclusive.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element minOccurs="0" name="daysAbsent" type="xs:string">
+					<xs:element minOccurs="0" name="daysAbsent" type="xs:decimal">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Total Number of Absences</elementName>
@@ -156,7 +156,7 @@
 							<xs:documentation>The total number of days the student was absent (excusedAbsences + unexcusedAbsences) school was in session between the StartDate and EndDate, inclusive.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="excusedAbsences" type="xs:string" minOccurs="0">
+					<xs:element name="excusedAbsences" type="xs:decimal" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Number of Excused Absences</elementName>
@@ -167,7 +167,7 @@
 							<xs:documentation>The number of days the student was absent from school with a valid excuse when school was in session between the StartDate and EndDate, inclusive.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="unexcusedAbsences" type="xs:string" minOccurs="0">
+					<xs:element name="unexcusedAbsences" type="xs:decimal" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Number of Unexcused Absenses</elementName>
@@ -178,7 +178,7 @@
 							<xs:documentation>The number of days the student was absent from school without a valid excuse when school was in session between the StartDate and EndDate, inclusive.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="daysTardy" type="xs:string" nillable="true" minOccurs="0">
+					<xs:element name="daysTardy" type="xs:decimal" nillable="true" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Number of Days Tardy</elementName>
