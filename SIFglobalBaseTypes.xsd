@@ -78,7 +78,13 @@
 			<xs:documentation>An element that is defined by a set of codes.  In SIF this is a list separate from the XSD. Annotations in the XSD where the code is instantiated identify which code set to use.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="code" type="xs:token"/>
+			<xs:element name="code" type="xs:token">
+				<xs:annotation>
+					<xs:appinfo>
+						<useLastAnnotation>true</useLastAnnotation>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="hexValue" minOccurs="0">
 				<xs:simpleType>
 					<xs:restriction base="xs:hexBinary">
