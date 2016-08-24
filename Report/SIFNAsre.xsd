@@ -8,8 +8,12 @@
 				<elementName/>
 				<events>no</events>
 				<isSIFObject>yes</isSIFObject>
+				<deprecated>yes</deprecated>
 			</xs:appinfo>
-			<xs:documentation>The Student Record Exchange object is a relatively de-normalized data structure meant to be used to transfer student information from one system to another. </xs:documentation>
+			<xs:documentation>DEPRECATION WARNING: This object is deprecated as of version 3.4 of the NADM and will be removed in version 3.5. Use the `xSRE` object instead.
+				
+				The Student Record Exchange object is a relatively de-normalized data structure meant to be used to transfer student information from one system to another. 
+			</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="gSIF_ReportType">
