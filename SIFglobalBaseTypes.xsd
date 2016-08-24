@@ -87,6 +87,9 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="hexValue" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>As of version 3.4 hex values are not published with the code sets.</xs:documentation>
+				</xs:annotation>				
 				<xs:simpleType>
 					<xs:restriction base="xs:hexBinary">
 						<xs:length value="4"/>
@@ -214,6 +217,9 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="hexValue" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>As of version 3.4 hex values are not published with the code sets.</xs:documentation>
+				</xs:annotation>				
 				<xs:simpleType>
 					<xs:restriction base="xs:hexBinary">
 						<xs:length value="4"/>
