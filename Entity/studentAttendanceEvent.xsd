@@ -6,7 +6,7 @@
 	<xs:complexType name="studentAttendanceEventType">
 		<xs:annotation>
 			<xs:appinfo>
-				<elementName>Student Daily Attendance</elementName>
+				<elementName>Student Attendance Event</elementName>
 				<events>yes</events>
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
@@ -61,18 +61,17 @@
 							<xs:documentation>School year for which this enrollment is applicable, expressed as the four-digit year in which the school year ends (e.g. 2007 for the 2006-07 school year).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element minOccurs="0" name="attendanceStatus" type="gCodedElementType">
+					<xs:element name="attendanceStatus" type="gCodedElementType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
-						<sifChar>O</sifChar>
-						<cedsId>000076</cedsId>
-						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3076</cedsURL>
-					</xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000076</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3076</cedsURL>
+							</xs:appinfo>
 							<xs:documentation>The status of a student's attendance during a given day while school is in session.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element minOccurs="0" name="attendanceEventType"
-						type="attendanceEventTypeType">
+					<xs:element name="attendanceEventType" type="attendanceEventTypeType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<sifChar>O</sifChar>
@@ -82,8 +81,7 @@
 							<xs:documentation>The type of attendance event.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element minOccurs="0" name="absentAttendanceCategory"
-						type="gCodedElementType">
+					<xs:element name="absentAttendanceCategory" type="gCodedElementType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<sifChar>O</sifChar>
@@ -93,8 +91,7 @@
 							<xs:documentation>The category that describes how the student spends his or her time not physically present on school grounds and not participating in instruction or instruction-related activities at an approved off-grounds location.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element minOccurs="0" name="presentAttendanceCategory"
-						type="gCodedElementType">
+					<xs:element name="presentAttendanceCategory" type="gCodedElementType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<sifChar>O</sifChar>
@@ -104,17 +101,17 @@
 							<xs:documentation>The category that describes how the student spends his or her time when attending an instructional program approved by the state and/or school.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element minOccurs="0" name="attendanceValue" type="xs:decimal">
+					<xs:element name="attendanceValue" type="xs:decimal" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<sifChar>O</sifChar>
-								<cedsId></cedsId>
-								<cedsURL></cedsURL>
-							</xs:appinfo>							
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
 							<xs:documentation>A percentage representing the amount of time for this event, relative to the attendanceEventType. For example, if the student was in attendance for half of the day, this value would be 0.5.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element minOccurs="0" name="timeTablePeriod" type="xs:normalizedString">
+					<xs:element name="timeTablePeriod" type="xs:normalizedString" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<sifChar>O</sifChar>
