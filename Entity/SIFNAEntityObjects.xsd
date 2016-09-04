@@ -422,6 +422,28 @@ Local identifier representing the current or most recent homeroom in which the s
 	</xs:complexType>
 	<xs:element name="student" type="studentType"/>
 	<!--Organizations-->
+	<xs:complexType name="groupType">
+		<xs:annotation>
+			<xs:documentation>An institutional community of persons organized for things such as subjects, courses taught, etc. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gGroupType">
+				<xs:sequence>
+					<xs:element name="groupCategory" type="xs:token" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The type of group. For example cohort, learning group, analysis group, etc.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="group" type="groupType"/>
 	<xs:complexType name="leaType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -733,28 +755,6 @@ Local identifier representing the current or most recent homeroom in which the s
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="studentActivity" type="studentActivityType"/>
-	<xs:complexType name="groupType">
-		<xs:annotation>
-			<xs:documentation>An institutional community of persons organized for things such as subjects, courses taught, etc. </xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="gGroupType">
-				<xs:sequence>
-					<xs:element name="groupCategory" type="xs:token" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation>The type of group. For example cohort, learning group, analysis group, etc.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="group" type="groupType"/>
 	<!--Learning-->
 	<xs:complexType name="courseType">
 		<xs:annotation>
@@ -771,7 +771,7 @@ Local identifier representing the current or most recent homeroom in which the s
 			<xs:extension base="gCourseType">
 				<xs:sequence>
 					<xs:element name="instructionalLevel" type="gCodedElementType" minOccurs="0">
-					<xs:annotation>
+						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Instructional Level</elementName>
 								<sifChar>O</sifChar>
@@ -1381,265 +1381,6 @@ Local identifier representing the current or most recent homeroom in which the s
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="address" type="gAddressType"/>
-	<xs:complexType name="schoolCalendarItemType">
-		<xs:annotation>
-			<xs:appinfo>
-				<elementName>School Calendar Item</elementName>
-				<events>yes</events>
-				<isSIFObject>yes</isSIFObject>
-				<cedsId/>
-				<cedsURL/>
-			</xs:appinfo>
-			<xs:documentation>A single event in a calendar. </xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="gSchoolCalendarItemType">
-				<xs:sequence>
-					<xs:element name="schoolCalendarRefId" type="gRefIdPointerType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation>The Id (UUID) of the school calendar of which this calendar date is part.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="schoolRefId" type="gRefIdPointerType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation>The Id (UUID) of the school for which this calendar information is being reported.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="schoolYear" type="xs:gYear" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007" for the 2006-07 school year).</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="event" type="xs:token" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar>O</sifChar>
-								<cedsId>000603</cedsId>
-								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3596</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>The type of scheduled or unscheduled event that causes interruption in direct instruction.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="eventDayName" type="xs:normalizedString" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar/>
-								<cedsId>001276</cedsId>
-								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4242</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>A name used for the day of the calendar event.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="date" type="xs:date">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar>M</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation>A specific school day that occurs within the school year.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="dateTypeCode" type="gCodedElementType" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>Code indicating the type of school day.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="dateNumber" type="xs:int" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation>Order in which the calendar date falls within the school calendar.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="studentAttendance" minOccurs="0">
-						<xs:complexType>
-							<xs:sequence>
-								<xs:element name="countsTowardAttendance" type="gYesNoUnknownType" minOccurs="0">
-									<xs:annotation>
-										<xs:appinfo>
-											<sifChar>O</sifChar>
-											<cedsId/>
-											<cedsURL/>
-										</xs:appinfo>
-										<xs:documentation>Designates whether this date should be counted toward student attendance.</xs:documentation>
-									</xs:annotation>
-								</xs:element>
-								<xs:element name="attendanceValue" type="xs:decimal" minOccurs="0">
-									<xs:annotation>
-										<xs:appinfo>
-											<sifChar>O</sifChar>
-											<cedsId/>
-											<cedsURL/>
-										</xs:appinfo>
-										<xs:documentation>Amount of the school day in which the student should be in attendance (Format is x.x; a student who should be in attendance a full day would be represented as 1.0). If CountsTowardAttendance equals Yes then StudentAttendanceValue must be greater than zero.</xs:documentation>
-									</xs:annotation>
-								</xs:element>
-							</xs:sequence>
-						</xs:complexType>
-					</xs:element>
-					<xs:element name="teacherAttendance" minOccurs="0">
-						<xs:complexType>
-							<xs:sequence>
-								<xs:element name="countsTowardAttendance" type="gYesNoUnknownType" minOccurs="0">
-									<xs:annotation>
-										<xs:appinfo>
-											<sifChar>O</sifChar>
-											<cedsId/>
-											<cedsURL/>
-										</xs:appinfo>
-										<xs:documentation>Designates whether this date should be counted toward teacher attendance.</xs:documentation>
-									</xs:annotation>
-								</xs:element>
-								<xs:element name="attendanceValue" type="xs:decimal" minOccurs="0">
-									<xs:annotation>
-										<xs:appinfo>
-											<sifChar>O</sifChar>
-											<cedsId/>
-											<cedsURL/>
-										</xs:appinfo>
-										<xs:documentation>Amount of the school day in which the teacher should be in attendance (format is x.x; a teacher who should be in attendance a full day would be represented as 1.0).</xs:documentation>
-									</xs:annotation>
-								</xs:element>
-							</xs:sequence>
-						</xs:complexType>
-					</xs:element>
-					<xs:element name="administratorAttendance" minOccurs="0">
-						<xs:complexType>
-							<xs:sequence>
-								<xs:element name="countsTowardAttendance" type="gYesNoUnknownType" minOccurs="0">
-									<xs:annotation>
-										<xs:appinfo>
-											<sifChar>O</sifChar>
-											<cedsId/>
-											<cedsURL/>
-										</xs:appinfo>
-										<xs:documentation>Designates whether this date should be counted toward administrator attendance.</xs:documentation>
-									</xs:annotation>
-								</xs:element>
-								<xs:element name="attendanceValue" type="gYesNoUnknownType" minOccurs="0">
-									<xs:annotation>
-										<xs:appinfo>
-											<sifChar>O</sifChar>
-											<cedsId/>
-											<cedsURL/>
-										</xs:appinfo>
-										<xs:documentation>Amount of the school day in which the administrator should be in attendance (format is x.x; an administrator who should be in attendance a full day would be represented as 1.0).</xs:documentation>
-									</xs:annotation>
-								</xs:element>
-							</xs:sequence>
-						</xs:complexType>
-					</xs:element>
-					<xs:element name="bellScheduleDayList" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation/>
-						</xs:annotation>
-						<xs:complexType>
-							<xs:sequence>
-								<xs:element name="bellScheduleDay" minOccurs="0" maxOccurs="unbounded">
-									<xs:annotation>
-										<xs:appinfo>
-											<sifChar>OR</sifChar>
-											<cedsId/>
-											<cedsURL/>
-										</xs:appinfo>
-										<xs:documentation/>
-									</xs:annotation>
-									<xs:complexType>
-										<xs:sequence>
-											<xs:element name="bellScheduleRefId" type="gRefIdPointerType" minOccurs="0">
-												<xs:annotation>
-													<xs:appinfo>
-														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
-													</xs:appinfo>
-													<xs:documentation>The GUID of a bell schedule to be utilized for the calendar date.</xs:documentation>
-												</xs:annotation>
-											</xs:element>
-											<xs:element name="timetableDayIdentifier" type="xs:token" minOccurs="0">
-												<xs:annotation>
-													<xs:appinfo>
-														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
-													</xs:appinfo>
-													<xs:documentation>The unique identifier of a timetable day to be utilized for the calendar date (from the list of timetable days defined for the calendar in the referenced BellSchedule object).</xs:documentation>
-												</xs:annotation>
-											</xs:element>
-										</xs:sequence>
-									</xs:complexType>
-								</xs:element>
-							</xs:sequence>
-						</xs:complexType>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="schoolCalendarItem" type="schoolCalendarItemType"/>
-	<xs:complexType name="schoolCalendarType">
-		<xs:annotation>
-			<xs:appinfo>
-				<elementName>School Calendar</elementName>
-				<events>yes</events>
-				<isSIFObject>yes</isSIFObject>
-				<cedsId/>
-				<cedsURL/>
-			</xs:appinfo>
-			<xs:documentation>A school's calendar information. The Calendar Item object lists individual calendar events. A school may have more than one calendar (e.g., one calendar for kindergarten students, one for special education students, one for seniors, or one for each calendar track), and each may have different days in session, start and end dates, minutes per day, instructional minutes, etc.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="gSchoolCalendarType">
-				<xs:sequence>
-					<xs:element name="markingTermIndicator" type="gYesNoUnknownType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar>O</sifChar>
-								<cedsId>001272</cedsId>
-								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4238</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Indicates that the session is a marking term.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="sessionSchedulingTermIndicator" type="gYesNoUnknownType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar/>
-								<cedsId>001273</cedsId>
-								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4239</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>Indicates that the session is a scheduling term.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="schoolCalendar" type="schoolCalendarType"/>
 	<xs:complexType name="crisisIncidentType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -2394,6 +2135,168 @@ Local identifier representing the current or most recent homeroom in which the s
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="disciplineIncident" type="disciplineIncidentType"/>
+	<xs:complexType name="employmentRecordType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Employment Record</elementName>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>This object contains a snapshot (view) of employment information for an employee. [This object currently inherits from SIF_Entity but more properly is a SIF_Association. It is classified as a SIF_Entity because of its conventional use in education.] </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSIF_EntityType">
+				<xs:sequence>
+					<xs:element name="personRef" type="gGenericRefIdPointerType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Person Reference</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The refId of the employee object or staffPerson object instance that this record is associated with. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="leaRefId" type="gRefIdPointerType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>LEA RefId</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The GUID reference to the LEA object representing the LEA that employs the staff member.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="active" type="gYesNoUnknownType" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Active Flag</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Staff is currently active and/or employed.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fullTimeStatus" type="gCodedElementType" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Full-Time Status</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Full-time status of employee. Codeset:NCES0476 FullTime Status(Full Time,Part Time)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="hireDate" type="xs:date" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Hire Date</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>000143</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Date the employee was hired.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="terminationDate" type="xs:date" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Termination Date</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>000795</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Date the employee resigned.  Present if a HireDate is entered and a TerminationDate is available.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="totalYearsExperience" type="xs:unsignedInt" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Years Experience</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>000302</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Total number of years of prior experience.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="positionTitle" type="xs:normalizedString" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Position Title</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>000213</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Employee's current position title.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="positionNumber" type="xs:normalizedString" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Position Number</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Employee's level or category assigned by employer.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="seniorityDate" type="xs:date" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Seniority Date</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Date employee has seniority.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="tenureDate" type="xs:date" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Tenure Date</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Date employee is tenured.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="separationReason" type="gCodedElementType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Employment Separation Reason</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>000620</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The primary reason for the termination of the employment relationship. See CEDS element Employment Separation Reason for an example codeset.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="employmentStatus" type="gCodedElementType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Employment Status</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>000347</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The current employment status of the person (e.g., terminated, on leave) or the condition under which a person has agreed to serve as an employee (e.g., tenured, temporary). See the CEDS element Employment Status for an example codeset. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="employmentRecord" type="employmentRecordType"/>
 	<xs:complexType name="facilityType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -2517,6 +2420,265 @@ Local identifier representing the current or most recent homeroom in which the s
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="facility" type="facilityType"/>
+	<xs:complexType name="schoolCalendarType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>School Calendar</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>A school's calendar information. The Calendar Item object lists individual calendar events. A school may have more than one calendar (e.g., one calendar for kindergarten students, one for special education students, one for seniors, or one for each calendar track), and each may have different days in session, start and end dates, minutes per day, instructional minutes, etc.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSchoolCalendarType">
+				<xs:sequence>
+					<xs:element name="markingTermIndicator" type="gYesNoUnknownType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>001272</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4238</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>Indicates that the session is a marking term.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sessionSchedulingTermIndicator" type="gYesNoUnknownType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar/>
+								<cedsId>001273</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4239</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>Indicates that the session is a scheduling term.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="schoolCalendar" type="schoolCalendarType"/>
+	<xs:complexType name="schoolCalendarItemType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>School Calendar Item</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>A single event in a calendar. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSchoolCalendarItemType">
+				<xs:sequence>
+					<xs:element name="schoolCalendarRefId" type="gRefIdPointerType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (UUID) of the school calendar of which this calendar date is part.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolRefId" type="gRefIdPointerType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (UUID) of the school for which this calendar information is being reported.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolYear" type="xs:gYear" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007" for the 2006-07 school year).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="event" type="xs:token" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000603</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3596</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>The type of scheduled or unscheduled event that causes interruption in direct instruction.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="eventDayName" type="xs:normalizedString" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar/>
+								<cedsId>001276</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4242</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>A name used for the day of the calendar event.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="date" type="xs:date">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>A specific school day that occurs within the school year.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dateTypeCode" type="gCodedElementType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Code indicating the type of school day.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dateNumber" type="xs:int" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Order in which the calendar date falls within the school calendar.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="studentAttendance" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="countsTowardAttendance" type="gYesNoUnknownType" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Designates whether this date should be counted toward student attendance.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="attendanceValue" type="xs:decimal" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Amount of the school day in which the student should be in attendance (Format is x.x; a student who should be in attendance a full day would be represented as 1.0). If CountsTowardAttendance equals Yes then StudentAttendanceValue must be greater than zero.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="teacherAttendance" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="countsTowardAttendance" type="gYesNoUnknownType" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Designates whether this date should be counted toward teacher attendance.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="attendanceValue" type="xs:decimal" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Amount of the school day in which the teacher should be in attendance (format is x.x; a teacher who should be in attendance a full day would be represented as 1.0).</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="administratorAttendance" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="countsTowardAttendance" type="gYesNoUnknownType" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Designates whether this date should be counted toward administrator attendance.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="attendanceValue" type="gYesNoUnknownType" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Amount of the school day in which the administrator should be in attendance (format is x.x; an administrator who should be in attendance a full day would be represented as 1.0).</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="bellScheduleDayList" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="bellScheduleDay" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>OR</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation/>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="bellScheduleRefId" type="gRefIdPointerType" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The GUID of a bell schedule to be utilized for the calendar date.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="timetableDayIdentifier" type="xs:token" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The unique identifier of a timetable day to be utilized for the calendar date (from the list of timetable days defined for the calendar in the referenced BellSchedule object).</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="schoolCalendarItem" type="schoolCalendarItemType"/>
 	<xs:complexType name="termType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -2558,6 +2720,123 @@ Local identifier representing the current or most recent homeroom in which the s
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="contactPersonAssociation" type="contactPersonAssociationType"/>
+	<xs:complexType name="learningStandardAssociationType">
+		<xs:annotation>
+			<xs:documentation>This object associates a learning standard with particular learning resources.  </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gAssociationType">
+				<xs:sequence>
+					<xs:element name="refURI" type="xs:anyURI" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>A URI that establishes uniqueness.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="learningStandardRefId" type="gRefIdPointerType">
+						<xs:annotation>
+							<xs:documentation>The RefId of a learning standard. The sif_Object attribute value should be either LearningStandardItem or LearningStandardDocument.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="targetObjectList">
+						<xs:annotation>
+							<xs:documentation>List of target objects for the learning standard linkage. </xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="targetObject" minOccurs="0" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="targetObjectRefId" type="gGenericRefIdPointerType">
+												<xs:annotation>
+													<xs:documentation>The RefId for the LearningResource or AssessmentItem. The sif_Object attribute value must be LearningResource or AssessmentItem</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="associationStrength" type="xs:decimal" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>A number greater than 0 and less than or equal to 1. This indicates the strength of the association between the one or more Learning Standards and this target object. </xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="associationType" type="xs:token" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:documentation>The type of relationship or cardinality being modeled, e.g., predecessor, prerequisite, unidirectional, nondirectional, is a component of, etc. </xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="startDate" type="xs:date">
+						<xs:annotation>
+							<xs:documentation>Start date of the learning standard association.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="endDate" type="xs:date" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>End date of the learning standard association</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="authoritativeSource" type="xs:normalizedString" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Body or organization creating this association. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="associationCreator" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="creatorName" type="xs:normalizedString" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Name of the Creator of the relationship. </xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="creatorRefId" type="gGenericRefIdPointerType" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>RefId of SIF object representing the creator if such exists.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="creationDate" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Creation date of the relationship. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="learningStandardAssociation" type="learningStandardAssociationType"/>
+	<xs:complexType name="organizationOrganizationAssociationType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Organization-Organization Association</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>A organization associated with another organization. This enables the creation of organization heirarchies or networks such as schools within a state. </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gOrganizationOrganizationAssociationType">
+				<xs:sequence>
+					<xs:element name="schoolYear" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007" for the 2006-07 school year).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="organizationOrganizationAssociation" type="organizationOrganizationAssociationType"/>
 	<xs:complexType name="partyAddressAssociationType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -2590,6 +2869,35 @@ Local identifier representing the current or most recent homeroom in which the s
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="partyOrganizationAssociation" type="partyOrganizationAssociationType"/>
+	<xs:complexType name="personGroupAssociationType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Person-Group Association</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>Connects a person to an education group.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gPersonGroupAssociationType">
+				<xs:sequence>
+					<xs:element name="schoolYear" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007" for the 2006-07 school year).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="personGroupAssociation" type="personGroupAssociationType"/>
 	<xs:complexType name="personRoleAssociationType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -2622,6 +2930,131 @@ Local identifier representing the current or most recent homeroom in which the s
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="staffPersonAssignment" type="staffPersonAssignmentType"/>
+	<xs:complexType name="staffSectionAssociationType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Staff-Section Association</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>Connects a Teacher to a section or class.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gStaffSectionAssociationType">
+				<xs:sequence>
+					<xs:element name="schoolYear" type="xs:gYear" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>School Year to which this record applies.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="teacherOfRecord" type="gYesNoUnknownType" minOccurs="0"/>
+					<xs:element name="roleList" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="role" type="xs:token" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:appinfo>
+											<sifChar>OR</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Possible Values: LeadTeacher
+    Lead teacher with the primary responsibility for student learning in the assigned class section.
+TeamTeacher
+    Team teacher with shared responsibility for student learning within the assigned class section.
+ContributingProfessional
+    Contributing professional who has been assigned the responsibility to provide additional services that support and increase a student learning.       
+    Paraprofessional, a non-teacher who is assigned to the section.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="percentResponsible" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Percentage of Responsibility of the Teacher of Record.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:decimal">
+								<xs:minInclusive value="0"/>
+								<xs:maxInclusive value="100"/>
+								<xs:fractionDigits value="2"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="staffSectionAssociation" type="staffSectionAssociationType"/>
+	<xs:complexType name="studentActivityParticipationType">
+		<xs:annotation>
+			<xs:documentation>The co-curricular or extra-curricular activity in which the student participates.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gAssociationType">
+				<xs:sequence>
+					<xs:element name="studentRefId">
+						<xs:annotation>
+							<xs:documentation>GUID that identifies the student participating in the activity.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="studentActivityRefId">
+						<xs:annotation>
+							<xs:documentation>GUID that identifies the activity in which the student participates.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolYear">
+						<xs:annotation>
+							<xs:documentation>School year for which the information is applicable, expressed as the four-digit year in which the school year ends.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="participationComment" type="xs:string" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Comment related to the student's participation in the activity.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="startDate" type="xs:date" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>This is the date which the activity participation is valid (inclusive).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="endDate" type="xs:date" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>This is the date through which the activity participation is valid (inclusive).  If element is supported by the publisher/responder, should contain a date if the student withdraws from the activity before the end of the school year.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="role" type="xs:normalizedString" nillable="true" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Specific role the student plays in the activity (e.g., band leader, student body president).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="recognitionList" nillable="true" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="recognition" type="gCodedElementType" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:documentation>The nature of recognition given to the student for the successful completion of work in a co-curricular or extra-curricular activity.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="studentActivityParticipation" type="studentActivityParticipationType"/>
 	<xs:complexType name="studentProgramAssociationType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -2813,275 +3246,4 @@ Local identifier representing the current or most recent homeroom in which the s
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="studentSectionAssociation" type="studentSectionAssociationType"/>
-	<xs:complexType name="staffSectionAssociationType">
-		<xs:annotation>
-			<xs:appinfo>
-				<elementName>Staff-Section Association</elementName>
-				<events>yes</events>
-				<isSIFObject>yes</isSIFObject>
-				<cedsId/>
-				<cedsURL/>
-			</xs:appinfo>
-			<xs:documentation>Connects a Teacher to a section or class.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="gStaffSectionAssociationType">
-				<xs:sequence>
-					<xs:element name="schoolYear" type="xs:gYear" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>School Year to which this record applies.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="teacherOfRecord" type="gYesNoUnknownType" minOccurs="0"/>
-					<xs:element name="roleList" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation/>
-						</xs:annotation>
-						<xs:complexType>
-							<xs:sequence>
-								<xs:element name="role" type="xs:token" minOccurs="0" maxOccurs="unbounded">
-									<xs:annotation>
-										<xs:appinfo>
-											<sifChar>OR</sifChar>
-											<cedsId/>
-											<cedsURL/>
-										</xs:appinfo>
-										<xs:documentation>Possible Values: LeadTeacher
-    Lead teacher with the primary responsibility for student learning in the assigned class section.
-TeamTeacher
-    Team teacher with shared responsibility for student learning within the assigned class section.
-ContributingProfessional
-    Contributing professional who has been assigned the responsibility to provide additional services that support and increase a student learning.       
-    Paraprofessional, a non-teacher who is assigned to the section.</xs:documentation>
-									</xs:annotation>
-								</xs:element>
-							</xs:sequence>
-						</xs:complexType>
-					</xs:element>
-					<xs:element name="percentResponsible" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>Percentage of Responsibility of the Teacher of Record.</xs:documentation>
-						</xs:annotation>
-						<xs:simpleType>
-							<xs:restriction base="xs:decimal">
-								<xs:minInclusive value="0"/>
-								<xs:maxInclusive value="100"/>
-								<xs:fractionDigits value="2"/>
-							</xs:restriction>
-						</xs:simpleType>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="staffSectionAssociation" type="staffSectionAssociationType"/>
-	<xs:complexType name="personGroupAssociationType">
-		<xs:annotation>
-			<xs:appinfo>
-				<elementName>Person-Group Association</elementName>
-				<events>yes</events>
-				<isSIFObject>yes</isSIFObject>
-				<cedsId/>
-				<cedsURL/>
-			</xs:appinfo>
-			<xs:documentation>Connects a person to an education group.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="gPersonGroupAssociationType">
-				<xs:sequence>
-					<xs:element name="schoolYear" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007" for the 2006-07 school year).</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="personGroupAssociation" type="personGroupAssociationType"/>
-	<xs:complexType name="organizationOrganizationAssociationType">
-		<xs:annotation>
-			<xs:appinfo>
-				<elementName>Organization-Organization Association</elementName>
-				<events>yes</events>
-				<isSIFObject>yes</isSIFObject>
-				<cedsId/>
-				<cedsURL/>
-			</xs:appinfo>
-			<xs:documentation>A organization associated with another organization. This enables the creation of organization heirarchies or networks such as schools within a state. </xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="gOrganizationOrganizationAssociationType">
-				<xs:sequence>
-					<xs:element name="schoolYear" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
-							</xs:appinfo>
-							<xs:documentation>School year for which the information is applicable, expressed as the four-digit year in which the school year ends (e.g., "2007" for the 2006-07 school year).</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="organizationOrganizationAssociation" type="organizationOrganizationAssociationType"/>
-	<xs:complexType name="learningStandardAssociationType">
-		<xs:annotation>
-			<xs:documentation>This object associates a learning standard with particular learning resources.  </xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="gAssociationType">
-				<xs:sequence>
-					<xs:element name="refURI" type="xs:anyURI" nillable="true" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>A URI that establishes uniqueness.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="learningStandardRefId" type="gRefIdPointerType">
-						<xs:annotation>
-							<xs:documentation>The RefId of a learning standard. The sif_Object attribute value should be either LearningStandardItem or LearningStandardDocument.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="targetObjectList">
-						<xs:annotation>
-							<xs:documentation>List of target objects for the learning standard linkage. </xs:documentation>
-						</xs:annotation>
-						<xs:complexType>
-							<xs:sequence>
-								<xs:element name="targetObject" minOccurs="0" maxOccurs="unbounded">
-									<xs:complexType>
-										<xs:sequence>
-											<xs:element name="targetObjectRefId" type="gGenericRefIdPointerType">
-												<xs:annotation>
-													<xs:documentation>The RefId for the LearningResource or AssessmentItem. The sif_Object attribute value must be LearningResource or AssessmentItem</xs:documentation>
-												</xs:annotation>
-											</xs:element>
-											<xs:element name="associationStrength" type="xs:decimal" nillable="true" minOccurs="0">
-												<xs:annotation>
-													<xs:documentation>A number greater than 0 and less than or equal to 1. This indicates the strength of the association between the one or more Learning Standards and this target object. </xs:documentation>
-												</xs:annotation>
-											</xs:element>
-											<xs:element name="associationType" type="xs:token" nillable="true" minOccurs="0">
-												<xs:annotation>
-													<xs:documentation>The type of relationship or cardinality being modeled, e.g., predecessor, prerequisite, unidirectional, nondirectional, is a component of, etc. </xs:documentation>
-												</xs:annotation>
-											</xs:element>
-										</xs:sequence>
-									</xs:complexType>
-								</xs:element>
-							</xs:sequence>
-						</xs:complexType>
-					</xs:element>
-					<xs:element name="startDate" type="xs:date">
-						<xs:annotation>
-							<xs:documentation>Start date of the learning standard association.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="endDate" type="xs:date" nillable="true" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>End date of the learning standard association</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="authoritativeSource" type="xs:normalizedString" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>Body or organization creating this association. </xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="associationCreator" minOccurs="0">
-						<xs:complexType>
-							<xs:sequence>
-								<xs:element name="creatorName" type="xs:normalizedString" minOccurs="0">
-									<xs:annotation>
-										<xs:documentation>Name of the Creator of the relationship. </xs:documentation>
-									</xs:annotation>
-								</xs:element>
-								<xs:element name="creatorRefId" type="gGenericRefIdPointerType" minOccurs="0">
-									<xs:annotation>
-										<xs:documentation>RefId of SIF object representing the creator if such exists.</xs:documentation>
-									</xs:annotation>
-								</xs:element>
-							</xs:sequence>
-						</xs:complexType>
-					</xs:element>
-					<xs:element name="creationDate" type="xs:date" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>Creation date of the relationship. </xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="learningStandardAssociation" type="learningStandardAssociationType"/>
-	<xs:complexType name="studentActivityParticipationType">
-		<xs:annotation>
-			<xs:documentation>The co-curricular or extra-curricular activity in which the student participates.</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="gAssociationType">
-				<xs:sequence>
-					<xs:element name="studentRefId">
-						<xs:annotation>
-							<xs:documentation>GUID that identifies the student participating in the activity.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="studentActivityRefId">
-						<xs:annotation>
-							<xs:documentation>GUID that identifies the activity in which the student participates.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="schoolYear">
-						<xs:annotation>
-							<xs:documentation>School year for which the information is applicable, expressed as the four-digit year in which the school year ends.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="participationComment" type="xs:string" nillable="true" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>Comment related to the student's participation in the activity.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="startDate" type="xs:date" nillable="true" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>This is the date which the activity participation is valid (inclusive).</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="endDate" type="xs:date" nillable="true" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>This is the date through which the activity participation is valid (inclusive).  If element is supported by the publisher/responder, should contain a date if the student withdraws from the activity before the end of the school year.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="role" type="xs:normalizedString" nillable="true" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>Specific role the student plays in the activity (e.g., band leader, student body president).</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="recognitionList" nillable="true" minOccurs="0">
-						<xs:complexType>
-							<xs:sequence>
-								<xs:element name="recognition" type="gCodedElementType" maxOccurs="unbounded">
-									<xs:annotation>
-										<xs:documentation>The nature of recognition given to the student for the successful completion of work in a co-curricular or extra-curricular activity.</xs:documentation>
-									</xs:annotation>
-								</xs:element>
-							</xs:sequence>
-						</xs:complexType>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:element name="studentActivityParticipation" type="studentActivityParticipationType"/>
 </xs:schema>

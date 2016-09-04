@@ -12,6 +12,5 @@
 	<xs:include schemaLocation="aggregateCharacteristic.xsd"/>
 	<xs:include schemaLocation="aggregateStatistic.xsd"/>
 	<xs:include schemaLocation="aggregateStatisticFact.xsd"/>
-	<xs:include schemaLocation="employmentRecord.xsd"/>
 	<xs:include schemaLocation="studentAttendanceSummary.xsd"/>
 </xs:schema>
