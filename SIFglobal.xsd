@@ -195,7 +195,6 @@
 					</xs:element>
 					<xs:element name="courseTitle" type="xs:token"/>
 					<xs:element name="description" type="xs:normalizedString" minOccurs="0"/>
-					<xs:element name="instructionalLevel" type="gInstructionalLevelType" minOccurs="0"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
