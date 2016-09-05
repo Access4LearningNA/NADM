@@ -241,6 +241,7 @@
 			<xs:enumeration value="ExcusedAbsences"/>
 			<xs:enumeration value="UnexcusedAbsences"/>
 			<xs:enumeration value="Tardies"/>
+			<xs:enumeration value="EarlyDepartures"/>
 			<xs:enumeration value="Enrolled"/>
 		</xs:restriction>
 	</xs:simpleType>
