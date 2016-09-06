@@ -5,9 +5,6 @@
 	<xs:include schemaLocation="SIFNAassessment.xsd"/>
 	<xs:include schemaLocation="SIFIdentityManagement.xsd"/>
 	<xs:include schemaLocation="../SIFLocale.xsd"/>
-	<!--3.4 new objects -->
-	<xs:include schemaLocation="mark.xsd"/>
-	<xs:include schemaLocation="studentAttendanceEvent.xsd"/>
 	<!--Persons-->
 	<xs:complexType name="contactPersonType">
 		<xs:annotation>
@@ -1315,6 +1312,302 @@ Local identifier representing the current or most recent homeroom in which the s
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="learningStandardItem" type="learningStandardItemType"/>
+	<xs:complexType name="markType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Mark</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>This object defines the types of values allowed for a mark and the domain for each mark value.  At least one of the Percentage, Numeric, Letter or Narrative nodes must be used to create a valid mark.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSIF_EntityType">
+				<xs:sequence>
+					<xs:element name="schoolRefId">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>School RefId</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (GUID) that uniquely identifies the School that these Mark Values apply to.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolYear" type="xs:gYear">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>The current school year.</elementName>
+								<sifChar>M</sifChar>
+								<cedsId>000243</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="name" type="xs:string">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Mark Name</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The text name of the score list ("Letter Grades", "Letter Grades (+/-)", "ESU", "Pass/Fail", "Override Grades", "Citizenship Comment Codes", etc.).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="description" type="xs:normalizedString" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Description</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>Textual description of the type of Mark (e.g. "Marking Period Grade", "Comment 1", "Comment 2", "Conduct", "Effort", "WorkHabits").</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="percentage" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Percentage</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="minimum" type="xs:decimal" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Minimum Score</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>The minimum percent value accepted for this mark.  If present, the publisher of this object is required to ensure that any values present in the StudentSectionMarks object will not be lower than this value.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="maximum" type="xs:decimal" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Maximum Score</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>The maximum percent value accepted for this mark.  If present, the publisher of this object is required to ensure that any values present in the StudentSectionMarks object will not be higher than this value.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+							<xs:attribute name="isAccepted" type="xs:boolean" use="required">
+								<xs:annotation>
+									<xs:appinfo>
+										<elementName>Is Accepted</elementName>
+										<sifChar>M</sifChar>
+										<cedsId/>
+										<cedsURL/>
+									</xs:appinfo>
+									<xs:documentation>Indicates whether a percent Mark is accepted and is used in Change events to unambiguously signal whether support for the Mark has changed, especially ended.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="numeric" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Numeric</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="precision" type="xs:unsignedInt" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Score Precision</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Number of significant digits.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="scale" type="xs:unsignedInt" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Score Scale</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Number of decimal places.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="low" type="xs:decimal" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Low Score</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Lowest Mark in the range (e.g., 98, 3.95).</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="high" type="xs:decimal" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>High Score</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>Highest Mark in the range (e.g., 100, 4.0).</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+							<xs:attribute name="isAccepted" type="xs:boolean" use="required">
+								<xs:annotation>
+									<xs:appinfo>
+										<elementName>Is Accepted</elementName>
+										<sifChar>M</sifChar>
+										<cedsId/>
+										<cedsURL/>
+									</xs:appinfo>
+									<xs:documentation>Indicates whether a raw numeric score is accepted and is used in Change events to unambiguously signal whether support for the score has changed, especially ended.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="letter" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Letter</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="validMark" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Valid Mark</elementName>
+											<sifChar>OR</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation/>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="code" type="xs:token">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Code</elementName>
+														<sifChar>M</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>String representing the actual Mark that would appear on the report card (e.g., "A+", "I", "100").</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="numericEquivalent" type="xs:decimal" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Numeric Equivalent</elementName>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>Numeric equivalent for the Mark (e.g., 100, 4.0).</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="description" type="xs:string" nillable="true" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Description</elementName>
+														<sifChar>O</sifChar>
+														<cedsId/>
+														<cedsURL/>
+													</xs:appinfo>
+													<xs:documentation>The description for this code. (e.g. "Excellent", "Participates in Class", "Incomplete", etc...).</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="IsAccepted" type="xs:boolean" use="required">
+								<xs:annotation>
+									<xs:appinfo>
+										<elementName>Is Accepted</elementName>
+										<sifChar>M</sifChar>
+										<cedsId/>
+										<cedsURL/>
+									</xs:appinfo>
+									<xs:documentation>Indicates whether a letter Mark is accepted and is used in Change events to unambiguously signal whether support for the Mark has changed, especially ended.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="narrative" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Narrative</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation/>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="maximumSize" type="xs:unsignedInt" nillable="true" minOccurs="0">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>Maximum Size</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+										</xs:appinfo>
+										<xs:documentation>An integer value representing the maximum number of Unicode characters for the narrative, the UTF-8 encoding of which may be longer.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+							<xs:attribute name="isAccepted" type="xs:boolean" use="required">
+								<xs:annotation>
+									<xs:appinfo>
+										<elementName>Is Accepted</elementName>
+										<sifChar>M</sifChar>
+										<cedsId/>
+										<cedsURL/>
+									</xs:appinfo>
+									<xs:documentation>Indicates whether a narrative is accepted and is used in Change events to unambiguously signal whether support for a narrative has changed, especially ended.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="mark" type="markType"/>
 	<xs:complexType name="programType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -1381,6 +1674,153 @@ Local identifier representing the current or most recent homeroom in which the s
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="address" type="gAddressType"/>
+	<xs:complexType name="studentAttendanceEventType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Student Attendance Event</elementName>
+				<events>yes</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>This object provides attendance information for a particular student for a particular school on a particular date realitive to an event.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gEventType">
+				<xs:sequence>
+					<xs:element name="studentRefId" type="gRefIdPointerType">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Student RefId</elementName>
+								<sifChar>M</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (GUID) of the student for whom this attendance information is being reported.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolRefId" type="gRefIdPointerType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>School RefId</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The Id (GUID) of the school for which this attendance information is being reported.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="calendarEventDate" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Attendance Date</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>The calendar date to which this attendance information relates.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="schoolYear" type="xs:token" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>School Year</elementName>
+								<sifChar>O</sifChar>
+								<cedsId>000243</cedsId>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>School year for which this enrollment is applicable, expressed as the four-digit year in which the school year ends (e.g. 2007 for the 2006-07 school year).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="attendanceStatus" type="gCodedElementType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000076</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3076</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>The status of a student's attendance during a given day while school is in session.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="attendanceEventType" type="attendanceEventTypeType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000601</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3594</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>The type of attendance event.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="absentAttendanceCategory" type="gCodedElementType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000599</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3592</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>The category that describes how the student spends his or her time not physically present on school grounds and not participating in instruction or instruction-related activities at an approved off-grounds location.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="presentAttendanceCategory" type="gCodedElementType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000600</cedsId>
+								<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3593</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>The category that describes how the student spends his or her time when attending an instructional program approved by the state and/or school.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="attendanceValue" type="xs:decimal" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>A percentage representing the amount of time for this event, relative to the attendanceEventType. For example, if the student was in attendance for half of the day, this value would be 0.5.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="timeTablePeriod" type="xs:normalizedString" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<sifChar>O</sifChar>
+								<cedsId>000522</cedsId>
+								<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24024</cedsURL>
+							</xs:appinfo>
+							<xs:documentation>An indication of the portion of a typical daily session in which students receive instruction in a specified subject (e.g., morning, sixth period, block period, or AB schedules).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StudentAttendanceEvent" type="studentAttendanceEventType"/>
+	<xs:simpleType name="attendanceEventTypeType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="DailyAttendance">
+				<xs:annotation>
+					<xs:appinfo>Daily attendance</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ClassSectionAttendance">
+				<xs:annotation>
+					<xs:appinfo>Class/section attendance</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ProgramAttendance">
+				<xs:annotation>
+					<xs:appinfo>Program attendance</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ExtracurricularAttendance">
+				<xs:annotation>
+					<xs:appinfo>Extracurricular attendance</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:complexType name="crisisIncidentType">
 		<xs:annotation>
 			<xs:appinfo>
