@@ -959,28 +959,6 @@
 							<xs:documentation>The year for a reported school session.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="sessionCode" type="xs:token" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>Session Code</elementName>
-								<sifChar>O</sifChar>
-								<cedsId>000252</cedsId>
-								<cedsURL>https://ceds.ed.gov/element/000252</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>A local code given to the session, usually for a session that represents a term within the school year such as a marking term.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="schoolCalendarRefId" type="gRefIdPointerType" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>School Calendar RefId</elementName>
-								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL>https://ceds.ed.gov/element/</cedsURL>
-							</xs:appinfo>
-							<xs:documentation>The RefId of the school calendar.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
 					<xs:element name="meetingTimes" type="xMeetingTimeListType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
