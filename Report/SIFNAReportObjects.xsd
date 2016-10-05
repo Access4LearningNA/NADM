@@ -8,7 +8,7 @@
 	<xs:include schemaLocation="SIFNASectionRosterReport.xsd"/>
 	<xs:include schemaLocation="SIFNAEnergyUsage.xsd"/>
 	<xs:include schemaLocation="SIFNALibraryPatronStatus.xsd"/>
-	<!--3.4 proposed new objects -->
+	<!--3.4 new objects -->
 	<xs:include schemaLocation="aggregateCharacteristic.xsd"/>
 	<xs:include schemaLocation="aggregateStatistic.xsd"/>
 	<xs:include schemaLocation="aggregateStatisticFact.xsd"/>
