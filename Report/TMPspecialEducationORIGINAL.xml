@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:include schemaLocation="../Composite/SIFNAxPressCommonTypes.xsd"/>
+    <xs:include schemaLocation="../Composite/SIFNAxPress.xsd"/>
+    <xs:complexType name="xSpecialEducationType">
+		<xs:sequence>
+			<xs:element name="schoolYear" type="xs:gYear" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>School Year</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000243</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3243</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The year for a reported school session.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schoolAttended" type="xSchoolType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>School of Attendance Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001069</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3155</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The school that managed or administered the activity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="residentSchool" type="xSchoolType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>School of Residence Identifier</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001069</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3155</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The school that managed or administered the activity.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="iepCompletionDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>IEP Completion Date</elementName>
+						<sifChar>O</sifChar>
+					</xs:appinfo>
+					<xs:documentation>The date that the student, school, and school district fulfills the listed activities described within the IEP.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="eligibilityDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Most Recent Eligibility Date</elementName>
+						<sifChar>O</sifChar>
+					</xs:appinfo>
+					<xs:documentation>The date when a student is identified by a school or school district as being eligible for special education services.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="startDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Program Participation Start Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000590</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3583</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The year, month and day on which the person began to participate in a program.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="exitDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Program Participation Exit Date</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000591</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3584</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The year, month and day on which the person ceased to participate in a program.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="exitReason" type="xSpecialEducationExitReasonType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Special Education Exit Reason</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000260</cedsId>
+						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24812</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The reason children who were in special education at the start of the reporting period, but were not in special education at the end of the reporting period.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="placementType" type="xs:token" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Federal Placement Type Code</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="placementDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Federal Placement Description</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="disabilityStatus" type="gYesNoUnknownType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Disability Status</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000577</cedsId>
+						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24884</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>An indication of whether a person is classified as disabled under the American's with Disability Act (ADA).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="section504Status" type="gYesNoUnknownType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Section 504 Status</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000249</cedsId>
+						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=24810</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Individuals with disabilities who are being provided with related aids and services under Section 504 of the Rehabilitation Act of 1973, as amended.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="awaitingInitialIdeaEvaluation" type="gYesNoUnknownType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Awaiting Initial IDEA Evaluation Status</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000031</cedsId>
+						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=23994</cedsURL>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="disabilities" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="disability" type="xDisabilityType" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>Primary Disability Type</elementName>
+									<sifChar>O</sifChar>
+									<cedsId>000218</cedsId>
+									<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3218</cedsURL>
+								</xs:appinfo>
+								<xs:documentation>The major or overriding disability condition that best describes a person's impairment.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="fteRatio" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Staff Full-time Equivalency</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000118</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3118</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The ratio between the hours of work expected in a special education capacity and the hours of work normally expected in a full-time placement in the same setting.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="services" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="service" type="xSpecialEducationServiceType" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName/>
+									<sifChar>OR</sifChar>
+									<cedsId/>
+									<cedsURL/>
+								</xs:appinfo>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xSpecialEducationServiceType">
+		<xs:sequence>
+			<xs:element name="ideaIndicator" type="gYesNoUnknownType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>IDEA Indicator</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000535</cedsId>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>A person having intellectual disability; hearing impairment, including deafness; speech or language impairment; visual impairment, including blindness; serious emotional disturbance (hereafter referred to as emotional disturbance); orthopedic impairment; autism; traumatic brain injury; developmental delay; other health impairment; specific learning disability; deaf-blindness; or multiple disabilities and who, by reason thereof, receive special education and related services under the Individuals with Disabilities Education Act (IDEA) according to an Individualized Education Program (IEP), Individual Family Service Plan (IFSP), or service plan.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ideaEnvironmentEarlyChildhood" type="xIdeaEnvironmentSchoolAgeType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>IDEA Educational Environment For Early Childhood</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000559</cedsId>
+						<cedsURL>https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=23660</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The setting in which children ages 6 through 21, receive special education and related services.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ideaEnvironmentSchoolAge" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>IDEA Educational Environment For School Age</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000535</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3526</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>A representation or characterization of the setting in which children ages 6 through 21, receive special education and related services.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="serviceType" type="xStudentSupportServiceType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Student Support Service Type</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000273</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3273</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>Type of related or ancillary services provided to a person or a group of persons within the formal educational system or offered by an outside agency which provides non-instructional services to support the general welfare of students. This includes physical and emotional health, the ability to select an appropriate course of study, admission to appropriate educational programs, and the ability to adjust to and remain in school through the completion of programs. In serving a student with an identified disability, related services include developmental, corrective, or supportive services required to ensure that the person benefits from special education.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="serviceDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>A representation or characterization of the related or ancillary services provided to a person or a group of persons within the formal educational system or offered by an outside agency which provides non-instructional services to support the general welfare of students. This includes physical and emotional health, the ability to select an appropriate course of study, admission to appropriate educational programs, and the ability to adjust to and remain in school through the completion of programs. In serving a student with an identified disability, related services include developmental, corrective, or supportive services required to ensure that the person benefits from special education.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fundingSourceCode" type="gLaxCodedElementType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>The organization that is supplying the money to provide the service to the student.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fundingSourceCodeDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName/>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>A representation or characterization of the organizaiton that is supplying the money to provide the service to the student and why it is being provided.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="serviceProvider" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Organization Name</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>00204,001156</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3204</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The name of the organization that is supplying the necessary instructional materials and personnel to deliver the service to the student.  Use code "ServiceProvider" when referring to CEDS element 0011156</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="providerPhone" type="xTelephoneType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Telephone Number</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000279,000167,000219</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3279</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The primary contact phone number for the organization that is supplying the necessary instructional materials and personnel to deliver the service to the student.  Uses code "Administrative" when referring to CEDS element 000167 and "Yes" when referring to CEDS element 000219. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="inclusionMinutes" type="xs:unsignedInt" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Individualized Program Inclusion Minutes Per Week</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001234</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4199</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The number of minutes per week that a student with disabilities is served in a special education setting separate from his or her non-disabled peers.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="noninclusionMinutes" type="xs:unsignedInt" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Individualized Program Non-inclusion Minutes Per Week</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001233</cedsId>
+						<cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=4198</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>The number of minutes per week that a student with disabilities is served in a regular classroom with his or her non-disabled peers.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>
