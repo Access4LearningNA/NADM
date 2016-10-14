@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-    <xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd"/>
-    <xs:include schemaLocation="../../Composite/SIFNAxPress.xsd"/>
-
-
+    <xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd" />
+    <xs:include schemaLocation="../../Composite/SIFNAxPress.xsd" />
     <xs:complexType name="xSpecialEducationIepHistoryType">
         <xs:annotation>
             <xs:appinfo>
@@ -17,14 +15,9 @@
                 List of previous IEPs and contact information for additional research.
             </xs:documentation>
         </xs:annotation>
-
-
         <xs:complexContent>
-
             <xs:extension base="gOtherSIFType">
-
                 <xs:sequence>
-                    
                     <xs:element name="iepHistoryReference" minOccurs="0" maxOccurs="unbounded">
                         <xs:annotation>
                             <xs:appinfo>
@@ -41,7 +34,6 @@
                         </xs:annotation>
                         <xs:complexType>
                             <xs:sequence>
-                                
                                 <xs:element name="lea" type="xLeaType" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>
@@ -73,10 +65,8 @@
                                     </xs:annotation>
                                     <xs:complexType>
                                         <xs:sequence>
-                                            
-                                            <xs:element name="start" type="xs:date" minOccurs="0"/>
-                                            <xs:element name="end" type="xs:date" minOccurs="0"/>
-                                            
+                                            <xs:element name="start" type="xs:date" minOccurs="0" />
+                                            <xs:element name="end" type="xs:date" minOccurs="0" />
                                         </xs:sequence>
                                     </xs:complexType>
                                 </xs:element>
@@ -98,18 +88,8 @@
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
-                    
-
-
-
                 </xs:sequence>
             </xs:extension>
-
         </xs:complexContent>
-
-
-
-
     </xs:complexType>
-
 </xs:schema>

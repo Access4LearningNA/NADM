@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../Composite/SIFNAxPress.xsd" />
+	<xs:complexType name="xSpecialEducationIndividualEducationPlanAnnualGoalListType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Annual Goals List </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation> List of goals to be sought for a special education student </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="annualGoal" minOccurs="1" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Annual Goal </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation> Documentation of an annual goal to be achieved by a special education student
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="currentPerformace" type="xs:normalizedString" minOccurs="0" />
+						<xs:element name="currentStatus" type="xs:normalizedString" minOccurs="0">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>
+										Current Status
+									</elementName>
+									<sifChar>O</sifChar>
+									<cedsId/>
+									<cedsURL/>
+								</xs:appinfo>
+								<xs:documentation>
+									Explanation of the student's current status relative to this goal.
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="parentAcceptance" type="parentAcceptanceType" minOccurs="1" maxOccurs="1">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>
+										Parent Acceptance of Goal
+									</elementName>
+									<sifChar>O</sifChar>
+									<cedsId/>
+									<cedsURL/>
+								</xs:appinfo>
+								<xs:documentation>
+									Parental agreement (or disagreement) with wworking toward this goal
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="goalType" minOccurs="1" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>
+										Goal Type
+									</elementName>
+									<sifChar>O</sifChar>
+									<cedsId/>
+									<cedsURL/>
+								</xs:appinfo>
+								<xs:documentation>
+									Category and reference information for goal
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="category" minOccurs="0">
+										<xs:annotation>
+											<xs:appinfo>
+												<elementName>
+													Category
+												</elementName>
+												<sifChar>O</sifChar>
+												<cedsId/>
+												<cedsURL/>
+											</xs:appinfo>
+											<xs:documentation>
+												EXPLANATION
+											</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="Academic" />
+												<xs:enumeration value="Functional" />
+												<xs:enumeration value="Transitional" />
+												<!-- is this the right list? tqii -->
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="standardsReference">
+										<xs:annotation>
+											<xs:appinfo>
+												<elementName>
+													Standards Reference
+												</elementName>
+												<sifChar>O</sifChar>
+												<cedsId/>
+												<cedsURL/>
+											</xs:appinfo>
+											<xs:documentation>
+												Reference for standard definition addressed by this goal
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="URI" type="xs:normalizedString" minOccurs="0">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Standards URI
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Location of the definition of the standard
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="identifier" type="xs:normalizedString" minOccurs="0">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Identifier
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Identifier or name of the standard
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="measurableObjectiveList" minOccurs="1" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>
+										Measurable Objective List
+									</elementName>
+									<sifChar>O</sifChar>
+									<cedsId/>
+									<cedsURL/>
+								</xs:appinfo>
+								<xs:documentation>
+									Objectives that will be achieved in the pursuit of this goal
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="measurableObjective">
+										<xs:annotation>
+											<xs:appinfo>
+												<elementName>
+													Measurable Objective
+												</elementName>
+												<sifChar>O</sifChar>
+												<cedsId/>
+												<cedsURL/>
+											</xs:appinfo>
+											<xs:documentation>
+												Specific objective that will be achieved in the pursuit of this goal
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="description" type="xs:normalizedString" minOccurs="0">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Description
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Description of the practical appearance of the goal’s achievement
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="facilitatorList" minOccurs="1" maxOccurs="unbounded">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Facilitator List
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															List of people who will help the student achieve this goal
+														</xs:documentation>
+													</xs:annotation>
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="facilitator">
+																<xs:annotation>
+																	<xs:appinfo>
+																		<elementName>
+																			Facilitator
+																		</elementName>
+																		<sifChar>O</sifChar>
+																		<cedsId/>
+																		<cedsURL/>
+																	</xs:appinfo>
+																	<xs:documentation>
+																		Person who will help the student achieve this goal
+																	</xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="identity" type="gStaffPersonType" minOccurs="0">
+																			<xs:annotation>
+																				<xs:appinfo>
+																					<elementName>
+																						Identity
+																					</elementName>
+																					<sifChar>O</sifChar>
+																					<cedsId/>
+																					<cedsURL/>
+																				</xs:appinfo>
+																				<xs:documentation>
+																					Facilitator Identity
+																				</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="contribution" type="xs:normalizedString" minOccurs="0">
+																			<xs:annotation>
+																				<xs:appinfo>
+																					<elementName>
+																						Contribution
+																					</elementName>
+																					<sifChar>O</sifChar>
+																					<cedsId/>
+																					<cedsURL/>
+																				</xs:appinfo>
+																				<xs:documentation>
+																					The help this facilitor is asked to contribut to the achievement of this objective
+																				</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="measurement" minOccurs="1" maxOccurs="unbounded">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Measurement
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Definition of the way we will know the student has achieved the goal
+														</xs:documentation>
+													</xs:annotation>
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="criterion">
+																<xs:annotation>
+																	<xs:appinfo>
+																		<elementName>
+																			Criterion
+																		</elementName>
+																		<sifChar>O</sifChar>
+																		<cedsId/>
+																		<cedsURL/>
+																	</xs:appinfo>
+																	<xs:documentation>
+																		Criterion used to determine success or progress toward mastering this objective
+																	</xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+																			<xs:annotation>
+																				<xs:appinfo>
+																					<elementName>
+																						Explanation
+																					</elementName>
+																					<sifChar>O</sifChar>
+																					<cedsId/>
+																					<cedsURL/>
+																				</xs:appinfo>
+																				<xs:documentation>
+																					Descriptor of the the process of evaluation of success
+																				</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="metric" minOccurs="1" maxOccurs="unbounded">
+																			<xs:annotation>
+																				<xs:appinfo>
+																					<elementName>
+																						Metric
+																					</elementName>
+																					<sifChar>O</sifChar>
+																					<cedsId/>
+																					<cedsURL/>
+																				</xs:appinfo>
+																				<xs:documentation>
+																					Definition of the quantitative measurement by which success will be judged. Three structures are defined.
+																				</xs:documentation>
+																			</xs:annotation>
+																			<xs:complexType>
+																				<xs:sequence>
+																					<xs:element name="accuracyPercentEvaluation" type="xs:integer" minOccurs="0">
+																						<xs:annotation>
+																							<xs:appinfo>
+																								<elementName>
+																									Accuracy Percent
+																								</elementName>
+																								<sifChar>O</sifChar>
+																								<cedsId/>
+																								<cedsURL/>
+																							</xs:appinfo>
+																							<xs:documentation>
+																								The percent of correct results that will be considered to represent success
+																							</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="trialCountEvaluation" minOccurs="1" maxOccurs="unbounded">
+																						<xs:annotation>
+																							<xs:appinfo>
+																								<elementName>
+																									Trial Count Specification
+																								</elementName>
+																								<sifChar>O</sifChar>
+																								<cedsId/>
+																								<cedsURL/>
+																							</xs:appinfo>
+																							<xs:documentation>
+																								Specifies minimum of trials and success threshold
+																							</xs:documentation>
+																						</xs:annotation>
+																						<xs:complexType>
+																							<xs:sequence>
+																								<xs:element name="successCount" type="xs:integer" minOccurs="0">
+																									<xs:annotation>
+																										<xs:appinfo>
+																											<elementName>
+																												Success Count
+																											</elementName>
+																											<sifChar>O</sifChar>
+																											<cedsId/>
+																											<cedsURL/>
+																										</xs:appinfo>
+																										<xs:documentation>
+																											The percent of correct results that will be considered to represent success
+																										</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="attemptCount" type="xs:integer" minOccurs="0">
+																									<xs:annotation>
+																										<xs:appinfo>
+																											<elementName>
+																												Attempt Count
+																											</elementName>
+																											<sifChar>O</sifChar>
+																											<cedsId/>
+																											<cedsURL/>
+																										</xs:appinfo>
+																										<xs:documentation>
+																											The number of attempts representing a completed trial
+																										</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																							</xs:sequence>
+																						</xs:complexType>
+																					</xs:element>
+																					<xs:element name="otherEvaluation" type="xs:normalizedString" minOccurs="0">
+																						<xs:annotation>
+																							<xs:appinfo>
+																								<elementName>
+																									Other Evaluation Method
+																								</elementName>
+																								<sifChar>O</sifChar>
+																								<cedsId/>
+																								<cedsURL/>
+																							</xs:appinfo>
+																							<xs:documentation>
+																								Description of other specific success measurement method
+																							</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																				</xs:sequence>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="parentAcceptance" type="parentAcceptanceType" minOccurs="1" maxOccurs="1">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Parent Acceptance
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Parental agreement (or disagreement) with judging objective based on specified criterion
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="independentActionsList" minOccurs="1" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>
+										Independent Actions List
+									</elementName>
+									<sifChar>O</sifChar>
+									<cedsId/>
+									<cedsURL/>
+								</xs:appinfo>
+								<xs:documentation>
+									Activities or actions to be accomplished outside of a service context
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="independentAction" type="xs:normalizedString" minOccurs="0">
+										<xs:annotation>
+											<xs:appinfo>
+												<elementName>
+													Independent Action
+												</elementName>
+												<sifChar>O</sifChar>
+												<cedsId/>
+												<cedsURL/>
+											</xs:appinfo>
+											<xs:documentation>
+												Activity or action to be accomplished outside of a service context
+											</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="servicesList" minOccurs="1" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>
+										Service List
+									</elementName>
+									<sifChar>O</sifChar>
+									<cedsId/>
+									<cedsURL/>
+								</xs:appinfo>
+								<xs:documentation>
+									List of supporting resources required for student to achieve a goal
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="service">
+										<xs:annotation>
+											<xs:appinfo>
+												<elementName>
+													Service
+												</elementName>
+												<sifChar>O</sifChar>
+												<cedsId/>
+												<cedsURL/>
+											</xs:appinfo>
+											<xs:documentation>
+												Support for student progress given by professional or para-professionals on a scheduled basis.
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="category" minOccurs="0">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Category
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Legal category of service
+														</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:normalizedString">
+															<xs:enumeration value="SpecialInstruction" />
+															<xs:enumeration value="Speech" />
+															<xs:enumeration value="Motor" />
+															<xs:enumeration value="Counseling" />
+															<xs:enumeration value="Vision/hearing" />
+															<xs:enumeration value="Transportation" />
+															<xs:enumeration value="InterpretingServices" />
+															<xs:enumeration value="Orientation/mobility" />
+															<xs:enumeration value="ParentTraining" />
+															<!-- is this list correct? tqii -->
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:element>
+												<xs:element name="setting" minOccurs="0">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Setting
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Where service will be rendered
+														</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:normalizedString">
+															<xs:enumeration value="General" />
+															<xs:enumeration value="Special" />
+															<!-- how to add other? tqii -->
+															<!-- is this list correct? tqii -->
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:element>
+												<xs:element name="serviceProvider" minOccurs="1" maxOccurs="unbounded">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																ServiceProvider
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Identity and role of person rendering support services
+														</xs:documentation>
+													</xs:annotation>
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="identity" type="gStaffPersonType" minOccurs="0">
+																<xs:annotation>
+																	<xs:appinfo>
+																		<elementName>
+																			Identity
+																		</elementName>
+																		<sifChar>O</sifChar>
+																		<cedsId/>
+																		<cedsURL/>
+																	</xs:appinfo>
+																	<xs:documentation>
+																		Service Provider Identity
+																	</xs:documentation>
+																</xs:annotation>
+															</xs:element>
+															<xs:element name="role" minOccurs="0">
+																<xs:annotation>
+																	<xs:appinfo>
+																		<elementName>
+																			Role
+																		</elementName>
+																		<sifChar>O</sifChar>
+																		<cedsId/>
+																		<cedsURL/>
+																	</xs:appinfo>
+																	<xs:documentation>
+																		Professional specialty applicable to the support of this goal.
+																	</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:normalizedString">
+																		<xs:enumeration value="Counselor" />
+																		<xs:enumeration value="ReadingSpecialist" />
+																		<!-- is this list correct? tqii -->
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="frequency" minOccurs="1" maxOccurs="unbounded">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Frequency
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Prescription for amount of service to be given.
+														</xs:documentation>
+													</xs:annotation>
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="cycle" minOccurs="0">
+																<xs:annotation>
+																	<xs:appinfo>
+																		<elementName>
+																			Cycle
+																		</elementName>
+																		<sifChar>O</sifChar>
+																		<cedsId/>
+																		<cedsURL/>
+																	</xs:appinfo>
+																	<xs:documentation>
+																		How often service must be rendered
+																	</xs:documentation>
+																</xs:annotation>
+																<xs:simpleType>
+																	<xs:restriction base="xs:normalizedString">
+																		<xs:enumeration value="5Day" />
+																		<xs:enumeration value="6Day" />
+																		<xs:enumeration value="10Day" />
+																		<!-- How to add 'other'? tqii -->
+																		<!-- is this list correct? tqii -->
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:element>
+															<xs:element name="duration" minOccurs="1" maxOccurs="unbounded">
+																<xs:annotation>
+																	<xs:appinfo>
+																		<elementName>
+																			Duration
+																		</elementName>
+																		<sifChar>O</sifChar>
+																		<cedsId/>
+																		<cedsURL/>
+																	</xs:appinfo>
+																	<xs:documentation>
+																		Amount of time during cycle that student receives service
+																	</xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="directMinutes" type="xs:integer" minOccurs="0">
+																			<xs:annotation>
+																				<xs:appinfo>
+																					<elementName>
+																						Direct Minutes
+																					</elementName>
+																					<sifChar>O</sifChar>
+																					<cedsId/>
+																					<cedsURL/>
+																				</xs:appinfo>
+																				<xs:documentation>
+																					Time spent directly with the student.
+																				</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="indirectMinutes" type="xs:integer" minOccurs="0">
+																			<xs:annotation>
+																				<xs:appinfo>
+																					<elementName>
+																						Indirect Minutes
+																					</elementName>
+																					<sifChar>O</sifChar>
+																					<cedsId/>
+																					<cedsURL/>
+																				</xs:appinfo>
+																				<xs:documentation>
+																					Service provider time spent on other service activities that are not with the student.
+																				</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="startDate" type="xs:normalizedString" minOccurs="0">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Start Date
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Date that work toward this goal will commence.
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="endDate" type="xs:normalizedString" minOccurs="0">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																End Date
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Date that work toward this goal will end.
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="nonParticipationReason" type="xs:normalizedString" minOccurs="0">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Non-Participation Reason
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Reason that student did not participate in this service.
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="extendsSchoolYEar" type="xs:boolean" minOccurs="0">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Extends School Year
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Determination if this service continues outside school year.
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="progressReportList" minOccurs="1" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:appinfo>
+									<elementName>
+										Progress Report List
+									</elementName>
+									<sifChar>O</sifChar>
+									<cedsId/>
+									<cedsURL/>
+								</xs:appinfo>
+								<xs:documentation>
+									Overall progress toward achievement of the goal
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="progressReport">
+										<xs:annotation>
+											<xs:appinfo>
+												<elementName>
+													Progress Report
+												</elementName>
+												<sifChar>O</sifChar>
+												<cedsId/>
+												<cedsURL/>
+											</xs:appinfo>
+											<xs:documentation>
+												Progress reported at a specific time
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Explanation
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Descriptive evaluation of student’s current progress
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="measurement" minOccurs="1" maxOccurs="unbounded">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Progress Measurement
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Quantitative data supporting the student’s progress evaluation
+														</xs:documentation>
+													</xs:annotation>
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+																<xs:annotation>
+																	<xs:appinfo>
+																		<elementName>
+																			Explanation
+																		</elementName>
+																		<sifChar>O</sifChar>
+																		<cedsId/>
+																		<cedsURL/>
+																	</xs:appinfo>
+																	<xs:documentation>
+																		Explanation of measurement process and importance of data that was measured.
+																	</xs:documentation>
+																</xs:annotation>
+															</xs:element>
+															<xs:element name="dataNames">
+																<xs:annotation>
+																	<xs:appinfo>
+																		<elementName>
+																			Data Names
+																		</elementName>
+																		<sifChar>O</sifChar>
+																		<cedsId/>
+																		<cedsURL/>
+																	</xs:appinfo>
+																	<xs:documentation>
+																		Meaning of data values
+																	</xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="categoryName" type="xs:normalizedString" minOccurs="0">
+																			<xs:annotation>
+																				<xs:appinfo>
+																					<elementName>
+																						Category Name
+																					</elementName>
+																					<sifChar>O</sifChar>
+																					<cedsId/>
+																					<cedsURL/>
+																				</xs:appinfo>
+																				<xs:documentation>
+																					Label that assigns meaning to the categories that were measured (eg, x-axis label)
+																				</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="valueName" type="xs:normalizedString" minOccurs="0">
+																			<xs:annotation>
+																				<xs:appinfo>
+																					<elementName>
+																						Value Name
+																					</elementName>
+																					<sifChar>O</sifChar>
+																					<cedsId/>
+																					<cedsURL/>
+																				</xs:appinfo>
+																				<xs:documentation>
+																					Label that assigns meaning to a chart display of a measured value (eg, y-axis label)
+																				</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="dataValuesList" minOccurs="1" maxOccurs="unbounded">
+																<xs:annotation>
+																	<xs:appinfo>
+																		<elementName>
+																			Data Value List
+																		</elementName>
+																		<sifChar>O</sifChar>
+																		<cedsId/>
+																		<cedsURL/>
+																	</xs:appinfo>
+																	<xs:documentation>
+																		Data pairs representing measurements of student performance relative to progress on this goal
+																	</xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="dataValue">
+																			<xs:annotation>
+																				<xs:appinfo>
+																					<elementName>
+																						Data Value
+																					</elementName>
+																					<sifChar>O</sifChar>
+																					<cedsId/>
+																					<cedsURL/>
+																				</xs:appinfo>
+																				<xs:documentation>
+																					A measurement of student performance
+																				</xs:documentation>
+																			</xs:annotation>
+																			<xs:complexType>
+																				<xs:sequence>
+																					<xs:element name="category" type="xs:integer" minOccurs="0">
+																						<xs:annotation>
+																							<xs:appinfo>
+																								<elementName>
+																									Category
+																								</elementName>
+																								<sifChar>O</sifChar>
+																								<cedsId/>
+																								<cedsURL/>
+																							</xs:appinfo>
+																							<xs:documentation>
+																								Thing being measured
+																							</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="value" type="xs:integer" minOccurs="0">
+																						<xs:annotation>
+																							<xs:appinfo>
+																								<elementName>
+																									Value
+																								</elementName>
+																								<sifChar>O</sifChar>
+																								<cedsId/>
+																								<cedsURL/>
+																							</xs:appinfo>
+																							<xs:documentation>
+																								Measurement
+																							</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																				</xs:sequence>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="determination" minOccurs="0">
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																Determination
+															</elementName>
+															<sifChar>O</sifChar>
+															<cedsId/>
+															<cedsURL/>
+														</xs:appinfo>
+														<xs:documentation>
+															Judgment on progress made toward goal at this time
+														</xs:documentation>
+													</xs:annotation>
+													<xs:simpleType>
+														<xs:restriction base="xs:normalizedString">
+															<xs:enumeration value="MakingExpectedProgress" />
+															<xs:enumeration value="NotMakingExpectedProgress" />
+															<xs:enumeration value="Complete" />
+															<!-- is this list correct? tqii -->
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:element>
+												<xs:element name="date" type="xs:date" minOccurs="0" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- SHARED TYPE -->
+	<xs:complexType name="parentAcceptanceType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Parent Acceptance Type
+				</elementName>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>
+				Simple Yes/No and explanation for indicating assent or rejection
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gOtherSIFType">
+				<xs:sequence>
+					<xs:element name="accepted" type="xs:boolean" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>
+									Accepts
+								</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>
+								Item is acceptable to parent
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="comment" type="xs:normalizedString" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>
+									Comment
+								</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>
+								Comment on item and acceptance or rejection
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

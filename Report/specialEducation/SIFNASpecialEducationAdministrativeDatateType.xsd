@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-    <xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd"/>
-    <xs:include schemaLocation="../../Composite/SIFNAxPress.xsd"/>
-    <xs:include schemaLocation="./SIFNASpecialEducationCommonTypes.xsd"/>
-    
+    <xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd" />
+    <xs:include schemaLocation="../../Composite/SIFNAxPress.xsd" />
+    <xs:include schemaLocation="./SIFNASpecialEducationCommonTypes.xsd" />
     <xs:complexType name="xSpecialEducationAdministrativeDataType">
         <xs:annotation>
             <xs:appinfo>
@@ -16,18 +15,13 @@
                 Administrative and demographic data supporting Special Education students
             </xs:documentation>
         </xs:annotation>
-            <xs:sequence>
-                
-                <xs:element name="reevaluationDueDate" type="xSpecialEducationAdministrativeDataReevaluationDueDateType"/>
-                <xs:element name="parentGuardianList" type="xParentGuardianListType" minOccurs="0"/>
-                <xs:element name="costSharing" type="xSpecialEducationAdministrativeDataCostSharingType"/>
-                
-
-
-            </xs:sequence>
+        <xs:sequence>
+            <xs:element name="reevaluationDueDate" type="xSpecialEducationAdministrativeDataReevaluationDueDateType" />
+            <xs:element name="parentGuardianList" type="xParentGuardianListType" minOccurs="0" />
+            <xs:element name="costSharing" type="xSpecialEducationAdministrativeDataCostSharingType" />
+        </xs:sequence>
     </xs:complexType>
-    
-<!-- first level -->
+    <!-- first level -->
     <xs:complexType name="xSpecialEducationAdministrativeDataReevaluationDueDateType">
         <xs:annotation>
             <xs:appinfo>
@@ -42,38 +36,35 @@
         </xs:annotation>
     </xs:complexType>
     <xs:complexType name="xSpecialEducationAdministrativeDataCostSharingType">
-            <xs:sequence>
-                <xs:element name="status" type="xs:boolean" minOccurs="0">
-                    <xs:annotation>
-                        <xs:appinfo>
-                            <elementName>
-                                Cost Sharing Availability Status
-                            </elementName>
-                            <sifChar>O</sifChar>
-                            <cedsId/>
-                            <cedsURL/>
-                        </xs:appinfo>
-                        <xs:documentation>The date that the next evaluation is due based on the three year cycle.</xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="agency" type="xs:normalizedString" minOccurs="0">
-                    <xs:annotation>
-                        <xs:appinfo>
-                            <elementName>
-                                Name of Agency Contributing Funding
-                            </elementName>
-                            <sifChar>O</sifChar>
-                            <cedsId/>
-                            <cedsURL/>
-                        </xs:appinfo>
-                        <xs:documentation>
-                            Government agency contributing funds to the support of this student.
-                        </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:sequence>
-        
+        <xs:sequence>
+            <xs:element name="status" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <elementName>
+                            Cost Sharing Availability Status
+                        </elementName>
+                        <sifChar>O</sifChar>
+                        <cedsId/>
+                        <cedsURL/>
+                    </xs:appinfo>
+                    <xs:documentation>The date that the next evaluation is due based on the three year cycle.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="agency" type="xs:normalizedString" minOccurs="0">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <elementName>
+                            Name of Agency Contributing Funding
+                        </elementName>
+                        <sifChar>O</sifChar>
+                        <cedsId/>
+                        <cedsURL/>
+                    </xs:appinfo>
+                    <xs:documentation>
+                        Government agency contributing funds to the support of this student.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
     </xs:complexType>
-    
-    
 </xs:schema>

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-    <xs:include schemaLocation="../Composite/SIFNAxPressCommonTypes.xsd"/>
-    <xs:include schemaLocation="../Composite/SIFNAxPress.xsd"/>
-    <xs:include schemaLocation="specialEducation/SIFNASpecialEducationAdministrativeDatateType.xsd"/>
-    <xs:include schemaLocation="specialEducation/SIFNASpecialEducationEligibility.xsd"/>
-    <xs:include schemaLocation="specialEducation/SIFNASpecialEducationIndividualEducationPlan.xsd"/>
-    <xs:include schemaLocation="specialEducation/SIFNASpecialEducationIepHistory.xsd"/>
-    
+    <xs:include schemaLocation="../Composite/SIFNAxPressCommonTypes.xsd" />
+    <xs:include schemaLocation="../Composite/SIFNAxPress.xsd" />
+    <xs:include schemaLocation="specialEducation/SIFNASpecialEducationAdministrativeDatateType.xsd" />
+    <xs:include schemaLocation="specialEducation/SIFNASpecialEducationEligibility.xsd" />
+    <xs:include schemaLocation="specialEducation/SIFNASpecialEducationIndividualEducationPlan.xsd" />
+    <xs:include schemaLocation="specialEducation/SIFNASpecialEducationIepHistory.xsd" />
     <xs:complexType name="xSpecialEducationType">
         <xs:annotation>
             <xs:appinfo>
@@ -17,22 +16,16 @@
                 <cedsURL/>
             </xs:appinfo>
             <xs:documentation>
-                Information to support Special Education students transferring into a new educational context.
-                
-                Specifically, this model supports these use cases:
-                Use Case 1 (Day Zero): An administrator is able to quickly look at the incoming information to where to place the student on the first day.
-                Use Case 2 (Ongoing IEP): A committee on the receiving school quickly understands the needs and services of a student in a way that allows it to take the actions necessary for the student to have the best outcome.
-                Use Case 3 (State Reporting): Data analysts at the receiving school build a complete (adequate?) student profile supporting their reporting and resource management needs.
+                Information to support Special Education students transferring into a new educational context. Specifically, this model supports these use cases: Use Case 1 (Day Zero): An administrator is able to quickly look at the incoming information to where to place the student on the first day. Use Case 2 (Ongoing IEP): A committee on the receiving school quickly understands the needs and services of a student in a way that allows it to take the actions necessary for the student to have the best outcome. Use Case 3 (State Reporting): Data analysts at the receiving school build a complete (adequate?) student profile supporting their reporting and resource management needs.
             </xs:documentation>
         </xs:annotation>
-        
         <xs:complexContent>
             <xs:extension base="gOtherSIFType">
                 <xs:sequence>
-                    <xs:element name="administrativeData" type="xSpecialEducationAdministrativeDataType"/>
-                    <xs:element name="eligibilty" type="xSpecialEducationEligibilityType"/>
-                    <xs:element name="individualEducationPlan" type="xSpecialEducationIndividualEducationPlanType"/>
-                    <xs:element name="iepHistory" type="xSpecialEducationIepHistoryType"/>
+                    <xs:element name="administrativeData" type="xSpecialEducationAdministrativeDataType" />
+                    <xs:element name="eligibilty" type="xSpecialEducationEligibilityType" />
+                    <xs:element name="individualEducationPlan" type="xSpecialEducationIndividualEducationPlanType" />
+                    <xs:element name="iepHistory" type="xSpecialEducationIepHistoryType" />
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
