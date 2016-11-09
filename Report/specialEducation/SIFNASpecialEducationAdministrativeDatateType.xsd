@@ -10,6 +10,7 @@
                 <sifChar>M</sifChar>
                 <cedsId/>
                 <cedsURL/>
+                <definitionRefId>7475bb58-0cae-433c-84ae-780ebb32eb73</definitionRefId>
             </xs:appinfo>
             <xs:documentation>
                 Administrative and demographic data supporting Special Education students
@@ -31,6 +32,7 @@
                 <sifChar>O</sifChar>
                 <cedsId/>
                 <cedsURL/>
+                <definitionRefId>61015b82-155f-4db9-8ecc-e845d62883fe</definitionRefId>
             </xs:appinfo>
             <xs:documentation>The date that the next evaluation is due based on the three year cycle.</xs:documentation>
         </xs:annotation>
@@ -46,6 +48,7 @@
                         <sifChar>O</sifChar>
                         <cedsId/>
                         <cedsURL/>
+                        <definitionRefId>5201310e-c36c-42b1-9fa0-6be95502cd96</definitionRefId>
                     </xs:appinfo>
                     <xs:documentation>The date that the next evaluation is due based on the three year cycle.</xs:documentation>
                 </xs:annotation>
@@ -59,6 +62,7 @@
                         <sifChar>O</sifChar>
                         <cedsId/>
                         <cedsURL/>
+                        <definitionRefId>00be92a9-0521-472f-971d-547a274a3cfa</definitionRefId>
                     </xs:appinfo>
                     <xs:documentation>
                         Government agency contributing funds to the support of this student.
