@@ -3,6 +3,7 @@
 	<xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd" />
 	<xs:include schemaLocation="../../Composite/SIFNAxPress.xsd" />
 	<xs:include schemaLocation="SIFNASpecialEducationIndividualEducationPlanAnnualGoalsList.xsd" />
+	<xs:include schemaLocation="SIFNASpecialEducationCommonTypes.xsd" />
 	<xs:complexType name="xSpecialEducationIndividualEducationPlanType">
 		<xs:annotation>
 			<xs:appinfo>
