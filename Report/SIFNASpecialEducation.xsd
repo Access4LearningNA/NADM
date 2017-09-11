@@ -2,14 +2,14 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
     <xs:include schemaLocation="../Composite/SIFNAxPressCommonTypes.xsd" />
     <xs:include schemaLocation="../Composite/SIFNAxPress.xsd" />
-    <xs:include schemaLocation="specialEducation/SIFNASpecialEducationAdministrativeDatateType.xsd" />
+    <xs:include schemaLocation="specialEducation/SIFNASpecialEducationAdministrativeDataType.xsd" />
     <xs:include schemaLocation="specialEducation/SIFNASpecialEducationEligibility.xsd" />
     <xs:include schemaLocation="specialEducation/SIFNASpecialEducationIndividualEducationPlan.xsd" />
     <xs:include schemaLocation="specialEducation/SIFNASpecialEducationIepHistory.xsd" />
-    <xs:complexType name="xSpecialEducationType">
+    <xs:complexType name="xIndividualizeEducationPlanType">
         <xs:annotation>
             <xs:appinfo>
-                <elementName>SpecialEducation</elementName>
+                <elementName>Individualize Educaiton Plan (IEP)</elementName>
                 <events>no</events>
                 <isSIFObject>yes</isSIFObject>
                 <cedsId/>

@@ -588,15 +588,17 @@
 	</xs:complexType>
 	<xs:element name="sreReceipts" type="sreReceiptCollectionType"/>
 	
-	<xs:element name="specialEducations" type="xSpecialEducationCollectionType">
+	<!-- specialEducation (IEP) -->
+	
+	<xs:element name="specialEducation" type="xSpecialEducationCollectionType">
 	</xs:element>
 	
 	<xs:complexType name="xSpecialEducationCollectionType">
 		<xs:annotation>
-			<xs:documentation>Special education information, including eligibility, placement, and services.</xs:documentation>
+			<xs:documentation>Special education information, including individualize education plans (IEP).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="xSpecialEducation" type="xSpecialEducationType" minOccurs="0"
+			<xs:element name="xIndividualizeEducationPlan" type="xIndividualizeEducationPlanType" minOccurs="0"
 				maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
