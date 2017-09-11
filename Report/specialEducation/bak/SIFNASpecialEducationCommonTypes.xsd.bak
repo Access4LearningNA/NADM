@@ -175,7 +175,7 @@
                                         <xs:appinfo>
                                             <elementName>TelephoneNumber</elementName>
                                             <sifChar>O</sifChar>
-                                            <cedsId>000279,000167,000219</cedsId>
+                                            <cedsId>3279</cedsId>
                                             <cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3279</cedsURL>
                                             <definitionRefId>b1c63eb4-4761-4c62-8cc7-a06daa2e3561</definitionRefId>
                                         </xs:appinfo>
