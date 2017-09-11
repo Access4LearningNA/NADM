@@ -47,8 +47,8 @@
 															Explanation of the Need for Evaluation
 														</elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+														<cedsId>001483</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/001483</cedsURL>
 <definitionRefId>874e6ff4-c8fa-4b9c-be66-232b618194e0</definitionRefId>
 													</xs:appinfo>
 													<xs:documentation>
@@ -82,8 +82,9 @@
 																		Date Referral to Evaluate was Made
 																	</elementName>
 																	<sifChar>O</sifChar>
-																	<cedsId/>
-																	<cedsURL/>
+																	<cedsId>001481</cedsId>
+																	<cedsURL>https://ceds.ed.gov/element/001481</cedsURL>
+																	
 <definitionRefId>04b85c4a-76f3-43b8-87a7-ec240ec9897b</definitionRefId>
 																</xs:appinfo>
 																<xs:documentation>
@@ -136,8 +137,9 @@
 												Parent Observations
 											</elementName>
 											<sifChar>O</sifChar>
-											<cedsId/>
-											<cedsURL/>
+											<cedsId>001732</cedsId>
+											<cedsURL>https://ceds.ed.gov/element/001732</cedsURL>
+											
 <definitionRefId>e2f3d4a7-f327-49d7-8865-c08ffe9504d0</definitionRefId>
 										</xs:appinfo>
 										<xs:documentation>
@@ -167,8 +169,9 @@
 													<xs:appinfo>
 														<elementName> Accepted </elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+														<cedsId>001726</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/001726</cedsURL>
+														
 <definitionRefId>149d7cb7-0b7c-45d4-82c5-005f173b9791</definitionRefId>
 													</xs:appinfo>
 													<xs:documentation>
@@ -183,8 +186,10 @@
 															Identity of Consenting Person
 														</elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+														
+														<cedsId>001727</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/001727</cedsURL>
+														
 <definitionRefId>c9c25b67-3f63-43f8-870b-7313f6cd6d58</definitionRefId>
 													</xs:appinfo>
 													<xs:documentation>
@@ -239,8 +244,9 @@
 															Evaluation Result Explanation
 														</elementName>
 														<sifChar>M</sifChar>
-														<cedsId/>
-														<cedsURL/>
+														<cedsId>001730</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/001730</cedsURL>
+														
 <definitionRefId>0c54f35a-58cf-4fb6-9d34-b32fab4bcfbe</definitionRefId>
 													</xs:appinfo>
 													<xs:documentation>
@@ -253,8 +259,9 @@
 													<xs:appinfo>
 														<elementName>Evaluation Type</elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+														<cedsId>001729</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/001729</cedsURL>
+														
 <definitionRefId>c15842a1-6d86-4f49-bed3-e313184be748</definitionRefId>
 													</xs:appinfo>
 													<xs:documentation>Category of evaluation</xs:documentation>
@@ -284,11 +291,12 @@
 															Date of Evaluation
 														</elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+														<cedsId>001731</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/001731</cedsURL>
+														
 <definitionRefId>25cb1adb-8153-4fb4-8f72-1dafc7ddc8b8</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation>Tee date when the evaluation was conducted.</xs:documentation>
+													<xs:documentation>The date when the evaluation was conducted.</xs:documentation>
 												</xs:annotation>
 											</xs:element>
 											<xs:element name="lifecyclePurpose" nillable="true" minOccurs="1">
@@ -296,8 +304,9 @@
 													<xs:appinfo>
 														<elementName>Lifecycle Purpose of Evaluation</elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+														<cedsId>001728</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/001728</cedsURL>
+														
 <definitionRefId>b7aa2611-ed5a-4268-ad89-a1f9a5cf40e5</definitionRefId>
 													</xs:appinfo>
 													<xs:documentation>IEP lifecycle evaluation purpose</xs:documentation>
@@ -356,8 +365,9 @@
 															Disability Code
 														</elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+														<cedsId>001733</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/001733</cedsURL>
+														
 <definitionRefId>3c78d60c-a59b-4e06-8441-e7a412aedae9</definitionRefId>
 													</xs:appinfo>
 													<xs:documentation>
@@ -805,8 +815,9 @@
 															Specific Disability Exists
 														</elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+														<cedsId>000577</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/000577</cedsURL>
+														
 <definitionRefId>549fe64a-f3bb-4c7f-8290-ce5fabbbe4d3</definitionRefId>
 													</xs:appinfo>
 													<xs:documentation>
@@ -837,8 +848,9 @@
 															Student is Eligible
 														</elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+														<cedsId>000151</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/000151</cedsURL>
+														
 <definitionRefId>a3a01a85-e0a0-4dde-8758-9ccc7f9859f4</definitionRefId>
 													</xs:appinfo>
 													<xs:documentation>

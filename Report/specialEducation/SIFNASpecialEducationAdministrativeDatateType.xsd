@@ -50,7 +50,7 @@
                         <cedsURL/>
                         <definitionRefId>5201310e-c36c-42b1-9fa0-6be95502cd96</definitionRefId>
                     </xs:appinfo>
-                    <xs:documentation>The date that the next evaluation is due based on the three year cycle.</xs:documentation>
+                    <xs:documentation>Plan has cost sharing available.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="agency" type="xs:normalizedString" minOccurs="0">

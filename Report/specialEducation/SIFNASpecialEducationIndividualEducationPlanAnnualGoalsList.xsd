@@ -36,8 +36,12 @@
 										Current Status
 									</elementName>
 									<sifChar>O</sifChar>
-									<cedsId/>
-									<cedsURL/>
+									
+									
+									<cedsId>001703</cedsId>
+									<cedsURL>https://ceds.ed.gov/element/001703</cedsURL>
+									
+									
 <definitionRefId>90e1982e-8ac9-4b10-89ee-17cafd2e73fb</definitionRefId>
 								</xs:appinfo>
 								<xs:documentation>
@@ -85,8 +89,10 @@
 													Category
 												</elementName>
 												<sifChar>O</sifChar>
-												<cedsId/>
-												<cedsURL/>
+												
+												<cedsId>001698</cedsId>
+												<cedsURL>https://ceds.ed.gov/element/001698</cedsURL>
+												
 <definitionRefId>3c9278fe-457a-40cc-96e0-490b9661670f</definitionRefId>
 											</xs:appinfo>
 											<xs:documentation>
@@ -126,8 +132,10 @@
 																Standards URI
 															</elementName>
 															<sifChar>O</sifChar>
-															<cedsId/>
-															<cedsURL/>
+															
+															<cedsId>000874</cedsId>
+															<cedsURL>https://ceds.ed.gov/element/000874</cedsURL>
+															
 <definitionRefId>d8cee3d6-ec81-42e2-93a4-64813005d82d</definitionRefId>
 														</xs:appinfo>
 														<xs:documentation>
@@ -142,8 +150,10 @@
 																Identifier
 															</elementName>
 															<sifChar>O</sifChar>
-															<cedsId/>
-															<cedsURL/>
+															
+															<cedsId>000692</cedsId>
+															<cedsURL>https://ceds.ed.gov/element/000692</cedsURL>
+															
 <definitionRefId>4c4838ba-0d9a-474c-94ee-144bd29fbc62</definitionRefId>
 														</xs:appinfo>
 														<xs:documentation>
@@ -198,8 +208,10 @@
 																Description
 															</elementName>
 															<sifChar>O</sifChar>
-															<cedsId/>
-															<cedsURL/>
+															
+															<cedsId>000692</cedsId>
+															<cedsURL>https://ceds.ed.gov/element/000692</cedsURL>
+															
 <definitionRefId>9afb5d48-c2e1-4c6b-8d00-b97c60aab8cd</definitionRefId>
 														</xs:appinfo>
 														<xs:documentation>
@@ -320,8 +332,10 @@
 																						Explanation
 																					</elementName>
 																					<sifChar>O</sifChar>
-																					<cedsId/>
-																					<cedsURL/>
+																					
+																					<cedsId>001695</cedsId>
+																					<cedsURL>https://ceds.ed.gov/element/001695</cedsURL>
+																					
 <definitionRefId>87285b28-d8dd-4a19-b33d-c4c008a4bd92</definitionRefId>
 																				</xs:appinfo>
 																				<xs:documentation>
@@ -353,8 +367,10 @@
 																									Accuracy Percent
 																								</elementName>
 																								<sifChar>O</sifChar>
-																								<cedsId/>
-																								<cedsURL/>
+																								
+																								<cedsId>001691</cedsId>
+																								<cedsURL>https://ceds.ed.gov/element/001691</cedsURL>
+																								
 <definitionRefId>b3612f3f-b6f0-4529-87c8-541756b1fb4c</definitionRefId>
 																							</xs:appinfo>
 																							<xs:documentation>
@@ -386,8 +402,10 @@
 																												Success Count
 																											</elementName>
 																											<sifChar>O</sifChar>
-																											<cedsId/>
-																											<cedsURL/>
+																											
+																											<cedsId>001694</cedsId>
+																											<cedsURL>https://ceds.ed.gov/element/001694</cedsURL>
+																											
 <definitionRefId>016e7c88-145b-4c4b-866f-baf695b4e529</definitionRefId>
 																										</xs:appinfo>
 																										<xs:documentation>
@@ -402,8 +420,10 @@
 																												Attempt Count
 																											</elementName>
 																											<sifChar>O</sifChar>
-																											<cedsId/>
-																											<cedsURL/>
+																											
+																											<cedsId>001692</cedsId>
+																											<cedsURL>https://ceds.ed.gov/element/001692</cedsURL>
+																											
 <definitionRefId>f4fe69d6-9cba-45dc-86ad-407a77218c13</definitionRefId>
 																										</xs:appinfo>
 																										<xs:documentation>
@@ -421,8 +441,10 @@
 																									Other Evaluation Method
 																								</elementName>
 																								<sifChar>O</sifChar>
-																								<cedsId/>
-																								<cedsURL/>
+																								
+																								<cedsId>001692</cedsId>
+																								<cedsURL>https://ceds.ed.gov/element/001692</cedsURL>
+																								
 <definitionRefId>f7a7cd71-8379-474e-85e6-baef2aa95399</definitionRefId>
 																							</xs:appinfo>
 																							<xs:documentation>
@@ -568,8 +590,10 @@
 																Setting
 															</elementName>
 															<sifChar>O</sifChar>
-															<cedsId/>
-															<cedsURL/>
+															
+															<cedsId>001634</cedsId>
+															<cedsURL>https://ceds.ed.gov/element/001634</cedsURL>
+															
 <definitionRefId>152a7b1d-691e-414e-93f0-7d6757b10f6f</definitionRefId>
 														</xs:appinfo>
 														<xs:documentation>
@@ -625,8 +649,10 @@
 																			Role
 																		</elementName>
 																		<sifChar>O</sifChar>
-																		<cedsId/>
-																		<cedsURL/>
+																		
+																		<cedsId>000558</cedsId>
+																		<cedsURL>https://ceds.ed.gov/element/000558</cedsURL>
+																		
 <definitionRefId>05e2d887-6dbf-4bfb-bd91-f050b818f106</definitionRefId>
 																	</xs:appinfo>
 																	<xs:documentation>
@@ -748,8 +774,10 @@
 																Start Date
 															</elementName>
 															<sifChar>O</sifChar>
-															<cedsId/>
-															<cedsURL/>
+															
+															<cedsId>001165</cedsId>
+															<cedsURL>https://ceds.ed.gov/element/001165</cedsURL>
+															
 <definitionRefId>78adc225-ba26-433a-ba14-2642690d888a</definitionRefId>
 														</xs:appinfo>
 														<xs:documentation>
@@ -764,8 +792,10 @@
 																End Date
 															</elementName>
 															<sifChar>O</sifChar>
-															<cedsId/>
-															<cedsURL/>
+															
+															<cedsId>001166</cedsId>
+															<cedsURL>https://ceds.ed.gov/element/001166</cedsURL>
+															
 <definitionRefId>097d92f3-4319-4672-8d12-d06aeda8af37</definitionRefId>
 														</xs:appinfo>
 														<xs:documentation>
@@ -780,8 +810,10 @@
 																Non-Participation Reason
 															</elementName>
 															<sifChar>O</sifChar>
-															<cedsId/>
-															<cedsURL/>
+															
+															<cedsId>001488</cedsId>
+															<cedsURL>https://ceds.ed.gov/element/001488</cedsURL>
+															
 <definitionRefId>f6e6860b-7d37-4083-bf45-d44b9a02e5d4</definitionRefId>
 														</xs:appinfo>
 														<xs:documentation>
@@ -796,8 +828,10 @@
 																Extends School Year
 															</elementName>
 															<sifChar>O</sifChar>
-															<cedsId/>
-															<cedsURL/>
+															
+															<cedsId>001717</cedsId>
+															<cedsURL>https://ceds.ed.gov/element/001717</cedsURL>
+															
 <definitionRefId>0c6d36dc-df7b-463b-baf1-1f9fe810b4f6</definitionRefId>
 														</xs:appinfo>
 														<xs:documentation>
@@ -852,8 +886,10 @@
 																Explanation
 															</elementName>
 															<sifChar>O</sifChar>
-															<cedsId/>
-															<cedsURL/>
+															
+															<cedsId>001700</cedsId>
+															<cedsURL>https://ceds.ed.gov/element/001700</cedsURL>
+															
 <definitionRefId>8d48e2cc-a95d-44ec-93fa-02167654773e</definitionRefId>
 														</xs:appinfo>
 														<xs:documentation>
@@ -1028,8 +1064,10 @@
 																Determination
 															</elementName>
 															<sifChar>O</sifChar>
-															<cedsId/>
-															<cedsURL/>
+															
+															<cedsId>001702</cedsId>
+															<cedsURL>https://ceds.ed.gov/element/001702</cedsURL>
+															
 <definitionRefId>f7030eab-10f4-4570-aa5c-4ec3f0afacd3</definitionRefId>
 														</xs:appinfo>
 														<xs:documentation>
@@ -1045,7 +1083,24 @@
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:element>
-												<xs:element name="date" type="xs:date" minOccurs="0" />
+												<xs:element name="date" type="xs:date" minOccurs="0" >
+													<xs:annotation>
+														<xs:appinfo>
+															<elementName>
+																date
+															</elementName>
+															<sifChar>O</sifChar>
+															
+															<cedsId>001699</cedsId>
+															<cedsURL>https://ceds.ed.gov/element/001699</cedsURL>
+															
+															<definitionRefId>aaa30eab-10f4-4570-aa5c-4ec3f0afacd3</definitionRefId>
+														</xs:appinfo>
+														<xs:documentation>
+															Individualized Program Service Plan Progress Report Date														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												
 											</xs:sequence>
 										</xs:complexType>
 									</xs:element>
@@ -1084,8 +1139,10 @@
 									Accepts
 								</elementName>
 								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
+								
+								<cedsId>001721</cedsId>
+								<cedsURL>https://ceds.ed.gov/element/001721</cedsURL>
+								
 <definitionRefId>a86999db-6823-401c-9d89-7c1aad6206e2</definitionRefId>
 							</xs:appinfo>
 							<xs:documentation>
@@ -1100,8 +1157,10 @@
 									Comment
 								</elementName>
 								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
+								
+								<cedsId>001722</cedsId>
+								<cedsURL>https://ceds.ed.gov/element/001722</cedsURL>
+								
 <definitionRefId>b7b7e385-98ab-41d7-ac7d-230137c04b20</definitionRefId>
 							</xs:appinfo>
 							<xs:documentation>

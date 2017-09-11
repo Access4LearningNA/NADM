@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-	<xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd" />
-	<xs:include schemaLocation="../../Composite/SIFNAxPress.xsd" />
-	<xs:include schemaLocation="SIFNASpecialEducationIndividualEducationPlanAnnualGoalsList.xsd" />
-	<xs:include schemaLocation="SIFNASpecialEducationCommonTypes.xsd" />
+	<xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd"/>
+	<xs:include schemaLocation="../../Composite/SIFNAxPress.xsd"/>
+	<xs:include schemaLocation="SIFNASpecialEducationIndividualEducationPlanAnnualGoalsList.xsd"/>
+	<xs:include schemaLocation="SIFNASpecialEducationCommonTypes.xsd"/>
 	<xs:complexType name="xSpecialEducationIndividualEducationPlanType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -26,8 +26,9 @@
 									Effective Period
 								</elementName>
 								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
+								<cedsId>001683</cedsId>
+								<cedsURL>https://ceds.ed.gov/element/001683</cedsURL>
+								
 <definitionRefId>425d71f7-886a-4f87-a28f-6d6ae9f60a0f</definitionRefId>
 							</xs:appinfo>
 							<xs:documentation>
@@ -94,9 +95,9 @@
 											<elementName>
 												Standard Grade Level
 											</elementName>
-											<sifChar>O</sifChar>
-											<cedsId/>
-											<cedsURL/>
+											<cedsId>000100</cedsId>
+											<cedsURL>https://ceds.ed.gov/element/000100</cedsURL>
+											
 <definitionRefId>e677aa8b-f677-4b8d-9f62-60ee07a1504d</definitionRefId>
 										</xs:appinfo>
 										<xs:documentation>
@@ -105,20 +106,20 @@
 									</xs:annotation>
 									<xs:simpleType>
 										<xs:restriction base="xs:normalizedString">
-											<xs:enumeration value="P" />
-											<xs:enumeration value="K" />
-											<xs:enumeration value="1" />
-											<xs:enumeration value="2" />
-											<xs:enumeration value="3" />
-											<xs:enumeration value="4" />
-											<xs:enumeration value="5" />
-											<xs:enumeration value="6" />
-											<xs:enumeration value="7" />
-											<xs:enumeration value="8" />
-											<xs:enumeration value="9" />
-											<xs:enumeration value="10" />
-											<xs:enumeration value="11" />
-											<xs:enumeration value="12" />
+											<xs:enumeration value="P"/>
+											<xs:enumeration value="K"/>
+											<xs:enumeration value="1"/>
+											<xs:enumeration value="2"/>
+											<xs:enumeration value="3"/>
+											<xs:enumeration value="4"/>
+											<xs:enumeration value="5"/>
+											<xs:enumeration value="6"/>
+											<xs:enumeration value="7"/>
+											<xs:enumeration value="8"/>
+											<xs:enumeration value="9"/>
+											<xs:enumeration value="10"/>
+											<xs:enumeration value="11"/>
+											<xs:enumeration value="12"/>
 											<!-- is this list correct? tqii -->
 										</xs:restriction>
 									</xs:simpleType>
@@ -172,9 +173,10 @@
 									</xs:annotation>
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="concerns" minOccurs="1" maxOccurs="unbounded">
+											<xs:element name="concerns" minOccurs="1"
+												maxOccurs="unbounded">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName>
 															Concerns
 														</elementName>
@@ -183,15 +185,16 @@
 														<cedsURL/>
 <definitionRefId>3a140e60-f67e-4376-9de8-a1e64a727f7e</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation>
+												<xs:documentation>
 														Justification for student’s involvement in special education process
 													</xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="reason" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="reason"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName>
 																		Reason for IEP
 																	</elementName>
@@ -200,49 +203,54 @@
 																	<cedsURL/>
 <definitionRefId>aa99d3ad-689a-49ef-812f-0aee221394b2</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation>
+												<xs:documentation>
 																	Explanation of the primary reasons that an IEP should be developed
 																</xs:documentation>
-															</xs:annotation>
-														</xs:element>
-														<xs:element name="parentConcern" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="parentConcern"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName>
 																		Parent's Concern
 																	</elementName>
 																	<sifChar>O</sifChar>
-																	<cedsId/>
-																	<cedsURL/>
+																	<cedsId>001710</cedsId>
+																	<cedsURL>https://ceds.ed.gov/element/001710</cedsURL>
+																	
 <definitionRefId>1f250a71-3d4b-4729-9a8a-aee9a9a18811</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation>
+												<xs:documentation>
 																	Parent’s explanation of their interest in student’s participation in special education
 																</xs:documentation>
-															</xs:annotation>
-														</xs:element>
-														<xs:element name="studentConcern" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="studentConcern"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName>
 																		Student's Concern
 																	</elementName>
 																	<sifChar>O</sifChar>
-																	<cedsId/>
-																	<cedsURL/>
+																	<cedsId>001711</cedsId>
+																	<cedsURL>https://ceds.ed.gov/element/001711</cedsURL>
+																	
 <definitionRefId>a53760e7-82c9-47e9-85f9-1df5961e188e</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation>
+												<xs:documentation>
 																	Student’s explanation of his or her interest in participation in special education
 																</xs:documentation>
-															</xs:annotation>
-														</xs:element>
-													</xs:sequence>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
-											<xs:element name="strengths" type="xs:normalizedString" minOccurs="0">
+											<xs:element name="strengths" type="xs:normalizedString"
+												minOccurs="0">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName>
 															Strengths
 														</elementName>
@@ -251,30 +259,33 @@
 														<cedsURL/>
 <definitionRefId>9a6c7d5d-82c1-49ed-9b8a-ab2cfdc6dba5</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation>
+												<xs:documentation>
 														Explanation of perceived strengths and abilities of the student
 													</xs:documentation>
 												</xs:annotation>
 											</xs:element>
-											<xs:element name="motivation" type="xs:normalizedString" minOccurs="0">
+											<xs:element name="motivation" type="xs:normalizedString"
+												minOccurs="0">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName>
 															Motivations
 														</elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+														<cedsId>001709</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/001709</cedsURL>
+														
 <definitionRefId>d5105fe3-452b-413b-a808-07219d3552df</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation>
+												<xs:documentation>
 														Explanation of the goals and interests of the student
 													</xs:documentation>
 												</xs:annotation>
 											</xs:element>
-											<xs:element name="evaluation" minOccurs="1" maxOccurs="unbounded">
+											<xs:element name="evaluation" minOccurs="1"
+												maxOccurs="unbounded">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName>
 															Evaluation
 														</elementName>
@@ -283,15 +294,16 @@
 														<cedsURL/>
 <definitionRefId>538a864e-cb4a-4d90-a9e2-713d7495c334</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation>
+												<xs:documentation>
 														Anecdotal background information about performance
 													</xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="needsList" minOccurs="1" maxOccurs="unbounded">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="needsList" minOccurs="1"
+												maxOccurs="unbounded">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName>
 																		List of Needs
 																	</elementName>
@@ -300,15 +312,16 @@
 																	<cedsURL/>
 <definitionRefId>a71a60d7-4553-4a9a-bb97-8a06f4258e78</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation>
+												<xs:documentation>
 																	Non-technical list of student’s perceived educational special needs
 																</xs:documentation>
-															</xs:annotation>
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="need" type="xs:normalizedString" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="need" type="xs:normalizedString"
+												minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName>
 																					Need
 																				</elementName>
@@ -317,17 +330,18 @@
 																				<cedsURL/>
 <definitionRefId>2da06ca3-dedc-40b1-b436-8c79514a83fd</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation>
+												<xs:documentation>
 																				Perceived disability
 																			</xs:documentation>
-																		</xs:annotation>
-																	</xs:element>
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-														<xs:element name="performance" minOccurs="1" maxOccurs="unbounded">
-															<xs:annotation>
-																<xs:appinfo>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												<xs:element name="performance" minOccurs="1"
+												maxOccurs="unbounded">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName>
 																		Performance
 																	</elementName>
@@ -336,31 +350,35 @@
 																	<cedsURL/>
 <definitionRefId>2e2e8bb5-e845-47ee-ad9e-da31f6c9506e</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation>
+												<xs:documentation>
 																	Non-technical list of student’s performance shortcomings
 																</xs:documentation>
-															</xs:annotation>
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="generalEducation" type="xs:normalizedString" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="generalEducation"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName>
 																					General Education
 																				</elementName>
 																				<sifChar>O</sifChar>
-																				<cedsId/>
-																				<cedsURL/>
+																				
+																				<cedsId>001707</cedsId>
+																				<cedsURL>https://ceds.ed.gov/element/001707</cedsURL>
+																				
 <definitionRefId>16e1dc07-c0ef-4703-882b-46a949632466</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation>
+												<xs:documentation>
 																				Student’s ability to perform classroom and other educational tasks
 																			</xs:documentation>
-																		</xs:annotation>
-																	</xs:element>
-																	<xs:element name="testResultList" minOccurs="1" maxOccurs="unbounded">
-																		<xs:annotation>
-																			<xs:appinfo>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="testResultList" minOccurs="1"
+												maxOccurs="unbounded">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName>
 																					Test Result List
 																				</elementName>
@@ -369,37 +387,41 @@
 																				<cedsURL/>
 <definitionRefId>4ca971e8-f3f4-4b84-931d-14719b5134b7</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation>
+												<xs:documentation>
 																				Anecdotal list of previous testing and evaluation of student’s performance
 																			</xs:documentation>
-																		</xs:annotation>
-																		<xs:complexType>
-																			<xs:sequence>
-																				<xs:element name="testResult" type="xs:normalizedString" minOccurs="0">
-																					<xs:annotation>
-																						<xs:appinfo>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="testResult"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																							<elementName>
 																								Test Result
 																							</elementName>
 																							<sifChar>O</sifChar>
-																							<cedsId/>
-																							<cedsURL/>
+													
+													<cedsId>001219</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001219</cedsURL>
+													
 <definitionRefId>746dc807-f57a-4b1d-bc1e-99f63e6ceb44</definitionRefId>
 																						</xs:appinfo>
-																						<xs:documentation>
+												<xs:documentation>
 																							Explanation of the result of a test
 																						</xs:documentation>
-																					</xs:annotation>
-																				</xs:element>
-																			</xs:sequence>
-																		</xs:complexType>
-																	</xs:element>
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-														<xs:element name="personalGoalsList" minOccurs="1" maxOccurs="unbounded">
-															<xs:annotation>
-																<xs:appinfo>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												<xs:element name="personalGoalsList" minOccurs="1"
+												maxOccurs="unbounded">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName>
 																		Personal Goal List
 																	</elementName>
@@ -408,15 +430,15 @@
 																	<cedsURL/>
 <definitionRefId>8ed32aec-000c-44ad-92b1-5199413821d2</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation>
+												<xs:documentation>
 																	List of goals that student wants to achieve
 																</xs:documentation>
-															</xs:annotation>
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="personalGoal">
-																		<xs:annotation>
-																			<xs:appinfo>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="personalGoal">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName>
 																					Personal Goal
 																				</elementName>
@@ -425,56 +447,63 @@
 																				<cedsURL/>
 <definitionRefId>3aa776f2-68bf-4a95-91ce-c0750c5dfd23</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation>
+												<xs:documentation>
 																				Specific goal
 																			</xs:documentation>
-																		</xs:annotation>
-																		<xs:complexType>
-																			<xs:sequence>
-																				<xs:element name="description" type="xs:normalizedString" minOccurs="0">
-																					<xs:annotation>
-																						<xs:appinfo>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="description"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																							<elementName>
 																								Description
 																							</elementName>
 																							<sifChar>O</sifChar>
-																							<cedsId/>
-																							<cedsURL/>
+													
+													<cedsId>000903</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/000903</cedsURL>
+													
 <definitionRefId>8c7fe68d-844f-4a59-aa91-7420d22a3fcd</definitionRefId>
 																						</xs:appinfo>
-																						<xs:documentation>
+												<xs:documentation>
 																							Explanation of the reason and nature of the goal
 																						</xs:documentation>
-																					</xs:annotation>
-																				</xs:element>
-																				<xs:element name="achievementLevel" type="xs:normalizedString" minOccurs="0">
-																					<xs:annotation>
-																						<xs:appinfo>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="achievementLevel"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																							<elementName>
 																								Achievement Level
 																							</elementName>
 																							<sifChar>O</sifChar>
-																							<cedsId/>
-																							<cedsURL/>
+													
+													<cedsId>000902</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/000902</cedsURL>
+													
 <definitionRefId>42ebcb5b-338b-40d1-a364-e4569eea3b72</definitionRefId>
 																						</xs:appinfo>
-																						<xs:documentation>
+												<xs:documentation>
 																							What success looks like for this goal
 																						</xs:documentation>
-																					</xs:annotation>
-																				</xs:element>
-																			</xs:sequence>
-																		</xs:complexType>
-																	</xs:element>
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-													</xs:sequence>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
-											<xs:element name="intention" minOccurs="1" maxOccurs="unbounded">
+											<xs:element name="intention" minOccurs="1"
+												maxOccurs="unbounded">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName>
 															Intention
 														</elementName>
@@ -483,15 +512,16 @@
 														<cedsURL/>
 <definitionRefId>f71309b7-94bd-4294-8c44-3ed3e2f19a8e</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation>
+												<xs:documentation>
 														The student's own intentions and aspirations
 													</xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="overview" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="overview"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName>
 																		Overview
 																	</elementName>
@@ -500,14 +530,15 @@
 																	<cedsURL/>
 <definitionRefId>46f4b7ef-7035-46c0-89e7-6a5deee0b865</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation>
+												<xs:documentation>
 																	Explanation of what the student wants to accomplish in life
 																</xs:documentation>
-															</xs:annotation>
-														</xs:element>
-														<xs:element name="desiredOutcomeList" minOccurs="1" maxOccurs="unbounded">
-															<xs:annotation>
-																<xs:appinfo>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="desiredOutcomeList"
+												minOccurs="1" maxOccurs="unbounded">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName>
 																		Desired Outcomes List
 																	</elementName>
@@ -516,15 +547,15 @@
 																	<cedsURL/>
 <definitionRefId>addb1fbe-5f05-4393-9296-80764dcfaa4a</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation>
+												<xs:documentation>
 																	List of specific life achievements desired by student
 																</xs:documentation>
-															</xs:annotation>
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="desiredOutcome">
-																		<xs:annotation>
-																			<xs:appinfo>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="desiredOutcome">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName>
 																					Desired Outcome
 																				</elementName>
@@ -533,15 +564,15 @@
 																				<cedsURL/>
 <definitionRefId>6b7a2ee0-5055-45b0-b3f6-b1f738c8bec2</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation>
+												<xs:documentation>
 																				A specific achievement the student wants to achieve
 																			</xs:documentation>
-																		</xs:annotation>
-																		<xs:complexType>
-																			<xs:sequence>
-																				<xs:element name="category" minOccurs="0">
-																					<xs:annotation>
-																						<xs:appinfo>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="category" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																							<elementName>
 																								Category
 																							</elementName>
@@ -550,22 +581,23 @@
 																							<cedsURL/>
 <definitionRefId>de1ef5c5-2ea3-4f50-9118-f72587639f04</definitionRefId>
 																						</xs:appinfo>
-																						<xs:documentation>
+												<xs:documentation>
 																							Category of achievement
 																						</xs:documentation>
-																					</xs:annotation>
-																					<xs:simpleType>
-																						<xs:restriction base="xs:normalizedString">
-																							<xs:enumeration value="AdultLiving" />
-																							<xs:enumeration value="Post-secondary" />
-																							<xs:enumeration value="WorkingEnvironment" />
-																							<!-- is this list correct? tqii -->
-																						</xs:restriction>
-																					</xs:simpleType>
-																				</xs:element>
-																				<xs:element name="title" type="xs:normalizedString" minOccurs="0">
-																					<xs:annotation>
-																						<xs:appinfo>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="AdultLiving"/>
+												<xs:enumeration value="Post-secondary"/>
+												<xs:enumeration value="WorkingEnvironment"/>
+												<!-- is this list correct? tqii -->
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="title"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																							<elementName>
 																								Title
 																							</elementName>
@@ -574,14 +606,15 @@
 																							<cedsURL/>
 <definitionRefId>f948b733-52bc-4b8a-898f-f28a007f64d5</definitionRefId>
 																						</xs:appinfo>
-																						<xs:documentation>
+												<xs:documentation>
 																							Brief characterization of achievement
 																						</xs:documentation>
-																					</xs:annotation>
-																				</xs:element>
-																				<xs:element name="description" type="xs:normalizedString" minOccurs="0">
-																					<xs:annotation>
-																						<xs:appinfo>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="description"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																							<elementName>
 																								Description
 																							</elementName>
@@ -590,14 +623,15 @@
 																							<cedsURL/>
 <definitionRefId>15556b55-50a1-4f0a-a2f2-31705918ad29</definitionRefId>
 																						</xs:appinfo>
-																						<xs:documentation>
+												<xs:documentation>
 																							Specific details that would be recognized as successful achievement for this intention
 																						</xs:documentation>
-																					</xs:annotation>
-																				</xs:element>
-																				<xs:element name="timeframe" type="xs:normalizedString" minOccurs="0">
-																					<xs:annotation>
-																						<xs:appinfo>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="timeframe"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																							<elementName>
 																								Time Frame
 																							</elementName>
@@ -606,18 +640,18 @@
 																							<cedsURL/>
 <definitionRefId>19d6f38c-181a-4378-abd9-69326e6c195f</definitionRefId>
 																						</xs:appinfo>
-																						<xs:documentation>
+												<xs:documentation>
 																							Explanation of when this achievement should take place
 																						</xs:documentation>
-																					</xs:annotation>
-																				</xs:element>
-																			</xs:sequence>
-																		</xs:complexType>
-																	</xs:element>
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-													</xs:sequence>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
@@ -637,193 +671,208 @@
 									</xs:annotation>
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="deficitList" minOccurs="1" maxOccurs="unbounded">
+											<xs:element name="deficitList" minOccurs="1"
+												maxOccurs="unbounded">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Academic Deficit </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>8cba54e1-f5d0-4cef-a07e-cfc5a299faa9</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> List of issues where student is unable to meet relevant academic standards
+												<xs:documentation> List of issues where student is unable to meet relevant academic standards
 													</xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="deficit">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="deficit">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Specific Academic Category </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>3ac7f2c2-5ca2-416e-9b1f-5ac335836638</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Information about a specific academic deficit </xs:documentation>
-															</xs:annotation>
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="academicArea" minOccurs="0" maxOccurs="unbounded">
-																		<xs:annotation>
-																			<xs:appinfo>
+												<xs:documentation> Information about a specific academic deficit </xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="academicArea" minOccurs="0"
+												maxOccurs="unbounded">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Academic Area </elementName>
 																				<sifChar>O</sifChar>
-																				<cedsId/>
-																				<cedsURL/>
+													
+													<cedsId>001518</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001518</cedsURL>
+													
 <definitionRefId>3ec72012-b488-44d5-aec4-96ca40640325</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Academic area affected by this issue </xs:documentation>
-																		</xs:annotation>
-																		<xs:simpleType>
-																			<xs:restriction base="xs:normalizedString">
-																				<xs:enumeration value="EnglishLanguageArts" />
-																				<xs:enumeration value="HistoryAndSocialSciences" />
-																				<xs:enumeration value="ScienceAndTechnology" />
-																				<xs:enumeration value="Mathematics" />
-																				<!-- this list is not right? tqii -->
-																			</xs:restriction>
-																		</xs:simpleType>
-																	</xs:element>
-																	<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												<xs:documentation> Academic area affected by this issue </xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="EnglishLanguageArts"/>
+												<xs:enumeration value="HistoryAndSocialSciences"/>
+												<xs:enumeration value="ScienceAndTechnology"/>
+												<xs:enumeration value="Mathematics"/>
+												<!-- this list is not right? tqii -->
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="explanation"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Explanation </elementName>
 																				<sifChar>O</sifChar>
 																				<cedsId/>
 																				<cedsURL/>
 <definitionRefId>eae50491-bf19-4246-9784-b441e4f147c5</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> The nature of the disability contributing to this deficit relative to standards
+												<xs:documentation> The nature of the disability contributing to this deficit relative to standards
 																			</xs:documentation>
-																		</xs:annotation>
-																	</xs:element>
-																	<xs:element name="consequences" type="xs:normalizedString" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="consequences"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Consequences </elementName>
 																				<sifChar>O</sifChar>
 																				<cedsId/>
 																				<cedsURL/>
 <definitionRefId>0f7624f9-aef0-46bf-abf2-07dd6097fd87</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> The particular ways that the disability interferes with academic attainment
+												<xs:documentation> The particular ways that the disability interferes with academic attainment
 																			</xs:documentation>
-																		</xs:annotation>
-																	</xs:element>
-																	<xs:element name="accommodation" type="xs:normalizedString" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="accommodation"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Accommodation </elementName>
 																				<sifChar>O</sifChar>
-																				<cedsId/>
-																				<cedsURL/>
+													
+													<cedsId>001685</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001685</cedsURL>
+													
 <definitionRefId>3edf4f28-be12-4405-ac99-cf8c0822aeb8</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Accommodations that mitigate the negative consequences of this disability
+												<xs:documentation> Accommodations that mitigate the negative consequences of this disability
 																			</xs:documentation>
-																		</xs:annotation>
-																	</xs:element>
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-													</xs:sequence>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
-											<xs:element name="summary" minOccurs="1" maxOccurs="unbounded">
+											<xs:element name="summary" minOccurs="1"
+												maxOccurs="unbounded">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Summary </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>4f26842b-d11d-43f9-a34d-982f90eeab3a</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Explanation of the how
+												<xs:documentation> Explanation of the how
 													</xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="Consequences" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="Consequences"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Consequences </elementName>
 																	<sifChar>O</sifChar>
-																	<cedsId/>
-																	<cedsURL/>
+													
+													<cedsId>001705</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001705</cedsURL>
+													
 <definitionRefId>ed7d87bd-0db2-4a07-9856-1e011a6d4057</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Discussion of the specific ways that disability interferes with the student’s outcome </xs:documentation>
-															</xs:annotation>
-														</xs:element>
-														<xs:element name="accommodationList">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:documentation> Discussion of the specific ways that disability interferes with the student’s outcome </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="accommodationList">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Accommodation List </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>94657cba-c82c-418b-92c0-71f48d288126</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> List of current accommodations
+												<xs:documentation> List of current accommodations
 																</xs:documentation>
-															</xs:annotation>
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="accommodation" minOccurs="1" maxOccurs="unbounded">
-																		<xs:annotation>
-																			<xs:appinfo>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="accommodation" minOccurs="1"
+												maxOccurs="unbounded">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Accommodation </elementName>
 																				<sifChar>O</sifChar>
 																				<cedsId/>
 																				<cedsURL/>
 <definitionRefId>a13041dc-7046-4e4c-8477-f9a932076581</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Current accommodation in place
+												<xs:documentation> Current accommodation in place
 																			</xs:documentation>
-																		</xs:annotation>
-																		<xs:complexType>
-																			<xs:sequence>
-																				<xs:element name="category" minOccurs="0">
-																					<xs:annotation>
-																						<xs:appinfo>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="category" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																							<elementName> Accommodation Category </elementName>
 																							<sifChar>O</sifChar>
 																							<cedsId/>
 																							<cedsURL/>
 <definitionRefId>db8df0c7-8c85-4289-92e5-d05cdaadbdab</definitionRefId>
 																						</xs:appinfo>
-																						<xs:documentation> Current accommodation Category
+												<xs:documentation> Current accommodation Category
 																						</xs:documentation>
-																					</xs:annotation>
-																					<xs:simpleType>
-																						<xs:restriction base="xs:normalizedString">
-																							<xs:enumeration value="Content" />
-																							<xs:enumeration value="MethodologyDelivery" />
-																							<xs:enumeration value="PerformanceCriteria" />
-																						</xs:restriction>
-																					</xs:simpleType>
-																				</xs:element>
-																				<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
-																					<xs:annotation>
-																						<xs:appinfo>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="Content"/>
+												<xs:enumeration value="MethodologyDelivery"/>
+												<xs:enumeration value="PerformanceCriteria"/>
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="explanation"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																							<elementName> Explanation </elementName>
 																							<sifChar>O</sifChar>
 																							<cedsId/>
 																							<cedsURL/>
 <definitionRefId>3609566b-a42f-42cf-837c-fe4d61e54929</definitionRefId>
 																						</xs:appinfo>
-																						<xs:documentation> Description of specific accommodation or change made to environment
+												<xs:documentation> Description of specific accommodation or change made to environment
 																						</xs:documentation>
-																					</xs:annotation>
-																				</xs:element>
-																			</xs:sequence>
-																		</xs:complexType>
-																	</xs:element>
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-													</xs:sequence>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
@@ -843,202 +892,222 @@
 									</xs:annotation>
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="disabilityList" minOccurs="1" maxOccurs="unbounded">
+											<xs:element name="disabilityList" minOccurs="1"
+												maxOccurs="unbounded">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> List of Functional Disabilities </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>848e3e65-f6cd-4d4c-8e57-f59f1ccc4d6b</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Information about the child’s ability to operate in a classroom or other learning setting </xs:documentation>
+												<xs:documentation> Information about the child’s ability to operate in a classroom or other learning setting </xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="disability">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="disability">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Specific Functional Disability </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>9568caf1-9f71-40e0-ba47-258759c0fc7c</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Information about a specific functional disability </xs:documentation>
-															</xs:annotation>
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="name" minOccurs="0" maxOccurs="unbounded">
-																		<xs:annotation>
-																			<xs:appinfo>
+												<xs:documentation> Information about a specific functional disability </xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="name" minOccurs="0"
+												maxOccurs="unbounded">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Disability Name </elementName>
 																				<sifChar>O</sifChar>
 																				<cedsId/>
 																				<cedsURL/>
 <definitionRefId>88e01654-95f1-42bb-ae33-ce9b1c0d09c1</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Specific identification of educational activity impaired by disability
+												<xs:documentation> Specific identification of educational activity impaired by disability
 																			</xs:documentation>
-																		</xs:annotation>
-																		<xs:simpleType>
-																			<xs:restriction base="xs:normalizedString">
-																				<xs:enumeration value="AdaptedPhysicalEducation" />
-																				<xs:enumeration value="BrailleNeedsBlind/visuallyImpaired" />
-																				<xs:enumeration value="ExtraCurriculumActivities" />
-																				<xs:enumeration value="Social/EmotionalNeeds" />
-																				<xs:enumeration value="AssistiveTechDevices/services" />
-																				<xs:enumeration value="CommunicationAllStudents" />
-																				<xs:enumeration value="LanguageNeedsLEPStudents" />
-																				<xs:enumeration value="TravelTraining" />
-																				<xs:enumeration value="Behavior" />
-																				<xs:enumeration value="CommunicationDeaf/hardOfHearingStudents" />
-																				<xs:enumeration value="NonacademicActivities" />
-																				<xs:enumeration value="SkillDevelopmentRelatedToVocationalPreparationOrExperience" />
-																				<xs:enumeration value="ForChildrenAges3To5—ParticipationInAppropriateActivities" />
-																				<xs:enumeration value="ForChildrenAges14+OrYoungerIfAppropriate—Student’sCourseOfStudy" />
-																				<xs:enumeration value="ForChildrenAges16OrYoungerIfAppropriateTo22—TransitionToPost-schoolActivitiesIncludingCommunityExperiencesEmploymentObjectivesOtherPostSchoolAdultLivingAndIfAppropriateDailyLivingSkills" />
-																				<!-- this list is not right? tqii -->
-																			</xs:restriction>
-																		</xs:simpleType>
-																	</xs:element>
-																	<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="AdaptedPhysicalEducation"/>
+												<xs:enumeration
+												value="BrailleNeedsBlind/visuallyImpaired"/>
+												<xs:enumeration value="ExtraCurriculumActivities"/>
+												<xs:enumeration value="Social/EmotionalNeeds"/>
+												<xs:enumeration
+												value="AssistiveTechDevices/services"/>
+												<xs:enumeration value="CommunicationAllStudents"/>
+												<xs:enumeration value="LanguageNeedsLEPStudents"/>
+												<xs:enumeration value="TravelTraining"/>
+												<xs:enumeration value="Behavior"/>
+												<xs:enumeration
+												value="CommunicationDeaf/hardOfHearingStudents"/>
+												<xs:enumeration value="NonacademicActivities"/>
+												<xs:enumeration
+												value="SkillDevelopmentRelatedToVocationalPreparationOrExperience"/>
+												<xs:enumeration
+												value="ForChildrenAges3To5—ParticipationInAppropriateActivities"/>
+												<xs:enumeration
+												value="ForChildrenAges14+OrYoungerIfAppropriate—Student’sCourseOfStudy"/>
+												<xs:enumeration
+												value="ForChildrenAges16OrYoungerIfAppropriateTo22—TransitionToPost-schoolActivitiesIncludingCommunityExperiencesEmploymentObjectivesOtherPostSchoolAdultLivingAndIfAppropriateDailyLivingSkills"/>
+												<!-- this list is not right? tqii -->
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="explanation"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Explanation </elementName>
 																				<sifChar>O</sifChar>
 																				<cedsId/>
 																				<cedsURL/>
 <definitionRefId>5515b51f-939d-4eb4-aecf-9367ca64cd89</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Explanation of the specifics of disability in this category </xs:documentation>
-																		</xs:annotation>
-																	</xs:element>
-																	<xs:element name="consequences" type="xs:normalizedString" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												<xs:documentation> Explanation of the specifics of disability in this category </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="consequences"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Consequences </elementName>
 																				<sifChar>O</sifChar>
 																				<cedsId/>
 																				<cedsURL/>
 <definitionRefId>6b4b59ae-d664-4682-afa4-1bb40efe9f75</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Analysis of the particular ways that the disability interferes with educational attainment </xs:documentation>
-																		</xs:annotation>
-																	</xs:element>
-																	<xs:element name="accommodation" type="xs:normalizedString" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												<xs:documentation> Analysis of the particular ways that the disability interferes with educational attainment </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="accommodation"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Accommodation </elementName>
 																				<sifChar>O</sifChar>
-																				<cedsId/>
-																				<cedsURL/>
+													
+													<cedsId>001685</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001685</cedsURL>
+													
 <definitionRefId>b7a89470-8391-40e2-87e0-1a04a345a1bd</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Description of the accommodations that mitigate the negative consequences of this disability
+												<xs:documentation> Description of the accommodations that mitigate the negative consequences of this disability
 																			</xs:documentation>
-																		</xs:annotation>
-																	</xs:element>
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-													</xs:sequence>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
-											<xs:element name="summary" minOccurs="1" maxOccurs="unbounded">
+											<xs:element name="summary" minOccurs="1"
+												maxOccurs="unbounded">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Summary </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>28008805-f321-4749-af73-b782fc330394</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Information about the specific ways that disability interferes
+												<xs:documentation> Information about the specific ways that disability interferes
 													</xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="Consequences" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="Consequences"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Consequences </elementName>
 																	<sifChar>O</sifChar>
-																	<cedsId/>
-																	<cedsURL/>
+													
+													<cedsId>001706</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001706</cedsURL>
+													
 <definitionRefId>334a21a2-85c8-4b1e-8bde-6e44aeabd587</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Discussion of the specific ways that disability interferes with the student’s outcome </xs:documentation>
-															</xs:annotation>
-														</xs:element>
-														<xs:element name="accommodationList">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:documentation> Discussion of the specific ways that disability interferes with the student’s outcome </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="accommodationList">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Accommodation List </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>f54b3033-5029-4eae-9f0a-8bc8c21e6c54</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> List of current accommodations
+												<xs:documentation> List of current accommodations
 																</xs:documentation>
-															</xs:annotation>
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="accommodation" minOccurs="1" maxOccurs="unbounded">
-																		<xs:annotation>
-																			<xs:appinfo>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="accommodation" minOccurs="1"
+												maxOccurs="unbounded">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Accommodation </elementName>
 																				<sifChar>O</sifChar>
 																				<cedsId/>
 																				<cedsURL/>
 <definitionRefId>47c51f79-3f2b-4155-b2cc-c4d4392dc22c</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Current accommodation in place
+												<xs:documentation> Current accommodation in place
 																			</xs:documentation>
-																		</xs:annotation>
-																		<xs:complexType>
-																			<xs:sequence>
-																				<xs:element name="category" minOccurs="0">
-																					<xs:annotation>
-																						<xs:appinfo>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="category" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																							<elementName> Accommodation Category </elementName>
 																							<sifChar>O</sifChar>
 																							<cedsId/>
 																							<cedsURL/>
 <definitionRefId>119cbb7d-3abc-49a4-ad4d-31b8f0973e35</definitionRefId>
 																						</xs:appinfo>
-																						<xs:documentation> Current accommodation Category
+												<xs:documentation> Current accommodation Category
 																						</xs:documentation>
-																					</xs:annotation>
-																					<xs:simpleType>
-																						<xs:restriction base="xs:normalizedString">
-																							<xs:enumeration value="Content" />
-																							<xs:enumeration value="MethodologyDelivery" />
-																							<xs:enumeration value="PerformanceCriteria" />
-																						</xs:restriction>
-																					</xs:simpleType>
-																				</xs:element>
-																				<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
-																					<xs:annotation>
-																						<xs:appinfo>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="Content"/>
+												<xs:enumeration value="MethodologyDelivery"/>
+												<xs:enumeration value="PerformanceCriteria"/>
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="explanation"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																							<elementName> Explanation </elementName>
 																							<sifChar>O</sifChar>
 																							<cedsId/>
 																							<cedsURL/>
 <definitionRefId>eb774fae-d661-4ca4-9809-12cfc9945550</definitionRefId>
 																						</xs:appinfo>
-																						<xs:documentation> Description of specific accommodation or change made to environment
+												<xs:documentation> Description of specific accommodation or change made to environment
 																						</xs:documentation>
-																					</xs:annotation>
-																				</xs:element>
-																			</xs:sequence>
-																		</xs:complexType>
-																	</xs:element>
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-													</xs:sequence>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
@@ -1058,69 +1127,74 @@
 									</xs:annotation>
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="curriculum" type="xs:normalizedString" minOccurs="0" />
-											<xs:element name="specialCategoryList" minOccurs="1" maxOccurs="unbounded">
+											<xs:element name="curriculum" type="xs:normalizedString"
+												minOccurs="0"/>
+											<xs:element name="specialCategoryList" minOccurs="1"
+												maxOccurs="unbounded">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Special Category List </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>7ff36e1d-c693-4ff3-b817-ff27abf22a31</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Special categories applying to this plan </xs:documentation>
+												<xs:documentation> Special categories applying to this plan </xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="specialCategory">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="specialCategory">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Special Category </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>f885aad8-34b4-4bf3-9df7-d0585db85233</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Category being fulfilled by this plan </xs:documentation>
-															</xs:annotation>
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="currentCategory" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												<xs:documentation> Category being fulfilled by this plan </xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="currentCategory" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Current Category </elementName>
 																				<sifChar>O</sifChar>
-																				<cedsId/>
-																				<cedsURL/>
+													
+													<cedsId>000320</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/000320</cedsURL>
+													
 <definitionRefId>9be6d7f8-08cf-4ce4-925a-5f7159e82f1f</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Special legal category
+												<xs:documentation> Special legal category
 																			</xs:documentation>
-																		</xs:annotation>
-																		<xs:simpleType>
-																			<xs:restriction base="xs:normalizedString">
-																				<xs:enumeration value="IFSP" />
-																				<xs:enumeration value="transition" />
-																				<!-- is this the right list? tqii -->
-																			</xs:restriction>
-																		</xs:simpleType>
-																	</xs:element>
-																	<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="IFSP"/>
+												<xs:enumeration value="transition"/>
+												<!-- is this the right list? tqii -->
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="explanation"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Explanation </elementName>
 																				<sifChar>O</sifChar>
 																				<cedsId/>
 																				<cedsURL/>
 <definitionRefId>e0c897c1-baa9-42dd-b507-406ed4cb843e</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Reason student is included in this category </xs:documentation>
-																		</xs:annotation>
-																	</xs:element>
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-													</xs:sequence>
+												<xs:documentation> Reason student is included in this category </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
@@ -1129,14 +1203,17 @@
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
-					<xs:element name="annualGoalsList" type="xSpecialEducationIndividualEducationPlanAnnualGoalListType" />
+					<xs:element name="annualGoalsList"
+						type="xSpecialEducationIndividualEducationPlanAnnualGoalListType"/>
 					<xs:element name="accommodationsList" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName> accommodation List </elementName>
 								<sifChar>O</sifChar>
-								<cedsId/>
-								<cedsURL/>
+								
+								<cedsId>000273</cedsId>
+								<cedsURL>https://ceds.ed.gov/element/000273</cedsURL>
+								
 <definitionRefId>c1acd542-36fd-4531-9976-7ebd48d5fe59</definitionRefId>
 							</xs:appinfo>
 							<xs:documentation> List of accommodations to support effective learning
@@ -1159,109 +1236,119 @@
 										<xs:sequence>
 											<xs:element name="supportType" minOccurs="0">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Support Type </elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+													
+													<cedsId>000385</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/000385</cedsURL>
+													
 <definitionRefId>a9a699fa-9e69-4d22-a608-df104f06d850</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Specific environmental change or support required </xs:documentation>
+												<xs:documentation> Specific environmental change or support required </xs:documentation>
 												</xs:annotation>
 												<xs:simpleType>
-													<xs:restriction base="xs:normalizedString">
-														<xs:enumeration value="No-type" />
-														<xs:enumeration value="Braille" />
-														<xs:enumeration value="LargeType" />
-														<xs:enumeration value="PriorNoticeOfTest/quizzes" />
-														<xs:enumeration value="ExtraTime" />
-														<xs:enumeration value="IndividualInstruction" />
-														<!-- Is this the correct list? tqii -->
-													</xs:restriction>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="No-type"/>
+												<xs:enumeration value="Braille"/>
+												<xs:enumeration value="LargeType"/>
+												<xs:enumeration value="PriorNoticeOfTest/quizzes"/>
+												<xs:enumeration value="ExtraTime"/>
+												<xs:enumeration value="IndividualInstruction"/>
+												<!-- Is this the correct list? tqii -->
+												</xs:restriction>
 												</xs:simpleType>
 											</xs:element>
 											<xs:element name="reimbursementCode" minOccurs="0">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> REimbursement Code </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>b9e17a22-edf9-4f33-8184-8da18db461e2</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> ID of funding source for accommodations </xs:documentation>
+												<xs:documentation> ID of funding source for accommodations </xs:documentation>
 												</xs:annotation>
 												<xs:simpleType>
-													<xs:restriction base="xs:normalizedString">
-														<xs:enumeration value="VALUE1" />
-														<xs:enumeration value="VALUE2" />
-														<!-- This list should probably be an extension point. Also, is there a federal list? tqii -->
-													</xs:restriction>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="VALUE1"/>
+												<xs:enumeration value="VALUE2"/>
+												<!-- This list should probably be an extension point. Also, is there a federal list? tqii -->
+												</xs:restriction>
 												</xs:simpleType>
 											</xs:element>
-											<xs:element name="applicabiltyList" minOccurs="1" maxOccurs="unbounded">
+											<xs:element name="applicabiltyList" minOccurs="1"
+												maxOccurs="unbounded">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Applicability List </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>7b95b85e-7d81-41cd-bee6-1732b32438b5</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Situations where the accommodation should be made available
+												<xs:documentation> Situations where the accommodation should be made available
 													</xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="applicability" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="applicability" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Applicability </elementName>
 																	<sifChar>O</sifChar>
-																	<cedsId/>
-																	<cedsURL/>
+													
+													<cedsId>001686</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001686</cedsURL>
+													
 <definitionRefId>39f28586-51ee-4b56-9743-63fa029d8a5d</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Situation where the accommodation is be made available
+												<xs:documentation> Situation where the accommodation is be made available
 																</xs:documentation>
-															</xs:annotation>
-															<xs:simpleType>
-																<xs:restriction base="xs:normalizedString">
-																	<xs:enumeration value="Reading" />
-																	<xs:enumeration value="English" />
-																	<xs:enumeration value="Spelling" />
-																	<xs:enumeration value="Math" />
-																	<xs:enumeration value="Autistic-Communication" />
-																	<xs:enumeration value="AutisticSocial-Interaction" />
-																	<xs:enumeration value="Autistic-Sensory-Experience" />
-																</xs:restriction>
-															</xs:simpleType>
-														</xs:element>
-													</xs:sequence>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="Reading"/>
+												<xs:enumeration value="English"/>
+												<xs:enumeration value="Spelling"/>
+												<xs:enumeration value="Math"/>
+												<xs:enumeration value="Autistic-Communication"/>
+												<xs:enumeration value="AutisticSocial-Interaction"/>
+												<xs:enumeration
+												value="Autistic-Sensory-Experience"/>
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
-											<xs:element name="justification" type="xs:normalizedString" minOccurs="0">
+											<xs:element name="justification"
+												type="xs:normalizedString" minOccurs="0">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Justification </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>ceb66bab-92a5-4102-935f-fb8ef09a3690</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Why the student needs this support </xs:documentation>
+												<xs:documentation> Why the student needs this support </xs:documentation>
 												</xs:annotation>
 											</xs:element>
-											<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+											<xs:element name="explanation"
+												type="xs:normalizedString" minOccurs="0">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Explanation </elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+													
+													<cedsId>001685</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001685</cedsURL>
+													
 <definitionRefId>86f588cd-d742-4a1c-a937-35d96b84d6a9</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> What needs to be done to help the student learn better </xs:documentation>
+												<xs:documentation> What needs to be done to help the student learn better </xs:documentation>
 												</xs:annotation>
 											</xs:element>
 										</xs:sequence>
@@ -1270,7 +1357,8 @@
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
-					<xs:element name="standardizedAssessmentResultList" minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="standardizedAssessmentResultList" minOccurs="0"
+						maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName> Standardized Assessment Result List </elementName>
@@ -1283,7 +1371,8 @@
 						</xs:annotation>
 						<xs:complexType>
 							<xs:sequence>
-								<xs:element name="standardizedAssessmentResult" minOccurs="1" maxOccurs="unbounded">
+								<xs:element name="standardizedAssessmentResult" minOccurs="1"
+									maxOccurs="unbounded">
 									<xs:annotation>
 										<xs:appinfo>
 											<elementName> Standardized Assessment Result </elementName>
@@ -1296,84 +1385,95 @@
 									</xs:annotation>
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="standardsReference" minOccurs="1" maxOccurs="unbounded">
+											<xs:element name="standardsReference" minOccurs="1"
+												maxOccurs="unbounded">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Standards Reference Info </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>e82bedb1-9efb-4c5f-a75c-9a182419f4a3</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Documentation of the standard tool used for assessment </xs:documentation>
+												<xs:documentation> Documentation of the standard tool used for assessment </xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="name" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="name" type="xs:normalizedString"
+												minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Assessment Name </elementName>
 																	<sifChar>O</sifChar>
-																	<cedsId/>
-																	<cedsURL/>
+													
+													<cedsId>000028</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/000028</cedsURL>
+													
 <definitionRefId>c9ea03ef-a2c5-4517-8440-c5877af15ad6</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Official name of assessment tool </xs:documentation>
-															</xs:annotation>
-														</xs:element>
-														<xs:element name="subject" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:documentation> Official name of assessment tool </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="subject" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Subject </elementName>
 																	<sifChar>O</sifChar>
-																	<cedsId/>
-																	<cedsURL/>
+													
+													<cedsId>001518</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001518</cedsURL>
+													
 <definitionRefId>11805844-a4a1-41b3-a113-baf1a1e78e3f</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> The topic category evaluated by this assessment </xs:documentation>
-															</xs:annotation>
-															<xs:simpleType>
-																<xs:restriction base="xs:normalizedString">
-																	<xs:enumeration value="English" />
-																	<xs:enumeration value="Math" />
-																	<xs:enumeration value="Sciences" />
-																	<xs:enumeration value="SocialStudies" />
-																</xs:restriction>
-															</xs:simpleType>
-														</xs:element>
-														<xs:element name="assessmentToolUri" type="xs:normalizedString" minOccurs="0">
-															<!-- is there an xml or sif data type for URI? tqii -->
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:documentation> The topic category evaluated by this assessment </xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="English"/>
+												<xs:enumeration value="Math"/>
+												<xs:enumeration value="Sciences"/>
+												<xs:enumeration value="SocialStudies"/>
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="assessmentToolUri"
+												type="xs:normalizedString" minOccurs="0">
+												<!-- is there an xml or sif data type for URI? tqii -->
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Assessment Tool URI </elementName>
 																	<sifChar>O</sifChar>
-																	<cedsId/>
-																	<cedsURL/>
+													
+													<cedsId>001204</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001204</cedsURL>
+													
 <definitionRefId>c1d26303-9866-4844-83f2-24aae21dba62</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Location of the definition of the standardized assessment </xs:documentation>
-															</xs:annotation>
-														</xs:element>
-													</xs:sequence>
+												<xs:documentation> Location of the definition of the standardized assessment </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
-											<xs:element name="accommodationList" minOccurs="1" maxOccurs="unbounded">
+											<xs:element name="accommodationList" minOccurs="1"
+												maxOccurs="unbounded">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> accommodation List </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>d5b75ff3-41cf-425b-af9d-d3c78e945bd3</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> List of accommodations needed by student to complete assessments
+												<xs:documentation> List of accommodations needed by student to complete assessments
 													</xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="accommodation" minOccurs="1" maxOccurs="unbounded">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="accommodation" minOccurs="1"
+												maxOccurs="unbounded">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> accommodation </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
@@ -1382,143 +1482,159 @@
 																	</cedsURL>
 <definitionRefId>2bff5526-0faa-44d4-b252-e036ed0eb3de</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Changes to the environment or assessment procedure necessitated the student’s disability </xs:documentation>
-															</xs:annotation>
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="location" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												<xs:documentation> Changes to the environment or assessment procedure necessitated the student’s disability </xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="location" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Location </elementName>
 																				<sifChar>O</sifChar>
-																				<cedsId/>
-																				<cedsURL/>
+													
+													<cedsId>000597</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/000597</cedsURL>
+													
 <definitionRefId>17211841-a2e3-4297-9b06-852e7215bd08</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Special location where student undergoes assessment compatible with the student’s disability </xs:documentation>
-																		</xs:annotation>
-																		<xs:simpleType>
-																			<xs:restriction base="xs:normalizedString">
-																				<xs:enumeration value="GeneralLocation" />
-																				<xs:enumeration value="DistrictWideLocation" />
-																				<!-- is this list correct? tqii -->
-																			</xs:restriction>
-																		</xs:simpleType>
-																	</xs:element>
-																	<xs:element name="category" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												<xs:documentation> Special location where student undergoes assessment compatible with the student’s disability </xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="GeneralLocation"/>
+												<xs:enumeration value="DistrictWideLocation"/>
+												<!-- is this list correct? tqii -->
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="category" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Category </elementName>
 																				<sifChar>O</sifChar>
-																				<cedsId/>
-																				<cedsURL/>
+													
+													<cedsId>000383</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/000383</cedsURL>
+													
 <definitionRefId>daedb013-88fa-4d01-a5e1-aa36d4cfd9e0</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> A category of accommodations needed for a given assessment. </xs:documentation>
-																		</xs:annotation>
-																		<xs:simpleType>
-																			<xs:restriction base="xs:normalizedString">
-																				<xs:enumeration value="SchedulingAccommodations" />
-																				<xs:enumeration value="SettingsAccommodations" />
-																				<xs:enumeration value="StudentEquipment/technology" />
-																				<xs:enumeration value="TestAdministrationAccommodation" />
-																				<xs:enumeration value="TestMaterialAccommodations" />
-																				<xs:enumeration value="TestResponseAccommodation" />
-																				<xs:enumeration value="EnglishLanguageLearnerAccommodation" />
-																				<xs:enumeration value="504Accommodation" />
-																				<xs:enumeration value="Other" />
-																			</xs:restriction>
-																		</xs:simpleType>
-																	</xs:element>
-																	<xs:element name="type" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												<xs:documentation> A category of accommodations needed for a given assessment. </xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="SchedulingAccommodations"/>
+												<xs:enumeration value="SettingsAccommodations"/>
+												<xs:enumeration
+												value="StudentEquipment/technology"/>
+												<xs:enumeration
+												value="TestAdministrationAccommodation"/>
+												<xs:enumeration value="TestMaterialAccommodations"/>
+												<xs:enumeration value="TestResponseAccommodation"/>
+												<xs:enumeration
+												value="EnglishLanguageLearnerAccommodation"/>
+												<xs:enumeration value="504Accommodation"/>
+												<xs:enumeration value="Other"/>
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="type" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Type </elementName>
 																				<sifChar>O</sifChar>
-																				<cedsId/>
-																				<cedsURL/>
+													
+													<cedsId>000385</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/000385</cedsURL>
+													
 <definitionRefId>d8f47b45-6499-44ee-ba77-7eb411c11944</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> The specific accommodation necessary for the administration of the assessment. </xs:documentation>
-																		</xs:annotation>
-																		<xs:simpleType>
-																			<xs:restriction base="xs:normalizedString">
-																				<xs:enumeration value="AdditionalExampleItems/tasks" />
-																				<xs:enumeration value="AdjustableSwivelArm" />
-																				<xs:enumeration value="AdjustableTableHeight" />
-																				<xs:enumeration value="AdministrationInSeveralSessions" />
-																				<xs:enumeration value="AlternateRepresentation" />
-																				<xs:enumeration value="AnswerMasking" />
-																				<xs:enumeration value="AnswersWrittenDirectlyInTest" />
-																				<!-- is this the correct list? Do we need 'other'? tqii -->
-																			</xs:restriction>
-																		</xs:simpleType>
-																	</xs:element>
-																	<xs:element name="achievementStandard">
-																		<xs:annotation>
-																			<xs:appinfo>
+												<xs:documentation> The specific accommodation necessary for the administration of the assessment. </xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration
+												value="AdditionalExampleItems/tasks"/>
+												<xs:enumeration value="AdjustableSwivelArm"/>
+												<xs:enumeration value="AdjustableTableHeight"/>
+												<xs:enumeration
+												value="AdministrationInSeveralSessions"/>
+												<xs:enumeration value="AlternateRepresentation"/>
+												<xs:enumeration value="AnswerMasking"/>
+												<xs:enumeration
+												value="AnswersWrittenDirectlyInTest"/>
+												<!-- is this the correct list? Do we need 'other'? tqii -->
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="achievementStandard">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Achievement Standard </elementName>
 																				<sifChar>O</sifChar>
 																				<cedsId/>
 																				<cedsURL/>
 <definitionRefId>7304a51d-46e0-49dd-93fb-a6497f2ea793</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Special assessment evaluation method, procedure or standard </xs:documentation>
-																		</xs:annotation>
-																		<xs:complexType>
-																			<xs:sequence>
-																				<xs:element name="type" minOccurs="0">
-																					<xs:annotation>
-																						<xs:appinfo>
+												<xs:documentation> Special assessment evaluation method, procedure or standard </xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="type" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																							<elementName> Type </elementName>
 																							<sifChar>O</sifChar>
 																							<cedsId/>
 																							<cedsURL/>
 <definitionRefId>f48fd527-cabd-4412-8474-bb7a43c5ddc4</definitionRefId>
 																						</xs:appinfo>
-																						<xs:documentation> Indicator if special standard is required </xs:documentation>
-																					</xs:annotation>
-																					<xs:simpleType>
-																						<xs:restriction base="xs:normalizedString">
-																							<xs:enumeration value="Regular" />
-																							<xs:enumeration value="Alternate" />
-																							<!-- is this list correct? tqii -->
-																						</xs:restriction>
-																					</xs:simpleType>
-																				</xs:element>
-																				<xs:element name="name" type="xs:normalizedString" minOccurs="0">
-																					<xs:annotation>
-																						<xs:appinfo>
+												<xs:documentation> Indicator if special standard is required </xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="Regular"/>
+												<xs:enumeration value="Alternate"/>
+												<!-- is this list correct? tqii -->
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="name" type="xs:normalizedString"
+												minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																							<elementName> Name of Alternate Standard </elementName>
 																							<sifChar>O</sifChar>
 																							<cedsId/>
 																							<cedsURL/>
 <definitionRefId>4caef890-56f2-46b7-807a-9d3832a7414a</definitionRefId>
 																						</xs:appinfo>
-																						<xs:documentation> Name of alternative standard
+												<xs:documentation> Name of alternative standard
 																						</xs:documentation>
-																					</xs:annotation>
-																				</xs:element>
-																			</xs:sequence>
-																		</xs:complexType>
-																	</xs:element>
-																	<xs:element name="reason" type="xs:normalizedString" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												<xs:element name="reason"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Reason </elementName>
 																				<sifChar>O</sifChar>
-																				<cedsId/>
-																				<cedsURL/>
+													
+													<cedsId>001687</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001687</cedsURL>
+													
 <definitionRefId>74c59dbb-448f-4184-b740-39cc06728b89</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Why accommodation is needed
+												<xs:documentation> Why accommodation is needed
 																			</xs:documentation>
-																		</xs:annotation>
-																	</xs:element>
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-													</xs:sequence>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
@@ -1553,84 +1669,97 @@
 									</xs:annotation>
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="changeList" minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="changeList" minOccurs="0"
+												maxOccurs="unbounded">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Change List </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>f22dea85-df9e-408d-ac9c-917700d81b95</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> List of changes included in this amendment </xs:documentation>
+												<xs:documentation> List of changes included in this amendment </xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="change" minOccurs="1" maxOccurs="unbounded">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="change" minOccurs="1"
+												maxOccurs="unbounded">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Change Detail </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>d0f69da1-4361-47e2-ae7a-edcd46aba60a</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> A specific detail of the changes made on this revision </xs:documentation>
-															</xs:annotation>
-															<xs:complexType>
-																<xs:sequence>
-																	<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												<xs:documentation> A specific detail of the changes made on this revision </xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+												<xs:sequence>
+												<xs:element name="explanation"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Explanation of the Change(s) </elementName>
 																				<sifChar>O</sifChar>
-																				<cedsId/>
-																				<cedsURL/>
+													
+													<cedsId>001689</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001689</cedsURL>
+													
 <definitionRefId>20865d2a-0234-42d2-bf4e-36a6aaf55e95</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Explanation of the changes made to the plan </xs:documentation>
-																		</xs:annotation>
-																	</xs:element>
-																	<xs:element name="reasonForChange" type="xs:normalizedString" minOccurs="0">
-																		<xs:annotation>
-																			<xs:appinfo>
+												<xs:documentation> Explanation of the changes made to the plan </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="reasonForChange"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																				<elementName> Reason for Change(s) </elementName>
 																				<sifChar>O</sifChar>
-																				<cedsId/>
-																				<cedsURL/>
+													
+													<cedsId>001688</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001688</cedsURL>
+													
 <definitionRefId>5c2c7788-cd05-48cb-bf09-24e2bd8bc3d8</definitionRefId>
 																			</xs:appinfo>
-																			<xs:documentation> Explanation of the reasons that the change is needed </xs:documentation>
-																		</xs:annotation>
-																	</xs:element>
-																</xs:sequence>
-															</xs:complexType>
-														</xs:element>
-													</xs:sequence>
+												<xs:documentation> Explanation of the reasons that the change is needed </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
+												</xs:complexType>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
-											<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+											<xs:element name="explanation"
+												type="xs:normalizedString" minOccurs="0">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Explanation </elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+													
+													<cedsId>001688</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001688</cedsURL>
+													
 <definitionRefId>8461d7da-10f7-4fac-92a0-fc162be76867</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Explanation for the reason that the IEP needed changing </xs:documentation>
+												<xs:documentation> Explanation for the reason that the IEP needed changing </xs:documentation>
 												</xs:annotation>
 											</xs:element>
-											<xs:element name="authorization" type="xSpecialEducationIndividualEducationPlanAuthorizationType" minOccurs="1" maxOccurs="1">
+											<xs:element name="authorization"
+												type="xSpecialEducationIndividualEducationPlanAuthorizationType"
+												minOccurs="1" maxOccurs="1">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Authorization to Change Plan </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>5fa4d0ba-33ff-4af9-a24f-a9da16ee6cc4</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Legal response and authorization to changes to an existing plan
+												<xs:documentation> Legal response and authorization to changes to an existing plan
 													</xs:documentation>
 												</xs:annotation>
 											</xs:element>
@@ -1658,40 +1787,47 @@
 										<xs:appinfo>
 											<elementName> Placement Type </elementName>
 											<sifChar>O</sifChar>
-											<cedsId/>
-											<cedsURL/>
+											
+											<cedsId>000535</cedsId>
+											<cedsURL>https://ceds.ed.gov/element/000535</cedsURL>
+											
 <definitionRefId>6d7347d9-f011-481c-abe8-4fa07d8f3c80</definitionRefId>
 										</xs:appinfo>
 										<xs:documentation> Educational setting required for achieving annual goals </xs:documentation>
 									</xs:annotation>
 									<xs:simpleType>
 										<xs:restriction base="xs:normalizedString">
-											<xs:enumeration value="Home" />
-											<xs:enumeration value="ServiceProviderLocation" />
-											<xs:enumeration value="IepServicesInTheInclusiveEarlyChildhoodProgram" />
-											<xs:enumeration value="InclusiveEarlyChildhoodProgram" />
-											<xs:enumeration value="SubstantiallySeparateProgram" />
-											<xs:enumeration value="PublicOrPrivateDayProgram" />
-											<xs:enumeration value="ResidentialSchool" />
-											<xs:enumeration value="FullInclusion" />
-											<xs:enumeration value="SubstantiallySeparateClassroom" />
-											<xs:enumeration value="60percentOfTheTime" />
-											<xs:enumeration value="PublicSeparateDaySchool" />
-											<xs:enumeration value="PrivateSeparateDaySchool" />
-											<xs:enumeration value="ResidentialSchool" />
-											<xs:enumeration value="Homebound/Hospital" />
-											<xs:enumeration value="PublicResidentialInstitutionalFacilities]" />
+											<xs:enumeration value="Home"/>
+											<xs:enumeration value="ServiceProviderLocation"/>
+											<xs:enumeration
+												value="IepServicesInTheInclusiveEarlyChildhoodProgram"/>
+											<xs:enumeration value="InclusiveEarlyChildhoodProgram"/>
+											<xs:enumeration value="SubstantiallySeparateProgram"/>
+											<xs:enumeration value="PublicOrPrivateDayProgram"/>
+											<xs:enumeration value="ResidentialSchool"/>
+											<xs:enumeration value="FullInclusion"/>
+											<xs:enumeration value="SubstantiallySeparateClassroom"/>
+											<xs:enumeration value="60percentOfTheTime"/>
+											<xs:enumeration value="PublicSeparateDaySchool"/>
+											<xs:enumeration value="PrivateSeparateDaySchool"/>
+											<xs:enumeration value="ResidentialSchool"/>
+											<xs:enumeration value="Homebound/Hospital"/>
+											<xs:enumeration
+												value="PublicResidentialInstitutionalFacilities]"/>
 											<!-- is this the correct list? tqii -->
 										</xs:restriction>
 									</xs:simpleType>
 								</xs:element>
-								<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+								<xs:element name="explanation" type="xs:normalizedString"
+									minOccurs="0">
 									<xs:annotation>
 										<xs:appinfo>
 											<elementName> Explanation </elementName>
 											<sifChar>O</sifChar>
-											<cedsId/>
-											<cedsURL/>
+											
+											<cedsId>001704</cedsId>
+											<cedsURL>https://ceds.ed.gov/element/001704</cedsURL>
+											
 <definitionRefId>468d89f8-6a4e-403c-ae67-ac9b2e2c29bf</definitionRefId>
 										</xs:appinfo>
 										<xs:documentation> Description of the specific arrangement and rationale </xs:documentation>
@@ -1712,119 +1848,124 @@
 										<xs:sequence>
 											<xs:element name="schoolDay" minOccurs="1" maxOccurs="1">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> School Day Modifications </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>82943bb4-11a5-47e6-bd02-d2b49dd7e748</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Schedule modifications to the standard school day </xs:documentation>
+												<xs:documentation> Schedule modifications to the standard school day </xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="category" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="category" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Category </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>0fdea2e6-03c6-4144-9a8a-84d3841174b6</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Brief characterization of main change </xs:documentation>
-															</xs:annotation>
-															<xs:simpleType>
-																<xs:restriction base="xs:normalizedString">
-																	<xs:enumeration value="shorter" />
-																	<xs:enumeration value="longer" />
-																</xs:restriction>
-															</xs:simpleType>
-														</xs:element>
-														<xs:element name="specificModification" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:documentation> Brief characterization of main change </xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="shorter"/>
+												<xs:enumeration value="longer"/>
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="specificModification"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Specific Modifications Required </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>fde69c47-e92d-40b5-92be-4a837d1d3a83</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Explanation of exactly what change is needed </xs:documentation>
-															</xs:annotation>
-														</xs:element>
-														<xs:element name="rationale" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:documentation> Explanation of exactly what change is needed </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="rationale"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Rationale </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>18304238-dce2-454a-86cf-b71ba2d4c9a3</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Reason that the changes are needed </xs:documentation>
-															</xs:annotation>
-														</xs:element>
-													</xs:sequence>
+												<xs:documentation> Reason that the changes are needed </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
-											<xs:element name="schoolYear" minOccurs="1" maxOccurs="1">
+											<xs:element name="schoolYear" minOccurs="1"
+												maxOccurs="1">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> School Year Modifications </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>e3b5693c-b9c1-4fef-ae95-a2052fe7b32c</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Modifications to the school year necessitated by the annual goals and services
+												<xs:documentation> Modifications to the school year necessitated by the annual goals and services
 													</xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="category" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="category" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Category </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>b6085acd-5abe-44a4-ae92-1787beef7311</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Brief characterization of main change </xs:documentation>
-															</xs:annotation>
-															<xs:simpleType>
-																<xs:restriction base="xs:normalizedString">
-																	<xs:enumeration value="shorter" />
-																	<xs:enumeration value="longer" />
-																</xs:restriction>
-															</xs:simpleType>
-														</xs:element>
-														<xs:element name="specificModification" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:documentation> Brief characterization of main change </xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="shorter"/>
+												<xs:enumeration value="longer"/>
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="specificModification"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Specific Modifications Required </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>123000ff-485b-4ce4-b0b6-10ba68ee573c</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Explanation of exactly what change is needed </xs:documentation>
-															</xs:annotation>
-														</xs:element>
-														<xs:element name="rationale" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:documentation> Explanation of exactly what change is needed </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="rationale"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Rationale </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>f2e34319-0343-43db-bea1-3983a55785fd</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Reason that the changes are needed </xs:documentation>
-															</xs:annotation>
-														</xs:element>
-													</xs:sequence>
+												<xs:documentation> Reason that the changes are needed </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
@@ -1845,101 +1986,104 @@
 										<xs:sequence>
 											<xs:element name="outsideSchool">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Outside of School </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>6966b250-e4ba-4807-a98b-c3a593280990</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Special vehicles or other transportation accommodations to help student move between settings </xs:documentation>
+												<xs:documentation> Special vehicles or other transportation accommodations to help student move between settings </xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="category" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="category" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Category </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>a9f26030-b2f7-43ce-ae46-060960d74d6f</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Annotation of whether special transportation is needed </xs:documentation>
-															</xs:annotation>
-															<xs:simpleType>
-																<xs:restriction base="xs:normalizedString">
-																	<xs:enumeration value="regular" />
-																	<xs:enumeration value="special" />
-																</xs:restriction>
-															</xs:simpleType>
-														</xs:element>
-														<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:documentation> Annotation of whether special transportation is needed </xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="regular"/>
+												<xs:enumeration value="special"/>
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="explanation"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Explanation </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>e268f9ab-f32e-4028-929c-32670fc277c4</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Explanation of the particular accommodation(s) needed </xs:documentation>
-															</xs:annotation>
-														</xs:element>
-													</xs:sequence>
+												<xs:documentation> Explanation of the particular accommodation(s) needed </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
 											<xs:element name="insideSchool">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Inside of School </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>7e973efe-7ed2-4842-8b76-cece53f92f3f</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Special accommodations for student movement inside of a school
+												<xs:documentation> Special accommodations for student movement inside of a school
 													</xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="category" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="category" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Category </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>4dbf479e-fb02-4a21-814c-d16b34a6fafa</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Annotation of whether special transportation is needed </xs:documentation>
-															</xs:annotation>
-															<xs:simpleType>
-																<xs:restriction base="xs:normalizedString">
-																	<xs:enumeration value="regular" />
-																	<xs:enumeration value="special" />
-																</xs:restriction>
-															</xs:simpleType>
-														</xs:element>
-														<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:documentation> Annotation of whether special transportation is needed </xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+												<xs:restriction base="xs:normalizedString">
+												<xs:enumeration value="regular"/>
+												<xs:enumeration value="special"/>
+												</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+												<xs:element name="explanation"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Explanation </elementName>
 																	<sifChar>O</sifChar>
 																	<cedsId/>
 																	<cedsURL/>
 <definitionRefId>e71e2e2e-5e3e-4229-a21b-30af907ffc36</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Explanation of the particular accommodation(s) needed </xs:documentation>
-															</xs:annotation>
-														</xs:element>
-													</xs:sequence>
+												<xs:documentation> Explanation of the particular accommodation(s) needed </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
-								<xs:element name="leastRestrictiveEnvironment" minOccurs="1" maxOccurs="1">
+								<xs:element name="leastRestrictiveEnvironment" minOccurs="1"
+									maxOccurs="1">
 									<xs:annotation>
 										<xs:appinfo>
 											<elementName> Least Restrictive Environment </elementName>
@@ -1953,40 +2097,47 @@
 									</xs:annotation>
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="totalMinutesPerWeek" type="xs:integer" minOccurs="0">
+											<xs:element name="totalMinutesPerWeek" type="xs:integer"
+												minOccurs="0">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Total Minutes per Week </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>cbdd40e3-97e9-4041-b229-c2c582495d8c</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Total number of special education minutes per week </xs:documentation>
+												<xs:documentation> Total number of special education minutes per week </xs:documentation>
 												</xs:annotation>
 											</xs:element>
-											<xs:element name="specialEducationSettingMinutesPerWeek" type="xs:integer" minOccurs="0">
+											<xs:element name="specialEducationSettingMinutesPerWeek"
+												type="xs:integer" minOccurs="0">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Special Ed Setting Minutes per Week </elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+													
+													<cedsId>001234</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001234</cedsURL>
+													
 <definitionRefId>f55594d5-cc0f-4c16-9e8e-9a8ef50bea77</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Number of minutes of special education conducted in a special education situation </xs:documentation>
+												<xs:documentation> Number of minutes of special education conducted in a special education situation </xs:documentation>
 												</xs:annotation>
 											</xs:element>
-											<xs:element name="generalEducationSettingMinutesPerWeek" type="xs:integer" minOccurs="0">
+											<xs:element name="generalEducationSettingMinutesPerWeek"
+												type="xs:integer" minOccurs="0">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> General Ed Setting Minutes per Week </elementName>
 														<sifChar>O</sifChar>
-														<cedsId/>
-														<cedsURL/>
+													
+													<cedsId>001233</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001233</cedsURL>
+													
 <definitionRefId>42f2de9d-b1f6-4d31-a115-dda5842680a9</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Number of minutes of special education conducted in a general education situation </xs:documentation>
+												<xs:documentation> Number of minutes of special education conducted in a general education situation </xs:documentation>
 												</xs:annotation>
 											</xs:element>
 										</xs:sequence>
@@ -1995,7 +2146,9 @@
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
-					<xs:element name="authorization" type="xSpecialEducationIndividualEducationPlanAuthorizationType" minOccurs="1" maxOccurs="1">
+					<xs:element name="authorization"
+						type="xSpecialEducationIndividualEducationPlanAuthorizationType"
+						minOccurs="1" maxOccurs="1">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName> Authorization to Implement IEP </elementName>
@@ -2029,7 +2182,8 @@
 						</xs:annotation>
 						<xs:complexType>
 							<xs:sequence>
-								<xs:element name="authorizingOfficial" type="xSpecialEducationAuthorizingPersonType" minOccurs="0">
+								<xs:element name="authorizingOfficial"
+									type="xSpecialEducationAuthorizingPersonType" minOccurs="0">
 									<xs:annotation>
 										<xs:appinfo>
 											<elementName> Authorizing Official </elementName>
@@ -2063,14 +2217,17 @@
 										<xs:appinfo>
 											<elementName> Accepted (with possible exclusions) </elementName>
 											<sifChar>O</sifChar>
-											<cedsId/>
-											<cedsURL/>
+											
+											<cedsId>001722</cedsId>
+											<cedsURL>https://ceds.ed.gov/element/001722</cedsURL>
+											
 <definitionRefId>693cd777-cbce-4020-976f-e6d20f4f2ac3</definitionRefId>
 										</xs:appinfo>
 										<xs:documentation> Indication of parental agreement with consideration of exceptions listed. </xs:documentation>
 									</xs:annotation>
 								</xs:element>
-								<xs:element name="rejectedPlanElements" minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="rejectedPlanElements" minOccurs="0"
+									maxOccurs="unbounded">
 									<xs:annotation>
 										<xs:appinfo>
 											<elementName> Rejected Elements </elementName>
@@ -2084,62 +2241,71 @@
 									</xs:annotation>
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element name="rejectedDetailList" minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="rejectedDetailList" minOccurs="0"
+												maxOccurs="unbounded">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Rejected Details </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>378695cd-4ece-463c-a114-da0f51d145c7</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Specific goals, services, modifications or other elements that the parent does not want implemented </xs:documentation>
+												<xs:documentation> Specific goals, services, modifications or other elements that the parent does not want implemented </xs:documentation>
 												</xs:annotation>
 												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="rejectedDetail" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:sequence>
+												<xs:element name="rejectedDetail"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Rejected IEP Detail </elementName>
 																	<sifChar>O</sifChar>
-																	<cedsId/>
-																	<cedsURL/>
+													
+													<cedsId>001723</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001723</cedsURL>
+													
 <definitionRefId>cf6b074a-2204-45d8-847f-7fd08ac4d5b4</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Elements parent does not want executed. </xs:documentation>
-															</xs:annotation>
-														</xs:element>
-														<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
-															<xs:annotation>
-																<xs:appinfo>
+												<xs:documentation> Elements parent does not want executed. </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												<xs:element name="explanation"
+												type="xs:normalizedString" minOccurs="0">
+												<xs:annotation>
+												<xs:appinfo>
 																	<elementName> Explanation </elementName>
 																	<sifChar>O</sifChar>
-																	<cedsId/>
-																	<cedsURL/>
+													
+													<cedsId>001724</cedsId>
+													<cedsURL>https://ceds.ed.gov/element/001724</cedsURL>
+													
 <definitionRefId>764e1b36-969f-44b3-8999-842acbbd2f40</definitionRefId>
 																</xs:appinfo>
-																<xs:documentation> Parental explanation for rejected portion </xs:documentation>
-															</xs:annotation>
-														</xs:element>
-													</xs:sequence>
+												<xs:documentation> Parental explanation for rejected portion </xs:documentation>
+												</xs:annotation>
+												</xs:element>
+												</xs:sequence>
 												</xs:complexType>
 											</xs:element>
-											<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+											<xs:element name="explanation"
+												type="xs:normalizedString" minOccurs="0">
 												<xs:annotation>
-													<xs:appinfo>
+												<xs:appinfo>
 														<elementName> Overall Explanation </elementName>
 														<sifChar>O</sifChar>
 														<cedsId/>
 														<cedsURL/>
 <definitionRefId>16f2f348-ee66-4cf7-8c36-58a0245944d4</definitionRefId>
 													</xs:appinfo>
-													<xs:documentation> Parental explanation of perspective of rejection not specific to an element </xs:documentation>
+												<xs:documentation> Parental explanation of perspective of rejection not specific to an element </xs:documentation>
 												</xs:annotation>
 											</xs:element>
 										</xs:sequence>
 									</xs:complexType>
 								</xs:element>
-								<xs:element name="authorizingParent" type="xSpecialEducationAuthorizingPersonType" minOccurs="0">
+								<xs:element name="authorizingParent"
+									type="xSpecialEducationAuthorizingPersonType" minOccurs="0">
 									<xs:annotation>
 										<xs:appinfo>
 											<elementName> Authorizing Parent </elementName>
@@ -2157,8 +2323,10 @@
 										<xs:appinfo>
 											<elementName> Authorization Date </elementName>
 											<sifChar>O</sifChar>
-											<cedsId/>
-											<cedsURL/>
+											
+											<cedsId>001725</cedsId>
+											<cedsURL>https://ceds.ed.gov/element/001725</cedsURL>
+											
 <definitionRefId>c3913a0b-65fe-4cbf-9798-cff5dc5ac262</definitionRefId>
 										</xs:appinfo>
 										<xs:documentation> Date that the agreement was approved

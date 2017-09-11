@@ -69,8 +69,46 @@
                                     </xs:annotation>
                                     <xs:complexType>
                                         <xs:sequence>
-                                            <xs:element name="start" type="xs:date" minOccurs="0" />
-                                            <xs:element name="end" type="xs:date" minOccurs="0" />
+                                            <xs:element name="start" type="xs:date" minOccurs="0" >
+                                            
+                                            <xs:annotation>
+                                                <xs:appinfo>
+                                                    <elementName>
+                                                        Start Date
+                                                    </elementName>
+                                                    <sifChar>O</sifChar>
+                                                    
+                                                    <cedsId>001236</cedsId>
+                                                    <cedsURL>https://ceds.ed.gov/element/001236</cedsURL>
+                                                    
+                                                    <definitionRefId>aaa17330-ba01-4ca6-908b-fec06fc3255c</definitionRefId>
+                                                </xs:appinfo>
+                                                <xs:documentation>
+                                                    Individualized Program Service Plan Date
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                </xs:element>
+                                            
+                                            <xs:element name="end" type="xs:date" minOccurs="0" >
+                                            
+                                            
+                                            <xs:annotation>
+                                                <xs:appinfo>
+                                                    <elementName>
+                                                        End Date
+                                                    </elementName>
+                                                    <sifChar>O</sifChar>
+                                                    
+                                                    <cedsId>001683</cedsId>
+                                                    <cedsURL>https://ceds.ed.gov/element/001683</cedsURL>
+                                                    
+                                                    <definitionRefId>aaa17330-ba01-4ca6-908b-fec06fc3255c</definitionRefId>
+                                                </xs:appinfo>
+                                                <xs:documentation>
+                                                    Individualized Program Service Plan End Date
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                </xs:element>
                                         </xs:sequence>
                                     </xs:complexType>
                                 </xs:element>

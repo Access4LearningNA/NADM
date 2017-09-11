@@ -159,8 +159,12 @@
                                         <xs:appinfo>
                                             <elementName>AddressPostalCode</elementName>
                                             <sifChar>O</sifChar>
+                                            
+                                            
                                             <cedsId>000214</cedsId>
-                                            <cedsURL>https://ceds.ed.gov/cedselementdetails.aspx?termid=3214</cedsURL>
+                                            <cedsURL>https://ceds.ed.gov/element/000214</cedsURL>
+                                            
+                                            
                                             <definitionRefId>04f98d1f-7779-46e8-8b4c-77a4466e5037</definitionRefId>
                                         </xs:appinfo>
                                         <xs:documentation> A number that identifies each postal delivery area in a country used as a portion of an address</xs:documentation>
@@ -207,7 +211,24 @@
                 <xs:sequence>
                     <xs:element name="identity" type="xs:normalizedString" minOccurs="0" />
                     <xs:element name="certification" type="xs:normalizedString" minOccurs="0" />
-                    <xs:element name="date" type="xs:date" minOccurs="0" />
+                    
+                    <xs:element name="date" type="xs:date" minOccurs="0" >
+                    
+                    <xs:annotation>
+                        <xs:appinfo>
+                            <elementName>Authorization Date</elementName>
+                            <sifChar>O</sifChar>
+                            
+                            <cedsId>001725</cedsId>
+                            <cedsURL>https://ceds.ed.gov/element/001725</cedsURL>
+                            
+                            <definitionRefId>aaa98d1f-7779-46e8-8b4c-77a4466e5037</definitionRefId>
+                        </xs:appinfo>
+                        <xs:documentation>Date authorization was made.</xs:documentation>
+                    </xs:annotation>
+                    </xs:element>
+                    
+                    
                     <xs:element name="contactInfo" type="xs:normalizedString" minOccurs="0" />
                     <xs:element name="intrinsicRole" type="xs:normalizedString" minOccurs="0" />
                     <!-- teacher, parent, doctor, principal -->
