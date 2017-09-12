@@ -929,20 +929,22 @@
 														Professional occupation category or relationship to student
 													</xs:documentation>
 												</xs:annotation>
-												<xs:complexType>
-													<xs:sequence>
-														<xs:element name="Parent" type="xs:string" />
-														<xs:element name="Student" type="xs:string" />
-														<xs:element name="LEARep" type="xs:string" />
-														<xs:element name="GeneralEdTeacher" type="xs:string" />
-														<xs:element name="SpecialEdTeacher" type="xs:string" />
-														<xs:element name="SchoolPsychologist" type="xs:string" />
-														<xs:element name="SchoolSocialWorker" type="xs:string" />
-														<xs:element name="SpeechLanguagePathologist" type="xs:string" />
-														<xs:element name="BilingualSpecialist" type="xs:string" />
-														<xs:element name="Physician" type="xs:string" />
-													</xs:sequence>
-												</xs:complexType>
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:enumeration value="Parent"/>
+														<xs:enumeration value="Student"/>
+														<xs:enumeration value="LEARep"/>
+														<xs:enumeration value="GeneralEdTeacher"/>
+														<xs:enumeration value="SpecialEdTeacher"/>
+														<xs:enumeration value="SchoolPsychologist"/>
+														<xs:enumeration value="SchoolSocialWorker"/>
+														<xs:enumeration value="SpeechLanguagePathologist"/>
+														<xs:enumeration value="BilingualSpecialist"/>
+														<xs:enumeration value="Physician"/>
+														<xs:enumeration value="Other"/>
+													</xs:restriction>
+												</xs:simpleType>
+
 											</xs:element>
 											<xs:element name="procedures" type="xs:normalizedString" minOccurs="0">
 												<xs:annotation>
