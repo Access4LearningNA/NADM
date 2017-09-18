@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:complexType name='iepEligabilityParticipantReportListParticipantReportType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Evaluation Report
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>67b87382-9a64-4664-83a1-07f349473a15</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Reports and comments by participants in the eligibility study
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="iepCommonAuthorizingPersonType" name="authorization" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Report Author
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>c2b5ed70-e50d-40ef-8833-cdec6316ecaa</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Proved identity of report author
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="role" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Role
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>335c4d7d-12c8-4265-bbde-716865cb3e24</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Professional occupation category or relationship to student
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Parent" />
+						<xs:enumeration value="Student" />
+						<xs:enumeration value="LEARep" />
+						<xs:enumeration value="GeneralEdTeacher" />
+						<xs:enumeration value="SpecialEdTeacher" />
+						<xs:enumeration value="SchoolPsychologist" />
+						<xs:enumeration value="SchoolSocialWorker" />
+						<xs:enumeration value="SpeechLanguagePathologist" />
+						<xs:enumeration value="BilingualSpecialist" />
+						<xs:enumeration value="Physician" />
+						<xs:enumeration value="Other" />
+					</xs:restriction>
+				</xs:simpleType>
+
+			</xs:element>
+			<xs:element name="procedures" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Procedures
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>15200d31-c606-4dcd-9803-f83dcbb37a37</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						What the participant did with the student
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="observations" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Observations
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>2d940e6b-e619-4930-8509-33a0b07aa177</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						What the participant observed during evaluation
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="conclusions" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Conclusions
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>4d56325f-ad9f-4c7a-8fcc-78e38b4ed326</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Conclusions reached as a result of the evaluation
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- named type -->
+	<xs:complexType name='iepEligabilityParticipantReportListType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Participant Reports
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>511d8379-e693-4cd7-805c-41b82271395f</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Documentation produced by people who have participated in the eligibility determination
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type='iepEligabilityParticipantReportListParticipantReportType' name="participantReport" minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

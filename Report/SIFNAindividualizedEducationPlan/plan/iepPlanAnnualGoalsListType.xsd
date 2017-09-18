@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="iepPlanAnnualGoalType.xsd" />
+
+	<xs:complexType name="iepPlanAnnualGoalListType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Annual Goals List </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>58bff2d2-b2b9-4345-b541-ef3e5cb716a6</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> List of goals to be sought for a special education student </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type='iepPlanAnnualGoalType' name="annualGoal" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

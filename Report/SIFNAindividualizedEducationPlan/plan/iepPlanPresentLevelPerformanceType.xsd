@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="iepPlanPresentLevelPerformancePersonalType.xsd" />
+	<xs:include schemaLocation="iepPlanPresentLevelPerformanceAcademicType.xsd" />
+	<xs:include schemaLocation="iepPlanPresentLevelPerformanceFunctionalType.xsd" />
+	<xs:include schemaLocation="iepPlanPresentLevelPerformanceConsequenceOfDisabilityType.xsd" />
+
+	<xs:complexType name='iepPlanPresentLevelPerformanceType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Present Level Performance </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>0fde3de8-976a-4328-a2fd-d9ff744dcc11</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Baseline performance </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type='iepPlanPresentLevelPerformancePersonalType' name="personal" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformanceAcademicType' name="academic" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalType' name="functional" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformanceConsequenceOfDisabilityType' name="consequenceOfDisability" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

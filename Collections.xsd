@@ -8,7 +8,7 @@
 	<xs:include schemaLocation="Report/SIFNAReportObjects.xsd"/>
 	<xs:include schemaLocation="Jobs/StudentLocator/StudentLocatorResponse.xsd"/>
 	
-	<xs:include schemaLocation="Report/SIFNASpecialEducation.xsd"/>
+	<xs:include schemaLocation="Report/SIFNAindividualizedEducationPlan.xsd"/>
 
 	<!--This file is made up of the so-called Collection Objects. Each Collection is a wrapper for multiple instances of a single object. This is done to make REST calls more REST-like. -->
 	<!--Entity Objects-->
@@ -588,20 +588,15 @@
 	</xs:complexType>
 	<xs:element name="sreReceipts" type="sreReceiptCollectionType"/>
 	
-	<!-- specialEducation (IEP) -->
-	
-	<xs:element name="specialEducation" type="xSpecialEducationCollectionType">
-	</xs:element>
-	
-	<xs:complexType name="xSpecialEducationCollectionType">
-		<xs:annotation>
-			<xs:documentation>Special education information, including individualize education plans (IEP).</xs:documentation>
-		</xs:annotation>
+	<!-- Individualized education plans (IEP) -->
+	<xs:complexType name="xIepCollectionType">
 		<xs:sequence>
-			<xs:element name="xIndividualizeEducationPlan" type="xIndividualizeEducationPlanType" minOccurs="0"
+			<xs:element name="xIndividualizedEducationPlan" type="xIepType" minOccurs="0"
 				maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
+	
+	<xs:element name="xIndividualizedEducationPlans" type="xIepCollectionType" />
 	
 	
 	

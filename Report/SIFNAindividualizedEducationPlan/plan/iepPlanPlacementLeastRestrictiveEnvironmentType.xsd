@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<!-- named type -->
+	<xs:complexType name='iepPlanPlacementLeastRestrictiveEnvironmentType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Least Restrictive Environment </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>949107b0-b1f2-4653-bc33-5e65faeb6af9</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Documentation of learning environment
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="totalMinutesPerWeek" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Total Minutes per Week </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>cbdd40e3-97e9-4041-b229-c2c582495d8c</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Total number of special education minutes per week </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="specialEducationSettingMinutesPerWeek" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Special Ed Setting Minutes per Week </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001234</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001234</cedsURL>
+
+						<definitionRefId>f55594d5-cc0f-4c16-9e8e-9a8ef50bea77</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Number of minutes of special education conducted in a special education situation </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="generalEducationSettingMinutesPerWeek" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> General Ed Setting Minutes per Week </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001233</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001233</cedsURL>
+
+						<definitionRefId>42f2de9d-b1f6-4d31-a115-dda5842680a9</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Number of minutes of special education conducted in a general education situation </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

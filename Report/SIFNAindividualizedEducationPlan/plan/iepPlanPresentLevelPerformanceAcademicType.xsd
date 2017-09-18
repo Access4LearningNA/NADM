@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:complexType name='iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListAccommodationType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Accommodation </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>a13041dc-7046-4e4c-8477-f9a932076581</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Current accommodation in place
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="category" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Accommodation Category </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>db8df0c7-8c85-4289-92e5-d05cdaadbdab</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Current accommodation Category
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="Content" />
+						<xs:enumeration value="MethodologyDelivery" />
+						<xs:enumeration value="PerformanceCriteria" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Explanation </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>3609566b-a42f-42cf-837c-fe4d61e54929</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Description of specific accommodation or change made to environment
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Accommodation List </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>94657cba-c82c-418b-92c0-71f48d288126</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> List of current accommodations
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element type='iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListAccommodationType' name="accommodation" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanPresentLevelPerformanceAcademicSummaryType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Summary </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>4f26842b-d11d-43f9-a34d-982f90eeab3a</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Explanation of the how
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="Consequences" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Consequences </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001705</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001705</cedsURL>
+
+						<definitionRefId>ed7d87bd-0db2-4a07-9856-1e011a6d4057</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Discussion of the specific ways that disability interferes with the student?s outcome </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element type='iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListType' name="accommodationList" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanPresentLevelPerformanceAcademicDeficitListDeficitType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Specific Academic Category </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>3ac7f2c2-5ca2-416e-9b1f-5ac335836638</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Information about a specific academic deficit </xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="academicArea" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Academic Area </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001518</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001518</cedsURL>
+
+						<definitionRefId>3ec72012-b488-44d5-aec4-96ca40640325</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Academic area affected by this issue </xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="EnglishLanguageArts" />
+						<xs:enumeration value="HistoryAndSocialSciences" />
+						<xs:enumeration value="ScienceAndTechnology" />
+						<xs:enumeration value="Mathematics" />
+						<!-- this list is not right? tqii -->
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Explanation </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>eae50491-bf19-4246-9784-b441e4f147c5</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> The nature of the disability contributing to this deficit relative to standards
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="consequences" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Consequences </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>0f7624f9-aef0-46bf-abf2-07dd6097fd87</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> The particular ways that the disability interferes with academic attainment
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="accommodation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Accommodation </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001685</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001685</cedsURL>
+
+						<definitionRefId>3edf4f28-be12-4405-ac99-cf8c0822aeb8</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Accommodations that mitigate the negative consequences of this disability
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanPresentLevelPerformanceAcademicDeficitListType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Academic Deficit </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>8cba54e1-f5d0-4cef-a07e-cfc5a299faa9</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> List of issues where student is unable to meet relevant academic standards
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element type='iepPlanPresentLevelPerformanceAcademicDeficitListDeficitType' name="deficit" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- named type -->
+	<xs:complexType name='iepPlanPresentLevelPerformanceAcademicType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Functional Impairment </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>ae1c04e2-2e16-4db2-a817-c4745de9273d</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Description of inability to meet standards in school and academic topics
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element type='iepPlanPresentLevelPerformanceAcademicDeficitListType' name="deficitList" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformanceAcademicSummaryType' name="summary" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

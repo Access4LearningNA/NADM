@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="iepPlanAnnualGoalGoalType.xsd" />
+	<xs:include schemaLocation="iepPlanAnnualGoalMeasurableObjectiveListType.xsd" />
+	<xs:include schemaLocation="iepPlanAnnualGoalIndependentActionsListType.xsd" />
+	<xs:include schemaLocation="iepPlanAnnualGoalServicesListType.xsd" />
+	<xs:include schemaLocation="iepPlanAnnualGoalProgressReportListType.xsd" />
+
+	<!-- SHARED TYPE -->
+	<xs:complexType name="iepPlanAnnualGoalListParentAcceptanceType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Parent Acceptance Type
+				</elementName>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>d2a1075f-1da3-4e63-ad22-5dbf8252e198</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Simple Yes/No and explanation for indicating assent or rejection
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gOtherSIFType">
+				<xs:sequence>
+					<xs:element name="accepted" type="xs:boolean" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>
+									Accepts
+								</elementName>
+								<sifChar>O</sifChar>
+
+								<cedsId>001721</cedsId>
+								<cedsURL>https://ceds.ed.gov/element/001721</cedsURL>
+
+								<definitionRefId>a86999db-6823-401c-9d89-7c1aad6206e2</definitionRefId>
+							</xs:appinfo>
+							<xs:documentation>
+								Item is acceptable to parent
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="comment" type="xs:normalizedString" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>
+									Comment
+								</elementName>
+								<sifChar>O</sifChar>
+
+								<cedsId>001722</cedsId>
+								<cedsURL>https://ceds.ed.gov/element/001722</cedsURL>
+
+								<definitionRefId>b7b7e385-98ab-41d7-ac7d-230137c04b20</definitionRefId>
+							</xs:appinfo>
+							<xs:documentation>
+								Comment on item and acceptance or rejection
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanAnnualGoalType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Annual Goal </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>cf4098e7-3561-4698-807e-402d4e47dadb</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Documentation of an annual goal to be achieved by a special education student
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element type="xs:normalizedString" name="currentPerformance" minOccurs="0" />
+			<xs:element type="xs:normalizedString" name="currentStatus" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Current Status
+						</elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001703</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001703</cedsURL>
+
+						<definitionRefId>90e1982e-8ac9-4b10-89ee-17cafd2e73fb</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Explanation of the student's current status relative to this goal.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element type="iepPlanAnnualGoalListParentAcceptanceType" name="parentAcceptance" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Parent Acceptance of Goal
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>215c0ca6-2bf0-4df3-b663-d800923122d2</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Parental agreement (or disagreement) with wworking toward this goal
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element type='iepPlanAnnualGoalGoalType' name="goalType" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListType' name="measurableObjectiveList" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalIndependentActionsListType' name="independentActionsList" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalServicesListType' name="servicesList" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalProgressReportListType' name="progressReportList" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+</xs:schema>

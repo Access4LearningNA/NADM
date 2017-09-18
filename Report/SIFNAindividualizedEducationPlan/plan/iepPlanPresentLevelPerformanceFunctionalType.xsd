@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListAccommodationType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Accommodation </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>47c51f79-3f2b-4155-b2cc-c4d4392dc22c</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Current accommodation in place
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="category" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Accommodation Category </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>119cbb7d-3abc-49a4-ad4d-31b8f0973e35</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Current accommodation Category
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="Content" />
+						<xs:enumeration value="MethodologyDelivery" />
+						<xs:enumeration value="PerformanceCriteria" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Explanation </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>eb774fae-d661-4ca4-9809-12cfc9945550</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Description of specific accommodation or change made to environment
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Accommodation List </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>f54b3033-5029-4eae-9f0a-8bc8c21e6c54</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> List of current accommodations
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListAccommodationType' name="accommodation" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalSummaryType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Summary </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>28008805-f321-4749-af73-b782fc330394</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Information about the specific ways that disability interferes
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="Consequences" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Consequences </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001706</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001706</cedsURL>
+
+						<definitionRefId>334a21a2-85c8-4b1e-8bde-6e44aeabd587</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Discussion of the specific ways that disability interferes with the student?s outcome </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListType' name="accommodationList" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Specific Functional Disability </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>9568caf1-9f71-40e0-ba47-258759c0fc7c</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Information about a specific functional disability </xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="name" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Disability Name </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>88e01654-95f1-42bb-ae33-ce9b1c0d09c1</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Specific identification of educational activity impaired by disability
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="AdaptedPhysicalEducation" />
+						<xs:enumeration value="BrailleNeedsBlind/visuallyImpaired" />
+						<xs:enumeration value="ExtraCurriculumActivities" />
+						<xs:enumeration value="Social/EmotionalNeeds" />
+						<xs:enumeration value="AssistiveTechDevices/services" />
+						<xs:enumeration value="CommunicationAllStudents" />
+						<xs:enumeration value="LanguageNeedsLEPStudents" />
+						<xs:enumeration value="TravelTraining" />
+						<xs:enumeration value="Behavior" />
+						<xs:enumeration value="CommunicationDeaf/hardOfHearingStudents" />
+						<xs:enumeration value="NonacademicActivities" />
+						<xs:enumeration value="SkillDevelopmentRelatedToVocationalPreparationOrExperience" />
+						<xs:enumeration value="ForChildrenAges3To5?ParticipationInAppropriateActivities" />
+						<xs:enumeration value="ForChildrenAges14+OrYoungerIfAppropriate?Student?sCourseOfStudy" />
+						<xs:enumeration value="ForChildrenAges16OrYoungerIfAppropriateTo22?TransitionToPost-schoolActivitiesIncludingCommunityExperiencesEmploymentObjectivesOtherPostSchoolAdultLivingAndIfAppropriateDailyLivingSkills" />
+						<!-- this list is not right? tqii -->
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Explanation </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>5515b51f-939d-4eb4-aecf-9367ca64cd89</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Explanation of the specifics of disability in this category </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="consequences" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Consequences </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>6b4b59ae-d664-4682-afa4-1bb40efe9f75</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Analysis of the particular ways that the disability interferes with educational attainment </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="accommodation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Accommodation </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001685</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001685</cedsURL>
+
+						<definitionRefId>b7a89470-8391-40e2-87e0-1a04a345a1bd</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Description of the accommodations that mitigate the negative consequences of this disability
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalDisabilityListType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> List of Functional Disabilities </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>848e3e65-f6cd-4d4c-8e57-f59f1ccc4d6b</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Information about the child?s ability to operate in a classroom or other learning setting </xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType' name="disability" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- named type -->
+	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Functional Impairment </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>438cfded-f069-4a3c-9481-37a947823544</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Information about the child�s ability to function in a classroom or other learning setting
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListType' name="disabilityList" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryType' name="summary" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

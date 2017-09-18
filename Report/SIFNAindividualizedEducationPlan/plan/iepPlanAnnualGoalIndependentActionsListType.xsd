@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<!-- named type -->
+	<xs:complexType name='iepPlanAnnualGoalIndependentActionsListType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Independent Actions List
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>d4e373fb-2c33-483a-9492-e562887f13bf</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Activities or actions to be accomplished outside of a service context
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="independentAction" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Independent Action
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>c0fff6d8-f25d-4b4e-9aa2-71cb1f7da905</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Activity or action to be accomplished outside of a service context
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

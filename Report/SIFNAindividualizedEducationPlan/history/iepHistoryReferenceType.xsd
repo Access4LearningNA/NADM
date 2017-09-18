@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:complexType name='iepHistoryReferenceIepDatesType'>
+		<xs:sequence>
+			<xs:element name="start" type="xs:date" minOccurs="0">
+
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Start Date
+						</elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001236</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001236</cedsURL>
+
+						<definitionRefId>aaa17330-ba01-4ca6-908b-fec06fc3255c</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Individualized Program Service Plan Date
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="end" type="xs:date" minOccurs="0">
+
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							End Date
+						</elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001683</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001683</cedsURL>
+
+						<definitionRefId>aaa17330-ba01-4ca6-908b-fec06fc3255c</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Individualized Program Service Plan End Date
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- named type -->	
+	<xs:complexType name='iepHistoryReferenceType'>
+		<xs:sequence>
+			<xs:element name="lea" type="xLeaType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							LEA
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>2953cd16-b19d-4bb8-a1e9-6db238450a1e</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						School where the IEP was created
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element type='iepHistoryReferenceIepDatesType' name="iepDates">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							IEP Dates
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>3c62a3ec-702e-4ba9-977a-94ca31af67db</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Period that IEP is in effect
+					</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="contactInfo" type="gContactPersonType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Contact Info
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>3e917330-ba01-4ca6-908b-fec06fc3255c</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Contact information for additional information about this IEP
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

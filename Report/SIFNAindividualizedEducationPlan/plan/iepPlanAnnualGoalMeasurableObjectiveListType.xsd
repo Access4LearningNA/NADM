@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveMeasurementCriterionMetricTrialCountEvaluationType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Trial Count Specification
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>3670dcee-b180-4a6d-a418-9d023b4f1509</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Specifies minimum of trials and success threshold
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="successCount" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Success Count
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001694</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001694</cedsURL>
+						<definitionRefId>016e7c88-145b-4c4b-866f-baf695b4e529</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						The percent of correct results that will be considered to represent success
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="attemptCount" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Attempt Count
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001692</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001692</cedsURL>
+						<definitionRefId>f4fe69d6-9cba-45dc-86ad-407a77218c13</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						The number of attempts representing a completed trial
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementCriterionMetricType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Metric
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>f41169ff-73e7-4d6b-866e-eff4f15be0d3</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Definition of the quantitative measurement by which success will be judged. Three structures are defined.
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="accuracyPercentEvaluation" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Accuracy Percent
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001691</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001691</cedsURL>
+						<definitionRefId>b3612f3f-b6f0-4529-87c8-541756b1fb4c</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						The percent of correct results that will be considered to represent success
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveMeasurementCriterionMetricTrialCountEvaluationType' name="trialCountEvaluation" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element name="otherEvaluation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Other Evaluation Method
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001692</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001692</cedsURL>
+						<definitionRefId>f7a7cd71-8379-474e-85e6-baef2aa95399</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Description of other specific success measurement method
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementCriterionType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Criterion
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>1ae44e99-0485-44eb-8bd3-7e076e9cc9a1</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Criterion used to determine success or progress toward mastering this objective
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Explanation
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001695</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001695</cedsURL>
+						<definitionRefId>87285b28-d8dd-4a19-b33d-c4c008a4bd92</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Descriptor of the the process of evaluation of success
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementCriterionMetricType' name="metric" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Measurement
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>e4c28b1b-b59e-4ac8-abdd-2877c5897fa8</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Definition of the way we will know the student has achieved the goal
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementCriterionType' name="criterion" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Facilitator
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>0dd5bd68-3eb9-4be3-a63d-8801218c8f07</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Person who will help the student achieve this goal
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="identity" type="gStaffPersonType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Identity
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>804e41bd-e339-4fdf-8f23-41918155d5c5</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Facilitator Identity
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contribution" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Contribution
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>e97afbab-e3aa-4b53-a751-1e81793440da</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						The help this facilitor is asked to contribut to the achievement of this objective
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Facilitator List
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>37b30b94-986a-49fc-a66c-bf8169a0dfb5</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				List of people who will help the student achieve this goal
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorType' name="facilitator" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Measurable Objective
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>6543a5c9-90dd-4305-8a08-57e80df35907</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Specific objective that will be achieved in the pursuit of this goal
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="description" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Description
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000692</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000692</cedsURL>
+						<definitionRefId>9afb5d48-c2e1-4c6b-8d00-b97c60aab8cd</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Description of the practical appearance of the goal?s achievement
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListType' name="facilitatorList" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementType' name="measurement" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element name="parentAcceptance" type="iepPlanAnnualGoalListParentAcceptanceType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Parent Acceptance
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>4b023834-03c0-41d3-b59f-d0fa950ba5ff</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Parental agreement (or disagreement) with judging objective based on specified criterion
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- named type -->
+	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Measurable Objective List
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>da110056-de8a-4a21-8d19-a2f37444cb18</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Objectives that will be achieved in the pursuit of this goal
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType' name="measurableObjective" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

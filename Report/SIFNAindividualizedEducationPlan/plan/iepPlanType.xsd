@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="iepPlanCommonAuthorizationType.xsd" />
+	
+	<xs:include schemaLocation="iepPlanEffectivePeriodType.xsd" />
+	<xs:include schemaLocation="iepPlanEnrollmentGradeLevelType.xsd" />
+	
+	<xs:include schemaLocation="iepPlanPresentLevelPerformanceType.xsd" />
+	
+	<xs:include schemaLocation="iepPlanAnnualGoalsListType.xsd" />
+	
+	<xs:include schemaLocation="iepPlanAccommodationsListType.xsd" />
+	<xs:include schemaLocation="iepPlanStandardizedAssessmentResultListType.xsd" />
+	<xs:include schemaLocation="iepPlanAmendmentListType.xsd" />
+	<xs:include schemaLocation="iepPlanPlacementType.xsd" />
+	
+	<!-- local parent type -->
+	<xs:complexType name="iepPlanType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>SpecialEducation</elementName>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>74f0dc3e-dc3f-42ae-acae-8b09a5ff9604</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Administrative and demographic data supporting Special Education students </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gOtherSIFType">
+				<xs:sequence>
+					<xs:element type='iepPlanEffectivePeriodType' name="effectivePeriod" minOccurs="1" maxOccurs="unbounded" />
+					<xs:element type='iepPlanEnrollmentGradeLevelType' name="enrollmentGradeLevel" minOccurs="1" maxOccurs="unbounded" />
+					<xs:element type='iepPlanPresentLevelPerformanceType' name="presentLevelPerformance" minOccurs="1" />
+					<xs:element type="iepPlanAnnualGoalListType" name="annualGoalsList" />
+					<xs:element type='iepPlanAccommodationsListType' name="accommodationsList" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element type='iepPlanStandardizedAssessmentResultListType' name="standardizedAssessmentResultList" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element type='iepPlanAmendmentListType' name="amendmentList" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element type='iepPlanPlacementType' name="placement" minOccurs="1" maxOccurs="1" />
+					<xs:element name="authorization" type="iepPlanCommonAuthorizationType" minOccurs="1" maxOccurs="1">
+
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+</xs:schema>

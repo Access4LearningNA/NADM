@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:complexType name='iepPlanAnnualGoalServicesListServiceFrequencyDurationType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Duration
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>ed5ded33-922e-48c9-97de-4a546187ba53</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Amount of time during cycle that student receives service
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="directMinutes" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Direct Minutes
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>feb7251a-8e93-48fa-b05e-ec33495015a5</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Time spent directly with the student.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="indirectMinutes" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Indirect Minutes
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>2f9a640d-6502-42aa-8c77-4e3612cc4bbf</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Service provider time spent on other service activities that are not with the student.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanAnnualGoalServicesListServiceFrequencyType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Frequency
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>56432805-5753-4e35-bfbc-af81e7bc7f4b</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Prescription for amount of service to be given.
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="cycle" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Cycle
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>b3f22600-8500-42dd-b18b-40854b421f94</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						How often service must be rendered
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="5Day" />
+						<xs:enumeration value="6Day" />
+						<xs:enumeration value="10Day" />
+						<!-- How to add 'other'? tqii -->
+						<!-- is this list correct? tqii -->
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyDurationType' name="duration" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanAnnualGoalServicesListServiceServiceProviderType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					ServiceProvider
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>0e9264b4-ff0e-4011-aa57-39ef0594a7df</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Identity and role of person rendering support services
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="identity" type="gStaffPersonType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Identity
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>0a77dcf2-5895-42b4-b547-f1e9101ea9be</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Service Provider Identity
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="role" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Role
+						</elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>000558</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000558</cedsURL>
+
+						<definitionRefId>05e2d887-6dbf-4bfb-bd91-f050b818f106</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Professional specialty applicable to the support of this goal.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="Counselor" />
+						<xs:enumeration value="ReadingSpecialist" />
+						<!-- is this list correct? tqii -->
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanAnnualGoalServicesListServiceType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Service
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>6a458f87-2a5e-4025-913d-0fb0620230b7</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Support for student progress given by professional or para-professionals on a scheduled basis.
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="category" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Category
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>d10ecd43-4d6a-4400-b210-11f2d3ba139a</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Legal category of service
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="SpecialInstruction" />
+						<xs:enumeration value="Speech" />
+						<xs:enumeration value="Motor" />
+						<xs:enumeration value="Counseling" />
+						<xs:enumeration value="Vision/hearing" />
+						<xs:enumeration value="Transportation" />
+						<xs:enumeration value="InterpretingServices" />
+						<xs:enumeration value="Orientation/mobility" />
+						<xs:enumeration value="ParentTraining" />
+						<!-- is this list correct? tqii -->
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="setting" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Setting
+						</elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001634</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001634</cedsURL>
+
+						<definitionRefId>152a7b1d-691e-414e-93f0-7d6757b10f6f</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Where service will be rendered
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="General" />
+						<xs:enumeration value="Special" />
+						<!-- how to add other? tqii -->
+						<!-- is this list correct? tqii -->
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element type='iepPlanAnnualGoalServicesListServiceServiceProviderType' name="serviceProvider" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyType' name="frequency" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element name="startDate" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Start Date
+						</elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001165</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001165</cedsURL>
+
+						<definitionRefId>78adc225-ba26-433a-ba14-2642690d888a</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Date that work toward this goal will commence.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endDate" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							End Date
+						</elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001166</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001166</cedsURL>
+
+						<definitionRefId>097d92f3-4319-4672-8d12-d06aeda8af37</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Date that work toward this goal will end.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nonParticipationReason" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Non-Participation Reason
+						</elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001488</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001488</cedsURL>
+
+						<definitionRefId>f6e6860b-7d37-4083-bf45-d44b9a02e5d4</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Reason that student did not participate in this service.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="extendsSchoolYEar" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Extends School Year
+						</elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001717</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001717</cedsURL>
+
+						<definitionRefId>0c6d36dc-df7b-463b-baf1-1f9fe810b4f6</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Determination if this service continues outside school year.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- named type -->
+	<xs:complexType name='iepPlanAnnualGoalServicesListType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Service List
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>6dda3e9f-afe9-44b9-a50e-ce3f80b8da8d</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				List of supporting resources required for student to achieve a goal
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element type='iepPlanAnnualGoalServicesListServiceType' name="service" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
