@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="iepEligibilityBackgroundType.xsd" />
+	<xs:include schemaLocation="iepEligibilityEvaluationResultListType.xsd" />
+	<xs:include schemaLocation="iepEligibilityIdeaDisabilityType.xsd" />
+	<xs:include schemaLocation="iepEligibilityParticipantReportListType.xsd" />
+
+	<!-- local parent type -->
+	<xs:complexType name="iepEligibilityType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Eligibility</elementName>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>0ef2e848-f613-4a4c-9899-743566f4a71c</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Information about a student's need and eligibility for special education services.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gOtherSIFType">
+				<xs:sequence>
+					<xs:element type='iepEligabilityBackgroundType' name="background" minOccurs="1" maxOccurs="1" />
+					<xs:element type='iepEligabilityEvaluationResultListType' name="evaluationResultList" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element type='iepEligabilityIdeaDisabilityType' name="ideaDisability" minOccurs="1" maxOccurs="1" />
+					<xs:element type='iepEligabilityParticipantReportListType' name="eligabilityParticipantReportList" minOccurs="0" maxOccurs="unbounded">
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+</xs:schema>

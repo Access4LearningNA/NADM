@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+						
+	<xs:complexType name='iepEligabilityEvaluationResultType'>
+										<xs:sequence>
+											<xs:element name="explanation" type="xs:normalizedString">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>
+															Evaluation Result Explanation
+														</elementName>
+														<sifChar>O</sifChar>
+														<cedsId>001730</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/001730</cedsURL>
+
+														<definitionRefId>0c54f35a-58cf-4fb6-9d34-b32fab4bcfbe</definitionRefId>
+													</xs:appinfo>
+													<xs:documentation>
+														Description of evaluation procedure and nature of the result
+													</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="type" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Evaluation Type</elementName>
+														<sifChar>O</sifChar>
+														<cedsId>001729</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/001729</cedsURL>
+
+														<definitionRefId>c15842a1-6d86-4f49-bed3-e313184be748</definitionRefId>
+													</xs:appinfo>
+													<xs:documentation>Category of evaluation</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:normalizedString">
+														<xs:enumeration value="Academic" />
+														<xs:enumeration value="Preacademic" />
+														<xs:enumeration value="Behavior" />
+														<xs:enumeration value="Adaptive" />
+														<xs:enumeration value="Transition" />
+														<xs:enumeration value="Communication" />
+														<xs:enumeration value="Motor" />
+														<xs:enumeration value="Hearing" />
+														<xs:enumeration value="Vision" />
+														<xs:enumeration value="Medical" />
+														<xs:enumeration value="Language" />
+														<!-- HOW DO I ALLOW FOR "OTHER" ? tqii -->
+														<!-- IS THIS THE RIGHT LIST? tqii -->
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+											<xs:element name="date" type="xs:date" minOccurs="0">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>
+															Date of Evaluation
+														</elementName>
+														<sifChar>O</sifChar>
+														<cedsId>001731</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/001731</cedsURL>
+
+														<definitionRefId>25cb1adb-8153-4fb4-8f72-1dafc7ddc8b8</definitionRefId>
+													</xs:appinfo>
+													<xs:documentation>The date when the evaluation was conducted.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="lifecyclePurpose" nillable="true" minOccurs="1">
+												<xs:annotation>
+													<xs:appinfo>
+														<elementName>Lifecycle Purpose of Evaluation</elementName>
+														<sifChar>O</sifChar>
+														<cedsId>001728</cedsId>
+														<cedsURL>https://ceds.ed.gov/element/001728</cedsURL>
+
+														<definitionRefId>b7aa2611-ed5a-4268-ad89-a1f9a5cf40e5</definitionRefId>
+													</xs:appinfo>
+													<xs:documentation>IEP lifecycle evaluation purpose</xs:documentation>
+												</xs:annotation>
+												<xs:simpleType>
+													<xs:restriction base="xs:normalizedString">
+														<xs:enumeration value="Initial" />
+														<xs:enumeration value="Reevaluation" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+									
+	<!-- named type -->
+	<xs:complexType name='iepEligabilityEvaluationResultListType'>
+							<xs:annotation>
+							<xs:appinfo>
+								<elementName>
+									Evaluation Results
+								</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+								<definitionRefId>0b6c73e6-151f-48c8-bf40-96f00cf26f7d</definitionRefId>
+							</xs:appinfo>
+							<xs:documentation>
+								List of the results of evaluations of the student
+							</xs:documentation>
+						</xs:annotation>
+							<xs:sequence>
+								<xs:element type='iepEligabilityEvaluationResultType' name="evaluationResult" minOccurs="0" maxOccurs="unbounded">
+									<xs:annotation>
+										<xs:appinfo>
+											<elementName>
+												Evaluation Result
+											</elementName>
+											<sifChar>O</sifChar>
+											<cedsId/>
+											<cedsURL/>
+											<definitionRefId>8f580355-71c9-4753-bc0b-f4bc78de25e0</definitionRefId>
+										</xs:appinfo>
+										<xs:documentation>
+											Results of one specific evaluation.
+										</xs:documentation>
+									</xs:annotation>
+									
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+	
+</xs:schema>

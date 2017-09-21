@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:complexType name='IepPlanCommonAuthorizationParentAuthorizationRejectedPlanElementsRejectedDetailList'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Rejected Details </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>378695cd-4ece-463c-a114-da0f51d145c7</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Specific goals, services, modifications or other elements that the parent does not want implemented </xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="rejectedDetail" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Rejected IEP Detail </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001723</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001723</cedsURL>
+
+						<definitionRefId>cf6b074a-2204-45d8-847f-7fd08ac4d5b4</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Elements parent does not want executed. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Explanation </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001724</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001724</cedsURL>
+
+						<definitionRefId>764e1b36-969f-44b3-8999-842acbbd2f40</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Parental explanation for rejected portion </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='IepPlanCommonAuthorizationParentAuthorizationRejectedPlanElements'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Rejected Elements </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>d85ae803-a719-4963-ad6b-3fbc316c4cd1</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Elements parent does not want executed.
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element type='IepPlanCommonAuthorizationParentAuthorizationRejectedPlanElementsRejectedDetailList' name="rejectedDetailList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Overall Explanation </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>16f2f348-ee66-4cf7-8c36-58a0245944d4</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Parental explanation of perspective of rejection not specific to an element </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanCommonAuthorizationParentAuthorization'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Parent Authorization </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>8eda91ef-4c7c-4a92-9465-8854c1ec89a4</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Parental input and signoff </xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="accepted" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Accepted (with possible exclusions) </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001722</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001722</cedsURL>
+
+						<definitionRefId>693cd777-cbce-4020-976f-e6d20f4f2ac3</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Indication of parental agreement with consideration of exceptions listed. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element type='IepPlanCommonAuthorizationParentAuthorizationRejectedPlanElements' name="rejectedPlanElements" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="authorizingParent" type="iepCommonAuthorizingPersonType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Authorizing Parent </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>46ebb831-299c-4410-816a-7aae5e1e8f29</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Proved identity of authorizing parent
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="authorizationDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Authorization Date </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001725</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001725</cedsURL>
+
+						<definitionRefId>c3913a0b-65fe-4cbf-9798-cff5dc5ac262</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Date that the agreement was approved
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='authorizingOfficialsList'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Authorizing Officials List </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>a15d56bd-c48b-476e-a123-1b4d38b9432f</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Education officials authorizing </xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="authorizingOfficial" type="iepCommonAuthorizingPersonType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Authorizing Official </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>c211125b-5c71-4551-819a-3e2c4191cd57</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Proved identity of authorizing official
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- named type -->
+	<xs:complexType name="iepPlanCommonAuthorizationType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Authorization for all or part of an IEP </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>b95e66a5-c13b-4256-8ad6-15edeb6515be</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Legal response and authorization to implement all or part of a plan </xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gOtherSIFType">
+				<xs:sequence>
+					<xs:element type='authorizingOfficialsList' name="authorizingOfficialsList" />
+					<xs:element type='iepPlanCommonAuthorizationParentAuthorization' name="parentAuthorization" minOccurs="1" maxOccurs="1" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+</xs:schema>

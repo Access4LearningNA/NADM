@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:include schemaLocation="../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../Composite/SIFNAxPress.xsd" />
+
+	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/iepCommonTypes.xsd" />
+
+	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/administrativeData/iepAdministrativeDataType.xsd" />
+	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/eligibility/iepEligibilityType.xsd" />
+	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/history/iepHistory.xsd" />
+	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/plan/iepPlanType.xsd" />
+
+	<xs:complexType name="xIepType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Individualize Education Plan (IEP)</elementName>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>
+				Information to support Special Education students transferring into a new educational context. Specifically, this model supports these use cases: Use Case 1 (Day Zero): An administrator is able to quickly look at the incoming information to where to place the student on the first day. Use Case 2 (Ongoing IEP): A committee on the receiving school quickly understands the needs and services of a student in a way that allows it to take the actions necessary for the student to have the best outcome. Use Case 3 (State Reporting): Data analysts at the receiving school build a complete (adequate?) student profile supporting their reporting and resource management needs.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gOtherSIFType">
+				<xs:sequence>
+					<xs:element name="iepAdministrativeData" type="iepAdministrativeDataType" />
+					<xs:element name="iepEligibility" type="iepEligibilityType" />
+					<xs:element name="iepPlan" type="iepPlanType" />
+					<xs:element name="iepHistory" type="iepHistory" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

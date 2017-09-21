@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:complexType name='iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListSpecialCategoryType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Special Category </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>f885aad8-34b4-4bf3-9df7-d0585db85233</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Category being fulfilled by this plan </xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="currentCategory" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Current Category </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>000320</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000320</cedsURL>
+
+						<definitionRefId>9be6d7f8-08cf-4ce4-925a-5f7159e82f1f</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Special legal category
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="IFSP" />
+						<xs:enumeration value="transition" />
+						<!-- is this the right list? tqii -->
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Explanation </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>e0c897c1-baa9-42dd-b507-406ed4cb843e</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Reason student is included in this category </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Special Category List </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>7ff36e1d-c693-4ff3-b817-ff27abf22a31</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Special categories applying to this plan </xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element type='iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListSpecialCategoryType' name="specialCategory" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- named type -->
+	<xs:complexType name='iepPlanPresentLevelPerformanceConsequenceOfDisabilityType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Consequence of Disability </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>44c5d825-d522-4ae5-b305-92b8d3f2fa38</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Summary of how disabilities effect the student�s ability to participate and learn
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="curriculum" type="xs:normalizedString" minOccurs="0" />
+			<xs:element type='iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListType' name="specialCategoryList" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

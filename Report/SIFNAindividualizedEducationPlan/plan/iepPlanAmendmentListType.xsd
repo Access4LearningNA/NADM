@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="iepPlanCommonAuthorizationType.xsd" />
+
+	<xs:complexType name='iepPlanAmendmentListAmendmentChangeListChangeType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Change Detail </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>d0f69da1-4361-47e2-ae7a-edcd46aba60a</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> A specific detail of the changes made on this revision </xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Explanation of the Change(s) </elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001689</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001689</cedsURL>
+						<definitionRefId>20865d2a-0234-42d2-bf4e-36a6aaf55e95</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Explanation of the changes made to the plan </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="reasonForChange" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Reason for Change(s) </elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001688</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001688</cedsURL>
+						<definitionRefId>5c2c7788-cd05-48cb-bf09-24e2bd8bc3d8</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Explanation of the reasons that the change is needed </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanAmendmentListAmendmentChangeListType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Change List </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>f22dea85-df9e-408d-ac9c-917700d81b95</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> List of changes included in this amendment </xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element type='iepPlanAmendmentListAmendmentChangeListChangeType' name="change" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepPlanAmendmentListAmendmentType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Amendment </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>fbff891d-06f9-4d1e-a9b8-8466949812b4</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Change to the IEP </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type='iepPlanAmendmentListAmendmentChangeListType' name="changeList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Explanation </elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001688</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001688</cedsURL>
+						<definitionRefId>8461d7da-10f7-4fac-92a0-fc162be76867</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Explanation for the reason that the IEP needed changing </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="authorization" type="iepPlanCommonAuthorizationType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Authorization to Change Plan </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>5fa4d0ba-33ff-4af9-a24f-a9da16ee6cc4</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Legal response and authorization to changes to an existing plan
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- local parent type -->
+	<xs:complexType name='iepPlanAmendmentListType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Amendments </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>2a8ba83a-36e0-466d-8293-dc8b912059fc</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> History List of Amendments to IEP </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type='iepPlanAmendmentListAmendmentType' name="amendment" minOccurs="1" maxOccurs="unbounded">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

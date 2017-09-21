@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<!-- named type -->
+    <xs:complexType name="iepAdministrativeDataCostSharingType">
+        <xs:sequence>
+            <xs:element name="status" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <elementName>
+                            Cost Sharing Availability Status
+                        </elementName>
+                        <sifChar>O</sifChar>
+                        <cedsId/>
+                        <cedsURL/>
+                        <definitionRefId>5201310e-c36c-42b1-9fa0-6be95502cd96</definitionRefId>
+                    </xs:appinfo>
+                    <xs:documentation>Plan has cost sharing available.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="agency" type="xs:normalizedString" minOccurs="0">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <elementName>
+                            Name of Agency Contributing Funding
+                        </elementName>
+                        <sifChar>O</sifChar>
+                        <cedsId/>
+                        <cedsURL/>
+                        <definitionRefId>00be92a9-0521-472f-971d-547a274a3cfa</definitionRefId>
+                    </xs:appinfo>
+                    <xs:documentation>
+                        Government agency contributing funds to the support of this student.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

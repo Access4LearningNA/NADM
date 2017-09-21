@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<!-- named type -->
+	<xs:complexType name='iepPlanEnrollmentGradeLevelType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Enrollment Grade Level
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>899c3a61-b5f7-4d44-b1f3-b79c0a85c9ca</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				The student’s actual, age and experience appropriate grade level including advancement
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="standardGradeLevel" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Standard Grade Level
+						</elementName>
+						<cedsId>000100</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000100</cedsURL>
+
+						<definitionRefId>e677aa8b-f677-4b8d-9f62-60ee07a1504d</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Standard Grade Level
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="P" />
+						<xs:enumeration value="K" />
+						<xs:enumeration value="1" />
+						<xs:enumeration value="2" />
+						<xs:enumeration value="3" />
+						<xs:enumeration value="4" />
+						<xs:enumeration value="5" />
+						<xs:enumeration value="6" />
+						<xs:enumeration value="7" />
+						<xs:enumeration value="8" />
+						<xs:enumeration value="9" />
+						<xs:enumeration value="10" />
+						<xs:enumeration value="11" />
+						<xs:enumeration value="12" />
+						<!-- is this list correct? tqii -->
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="other" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Explanation
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>36484433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Text description of non-standard grade level designation
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

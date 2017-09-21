@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="iepPlanPlacementTransportationType.xsd" />
+	<xs:include schemaLocation="iepPlanPlacementLeastRestrictiveEnvironmentType.xsd" />
+	<xs:include schemaLocation="iepPlanPlacementScheduleModificationType.xsd" />
+
+	<!-- named type -->
+	<xs:complexType name='iepPlanPlacementType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName> Placement </elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>d39b8860-6452-4bee-9901-2bf7e39445e4</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation> Physical location where special education will take place </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="type" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Placement Type </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>000535</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000535</cedsURL>
+
+						<definitionRefId>6d7347d9-f011-481c-abe8-4fa07d8f3c80</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Educational setting required for achieving annual goals </xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="Home" />
+						<xs:enumeration value="ServiceProviderLocation" />
+						<xs:enumeration value="IepServicesInTheInclusiveEarlyChildhoodProgram" />
+						<xs:enumeration value="InclusiveEarlyChildhoodProgram" />
+						<xs:enumeration value="SubstantiallySeparateProgram" />
+						<xs:enumeration value="PublicOrPrivateDayProgram" />
+						<xs:enumeration value="ResidentialSchool" />
+						<xs:enumeration value="FullInclusion" />
+						<xs:enumeration value="SubstantiallySeparateClassroom" />
+						<xs:enumeration value="60percentOfTheTime" />
+						<xs:enumeration value="PublicSeparateDaySchool" />
+						<xs:enumeration value="PrivateSeparateDaySchool" />
+						<xs:enumeration value="ResidentialSchool" />
+						<xs:enumeration value="Homebound/Hospital" />
+						<xs:enumeration value="PublicResidentialInstitutionalFacilities]" />
+						<!-- is this the correct list? tqii -->
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Explanation </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001704</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001704</cedsURL>
+
+						<definitionRefId>468d89f8-6a4e-403c-ae67-ac9b2e2c29bf</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Description of the specific arrangement and rationale </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element type='iepPlanPlacementScheduleModificationType' name="scheduleModification" />
+			<xs:element type='iepPlanPlacementTransportationType' name="transportation" minOccurs="1" maxOccurs="1" />
+			<xs:element type='iepPlanPlacementLeastRestrictiveEnvironmentType' name="leastRestrictiveEnvironment" minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+</xs:schema>

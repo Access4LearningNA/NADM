@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="iepAdministrativeDataReevaluationDueDateType.xsd" />
+	<xs:include schemaLocation="iepAdministrativeDataCostSharingType.xsd" />
+
+	<!-- local parent type -->
+    <xs:complexType name="iepAdministrativeDataType">
+        <xs:annotation>
+            <xs:appinfo>
+                <elementName>Special Education</elementName>
+                <sifChar>O</sifChar>
+                <cedsId/>
+                <cedsURL/>
+                <definitionRefId>7475bb58-0cae-433c-84ae-780ebb32eb73</definitionRefId>
+            </xs:appinfo>
+            <xs:documentation>
+                Administrative and demographic data supporting Special Education students
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element type="iepAdministrativeDataReevaluationDueDateType" name="reevaluationDueDate" />
+            <xs:element type="iepCommonParentGuardianListType" name="parentGuardianList" minOccurs="0" />
+            <xs:element type="iepAdministrativeDataCostSharingType" name="costSharing" />
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
