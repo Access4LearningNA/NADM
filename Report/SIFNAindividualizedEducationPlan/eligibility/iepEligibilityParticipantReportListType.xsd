@@ -133,7 +133,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepEligabilityParticipantReportListParticipantReportType' name="participantReport" minOccurs="1" maxOccurs="1" />
+			<xs:element type='iepEligabilityParticipantReportListParticipantReportType' name="participantReport" minOccurs="0" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
 	

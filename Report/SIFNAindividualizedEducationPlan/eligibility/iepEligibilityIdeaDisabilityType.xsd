@@ -406,7 +406,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepEligabilityIdeaDisabilitySpecificLearningDisabilitySpecialDiagnosisJustificationsPrimaryCauseExclusionsType' name="primaryCauseExclusions" minOccurs="1" maxOccurs="1" />
+			<xs:element type='iepEligabilityIdeaDisabilitySpecificLearningDisabilitySpecialDiagnosisJustificationsPrimaryCauseExclusionsType' name="primaryCauseExclusions" minOccurs="0" maxOccurs="1" />
 			<xs:element name="lackOfAdequateAchievementExplanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -439,13 +439,13 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepEligabilityIdeaDisabilitySpecificLearningDisabilityDecisionsType' name="decisions" minOccurs="1" maxOccurs="1" />
+			<xs:element type='iepEligabilityIdeaDisabilitySpecificLearningDisabilityDecisionsType' name="decisions" minOccurs="0" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
 
 	<xs:complexType name='iepEligabilityIdeaDisabilitySpecificLearningDisabilitySpecialDiagnosisJustificationsType'>
 		<xs:sequence>
-			<xs:element type='iepEligabilityIdeaDisabilitySpecificLearningDisabilitySpecialDiagnosisJustificationsSpecificLearningDisabilityType' name="specificLearningDisability" minOccurs="1" maxOccurs="1" />
+			<xs:element type='iepEligabilityIdeaDisabilitySpecificLearningDisabilitySpecialDiagnosisJustificationsSpecificLearningDisabilityType' name="specificLearningDisability" minOccurs="0" maxOccurs="1" />
 			<xs:element name="TeamOverride" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>

@@ -88,7 +88,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveMeasurementCriterionMetricTrialCountEvaluationType' name="trialCountEvaluation" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveMeasurementCriterionMetricTrialCountEvaluationType' name="trialCountEvaluation" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element name="otherEvaluation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -142,7 +142,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementCriterionMetricType' name="metric" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementCriterionMetricType' name="metric" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -277,9 +277,9 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListType' name="facilitatorList" minOccurs="1" maxOccurs="unbounded" />
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementType' name="measurement" minOccurs="1" maxOccurs="unbounded" />
-			<xs:element name="parentAcceptance" type="iepPlanAnnualGoalListParentAcceptanceType" minOccurs="1" maxOccurs="1">
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListType' name="facilitatorList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementType' name="measurement" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="parentAcceptance" type="iepPlanAnnualGoalListParentAcceptanceType" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>

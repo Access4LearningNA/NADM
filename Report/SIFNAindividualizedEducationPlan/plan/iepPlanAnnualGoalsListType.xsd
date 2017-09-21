@@ -15,7 +15,7 @@
 			<xs:documentation> List of goals to be sought for a special education student </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalType' name="annualGoal" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalType' name="annualGoal" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 

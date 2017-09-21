@@ -65,7 +65,7 @@
 													<xs:documentation>The date when the evaluation was conducted.</xs:documentation>
 												</xs:annotation>
 											</xs:element>
-											<xs:element name="lifecyclePurpose" nillable="true" minOccurs="1">
+											<xs:element name="lifecyclePurpose" nillable="true" minOccurs="0">
 												<xs:annotation>
 													<xs:appinfo>
 														<elementName>Lifecycle Purpose of Evaluation</elementName>

@@ -58,7 +58,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanAmendmentListAmendmentChangeListChangeType' name="change" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAmendmentListAmendmentChangeListChangeType' name="change" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -87,7 +87,7 @@
 					<xs:documentation> Explanation for the reason that the IEP needed changing </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="authorization" type="iepPlanCommonAuthorizationType" minOccurs="1" maxOccurs="1">
+			<xs:element name="authorization" type="iepPlanCommonAuthorizationType" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Authorization to Change Plan </elementName>
@@ -116,7 +116,7 @@
 			<xs:documentation> History List of Amendments to IEP </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAmendmentListAmendmentType' name="amendment" minOccurs="1" maxOccurs="unbounded">
+			<xs:element type='iepPlanAmendmentListAmendmentType' name="amendment" minOccurs="0" maxOccurs="unbounded">
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>

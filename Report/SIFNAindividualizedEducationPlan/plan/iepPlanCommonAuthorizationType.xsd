@@ -183,7 +183,7 @@
 			<xs:extension base="gOtherSIFType">
 				<xs:sequence>
 					<xs:element type='authorizingOfficialsList' name="authorizingOfficialsList" />
-					<xs:element type='iepPlanCommonAuthorizationParentAuthorization' name="parentAuthorization" minOccurs="1" maxOccurs="1" />
+					<xs:element type='iepPlanCommonAuthorizationParentAuthorization' name="parentAuthorization" minOccurs="0" maxOccurs="1" />
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

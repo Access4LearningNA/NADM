@@ -67,8 +67,8 @@
 				</xs:annotation>
 			</xs:element>
 			<xs:element type='iepPlanPlacementScheduleModificationType' name="scheduleModification" />
-			<xs:element type='iepPlanPlacementTransportationType' name="transportation" minOccurs="1" maxOccurs="1" />
-			<xs:element type='iepPlanPlacementLeastRestrictiveEnvironmentType' name="leastRestrictiveEnvironment" minOccurs="1" maxOccurs="1" />
+			<xs:element type='iepPlanPlacementTransportationType' name="transportation" minOccurs="0" maxOccurs="1" />
+			<xs:element type='iepPlanPlacementLeastRestrictiveEnvironmentType' name="leastRestrictiveEnvironment" minOccurs="0" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
 

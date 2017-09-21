@@ -67,7 +67,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListAccommodationType' name="accommodation" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListAccommodationType' name="accommodation" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -220,8 +220,8 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformanceAcademicDeficitListType' name="deficitList" minOccurs="1" maxOccurs="unbounded" />
-			<xs:element type='iepPlanPresentLevelPerformanceAcademicSummaryType' name="summary" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformanceAcademicDeficitListType' name="deficitList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformanceAcademicSummaryType' name="summary" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 

@@ -135,8 +135,8 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanPlacementScheduleModificationSchoolDayType' name="schoolDay" minOccurs="1" maxOccurs="1" />
-			<xs:element type='iepPlanPlacementScheduleModificationSchoolYearType' name="schoolYear" minOccurs="1" maxOccurs="1" />
+			<xs:element type='iepPlanPlacementScheduleModificationSchoolDayType' name="schoolDay" minOccurs="0" maxOccurs="1" />
+			<xs:element type='iepPlanPlacementScheduleModificationSchoolYearType' name="schoolYear" minOccurs="0" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
 

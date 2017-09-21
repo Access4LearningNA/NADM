@@ -24,9 +24,9 @@
 		<xs:complexContent>
 			<xs:extension base="gOtherSIFType">
 				<xs:sequence>
-					<xs:element type='iepEligabilityBackgroundType' name="background" minOccurs="1" maxOccurs="1" />
+					<xs:element type='iepEligabilityBackgroundType' name="background" minOccurs="0" maxOccurs="1" />
 					<xs:element type='iepEligabilityEvaluationResultListType' name="evaluationResultList" minOccurs="0" maxOccurs="unbounded" />
-					<xs:element type='iepEligabilityIdeaDisabilityType' name="ideaDisability" minOccurs="1" maxOccurs="1" />
+					<xs:element type='iepEligabilityIdeaDisabilityType' name="ideaDisability" minOccurs="0" maxOccurs="1" />
 					<xs:element type='iepEligabilityParticipantReportListType' name="eligabilityParticipantReportList" minOccurs="0" maxOccurs="unbounded">
 					</xs:element>
 				</xs:sequence>
