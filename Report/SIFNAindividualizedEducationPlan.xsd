@@ -27,10 +27,10 @@
 		<xs:complexContent>
 			<xs:extension base="gOtherSIFType">
 				<xs:sequence>
-					<xs:element name="iepAdministrativeData" type="iepAdministrativeDataType" />
-					<xs:element name="iepEligibility" type="iepEligibilityType" />
-					<xs:element name="iepPlan" type="iepPlanType" />
-					<xs:element name="iepHistory" type="iepHistory" />
+					<xs:element name="iepAdministrativeData" type="iepAdministrativeDataType" minOccurs="0" />
+					<xs:element name="iepEligibility" type="iepEligibilityType" minOccurs="0" />
+					<xs:element name="iepPlan" type="iepPlanType" minOccurs="0" />
+					<xs:element name="iepHistory" type="iepHistory" minOccurs="0" />
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
