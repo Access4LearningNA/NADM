@@ -164,7 +164,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementCriterionType' name="criterion" />
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementCriterionType' name="criterion" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -239,7 +239,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorType' name="facilitator" />
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorType' name="facilitator" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -315,7 +315,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType' name="measurableObjective" />
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType' name="measurableObjective" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 

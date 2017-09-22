@@ -34,7 +34,7 @@
 					<xs:element type='iepPlanEffectivePeriodType' name="effectivePeriod" minOccurs="0" maxOccurs="unbounded" />
 					<xs:element type='iepPlanEnrollmentGradeLevelType' name="enrollmentGradeLevel" minOccurs="0" maxOccurs="unbounded" />
 					<xs:element type='iepPlanPresentLevelPerformanceType' name="presentLevelPerformance" minOccurs="0" />
-					<xs:element type="iepPlanAnnualGoalListType" name="annualGoalsList" />
+					<xs:element type="iepPlanAnnualGoalListType" name="annualGoalsList" minOccurs="0" />
 					<xs:element type='iepPlanAccommodationsListType' name="accommodationsList" minOccurs="0" maxOccurs="unbounded" />
 					<xs:element type='iepPlanStandardizedAssessmentResultListType' name="standardizedAssessmentResultList" minOccurs="0" maxOccurs="unbounded" />
 					<xs:element type='iepPlanAmendmentListType' name="amendmentList" minOccurs="0" maxOccurs="unbounded" />

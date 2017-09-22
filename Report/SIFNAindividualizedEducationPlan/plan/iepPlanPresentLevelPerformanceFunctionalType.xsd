@@ -100,7 +100,7 @@
 					<xs:documentation> Discussion of the specific ways that disability interferes with the student?s outcome </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListType' name="accommodationList" />
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListType' name="accommodationList" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -207,7 +207,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType' name="disability" />
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType' name="disability" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 

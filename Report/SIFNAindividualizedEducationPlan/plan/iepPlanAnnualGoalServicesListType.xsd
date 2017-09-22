@@ -333,7 +333,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalServicesListServiceType' name="service" />
+			<xs:element type='iepPlanAnnualGoalServicesListServiceType' name="service" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 

@@ -111,8 +111,8 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanPlacementTransportationOutsideSchoolType' name="outsideSchool" />
-			<xs:element type='iepPlanPlacementTransportationInsideSchoolType' name="insideSchool" />
+			<xs:element type='iepPlanPlacementTransportationOutsideSchoolType' name="outsideSchool" minOccurs="0" />
+			<xs:element type='iepPlanPlacementTransportationInsideSchoolType' name="insideSchool" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 

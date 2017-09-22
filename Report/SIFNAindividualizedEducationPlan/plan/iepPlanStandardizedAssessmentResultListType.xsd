@@ -141,7 +141,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationAchievementStandardType' name="achievementStandard" />
+			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationAchievementStandardType' name="achievementStandard" minOccurs="0" />
 			<xs:element name="reason" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>

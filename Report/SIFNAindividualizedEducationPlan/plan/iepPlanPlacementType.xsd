@@ -66,7 +66,7 @@
 					<xs:documentation> Description of the specific arrangement and rationale </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanPlacementScheduleModificationType' name="scheduleModification" />
+			<xs:element type='iepPlanPlacementScheduleModificationType' name="scheduleModification" minOccurs="0" />
 			<xs:element type='iepPlanPlacementTransportationType' name="transportation" minOccurs="0" maxOccurs="1" />
 			<xs:element type='iepPlanPlacementLeastRestrictiveEnvironmentType' name="leastRestrictiveEnvironment" minOccurs="0" maxOccurs="1" />
 		</xs:sequence>

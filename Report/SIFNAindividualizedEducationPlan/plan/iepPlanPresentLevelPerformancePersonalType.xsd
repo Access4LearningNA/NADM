@@ -112,7 +112,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListDesiredOutcomeType' name="desiredOutcome" />
+			<xs:element type='iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListDesiredOutcomeType' name="desiredOutcome" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -229,7 +229,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListPersonalGoalType' name="personalGoal" />
+			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListPersonalGoalType' name="personalGoal" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 
