@@ -223,7 +223,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type="iepCommonParentGuardianType" name="parentGuardian" maxOccurs="unbounded" />
+			<xs:element type="iepCommonParentGuardianType" name="parentGuardian" maxOccurs="unbounded" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 

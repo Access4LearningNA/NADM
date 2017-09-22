@@ -97,7 +97,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyDurationType' name="duration" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyDurationType' name="duration" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -237,8 +237,8 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element type='iepPlanAnnualGoalServicesListServiceServiceProviderType' name="serviceProvider" minOccurs="1" maxOccurs="unbounded" />
-			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyType' name="frequency" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalServicesListServiceServiceProviderType' name="serviceProvider" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyType' name="frequency" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element name="startDate" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -333,7 +333,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalServicesListServiceType' name="service" />
+			<xs:element type='iepPlanAnnualGoalServicesListServiceType' name="service" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 

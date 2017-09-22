@@ -141,7 +141,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationAchievementStandardType' name="achievementStandard" />
+			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationAchievementStandardType' name="achievementStandard" minOccurs="0" />
 			<xs:element name="reason" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -175,7 +175,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationType' name="accommodation" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationType' name="accommodation" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -261,8 +261,8 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultStandardsReferenceType' name="standardsReference" minOccurs="1" maxOccurs="unbounded" />
-			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListType' name="accommodationList" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultStandardsReferenceType' name="standardsReference" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListType' name="accommodationList" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -280,7 +280,7 @@
 			<xs:documentation> Results of standardized assessments used to document current student performance </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultType' name="standardizedAssessmentResult" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultType' name="standardizedAssessmentResult" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 

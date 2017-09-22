@@ -72,7 +72,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListDataValueType' name="dataValue" />
+			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListDataValueType' name="dataValue" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -163,8 +163,8 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataNamesType' name="dataNames" />
-			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListType' name="dataValuesList" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataNamesType' name="dataNames" minOccurs="0" />
+			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListType' name="dataValuesList" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -202,7 +202,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementType' name="measurement" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementType' name="measurement" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element name="determination" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -262,7 +262,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportType' name="progressReport" />
+			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportType' name="progressReport" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 

@@ -19,9 +19,9 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element type="iepAdministrativeDataReevaluationDueDateType" name="reevaluationDueDate" />
+            <xs:element type="iepAdministrativeDataReevaluationDueDateType" name="reevaluationDueDate" minOccurs="0" />
             <xs:element type="iepCommonParentGuardianListType" name="parentGuardianList" minOccurs="0" />
-            <xs:element type="iepAdministrativeDataCostSharingType" name="costSharing" />
+            <xs:element type="iepAdministrativeDataCostSharingType" name="costSharing" minOccurs="0" />
         </xs:sequence>
     </xs:complexType>
 

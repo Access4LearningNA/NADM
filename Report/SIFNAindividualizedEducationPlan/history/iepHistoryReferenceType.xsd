@@ -64,7 +64,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepHistoryReferenceIepDatesType' name="iepDates">
+			<xs:element type='iepHistoryReferenceIepDatesType' name="iepDates" minOccurs="0" >
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>

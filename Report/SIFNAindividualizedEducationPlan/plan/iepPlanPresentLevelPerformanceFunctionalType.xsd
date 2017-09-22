@@ -67,7 +67,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListAccommodationType' name="accommodation" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListAccommodationType' name="accommodation" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -100,7 +100,7 @@
 					<xs:documentation> Discussion of the specific ways that disability interferes with the student?s outcome </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListType' name="accommodationList" />
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListType' name="accommodationList" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -207,7 +207,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType' name="disability" />
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType' name="disability" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -227,8 +227,8 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListType' name="disabilityList" minOccurs="1" maxOccurs="unbounded" />
-			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryType' name="summary" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListType' name="disabilityList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryType' name="summary" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 
