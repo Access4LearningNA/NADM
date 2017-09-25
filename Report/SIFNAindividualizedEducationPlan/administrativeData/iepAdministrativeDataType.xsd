@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- start redundant declaration  for SIF tool analysis -->
+		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<!-- end redundant declaration for SIF tool analysis -->
+
 
 	<xs:include schemaLocation="iepAdministrativeDataReevaluationDueDateType.xsd" />
 	<xs:include schemaLocation="iepAdministrativeDataCostSharingType.xsd" />
@@ -18,11 +25,18 @@
                 Administrative and demographic data supporting Special Education students
             </xs:documentation>
         </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="gOtherSIFType">
         <xs:sequence>
+            <xs:element type="studentType" name="student" minOccurs="0" />
+			<xs:element name="studentRefId" type="gRefIdPointerType" minOccurs="0" />
+			
             <xs:element type="iepAdministrativeDataReevaluationDueDateType" name="reevaluationDueDate" minOccurs="0" />
             <xs:element type="iepCommonParentGuardianListType" name="parentGuardianList" minOccurs="0" />
             <xs:element type="iepAdministrativeDataCostSharingType" name="costSharing" minOccurs="0" />
         </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
 
 </xs:schema>
