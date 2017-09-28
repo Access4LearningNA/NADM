@@ -3,6 +3,7 @@
 
 	<xs:include schemaLocation="iepAdministrativeDataReevaluationDueDateType.xsd" />
 	<xs:include schemaLocation="iepAdministrativeDataCostSharingType.xsd" />
+    <xs:include schemaLocation="../iepCommonTypes.xsd" />
 
 	<!-- local parent type -->
     <xs:complexType name="iepAdministrativeDataType">
