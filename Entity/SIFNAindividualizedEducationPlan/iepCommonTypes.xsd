@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<!-- start redundant declaration  for SIF tool analysis -->
+		<xs:include schemaLocation="../../SIFglobal.xsd"/>
+		<xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd" />
+		<xs:include schemaLocation="../../Composite/SIFNAxPress.xsd" />
+
+	<!-- end redundant declaration for SIF tool analysis -->
+
+
+	<xs:include schemaLocation="../../SIFglobalBaseTypes.xsd" />
+	<xs:include schemaLocation="../../SIFglobalCommonTypes.xsd" />
+	<xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd" />
+
+	<xs:complexType name="iepCommonAuthorizingPersonType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Authorization
+				</elementName>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>b4512e48-2ff9-41cf-8433-428ca1b9d1d8</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Proved Identity Information
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="identity" type="xs:normalizedString" minOccurs="0" />
+			<xs:element name="certification" type="xs:normalizedString" minOccurs="0" />
+
+			<xs:element name="date" type="xs:date" minOccurs="0">
+
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Authorization Date</elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>001725</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001725</cedsURL>
+
+						<definitionRefId>aaa98d1f-7779-46e8-8b4c-77a4466e5037</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>Date authorization was made.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="contactInfo" type="xs:normalizedString" minOccurs="0" />
+			<xs:element name="intrinsicRole" type="xs:normalizedString" minOccurs="0" />
+			<!-- teacher, parent, doctor, principal -->
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name='iepCommonParentGuardianListType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					List of Guardians
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>cccd8379-e693-4cd7-805c-41b82271395f</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Documentation produced by people who have participated in the eligibility determination
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="xContactType" name="parentGuardian" maxOccurs="unbounded" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Parent or Guardian</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL></cedsURL>
+					</xs:appinfo>
+					<xs:documentation>People responsible for the student. Preferably a duplicate of the contact list in the student object but as IEPs are commonly created in a system separate from the SIS, this may not be the case.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

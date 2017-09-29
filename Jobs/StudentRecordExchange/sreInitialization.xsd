@@ -1,5 +1,5 @@
 <!-- version 3.03.02 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.4" targetNamespace="http://www.sifassociation.org/datamodel/na/3.4" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sifassociation.org/datamodel/na/3.5" targetNamespace="http://www.sifassociation.org/datamodel/na/3.5" elementFormDefault="qualified">
   <xs:include schemaLocation="../../SIFglobal.xsd"/>
   <xs:complexType name="sreInitializationType">
     <xs:annotation>
