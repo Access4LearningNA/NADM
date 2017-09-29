@@ -32,9 +32,12 @@
         <xs:complexContent>
             <xs:extension base="gOtherSIFType">
         <xs:sequence>
-            <xs:element type="xStudentType" name="xStudent" minOccurs="0" />
+            <xs:element type="xStudentType" name="xStudent" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The opportunity to include student information is intended for situtations where is not avaliable seperately.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
 			<xs:element name="studentRefId" type="gRefIdPointerType" minOccurs="0" />
-			
             <xs:element type="iepAdministrativeDataReevaluationDueDateType" name="reevaluationDueDate" minOccurs="0" />
             <xs:element type="iepCommonParentGuardianListType" name="parentGuardianList" minOccurs="0" />
             <xs:element type="iepAdministrativeDataCostSharingType" name="costSharing" minOccurs="0" />
