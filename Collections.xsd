@@ -8,7 +8,7 @@
 	<xs:include schemaLocation="Report/SIFNAReportObjects.xsd"/>
 	<xs:include schemaLocation="Jobs/StudentLocator/StudentLocatorResponse.xsd"/>
 	
-	<xs:include schemaLocation="Report/SIFNAindividualizedEducationPlan.xsd"/>
+	<xs:include schemaLocation="Entity/SIFNAindividualizedEducationPlan.xsd"/>
 
 	<!--This file is made up of the so-called Collection Objects. Each Collection is a wrapper for multiple instances of a single object. This is done to make REST calls more REST-like. -->
 	<!--Entity Objects-->

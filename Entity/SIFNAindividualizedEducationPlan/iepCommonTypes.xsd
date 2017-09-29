@@ -71,7 +71,17 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type="xContactType" name="parentGuardian" maxOccurs="unbounded" minOccurs="0" />
+			<xs:element type="xContactType" name="parentGuardian" maxOccurs="unbounded" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Parent or Guardian</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL></cedsURL>
+					</xs:appinfo>
+					<xs:documentation>People responsible for the student. Preferably a duplicate of the contact list in the student object but as IEPs are commonly created in a system separate from the SIS, this may not be the case.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 

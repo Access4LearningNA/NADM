@@ -34,7 +34,7 @@
         <xs:sequence>
             <xs:element type="xStudentType" name="xStudent" minOccurs="0">
                 <xs:annotation>
-                    <xs:documentation>The opportunity to include student information is intended for situations where is not available separately.</xs:documentation>
+                    <xs:documentation>Provided to allow a complete data structure when the xIndividualizeEducationPlan is used for transfer. This is an alternative to the studentRefId though both may be present.</xs:documentation>
                 </xs:annotation>
             </xs:element>
 			<xs:element name="studentRefId" type="gRefIdPointerType" minOccurs="0">
@@ -45,7 +45,7 @@
 			            <cedsId/>
 			            <cedsURL></cedsURL>
 			        </xs:appinfo>
-			        <xs:documentation>This is the reference identifier of the student, for when the student record is expected to be retrievable.</xs:documentation>
+			        <xs:documentation>This is the reference identifier of the student, for when the student record is expected to be retrievable. This is an alternative to the student though both may be present.</xs:documentation>
 			    </xs:annotation>			    
 			</xs:element>
             <xs:element type="iepAdministrativeDataReevaluationDueDateType" name="reevaluationDueDate" minOccurs="0" />
