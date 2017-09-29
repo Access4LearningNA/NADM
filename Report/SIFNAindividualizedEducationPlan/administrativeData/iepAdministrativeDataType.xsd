@@ -13,6 +13,7 @@
 	<xs:include schemaLocation="iepAdministrativeDataReevaluationDueDateType.xsd" />
 	<xs:include schemaLocation="iepAdministrativeDataCostSharingType.xsd" />
     <xs:include schemaLocation="../iepCommonTypes.xsd" />
+    <xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 
 	<!-- local parent type -->
     <xs:complexType name="iepAdministrativeDataType">
@@ -31,7 +32,7 @@
         <xs:complexContent>
             <xs:extension base="gOtherSIFType">
         <xs:sequence>
-            <xs:element type="studentType" name="student" minOccurs="0" />
+            <xs:element type="xStudentType" name="xStudent" minOccurs="0" />
 			<xs:element name="studentRefId" type="gRefIdPointerType" minOccurs="0" />
 			
             <xs:element type="iepAdministrativeDataReevaluationDueDateType" name="reevaluationDueDate" minOccurs="0" />
