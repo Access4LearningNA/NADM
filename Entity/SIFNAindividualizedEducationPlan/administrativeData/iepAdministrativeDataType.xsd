@@ -1,61 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-    <!-- start redundant declaration  for SIF tool analysis -->
-    <xs:include schemaLocation="../../../SIFglobal.xsd"/>
-    <xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-    <xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-    <xs:include schemaLocation="../iepCommonTypes.xsd" />
-    
-    <xs:include schemaLocation="../../../Entity/SIFNAEntityObjects.xsd" />
-    
-    <!-- end redundant declaration for SIF tool analysis -->   
+	<!-- start redundant declaration  for SIF tool analysis -->
+	<xs:include schemaLocation="../../../SIFglobal.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 
-    <xs:include schemaLocation="iepAdministrativeDataReevaluationDueDateType.xsd" />
-    <xs:include schemaLocation="iepAdministrativeDataCostSharingType.xsd" />
-    <xs:include schemaLocation="iepPermissionToTransferType.xsd" />
-    <xs:include schemaLocation="../iepCommonTypes.xsd" />
-    <xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../../../Entity/SIFNAEntityObjects.xsd" />
+
+	<!-- end redundant declaration for SIF tool analysis -->
+
+	<xs:include schemaLocation="iepAdministrativeDataCostSharingType.xsd" />
+	<xs:include schemaLocation="iepPermissionToTransferType.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 
 	<!-- local parent type -->
-    <xs:complexType name="iepAdministrativeDataType">
-        <xs:annotation>
-            <xs:appinfo>
-                <elementName>Special Education</elementName>
-                <sifChar>O</sifChar>
-                <cedsId/>
-                <cedsURL/>
-                <definitionRefId>7475bb58-0cae-433c-84ae-780ebb32eb73</definitionRefId>
-            </xs:appinfo>
-            <xs:documentation>
-                Administrative and demographic data supporting Special Education students
-            </xs:documentation>
-        </xs:annotation>
-        <xs:complexContent>
-            <xs:extension base="gOtherSIFType">
-        <xs:sequence>
-            <xs:element type="xStudentType" name="xStudent" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation>Provided to allow a complete data structure when the xIndividualizeEducationPlan is used for transfer. This is an alternative to the studentRefId though both may be present.</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-			<xs:element name="studentRefId" type="gRefIdPointerType" minOccurs="0">
-			    <xs:annotation>
-			        <xs:appinfo>
-			            <elementName>Student Reference Identifier</elementName>
-			            <sifChar>O</sifChar>
-			            <cedsId/>
-			            <cedsURL></cedsURL>
-			        </xs:appinfo>
-			        <xs:documentation>This is the reference identifier of the student, for when the student record is expected to be retrievable. This is an alternative to the student though both may be present.</xs:documentation>
-			    </xs:annotation>			    
-			</xs:element>
-            <xs:element type="iepAdministrativeDataReevaluationDueDateType" name="reevaluationDueDate" minOccurs="0" />
-            <xs:element type="iepCommonParentGuardianListType" name="parentGuardianList" minOccurs="0" />
-            <xs:element type="iepAdministrativeDataCostSharingType" name="costSharing" minOccurs="0" />
-            <xs:element type="iepPermissionToTransferType" name="costSharing" minOccurs="0" />
-        </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
+	<xs:complexType name="iepAdministrativeDataType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>Special Education</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>7475bb58-0cae-433c-84ae-780ebb32eb73</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Administrative and demographic data supporting Special Education students
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gOtherSIFType">
+				<xs:sequence>
+					<xs:element type="xStudentType" name="xStudent" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Provided to allow a complete data structure when the xIndividualizeEducationPlan is used for transfer. This is an alternative to the studentRefId though both may be present.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="studentRefId" type="gRefIdPointerType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Student Reference Identifier</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL></cedsURL>
+							</xs:appinfo>
+							<xs:documentation>This is the reference identifier of the student, for when the student record is expected to be retrievable. This is an alternative to the student though both may be present.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element type="xs:date" name="reevaluationDueDate" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>
+									Date of next evaluation
+								</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+								<definitionRefId>61015b82-155f-4db9-8ecc-e845d62883fe</definitionRefId>
+							</xs:appinfo>
+							<xs:documentation>The date that the next evaluation is due based on the three year cycle.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+
+					<xs:element type="iepCommonParentGuardianListType" name="parentGuardianList" minOccurs="0" />
+					<xs:element type="iepAdministrativeDataCostSharingType" name="costSharing" minOccurs="0" />
+					<xs:element type="iepPermissionToTransferType" name="costSharing" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 
 </xs:schema>
