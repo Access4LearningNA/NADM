@@ -85,4 +85,67 @@
 		</xs:sequence>
 	</xs:complexType>
 
+
+
+	<xs:complexType name='iepCommonServiceProviderType'>
+
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					ServiceProvider
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>0e9264b4-ff0e-4011-aa57-39ef0594a7df</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Identity and role of person rendering support services
+			</xs:documentation>
+		</xs:annotation>
+
+		<xs:sequence>
+			<xs:element name="identity" type="gStaffPersonType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Identity
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>0a77dcf2-5895-42b4-b547-f1e9101ea9be</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Service Provider Identity
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="role" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Role
+						</elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>000558</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000558</cedsURL>
+
+						<definitionRefId>05e2d887-6dbf-4bfb-bd91-f050b818f106</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Professional specialty applicable to the support of this goal.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="Counselor" />
+						<xs:enumeration value="ReadingSpecialist" />
+						<!-- is this list correct? tqii -->
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>
