@@ -99,17 +99,40 @@
 						<definitionRefId>3c9278fe-457a-40cc-96e0-490b9661670f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						EXPLANATION
+						The focus of the goal.
 					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="Academic" />
-						<xs:enumeration value="Functional" />
-						<xs:enumeration value="Transitional" />
-						<!-- is this the right list? tqii -->
+						<xs:enumeration value="intellectual" />
+						<xs:enumeration value="academic" />
+						<xs:enumeration value="social/emotional/behavioral" />
+						<xs:enumeration value="communication" />
+						<xs:enumeration value="motor" />
+						<xs:enumeration value="functional skills" />
+						<xs:enumeration value="sensory status" />
+						<xs:enumeration value="physical status" />
+						<xs:enumeration value="other" />
 					</xs:restriction>
 				</xs:simpleType>
+			</xs:element>
+			<xs:element type='xs:string' name="otherDescription" minOccurs="0" >
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							otherDescription
+						</elementName>
+						<sifChar>O</sifChar>
+						
+						<cedsId/>
+						<cedsURL/>
+						
+						<definitionRefId>ddd278fe-457a-40cc-96e0-490b9661670f</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						The focus of the goal when 'other' is chosen.
+					</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 			<xs:element type='iepPlanAnnualGoalGoalStandardsReferenceType' name="standardsReference" minOccurs="0" />
 		</xs:sequence>

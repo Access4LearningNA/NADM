@@ -193,7 +193,7 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element name="identity" type="gStaffPersonType" minOccurs="0">
+			<xs:element name="identity" type="xContactType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>

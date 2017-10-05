@@ -88,7 +88,7 @@
 				</xs:annotation>
 
 			</xs:element>
-			<xs:element name="contactInfo" type="gContactPersonType" minOccurs="0">
+			<xs:element name="contactInfo" type="xContactType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
