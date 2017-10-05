@@ -89,7 +89,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="other" type="gPartyType" minOccurs="0">
+			<xs:element name="other" type="xPartyType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Other Recipient </elementName>
