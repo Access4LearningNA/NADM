@@ -1110,23 +1110,50 @@ CEDS Equivalent: Charter School Indicator 000039, Charter School Type 000710.</x
 		</xs:sequence>
 		<xs:attribute name="refId" type="gRefIdType" use="required"/>
 	</xs:complexType>
+
+	<xs:complexType name="gSIF_BaseType">
+		<xs:annotation>
+			<xs:appinfo>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>This is the root entity of SIF objects. It is the highest level object in the SIF Conceptual Model for Education.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0">
+			<xs:any namespace="##other" processContents="lax" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>SIF extension point</xs:documentation>
+				</xs:annotation>
+			</xs:any>
+		</xs:sequence>
+	</xs:complexType>
+	
 	<xs:complexType name="gSIF_EntityType">
 		<xs:annotation>
 			<xs:appinfo>
 				<cedsId/>
 				<cedsURL/>
 			</xs:appinfo>
-			<xs:documentation>This is the root entity of SIF entity objects. It is the highest level Entity in the SIF Conceptual Model for Education.</xs:documentation>
+			<xs:documentation>This is the root entity of SIF entity objects. It is the highest level for Entities that need to be referenced by a RefId.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence minOccurs="0">
 			<xs:any namespace="##other" processContents="lax" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>SIF extention point</xs:documentation>
+					<xs:documentation>SIF extension point</xs:documentation>
 				</xs:annotation>
 			</xs:any>
 		</xs:sequence>
 		<xs:attribute name="refId" type="gRefIdType" use="required"/>
 	</xs:complexType>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<xs:complexType name="gSIF_ReportType">
 		<xs:annotation>
 			<xs:documentation>The root object of SIF Report objects. The refId for report-type objects is transient.  That is, its value is generated at the time the object is created and is not expected to have any persistent meaning. </xs:documentation>
