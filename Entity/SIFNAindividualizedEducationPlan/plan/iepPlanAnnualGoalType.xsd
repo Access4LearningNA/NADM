@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
 
 
@@ -31,48 +31,44 @@
 				Simple Yes/No and explanation for indicating assent or rejection
 			</xs:documentation>
 		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="gOtherSIFType">
-				<xs:sequence>
-					<xs:element name="accepted" type="xs:boolean" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>
-									Accepts
-								</elementName>
-								<sifChar>O</sifChar>
+		<xs:sequence>
+			<xs:element name="accepted" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Accepts
+						</elementName>
+						<sifChar>O</sifChar>
 
-								<cedsId>001721</cedsId>
-								<cedsURL>https://ceds.ed.gov/element/001721</cedsURL>
+						<cedsId>001721</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001721</cedsURL>
 
-								<definitionRefId>a86999db-6823-401c-9d89-7c1aad6206e2</definitionRefId>
-							</xs:appinfo>
-							<xs:documentation>
-								Item is acceptable to parent
-							</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="comment" type="xs:normalizedString" minOccurs="0">
-						<xs:annotation>
-							<xs:appinfo>
-								<elementName>
-									Comment
-								</elementName>
-								<sifChar>O</sifChar>
+						<definitionRefId>a86999db-6823-401c-9d89-7c1aad6206e2</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Item is acceptable to parent
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="comment" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Comment
+						</elementName>
+						<sifChar>O</sifChar>
 
-								<cedsId>001722</cedsId>
-								<cedsURL>https://ceds.ed.gov/element/001722</cedsURL>
+						<cedsId>001722</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001722</cedsURL>
 
-								<definitionRefId>b7b7e385-98ab-41d7-ac7d-230137c04b20</definitionRefId>
-							</xs:appinfo>
-							<xs:documentation>
-								Comment on item and acceptance or rejection
-							</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
+						<definitionRefId>b7b7e385-98ab-41d7-ac7d-230137c04b20</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Comment on item and acceptance or rejection
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
 	</xs:complexType>
 
 	<xs:complexType name='iepPlanAnnualGoalType'>

@@ -30,7 +30,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gOtherSIFType">
+			<xs:extension base="gSIF_BaseType">
 				<xs:sequence>
 					<xs:element type="xStudentType" name="xStudent" minOccurs="0">
 						<xs:annotation>

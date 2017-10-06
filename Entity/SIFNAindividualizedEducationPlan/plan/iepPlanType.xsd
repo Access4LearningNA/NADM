@@ -36,7 +36,7 @@
 			<xs:documentation> Administrative and demographic data supporting Special Education students </xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gOtherSIFType">
+			<xs:extension base="gSIF_BaseType">
 				<xs:sequence>
 					<xs:element type='iepPlanEffectivePeriodType' name="effectivePeriod" minOccurs="0" maxOccurs="unbounded" />
 					<xs:element type='iepPlanEnrollmentGradeLevelType' name="enrollmentGradeLevel" minOccurs="0" maxOccurs="unbounded" />

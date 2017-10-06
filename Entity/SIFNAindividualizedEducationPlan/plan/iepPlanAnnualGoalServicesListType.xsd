@@ -238,7 +238,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="extendsSchoolYEar" type="xs:boolean" minOccurs="0">
+			<xs:element name="extendsSchoolYear" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>

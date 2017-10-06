@@ -29,7 +29,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
-			<xs:extension base="gOtherSIFType">
+			<xs:extension base="gSIF_BaseType">
 				<xs:sequence>
 					<xs:element type='iepEligabilityBackgroundType' name="background" minOccurs="0" maxOccurs="1" />
 					<xs:element type='iepEligabilityEvaluationResultListType' name="evaluationResultList" minOccurs="0" maxOccurs="unbounded" />

@@ -63,7 +63,7 @@
 			<xs:documentation> Person or organization that is the intended recipient </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="lea" type="gLEAType" minOccurs="0">
+			<xs:element name="lea" type="xLeaType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Permitting Parent </elementName>
@@ -89,7 +89,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="other" type="gPartyType" minOccurs="0">
+			<xs:element name="other" type="xPartyType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Other Recipient </elementName>

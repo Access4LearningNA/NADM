@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
 
 
@@ -186,14 +186,10 @@
 			</xs:appinfo>
 			<xs:documentation> Legal response and authorization to implement all or part of a plan </xs:documentation>
 		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="gOtherSIFType">
-				<xs:sequence>
-					<xs:element type='authorizingOfficialsList' name="authorizingOfficialsList" minOccurs="0" />
-					<xs:element type='iepPlanCommonAuthorizationParentAuthorization' name="parentAuthorization" minOccurs="0" maxOccurs="1" />
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
+		<xs:sequence>
+			<xs:element type='authorizingOfficialsList' name="authorizingOfficialsList" minOccurs="0" />
+			<xs:element type='iepPlanCommonAuthorizationParentAuthorization' name="parentAuthorization" minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
 	</xs:complexType>
 
 </xs:schema>
