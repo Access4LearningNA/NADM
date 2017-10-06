@@ -57,9 +57,14 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
+						<xs:enumeration value="OccupationalTherapist" />
+						<xs:enumeration value="PhysicalTherapist" />
+						<xs:enumeration value="SchoolNurse" />
+						<xs:enumeration value="AdminDesignee" />
+						<xs:enumeration value="DevelopmentalAdaptivePhysicalEducation" />
 						<xs:enumeration value="Parent" />
 						<xs:enumeration value="Student" />
-						<xs:enumeration value="LEARep" />
+						<xs:enumeration value="LeaRep" />
 						<xs:enumeration value="GeneralEdTeacher" />
 						<xs:enumeration value="SpecialEdTeacher" />
 						<xs:enumeration value="SchoolPsychologist" />
