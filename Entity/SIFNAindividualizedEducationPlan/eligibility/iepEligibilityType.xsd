@@ -35,7 +35,6 @@
 					<xs:element type='iepEligabilityEvaluationResultListType' name="evaluationResultList" minOccurs="0" maxOccurs="unbounded" />
 					<xs:element type='iepEligabilityIdeaDisabilityType' name="ideaDisability" minOccurs="0" maxOccurs="1" />
 					<xs:element type='iepEligabilityParticipantReportListType' name="eligabilityParticipantReportList" minOccurs="0" maxOccurs="unbounded" />
-					
 					<xs:element name="lifecyclePurpose" nillable="true" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
@@ -43,7 +42,6 @@
 								<sifChar>O</sifChar>
 								<cedsId>001728</cedsId>
 								<cedsURL>https://ceds.ed.gov/element/001728</cedsURL>
-								
 								<definitionRefId>b7aa2611-ed5a-4268-ad89-a1f9a5cf40e5</definitionRefId>
 							</xs:appinfo>
 							<xs:documentation>Purpose within the IEP lifecycle for which the eligibility evaluation is conducted.</xs:documentation>
@@ -54,6 +52,22 @@
 								<xs:enumeration value="Reevaluation" />
 							</xs:restriction>
 						</xs:simpleType>
+					</xs:element>
+					<xs:element name="determination" type="xs:normalizedString" minOccurs="0" >
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>
+									Eligibility Determination
+								</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+								<definitionRefId>eee3677d-c721-4bd5-9ab4-f3556040f31b</definitionRefId>
+							</xs:appinfo>
+							<xs:documentation>
+								Explanation for how the student's condition meets the criteria for disability.
+							</xs:documentation>
+						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
 			</xs:extension>
