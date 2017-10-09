@@ -49,10 +49,26 @@
 						<definitionRefId>0db3677d-c721-4bd5-9ab4-f3556040f31b</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Description of the overall changes needed for the student�s educational program
+						Description of the overall changes needed for the student's educational program
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="accommodation" type="xs:normalizedString" minOccurs="0" >
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Accommodations
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>0db3677d-c721-4bd5-9ab4-f3556040f31b</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Description of the accommodation needed to optimize the student's potential for learning.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>		
 			<xs:element name="otherInformation" type="xs:normalizedString" minOccurs="0" >
 				<xs:annotation>
 					<xs:appinfo>
@@ -504,7 +520,23 @@
 						List of legal identifiers for disabilities found.
 					</xs:documentation>
 				</xs:annotation>
-
+					<xs:simpleType>
+						<xs:restriction base="xs:token">
+							<xs:enumeration value="autism"/>
+							<xs:enumeration value="deaf blindness"/>
+							<xs:enumeration value="developmental delay"/>
+							<xs:enumeration value="hearing impairment"/>
+							<xs:enumeration value="mental retardation"/>
+							<xs:enumeration value="multiple disabilities"/>
+							<xs:enumeration value="orthopedic impairment"/>
+							<xs:enumeration value="serious emotional disturbance"/>
+							<xs:enumeration value="specific learning disabilities"/>
+							<xs:enumeration value="speech or language impairment"/>
+							<xs:enumeration value="traumatic brain injury"/>
+							<xs:enumeration value="visual impairment"/>
+							<xs:enumeration value="Other"/>
+						</xs:restriction>
+					</xs:simpleType>
 			</xs:element>
 			<xs:element type='iepEligabilityIdeaDisabilityAnalysisType' name="analysis" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element type='iepEligabilityIdeaDisabilitySpecificLearningDisabilitySpecialDiagnosisJustificationsType' name="SpecialDiagnosisJustifications" minOccurs="0" />
