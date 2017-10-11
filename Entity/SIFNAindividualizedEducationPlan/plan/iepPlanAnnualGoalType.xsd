@@ -105,6 +105,11 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element type='iepPlanAnnualGoalGoalType' name="goalType" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListType' name="measurableObjectiveList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalIndependentActionsListType' name="independentActionsList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalServicesListType' name="servicesList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAnnualGoalProgressReportListType' name="progressReportList" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element type="iepPlanAnnualGoalListParentAcceptanceType" name="parentAcceptance" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:appinfo>
@@ -121,11 +126,6 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanAnnualGoalGoalType' name="goalType" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListType' name="measurableObjectiveList" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type='iepPlanAnnualGoalIndependentActionsListType' name="independentActionsList" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type='iepPlanAnnualGoalServicesListType' name="servicesList" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type='iepPlanAnnualGoalProgressReportListType' name="progressReportList" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 
