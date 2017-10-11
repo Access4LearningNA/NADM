@@ -534,10 +534,12 @@
 							<xs:enumeration value="speech or language impairment"/>
 							<xs:enumeration value="traumatic brain injury"/>
 							<xs:enumeration value="visual impairment"/>
+							<xs:enumeration value="Student Needing Alternate Programming (SNAP)"/>
 							<xs:enumeration value="Other"/>
 						</xs:restriction>
 					</xs:simpleType>
 			</xs:element>
+			<xs:element type='xs:string' name="snapExplanation" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element type='iepEligabilityIdeaDisabilityAnalysisType' name="analysis" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element type='iepEligabilityIdeaDisabilitySpecificLearningDisabilitySpecialDiagnosisJustificationsType' name="SpecialDiagnosisJustifications" minOccurs="0" />
 			<xs:element type='iepEligabilityIdeaDisabilityDecisionsType' name="decisions" minOccurs="0" />
