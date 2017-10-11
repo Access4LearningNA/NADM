@@ -38,7 +38,7 @@
 						<definitionRefId>5e7dc910-05b3-4f5a-947e-05a070b3ccb2</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Effective beginning of the IEP
+						IEP Start Date
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -54,7 +54,23 @@
 						<definitionRefId>0382a648-670b-4e98-9afc-e2e873ce5b7c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Effective end date of the IEP
+						IEP End Date
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="evaluationDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							End
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>ccc2a648-670b-4e98-9afc-e2e873ce5b7c</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Evaluation Date
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
