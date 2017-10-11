@@ -112,7 +112,7 @@
 						<xs:enumeration value="functional skills" />
 						<xs:enumeration value="sensory status" />
 						<xs:enumeration value="physical status" />
-						<xs:enumeration value="transitional skills" />
+						<xs:enumeration value="transition skills" />
 						<xs:enumeration value="other" />
 					</xs:restriction>
 				</xs:simpleType>
