@@ -79,7 +79,7 @@
 						<definitionRefId>36484433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Text description of non-standard grade level designation
+						Text description of other, ungraded or non-standard grade level.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
