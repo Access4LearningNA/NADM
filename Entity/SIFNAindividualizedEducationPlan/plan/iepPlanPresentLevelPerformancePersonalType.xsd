@@ -440,11 +440,28 @@
 						<sifChar>O</sifChar>
 						<cedsId>001711</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001711</cedsURL>
-
+						
 						<definitionRefId>a53760e7-82c9-47e9-85f9-1df5961e188e</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Student?s explanation of his or her interest in participation in special education
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="background" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Background
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						
+						<definitionRefId>ccc760e7-82c9-47e9-85f9-1df5961e188e</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Other useful information
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
