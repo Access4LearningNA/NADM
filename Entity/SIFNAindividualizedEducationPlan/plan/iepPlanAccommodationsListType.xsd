@@ -106,7 +106,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element type='iepPlanAccommodationsListAccommodationApplicabiltyListType' name="applicabiltyList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAccommodationsListAccommodationApplicabiltyListType' name="applicabilityList" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element name="justification" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
