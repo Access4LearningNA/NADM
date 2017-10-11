@@ -43,10 +43,9 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="AdultLiving" />
+						<xs:enumeration value="IndependentLiving" />
 						<xs:enumeration value="Post-secondary" />
 						<xs:enumeration value="WorkingEnvironment" />
-						<!-- is this list correct? tqii -->
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -349,7 +348,7 @@
 						<definitionRefId>2da06ca3-dedc-40b1-b436-8c79514a83fd</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						C
+						Characterization of a deficit, disability or problem.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
