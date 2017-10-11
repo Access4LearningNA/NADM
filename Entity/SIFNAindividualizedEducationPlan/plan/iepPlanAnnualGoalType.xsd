@@ -86,7 +86,6 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type="xs:normalizedString" name="currentPerformance" minOccurs="0" />
 			<xs:element type="xs:normalizedString" name="currentStatus" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -101,7 +100,7 @@
 						<definitionRefId>90e1982e-8ac9-4b10-89ee-17cafd2e73fb</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Explanation of the student's current status relative to this goal.
+						Description of status toward achievement of the annual goal or short-term objectives.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
