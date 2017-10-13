@@ -17,11 +17,11 @@
 				<cedsURL/>
 				<definitionRefId>7b95b85e-7d81-41cd-bee6-1732b32438b5</definitionRefId>
 			</xs:appinfo>
-			<xs:documentation> Situations where the accommodation should be made available
+			<xs:documentation> List of circumstances in which the accommodation or change to standards or practices will be applied.
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="applicability" minOccurs="0">
+			<xs:element name="applicability" type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Applicability </elementName>
@@ -32,20 +32,9 @@
 
 						<definitionRefId>39f28586-51ee-4b56-9743-63fa029d8a5d</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Situation where the accommodation is be made available
+					<xs:documentation> Circumstances in which the accommodation or change to standards or practices will be applied.
 					</xs:documentation>
 				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="Reading" />
-						<xs:enumeration value="English" />
-						<xs:enumeration value="Spelling" />
-						<xs:enumeration value="Math" />
-						<xs:enumeration value="Autistic-Communication" />
-						<xs:enumeration value="AutisticSocial-Interaction" />
-						<xs:enumeration value="Autistic-Sensory-Experience" />
-					</xs:restriction>
-				</xs:simpleType>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
@@ -62,10 +51,10 @@
 			<xs:documentation> Changes to the environment that remove barriers to learning </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="supportType" minOccurs="0">
+			<xs:element name="accommodationType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Support Type </elementName>
+						<elementName> Accommodation Type </elementName>
 						<sifChar>O</sifChar>
 
 						<cedsId>000385</cedsId>
@@ -73,56 +62,133 @@
 
 						<definitionRefId>a9a699fa-9e69-4d22-a608-df104f06d850</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Specific environmental change or support required </xs:documentation>
+					<xs:documentation> The specific accommodation necessary for assessment or instruction. </xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="No-type" />
-						<xs:enumeration value="Braille" />
-						<xs:enumeration value="LargeType" />
-						<xs:enumeration value="PriorNoticeOfTest/quizzes" />
-						<xs:enumeration value="ExtraTime" />
-						<xs:enumeration value="IndividualInstruction" />
-						<!-- Is this the correct list? tqii -->
+						<xs:enumeration value="03513"/>
+						<xs:enumeration value="00461"/>
+						<xs:enumeration value="00462"/>
+						<xs:enumeration value="03514"/>
+						<xs:enumeration value="13803"/>
+						<xs:enumeration value="13793"/>
+						<xs:enumeration value="03515"/>
+						<xs:enumeration value="03517"/>
+						<xs:enumeration value="75005"/>
+						<xs:enumeration value="03519"/>
+						<xs:enumeration value="03518"/>
+						<xs:enumeration value="75006"/>
+						<xs:enumeration value="13791"/>
+						<xs:enumeration value="00463"/>
+						<xs:enumeration value="03522"/>
+						<xs:enumeration value="75007"/>
+						<xs:enumeration value="03524"/>
+						<xs:enumeration value="13800"/>
+						<xs:enumeration value="03525"/>
+						<xs:enumeration value="03526"/>
+						<xs:enumeration value="03527"/>
+						<xs:enumeration value="03528"/>
+						<xs:enumeration value="03529"/>
+						<xs:enumeration value="75008"/>
+						<xs:enumeration value="03530"/>
+						<xs:enumeration value="03531"/>
+						<xs:enumeration value="03533"/>
+						<xs:enumeration value="13795"/>
+						<xs:enumeration value="00937"/>
+						<xs:enumeration value="00464"/>
+						<xs:enumeration value="03534"/>
+						<xs:enumeration value="00465"/>
+						<xs:enumeration value="13797"/>
+						<xs:enumeration value="03535"/>
+						<xs:enumeration value="13789"/>
+						<xs:enumeration value="03536"/>
+						<xs:enumeration value="03537"/>
+						<xs:enumeration value="03538"/>
+						<xs:enumeration value="03539"/>
+						<xs:enumeration value="13790"/>
+						<xs:enumeration value="13805"/>
+						<xs:enumeration value="13798"/>
+						<xs:enumeration value="13804"/>
+						<xs:enumeration value="75009"/>
+						<xs:enumeration value="13796"/>
+						<xs:enumeration value="75010"/>
+						<xs:enumeration value="03541"/>
+						<xs:enumeration value="75011"/>
+						<xs:enumeration value="13792"/>
+						<xs:enumeration value="03543"/>
+						<xs:enumeration value="03544"/>
+						<xs:enumeration value="00469"/>
+						<xs:enumeration value="03545"/>
+						<xs:enumeration value="13802"/>
+						<xs:enumeration value="03546"/>
+						<xs:enumeration value="09999"/>
+						<xs:enumeration value="03547"/>
+						<xs:enumeration value="03548"/>
+						<xs:enumeration value="00471"/>
+						<xs:enumeration value="13801"/>
+						<xs:enumeration value="03549"/>
+						<xs:enumeration value="03550"/>
+						<xs:enumeration value="13788"/>
+						<xs:enumeration value="13799"/>
+						<xs:enumeration value="03551"/>
+						<xs:enumeration value="00473"/>
+						<xs:enumeration value="03552"/>
+						<xs:enumeration value="73070"/>
+						<xs:enumeration value="03553"/>
+						<xs:enumeration value="00474"/>
+						<xs:enumeration value="03554"/>
+						<xs:enumeration value="03555"/>
+						<xs:enumeration value="00475"/>
+						<xs:enumeration value="00476"/>
+						<xs:enumeration value="03558"/>
+						<xs:enumeration value="03556"/>
+						<xs:enumeration value="03557"/>
+						<xs:enumeration value="13794"/>
+						<xs:enumeration value="03559"/>
+						<xs:enumeration value="03560"/>
+						<xs:enumeration value="75012"/>
+						<xs:enumeration value="13806"/>
+						<xs:enumeration value="03562"/>
+						<xs:enumeration value="75013"/>
+						<xs:enumeration value="03563"/>
+						<xs:enumeration value="03564"/>
+						<xs:enumeration value="03566"/>
+						<xs:enumeration value="00477"/>
+						<xs:enumeration value="03567"/>
+						<xs:enumeration value="09997"/>
+						<xs:enumeration value="00479"/>
+						<xs:enumeration value="03568"/>
+						<xs:enumeration value="75014"/>
+						<xs:enumeration value="03570"/>
+						<xs:enumeration value="03571"/>
+						<xs:enumeration value="03572"/>
+						<xs:enumeration value="03573"/>
+						<xs:enumeration value="75015"/>
+						<xs:enumeration value="75016"/>
+						<xs:enumeration value="75017"/>
+						<xs:enumeration value="75018"/>
+						<xs:enumeration value="75019"/>
+						<xs:enumeration value="other"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="reimbursementCode" minOccurs="0">
+			<xs:element name="otherAccomodation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> REimbursement Code </elementName>
+						<elementName> Other Accomodation </elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>b9e17a22-edf9-4f33-8184-8da18db461e2</definitionRefId>
+						<definitionRefId>ccc66bab-92a5-4102-935f-fb8ef09a3690</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> ID of funding source for accommodations </xs:documentation>
+					<xs:documentation> Explanation of non-standard, other accomodation </xs:documentation>
 				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="VALUE1" />
-						<xs:enumeration value="VALUE2" />
-						<!-- This list should probably be an extension point. Also, is there a federal list? tqii -->
-					</xs:restriction>
-				</xs:simpleType>
 			</xs:element>
 			<xs:element type='iepPlanAccommodationsListAccommodationApplicabiltyListType' name="applicabilityList" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element name="justification" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="description" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Justification </elementName>
-						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-						<definitionRefId>ceb66bab-92a5-4102-935f-fb8ef09a3690</definitionRefId>
-					</xs:appinfo>
-					<xs:documentation> Why the student needs this support </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName> Explanation </elementName>
+						<elementName> Description </elementName>
 						<sifChar>O</sifChar>
 
 						<cedsId>001685</cedsId>
@@ -130,7 +196,7 @@
 
 						<definitionRefId>86f588cd-d742-4a1c-a937-35d96b84d6a9</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> What needs to be done to help the student learn better </xs:documentation>
+					<xs:documentation> Description of a specific accommodation or change to standards or practices that will be made. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
