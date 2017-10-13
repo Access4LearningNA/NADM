@@ -31,10 +31,10 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_BaseType">
 				<xs:sequence>
-					<xs:element type='iepEligabilityBackgroundType' name="background" minOccurs="0" maxOccurs="1" />
-					<xs:element type='iepEligabilityEvaluationResultListType' name="evaluationResultList" minOccurs="0" maxOccurs="unbounded" />
-					<xs:element type='iepEligabilityIdeaDisabilityType' name="ideaDisability" minOccurs="0" maxOccurs="1" />
-					<xs:element type='iepEligabilityParticipantReportListType' name="eligabilityParticipantReportList" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element type='iepEligibilityBackgroundType' name="background" minOccurs="0" maxOccurs="1" />
+					<xs:element type='iepEligibilityEvaluationResultListType' name="evaluationResultList" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element type='iepEligibilityIdeaDisabilityType' name="ideaDisability" minOccurs="0" maxOccurs="1" />
+					<xs:element type='iepEligibilityParticipantReportListType' name="eligibilityParticipantReportList" minOccurs="0" maxOccurs="unbounded" />
 					<xs:element name="lifecyclePurpose" nillable="true" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>

@@ -8,7 +8,7 @@
 	<!-- end redundant declaration for SIF tool analysis -->
 
 
-	<xs:complexType name='iepEligabilityEvaluationResultType'>
+	<xs:complexType name='iepEligibilityEvaluationResultType'>
 		<xs:sequence>
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0" >
 				<xs:annotation>
@@ -80,7 +80,7 @@
 	</xs:complexType>
 
 	<!-- named type -->
-	<xs:complexType name='iepEligabilityEvaluationResultListType'>
+	<xs:complexType name='iepEligibilityEvaluationResultListType'>
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -96,7 +96,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepEligabilityEvaluationResultType' name="evaluationResult" minOccurs="0" maxOccurs="unbounded">
+			<xs:element type='iepEligibilityEvaluationResultType' name="evaluationResult" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>

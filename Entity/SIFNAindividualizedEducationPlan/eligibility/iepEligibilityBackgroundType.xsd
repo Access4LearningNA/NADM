@@ -8,7 +8,7 @@
 	<!-- end redundant declaration for SIF tool analysis -->
 
 
-	<xs:complexType name='iepEligabilityBackgroundConsentToEvaluateType'>
+	<xs:complexType name='iepEligibilityBackgroundConsentToEvaluateType'>
 		<xs:sequence>
 			<xs:element name="accepted" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -46,7 +46,7 @@
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:complexType name='iepEligabilityBackgroundReferralType'>
+	<xs:complexType name='iepEligibilityBackgroundReferralType'>
 		<xs:sequence>
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -64,11 +64,11 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepEligabilityBackgroundReferralReferrerType' name="referrer" minOccurs="0" />
+			<xs:element type='iepEligibilityBackgroundReferralReferrerType' name="referrer" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:complexType name='iepEligabilityBackgroundReferralReferrerType'>
+	<xs:complexType name='iepEligibilityBackgroundReferralReferrerType'>
 		<xs:sequence>
 			<xs:element name="identity" type="xs:date" minOccurs="0">
 				<xs:annotation>
@@ -107,7 +107,7 @@
 	</xs:complexType>
 	
 	<!-- named type -->
-	<xs:complexType name='iepEligabilityBackgroundType'>
+	<xs:complexType name='iepEligibilityBackgroundType'>
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>
@@ -123,7 +123,7 @@
 							</xs:documentation>
 						</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepEligabilityBackgroundReferralType' name="referral" minOccurs="0" />
+			<xs:element type='iepEligibilityBackgroundReferralType' name="referral" minOccurs="0" />
 			<xs:element name="history" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -173,7 +173,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepEligabilityBackgroundConsentToEvaluateType' name="consentToEvaluation" minOccurs="0" maxOccurs="unbounded">
+			<xs:element type='iepEligibilityBackgroundConsentToEvaluateType' name="consentToEvaluation" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
