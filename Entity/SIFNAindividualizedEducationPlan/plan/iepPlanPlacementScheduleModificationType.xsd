@@ -38,6 +38,7 @@
 					<xs:restriction base="xs:normalizedString">
 						<xs:enumeration value="shorter" />
 						<xs:enumeration value="longer" />
+						<xs:enumeration value="ESY" />
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
