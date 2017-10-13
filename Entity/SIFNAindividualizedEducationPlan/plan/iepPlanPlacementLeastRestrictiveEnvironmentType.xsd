@@ -36,10 +36,10 @@
 					<xs:documentation> Total number of special education minutes per week </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="specialEducationSettingMinutesPerWeek" type="xs:integer" minOccurs="0">
+			<xs:element name="individualizedProgramInclusionMinutesPerWeek" type="xs:integer" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Special Ed Setting Minutes per Week </elementName>
+						<elementName> Individualized Program Inclusion Minutes Per Week </elementName>
 						<sifChar>O</sifChar>
 
 						<cedsId>001234</cedsId>
@@ -47,7 +47,7 @@
 
 						<definitionRefId>f55594d5-cc0f-4c16-9e8e-9a8ef50bea77</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Number of minutes of special education conducted in a special education situation </xs:documentation>
+					<xs:documentation> The number of minutes per week that a student with disabilities is served in a special education setting separate from his or her non-disabled peers. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="generalEducationSettingMinutesPerWeek" type="xs:integer" minOccurs="0">

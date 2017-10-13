@@ -200,10 +200,10 @@
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element name="name" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="assessmentTitle" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Assessment Name </elementName>
+						<elementName> Assessment Title </elementName>
 						<sifChar>O</sifChar>
 
 						<cedsId>000028</cedsId>
@@ -211,7 +211,7 @@
 
 						<definitionRefId>c9ea03ef-a2c5-4517-8440-c5877af15ad6</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Official name of assessment tool </xs:documentation>
+					<xs:documentation> The title or name of the assessment. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="subject" minOccurs="0">
@@ -220,8 +220,8 @@
 						<elementName> Subject </elementName>
 						<sifChar>O</sifChar>
 
-						<cedsId>001518</cedsId>
-						<cedsURL>https://ceds.ed.gov/element/001518</cedsURL>
+						<cedsId />
+						<cedsURL />
 
 						<definitionRefId>11805844-a4a1-41b3-a113-baf1a1e78e3f</definitionRefId>
 					</xs:appinfo>
@@ -229,7 +229,7 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="English" />
+						<xs:enumeration value="Reading" />
 						<xs:enumeration value="Math" />
 						<xs:enumeration value="Sciences" />
 						<xs:enumeration value="SocialStudies" />
@@ -237,7 +237,6 @@
 				</xs:simpleType>
 			</xs:element>
 			<xs:element name="assessmentToolUri" type="xs:normalizedString" minOccurs="0">
-				<!-- is there an xml or sif data type for URI? tqii -->
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Assessment Tool URI </elementName>
@@ -248,7 +247,7 @@
 
 						<definitionRefId>c1d26303-9866-4844-83f2-24aae21dba62</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Location of the definition of the standardized assessment </xs:documentation>
+					<xs:documentation> The Uniform Resource Locator (URL) location of the external Assessment Asset content. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

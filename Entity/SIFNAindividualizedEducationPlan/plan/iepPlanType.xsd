@@ -44,11 +44,9 @@
 					<xs:element type="iepPlanAnnualGoalListType" name="annualGoalsList" minOccurs="0" />
 					<xs:element type='iepPlanAccommodationsListType' name="accommodationsList" minOccurs="0" maxOccurs="unbounded" />
 					<xs:element type='iepPlanStandardizedAssessmentResultListType' name="standardizedAssessmentResultList" minOccurs="0" maxOccurs="unbounded" />
-					<xs:element type='iepPlanAmendmentListType' name="amendmentList" minOccurs="0" maxOccurs="unbounded" />
 					<xs:element type='iepPlanPlacementType' name="placement" minOccurs="0" maxOccurs="1" />
-					<xs:element name="authorization" type="iepPlanCommonAuthorizationType" minOccurs="0" maxOccurs="1">
-
-					</xs:element>
+					<xs:element name="authorization" type="iepPlanCommonAuthorizationType" minOccurs="0" maxOccurs="1" />
+					<xs:element type='iepPlanAmendmentListType' name="amendmentList" minOccurs="0" maxOccurs="unbounded" />
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
