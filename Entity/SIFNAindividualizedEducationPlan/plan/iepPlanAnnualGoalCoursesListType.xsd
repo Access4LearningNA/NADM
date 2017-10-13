@@ -79,10 +79,10 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="classUri" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="courseUri" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Class URI </elementName>
+						<elementName> Course URI </elementName>
 						<sifChar>O</sifChar>
 
 						<cedsId>001204</cedsId>
