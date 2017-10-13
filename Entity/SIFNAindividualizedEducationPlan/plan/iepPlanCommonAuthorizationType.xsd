@@ -8,7 +8,7 @@
 	<!-- end redundant declaration for SIF tool analysis -->
 
 
-	<xs:complexType name='IepPlanCommonAuthorizationParentAuthorizationRejectedPlanElementsRejectedDetailList'>
+	<xs:complexType name='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailList'>
 
 		<xs:annotation>
 			<xs:appinfo>
@@ -18,7 +18,7 @@
 				<cedsURL/>
 				<definitionRefId>378695cd-4ece-463c-a114-da0f51d145c7</definitionRefId>
 			</xs:appinfo>
-			<xs:documentation> Specific goals, services, modifications or other elements that the parent does not want implemented </xs:documentation>
+			<xs:documentation> Specific goals, services, modifications or other elements that the parent/guardian does not want implemented </xs:documentation>
 		</xs:annotation>
 
 		<xs:sequence>
@@ -33,7 +33,7 @@
 
 						<definitionRefId>cf6b074a-2204-45d8-847f-7fd08ac4d5b4</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Elements parent does not want executed. </xs:documentation>
+					<xs:documentation> Elements parent/guardian does not want executed. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
@@ -47,13 +47,13 @@
 
 						<definitionRefId>764e1b36-969f-44b3-8999-842acbbd2f40</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Parental explanation for rejected portion </xs:documentation>
+					<xs:documentation> Parent/guardian explanation for rejected portion </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:complexType name='IepPlanCommonAuthorizationParentAuthorizationRejectedPlanElements'>
+	<xs:complexType name='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElements'>
 
 		<xs:annotation>
 			<xs:appinfo>
@@ -63,12 +63,12 @@
 				<cedsURL/>
 				<definitionRefId>d85ae803-a719-4963-ad6b-3fbc316c4cd1</definitionRefId>
 			</xs:appinfo>
-			<xs:documentation> Elements parent does not want executed.
+			<xs:documentation> Elements parent/guardian does not want executed.
 			</xs:documentation>
 		</xs:annotation>
 
 		<xs:sequence>
-			<xs:element type='IepPlanCommonAuthorizationParentAuthorizationRejectedPlanElementsRejectedDetailList' name="rejectedDetailList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailList' name="rejectedDetailList" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -78,23 +78,23 @@
 						<cedsURL/>
 						<definitionRefId>16f2f348-ee66-4cf7-8c36-58a0245944d4</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Parental explanation of perspective of rejection not specific to an element </xs:documentation>
+					<xs:documentation> Parent/guardian explanation of perspective of rejection not specific to an element </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:complexType name='iepPlanCommonAuthorizationParentAuthorization'>
+	<xs:complexType name='iepPlanCommonAuthorizationParentGuardianAuthorization'>
 
 		<xs:annotation>
 			<xs:appinfo>
-				<elementName> Parent Authorization </elementName>
+				<elementName> Parent/Guardian Authorization </elementName>
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
 				<definitionRefId>8eda91ef-4c7c-4a92-9465-8854c1ec89a4</definitionRefId>
 			</xs:appinfo>
-			<xs:documentation> Parental input and signoff </xs:documentation>
+			<xs:documentation> Parent/guardian input and signoff </xs:documentation>
 		</xs:annotation>
 
 		<xs:sequence>
@@ -109,20 +109,20 @@
 
 						<definitionRefId>693cd777-cbce-4020-976f-e6d20f4f2ac3</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Indication of parental agreement with consideration of exceptions listed. </xs:documentation>
+					<xs:documentation> Indication of parent/guardian agreement with consideration of exceptions listed. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='IepPlanCommonAuthorizationParentAuthorizationRejectedPlanElements' name="rejectedPlanElements" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element name="authorizingParent" type="iepCommonAuthorizingPersonType" minOccurs="0">
+			<xs:element type='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElements' name="rejectedPlanElements" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="authorizingParentGuardian" type="iepCommonAuthorizingPersonType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Authorizing Parent </elementName>
+						<elementName> Authorizing Parent or Guardian </elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
 						<definitionRefId>46ebb831-299c-4410-816a-7aae5e1e8f29</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Proved identity of authorizing parent
+					<xs:documentation> Proved identity of authorizing parent or guardian
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -188,7 +188,22 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element type='authorizingOfficialsList' name="authorizingOfficialsList" minOccurs="0" />
-			<xs:element type='iepPlanCommonAuthorizationParentAuthorization' name="parentAuthorization" minOccurs="0" maxOccurs="1" />
+			<xs:element type='iepPlanCommonAuthorizationParentGuardianAuthorization' name="parentGuardianAuthorization" minOccurs="0" maxOccurs="1" />
+			<xs:element name="transferOfRightsNotificationDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Rights Notification Date </elementName>
+						<sifChar>O</sifChar>
+						
+						<cedsId />
+						<cedsURL />
+						
+						<definitionRefId>ccc13a0b-65fe-4cbf-9798-cff5dc5ac262</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Date that student over seventeen years old was notified of his or her right to sign IEP.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 
