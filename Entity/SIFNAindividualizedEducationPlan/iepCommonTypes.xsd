@@ -31,8 +31,21 @@
 
 		<xs:sequence>
 			<xs:element name="identity" type="xs:normalizedString" minOccurs="0" />
-			<xs:element name="certification" type="xs:normalizedString" minOccurs="0" />
+			<xs:element name="qualification" type="xs:normalizedString" minOccurs="0" >
 
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Qualification</elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId />
+						<cedsURL />
+
+						<definitionRefId>ddd98d1f-7779-46e8-8b4c-77a4466e5037</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>Qualification to participate in the authorization of this plan.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="date" type="xs:date" minOccurs="0">
 
 				<xs:annotation>
@@ -45,13 +58,26 @@
 
 						<definitionRefId>aaa98d1f-7779-46e8-8b4c-77a4466e5037</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation>Date authorization was made.</xs:documentation>
+					<xs:documentation>The date the authorization occurred.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 
 			<xs:element name="contactInfo" type="xs:normalizedString" minOccurs="0" />
-			<xs:element name="intrinsicRole" type="xs:normalizedString" minOccurs="0" />
-			<!-- teacher, parent, doctor, principal -->
+			<xs:element name="intrinsicRole" type="xs:normalizedString" minOccurs="0" >
+				
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Intrinsic Role</elementName>
+						<sifChar>O</sifChar>
+						
+						<cedsId />
+						<cedsURL />
+						
+						<definitionRefId>bbb98d1f-7779-46e8-8b4c-77a4466e5037</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>Role of the person (eg, teacher, parent, principal, student, etc).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 
