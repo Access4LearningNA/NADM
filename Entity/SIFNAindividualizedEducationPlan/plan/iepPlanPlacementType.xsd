@@ -51,6 +51,33 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
+			<xs:element name="ideaEducationalEnvironmentForEarlyChildhood" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>  IDEA Educational Environment for Early Childhood </elementName>
+						<sifChar>O</sifChar>
+
+						<cedsId>000559</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000559</cedsURL>
+
+						<definitionRefId>6d7347d9-f011-481c-abe8-4fa07d8f3c80</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> The program in which children ages 3 through 5 attend and in which these children receive special education and related services. </xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+							<xs:enumeration value="REC09YOTHLOC"/>
+							<xs:enumeration value="REC10YOTHLOC"/>
+							<xs:enumeration value="REC09YSVCS"/>
+							<xs:enumeration value="REC10YSVCS"/>
+							<xs:enumeration value="SC"/>
+							<xs:enumeration value="SS"/>
+							<xs:enumeration value="RF"/>
+							<xs:enumeration value="H"/>
+							<xs:enumeration value="SPL"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
 			<xs:element name="ideaPlacementRationale" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
