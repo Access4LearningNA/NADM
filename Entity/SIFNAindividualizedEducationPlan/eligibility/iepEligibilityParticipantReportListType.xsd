@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<xs:complexType name='iepEligibilityParticipantReportListParticipantReportType'>
 		<xs:annotation>
 			<xs:appinfo>
@@ -75,7 +74,22 @@
 						<xs:enumeration value="Other" />
 					</xs:restriction>
 				</xs:simpleType>
-
+			</xs:element>
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Explanation
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>aac84433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Explanation for choice of other or information refining category selection.
+					</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="procedures" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -127,7 +141,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<!-- named type -->
 	<xs:complexType name='iepEligibilityParticipantReportListType'>
 		<xs:annotation>
@@ -148,5 +161,4 @@
 			<xs:element type='iepEligibilityParticipantReportListParticipantReportType' name="participantReport" minOccurs="0" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
-	
 </xs:schema>

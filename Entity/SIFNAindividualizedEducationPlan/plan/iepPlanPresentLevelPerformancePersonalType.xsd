@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListDesiredOutcomeType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -24,7 +22,6 @@
 				A specific achievement the student wants to achieve
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="category" minOccurs="0">
 				<xs:annotation>
@@ -99,9 +96,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -116,14 +111,11 @@
 				List of specific life achievements desired by student
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListDesiredOutcomeType' name="desiredOutcome" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalIntentionType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -138,7 +130,6 @@
 				The student's own intentions and aspirations
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="overview" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -159,9 +150,7 @@
 			<xs:element type='iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListType' name="desiredOutcomeList" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListPersonalGoalType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -176,49 +165,42 @@
 				Specific goal
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="description" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Description
+							Goal Description
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>000903</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000903</cedsURL>
-
 						<definitionRefId>8c7fe68d-844f-4a59-aa91-7420d22a3fcd</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Explanation of the reason and nature of the goal
+						A statement that describes the desired outcomes.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="achievementLevel" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="successCriteria" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Achievement Level
+							Goal Success Criteria
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>000902</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000902</cedsURL>
-
 						<definitionRefId>42ebcb5b-338b-40d1-a364-e4569eea3b72</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						What success looks like for this goal
+						One or more statements that describes the criteria used by teachers and students to check for attainment of a goal.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -233,14 +215,11 @@
 				List of goals that student wants to achieve
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListPersonalGoalType' name="personalGoal" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalEvaluationPerformanceTestResultListType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -252,34 +231,29 @@
 				<definitionRefId>4ca971e8-f3f4-4b84-931d-14719b5134b7</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
-				Anecdotal list of previous testing and evaluation of student?s performance
+				Anecdotal list of previous testing and evaluation of student's performance
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
-			<xs:element name="testResult" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="diagnosticStatement" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Test Result
+							Result Diagnostic Statement
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001219</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001219</cedsURL>
-
 						<definitionRefId>746dc807-f57a-4b1d-bc1e-99f63e6ceb44</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Explanation of the result of a test
+						A statement intended for use by education professionals, using professional terminology, to interpret learner needs based on the scored/evaluated portion of an assessment. This statement may inform Descriptive Feedback given to the learner.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalEvaluationPerformanceType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -291,35 +265,30 @@
 				<definitionRefId>2e2e8bb5-e845-47ee-ad9e-da31f6c9506e</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
-				Non-technical list of student?s performance shortcomings
+				Non-technical list of student's performance shortcomings
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
-			<xs:element name="generalEducation" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="generalEducationDescription" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							General Education
+							General Education Description
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001707</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001707</cedsURL>
-
 						<definitionRefId>16e1dc07-c0ef-4703-882b-46a949632466</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Student?s ability to perform classroom and other educational tasks
+						How the child's disability affects the child's involvement and progress in the general education curriculum.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPerformanceTestResultListType' name="testResultList" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalEvaluationNeedsListType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -331,10 +300,9 @@
 				<definitionRefId>a71a60d7-4553-4a9a-bb97-8a06f4258e78</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
-				Non-technical list of student?s perceived educational special needs
+				Non-technical list of student's perceived educational special needs
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="need" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -354,9 +322,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalEvaluationType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -371,16 +337,13 @@
 				Anecdotal background information about performance
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationNeedsListType' name="needsList" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPerformanceType' name="performance" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListType' name="personalGoalsList" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalConcernsType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -392,10 +355,9 @@
 				<definitionRefId>3a140e60-f67e-4376-9de8-a1e64a727f7e</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
-				Justification for student?s involvement in special education process
+				Justification for student's involvement in special education process
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="reason" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -413,37 +375,35 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="parentConcern" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="parentConcernDescription" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Parent's Concern
+							Parent's Concern Description
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001710</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001710</cedsURL>
-
 						<definitionRefId>1f250a71-3d4b-4729-9a8a-aee9a9a18811</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Parent?s explanation of their interest in student?s participation in special education
+						Parent's explanation of their interest in student's participation in special education
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="studentConcern" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="studentConcernDescription" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Student's Concern
+							Student's Concern Description
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001711</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001711</cedsURL>
-						
 						<definitionRefId>a53760e7-82c9-47e9-85f9-1df5961e188e</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Student?s explanation of his or her interest in participation in special education
+						Student's explanation of his or her interest in participation in special education
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -456,7 +416,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						
 						<definitionRefId>ccc760e7-82c9-47e9-85f9-1df5961e188e</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
@@ -466,10 +425,8 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<!-- named type -->
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -484,18 +441,17 @@
 				Information about student�s personal views, background, goals and home culture
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanPresentLevelPerformancePersonalConcernsType' name="concerns" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element name="strengths" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="strengthsDescription" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Strengths
+							Strengths Description
 						</elementName>
 						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
+						<cedsId>001709</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001709</cedsURL>
 						<definitionRefId>9a6c7d5d-82c1-49ed-9b8a-ab2cfdc6dba5</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
@@ -510,9 +466,8 @@
 							Motivations
 						</elementName>
 						<sifChar>O</sifChar>
-						<cedsId>001709</cedsId>
-						<cedsURL>https://ceds.ed.gov/element/001709</cedsURL>
-
+						<cedsId/>
+						<cedsURL/>
 						<definitionRefId>d5105fe3-452b-413b-a808-07219d3552df</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
@@ -524,5 +479,4 @@
 			<xs:element type='iepPlanPresentLevelPerformancePersonalIntentionType' name="intention" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>

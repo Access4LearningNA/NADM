@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
-	
 	<xs:complexType name='iepPlanAnnualGoalGoalStandardsReferenceType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -25,23 +22,20 @@
 				Reference for standard definition addressed by this goal
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
-			<xs:element name="URI" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="url" type="xs:anyURI" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Standards URI
+							Competency Framework Item URL
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>000874</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000874</cedsURL>
-
 						<definitionRefId>d8cee3d6-ec81-42e2-93a4-64813005d82d</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Location of the definition of the standard
+						A network-resolvable Uniform Resource Locator (URL) pointing to the authoritative reference for the competency framework item
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -49,26 +43,22 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Identifier
+							Learning Standard Item Code
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>000692</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000692</cedsURL>
-
 						<definitionRefId>4c4838ba-0d9a-474c-94ee-144bd29fbc62</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Identifier or name of the standard
+						A human-referenceable code designated by the publisher to identify the item in the hierarchy of competency framework items.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<!-- named type -->
 	<xs:complexType name='iepPlanAnnualGoalGoalType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -83,60 +73,47 @@
 				Category and reference information for goal
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="category" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Category
+							IEP Goal Type
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001698</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001698</cedsURL>
-
 						<definitionRefId>3c9278fe-457a-40cc-96e0-490b9661670f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						The focus of the goal.
+						Legal category for an IEP annual goal or short-term objectives.
 					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="intellectual" />
 						<xs:enumeration value="academic" />
-						<xs:enumeration value="social/emotional/behavioral" />
-						<xs:enumeration value="communication" />
-						<xs:enumeration value="motor" />
-						<xs:enumeration value="functional skills" />
-						<xs:enumeration value="sensory status" />
-						<xs:enumeration value="physical status" />
-						<xs:enumeration value="transition skills" />
-						<xs:enumeration value="other" />
+						<xs:enumeration value="functional" />
+						<xs:enumeration value="transitional" />
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element type='xs:string' name="otherDescription" minOccurs="0" >
+			<xs:element type='xs:string' name="additionalInformation" minOccurs="0" >
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							otherDescription
+						Additional Information
 						</elementName>
 						<sifChar>O</sifChar>
-						
 						<cedsId/>
 						<cedsURL/>
-						
 						<definitionRefId>ddd278fe-457a-40cc-96e0-490b9661670f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						The focus of the goal when 'other' is chosen.
+						Additional information about goal or why it fits this category.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element type='iepPlanAnnualGoalGoalStandardsReferenceType' name="standardsReference" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>

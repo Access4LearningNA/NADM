@@ -1,58 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<xs:complexType name='iepHistoryReferenceIepDatesType'>
 		<xs:sequence>
 			<xs:element name="start" type="xs:date" minOccurs="0">
-
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Start Date
+							Individualized Program Service Plan Date
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001236</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001236</cedsURL>
-
 						<definitionRefId>aaa17330-ba01-4ca6-908b-fec06fc3255c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Individualized Program Service Plan Date
+						The year, month and day on which the status of the service plan for a child is established or significantly altered
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-
 			<xs:element name="end" type="xs:date" minOccurs="0">
-
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							End Date
+							Individualized Program Service Plan End Date
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001683</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001683</cedsURL>
-
 						<definitionRefId>aaa17330-ba01-4ca6-908b-fec06fc3255c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Individualized Program Service Plan End Date
+						The year, month and day on which the status of the service plan for a child effectively ends.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	
-	<!-- named type -->	
+	<!-- named type -->
 	<xs:complexType name='iepHistoryReferenceType'>
 		<xs:sequence>
 			<xs:element name="lea" type="xLeaType" minOccurs="0">
@@ -86,7 +77,6 @@
 						Period that IEP is in effect
 					</xs:documentation>
 				</xs:annotation>
-
 			</xs:element>
 			<xs:element name="contactInfo" type="xContactType" minOccurs="0">
 				<xs:annotation>
@@ -106,5 +96,4 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>

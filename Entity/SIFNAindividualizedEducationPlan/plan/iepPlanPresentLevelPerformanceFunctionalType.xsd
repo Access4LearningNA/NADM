@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListAccommodationType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Accommodation </elementName>
@@ -21,7 +19,6 @@
 			<xs:documentation> Current accommodation in place
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="category" minOccurs="0">
 				<xs:annotation>
@@ -58,9 +55,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Accommodation List </elementName>
@@ -72,14 +67,11 @@
 			<xs:documentation> List of current accommodations
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListAccommodationType' name="accommodation" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalSummaryType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Summary </elementName>
@@ -91,28 +83,23 @@
 			<xs:documentation> Information about the specific ways that disability interferes
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
-			<xs:element name="Consequences" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="description" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Consequences </elementName>
+						<elementName> Functional Description </elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001706</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001706</cedsURL>
-
 						<definitionRefId>334a21a2-85c8-4b1e-8bde-6e44aeabd587</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Discussion of the specific ways that disability interferes with the student?s outcome </xs:documentation>
+					<xs:documentation> How the child's disability affects the child's functional performance. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListType' name="accommodationList" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Specific Functional Disability </elementName>
@@ -123,7 +110,6 @@
 			</xs:appinfo>
 			<xs:documentation> Information about a specific functional disability </xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="name" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
@@ -152,7 +138,7 @@
 						<xs:enumeration value="NonacademicActivities" />
 						<xs:enumeration value="SkillDevelopmentRelatedToVocationalPreparationOrExperience" />
 						<xs:enumeration value="ForChildrenAges3To5?ParticipationInAppropriateActivities" />
-						<xs:enumeration value="ForChildrenAges14+OrYoungerIfAppropriate?Student?sCourseOfStudy" />
+						<xs:enumeration value="ForChildrenAges14+OrYoungerIfAppropriate?student'sCourseOfStudy" />
 						<xs:enumeration value="ForChildrenAges16OrYoungerIfAppropriateTo22?TransitionToPost-schoolActivitiesIncludingCommunityExperiencesEmploymentObjectivesOtherPostSchoolAdultLivingAndIfAppropriateDailyLivingSkills" />
 						<!-- this list is not right? tqii -->
 					</xs:restriction>
@@ -182,26 +168,10 @@
 					<xs:documentation> Analysis of the particular ways that the disability interferes with educational attainment </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="accommodation" type="xs:normalizedString" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName> Accommodation </elementName>
-						<sifChar>O</sifChar>
-
-						<cedsId>001685</cedsId>
-						<cedsURL>https://ceds.ed.gov/element/001685</cedsURL>
-
-						<definitionRefId>b7a89470-8391-40e2-87e0-1a04a345a1bd</definitionRefId>
-					</xs:appinfo>
-					<xs:documentation> Description of the accommodations that mitigate the negative consequences of this disability
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			<xs:element type='iepCommonAccommodationType' name="accommodation" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalDisabilityListType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> List of Functional Disabilities </elementName>
@@ -212,15 +182,12 @@
 			</xs:appinfo>
 			<xs:documentation> Information about the child?s ability to operate in a classroom or other learning setting </xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType' name="disability" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<!-- named type -->
 	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Functional Impairment </elementName>
@@ -232,11 +199,9 @@
 			<xs:documentation> Information about the child�s ability to function in a classroom or other learning setting
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListType' name="disabilityList" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryType' name="summary" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>

@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<xs:complexType name='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListDataValueType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -24,7 +22,6 @@
 				A measurement of student performance
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="category" type="xs:integer" minOccurs="0">
 				<xs:annotation>
@@ -60,9 +57,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -77,14 +72,11 @@
 				Data pairs representing measurements of student performance relative to progress on this goal
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListDataValueType' name="dataValue" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataNamesType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -99,7 +91,6 @@
 				Meaning of data values
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="categoryName" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -135,9 +126,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanAnnualGoalProgressReportListProgressReportMeasurementType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -149,10 +138,9 @@
 				<definitionRefId>335317fe-8673-4c34-897e-e61ddc334557</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
-				Quantitative data supporting the student?s progress evaluation
+				Quantitative data supporting the student's progress evaluation
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -174,9 +162,7 @@
 			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListType' name="dataValuesList" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanAnnualGoalProgressReportListProgressReportType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -191,13 +177,12 @@
 				Progress reported at a specific time
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
-			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="description" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Explanation
+							Service Plan Progress Report Description
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001700</cedsId>
@@ -205,16 +190,16 @@
 						<definitionRefId>8d48e2cc-a95d-44ec-93fa-02167654773e</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Descriptive evaluation of student?s current progress
+						A description of the progress report used to notify parents of the student’s progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementType' name="measurement" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element name="determination" minOccurs="0">
+			<xs:element name="status" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Determination
+							Goal Status
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001702</cedsId>
@@ -222,23 +207,39 @@
 						<definitionRefId>f7030eab-10f4-4570-aa5c-4ec3f0afacd3</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Judgment on progress made toward goal at this time
+						Status toward achievement of the annual goal or short-term objectives.
 					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="MakingExpectedProgress" />
-						<xs:enumeration value="NotMakingExpectedProgress" />
-						<xs:enumeration value="Complete" />
-						<!-- is this list correct? tqii -->
+						<xs:enumeration value="SatisfactoryProgress" />
+						<xs:enumeration value="UnsatisfactoryProgress" />
+						<xs:enumeration value="Completed" />
+						<xs:enumeration value="Other" />
 					</xs:restriction>
 				</xs:simpleType>
+			</xs:element>
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Explanation
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>ccc2c8e0-3a21-428f-b9fe-7f4c87ed09e3</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Explanation for choice of other or information refining status determination.
+					</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 			<xs:element name="date" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							date
+							Progress Report Date
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId>001699</cedsId>
@@ -246,12 +247,12 @@
 						<definitionRefId>aaa30eab-10f4-4570-aa5c-4ec3f0afacd3</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Individualized Program Service Plan Progress Report Date </xs:documentation>
+						The date parents are notified of the student’s progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
+						</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<!-- named type -->
 	<xs:complexType name='iepPlanAnnualGoalProgressReportListType'>
 		<xs:annotation>
@@ -272,5 +273,4 @@
 			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportType' name="progressReport" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>

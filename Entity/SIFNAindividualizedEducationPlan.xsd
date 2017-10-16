@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
 	<xs:include schemaLocation="../Composite/SIFNAxPressCommonTypes.xsd" />
 	<xs:include schemaLocation="../Composite/SIFNAxPress.xsd" />
-
 	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/iepCommonTypes.xsd" />
-
 	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/administrativeData/iepAdministrativeDataType.xsd" />
 	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/eligibility/iepEligibilityType.xsd" />
 	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/history/iepHistory.xsd" />
 	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/plan/iepPlanType.xsd" />
-
 	<xs:complexType name="xIepType">
 		<xs:annotation>
 			<xs:appinfo>

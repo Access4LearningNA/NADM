@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<xs:include schemaLocation="iepPlanCommonAuthorizationType.xsd" />
-	
 	<xs:include schemaLocation="iepPlanEffectivePeriodType.xsd" />
 	<xs:include schemaLocation="iepPlanEnrollmentGradeLevelType.xsd" />
-	
 	<xs:include schemaLocation="iepPlanPresentLevelPerformanceType.xsd" />
-	
 	<xs:include schemaLocation="iepPlanAnnualGoalsListType.xsd" />
-	
 	<xs:include schemaLocation="iepPlanAccommodationsListType.xsd" />
 	<xs:include schemaLocation="iepPlanStandardizedAssessmentResultListType.xsd" />
 	<xs:include schemaLocation="iepPlanAmendmentListType.xsd" />
 	<xs:include schemaLocation="iepPlanPlacementType.xsd" />
-	
 	<!-- local parent type -->
 	<xs:complexType name="iepPlanType">
 		<xs:annotation>
@@ -51,5 +45,4 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-
 </xs:schema>

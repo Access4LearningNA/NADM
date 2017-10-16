@@ -21,7 +21,7 @@
 						<definitionRefId>149d7cb7-0b7c-45d4-82c5-005f173b9791</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Indication of parental agreement to evaluate student.
+						Indication parent agreed to evaluate student.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -33,8 +33,8 @@
 						</elementName>
 						<sifChar>O</sifChar>
 
-						<cedsId>001727</cedsId>
-						<cedsURL>https://ceds.ed.gov/element/001727</cedsURL>
+						<cedsId />
+						<cedsURL />
 
 						<definitionRefId>c9c25b67-3f63-43f8-870b-7313f6cd6d58</definitionRefId>
 					</xs:appinfo>
@@ -60,7 +60,7 @@
 						<definitionRefId>874e6ff4-c8fa-4b9c-be66-232b618194e0</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Explanation of observations and issues that motivate the request for evaluation
+						The reason for the referral.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -99,7 +99,7 @@
 						<definitionRefId>04b85c4a-76f3-43b8-87a7-ec240ec9897b</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Date Referral to Evaluate was Made
+						The date of referral.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -169,7 +169,7 @@
 						<definitionRefId>e2f3d4a7-f327-49d7-8865-c08ffe9504d0</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Parent explanation of student’s characteristics and history
+						Explanation of parent's observations of student’s characteristics and history used for determining eligibility.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>

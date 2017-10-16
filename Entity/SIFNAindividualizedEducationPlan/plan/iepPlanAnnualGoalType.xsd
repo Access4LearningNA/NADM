@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
 	<xs:include schemaLocation="../../../SIFglobal.xsd" />
 	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<xs:include schemaLocation="iepPlanAnnualGoalGoalType.xsd" />
 	<xs:include schemaLocation="iepPlanAnnualGoalMeasurableObjectiveListType.xsd" />
 	<xs:include schemaLocation="iepPlanAnnualGoalIndependentActionsListType.xsd" />
 	<xs:include schemaLocation="iepPlanAnnualGoalServicesListType.xsd" />
 	<xs:include schemaLocation="iepPlanAnnualGoalCoursesListType.xsd" />
 	<xs:include schemaLocation="iepPlanAnnualGoalProgressReportListType.xsd" />
-
 	<!-- SHARED TYPE -->
 	<xs:complexType name="iepPlanAnnualGoalListParentAcceptanceType">
 		<xs:annotation>
@@ -33,47 +31,47 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="accepted" type="xs:boolean" minOccurs="0">
+			<xs:element name="accepted" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Accepts
+							Authorization Acceptance Indicator
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001721</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001721</cedsURL>
-
 						<definitionRefId>a86999db-6823-401c-9d89-7c1aad6206e2</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Item is acceptable to parent
+						Indicates authorizer agreement to a document or plan, such as plan for delivery of student services, program, or improvement plan.
 					</xs:documentation>
 				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="Yes"/>
+						<xs:enumeration value="No"/>
+					</xs:restriction>
+				</xs:simpleType>
 			</xs:element>
-			<xs:element name="comment" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Comment
+							Decision Explanation
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001722</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001722</cedsURL>
-
 						<definitionRefId>b7b7e385-98ab-41d7-ac7d-230137c04b20</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Comment on item and acceptance or rejection
+						Authorizer's explanation regarding the authorization decision.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanAnnualGoalType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Annual Goal </elementName>
@@ -85,19 +83,16 @@
 			<xs:documentation> Documentation of an annual goal to be achieved by a special education student
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type="xs:normalizedString" name="currentStatus" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Current Status
+							Goal Status
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001703</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001703</cedsURL>
-
 						<definitionRefId>90e1982e-8ac9-4b10-89ee-17cafd2e73fb</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
@@ -129,6 +124,4 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
-
 </xs:schema>
