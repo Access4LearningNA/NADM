@@ -8,7 +8,7 @@
 	<!-- end redundant declaration for SIF tool analysis -->
 
 
-	<xs:complexType name='iepEligabilityBackgroundConsentToEvaluateType'>
+	<xs:complexType name='iepEligibilityBackgroundConsentToEvaluateType'>
 		<xs:sequence>
 			<xs:element name="accepted" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -21,7 +21,7 @@
 						<definitionRefId>149d7cb7-0b7c-45d4-82c5-005f173b9791</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Indication of parental agreement to evaluate student.
+						Indication parent agreed to evaluate student.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -33,8 +33,8 @@
 						</elementName>
 						<sifChar>O</sifChar>
 
-						<cedsId>001727</cedsId>
-						<cedsURL>https://ceds.ed.gov/element/001727</cedsURL>
+						<cedsId />
+						<cedsURL />
 
 						<definitionRefId>c9c25b67-3f63-43f8-870b-7313f6cd6d58</definitionRefId>
 					</xs:appinfo>
@@ -46,7 +46,7 @@
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:complexType name='iepEligabilityBackgroundReferralType'>
+	<xs:complexType name='iepEligibilityBackgroundReferralType'>
 		<xs:sequence>
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -60,15 +60,15 @@
 						<definitionRefId>874e6ff4-c8fa-4b9c-be66-232b618194e0</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Explanation of observations and issues that motivate the request for evaluation
+						The reason for the referral.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepEligabilityBackgroundReferralReferrerType' name="referrer" minOccurs="0" />
+			<xs:element type='iepEligibilityBackgroundReferralReferrerType' name="referrer" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:complexType name='iepEligabilityBackgroundReferralReferrerType'>
+	<xs:complexType name='iepEligibilityBackgroundReferralReferrerType'>
 		<xs:sequence>
 			<xs:element name="identity" type="xs:date" minOccurs="0">
 				<xs:annotation>
@@ -99,7 +99,7 @@
 						<definitionRefId>04b85c4a-76f3-43b8-87a7-ec240ec9897b</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Date Referral to Evaluate was Made
+						The date of referral.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -107,7 +107,7 @@
 	</xs:complexType>
 	
 	<!-- named type -->
-	<xs:complexType name='iepEligabilityBackgroundType'>
+	<xs:complexType name='iepEligibilityBackgroundType'>
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>
@@ -123,7 +123,7 @@
 							</xs:documentation>
 						</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepEligabilityBackgroundReferralType' name="referral" minOccurs="0" />
+			<xs:element type='iepEligibilityBackgroundReferralType' name="referral" minOccurs="0" />
 			<xs:element name="history" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -169,11 +169,11 @@
 						<definitionRefId>e2f3d4a7-f327-49d7-8865-c08ffe9504d0</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Parent explanation of student’s characteristics and history
+						Explanation of parent's observations of student’s characteristics and history used for determining eligibility.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepEligabilityBackgroundConsentToEvaluateType' name="consentToEvaluation" minOccurs="0" maxOccurs="unbounded">
+			<xs:element type='iepEligibilityBackgroundConsentToEvaluateType' name="consentToEvaluation" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>

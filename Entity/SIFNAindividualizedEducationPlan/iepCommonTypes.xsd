@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../Composite/SIFNAxPress.xsd" />
-
+	<xs:include schemaLocation="../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../Composite/SIFNAxPress.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<xs:include schemaLocation="../../SIFglobalBaseTypes.xsd" />
 	<xs:include schemaLocation="../../SIFglobalCommonTypes.xsd" />
 	<xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd" />
-
 	<xs:complexType name="iepCommonAuthorizingPersonType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -28,33 +25,47 @@
 				Proved Identity Information
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="identity" type="xs:normalizedString" minOccurs="0" />
-			<xs:element name="certification" type="xs:normalizedString" minOccurs="0" />
-
+			<xs:element name="qualification" type="xs:normalizedString" minOccurs="0" >
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Qualification</elementName>
+						<sifChar>O</sifChar>
+						<cedsId />
+						<cedsURL />
+						<definitionRefId>ddd98d1f-7779-46e8-8b4c-77a4466e5037</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>Qualification to participate in the authorization of this plan.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="date" type="xs:date" minOccurs="0">
-
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>Authorization Date</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001725</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001725</cedsURL>
-
 						<definitionRefId>aaa98d1f-7779-46e8-8b4c-77a4466e5037</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation>Date authorization was made.</xs:documentation>
+					<xs:documentation>The date the authorization occurred.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-
 			<xs:element name="contactInfo" type="xs:normalizedString" minOccurs="0" />
-			<xs:element name="intrinsicRole" type="xs:normalizedString" minOccurs="0" />
-			<!-- teacher, parent, doctor, principal -->
+			<xs:element name="intrinsicRole" type="xs:normalizedString" minOccurs="0" >
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>Intrinsic Role</elementName>
+						<sifChar>O</sifChar>
+						<cedsId />
+						<cedsURL />
+						<definitionRefId>bbb98d1f-7779-46e8-8b4c-77a4466e5037</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>Role of the person (eg, teacher, parent, principal, student, etc).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepCommonParentGuardianListType'>
 		<xs:annotation>
 			<xs:appinfo>
@@ -84,11 +95,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
-
-
 	<xs:complexType name='iepCommonServiceProviderType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -103,7 +110,6 @@
 				Identity and role of person rendering support services
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="identity" type="xContactType" minOccurs="0">
 				<xs:annotation>
@@ -125,26 +131,193 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Role
+							Special Education Support Services Category
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>000558</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000558</cedsURL>
-
 						<definitionRefId>05e2d887-6dbf-4bfb-bd91-f050b818f106</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Professional specialty applicable to the support of this goal.
+						Titles of personnel employed and contracted to provide special education and related services for children with disabilities.
 					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="Counselor" />
-						<xs:enumeration value="ReadingSpecialist" />
-						<!-- is this list correct? tqii -->
+						<xs:enumeration value="PSYCH"/>
+						<xs:enumeration value="SOCIALWORK"/>
+						<xs:enumeration value="OCCTHERAP"/>
+						<xs:enumeration value="AUDIO"/>
+						<xs:enumeration value="PEANDREC"/>
+						<xs:enumeration value="PHYSTHERAP"/>
+						<xs:enumeration value="SPEECHPATH"/>
+						<xs:enumeration value="INTERPRET"/>
+						<xs:enumeration value="COUNSELOR"/>
+						<xs:enumeration value="ORIENTMOBIL"/>
+						<xs:enumeration value="MEDNURSE"/>
 					</xs:restriction>
 				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name='iepCommonAccommodationType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Type of Accommodation
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>ccc264b4-ff0e-4011-aa57-39ef0594a7df</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				The specific accommodation necessary for assessment or instruction
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="type" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Accommodation Type </elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000385</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000385</cedsURL>
+						<definitionRefId>ccc699fa-9e69-4d22-a608-df104f06d850</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> The specific accommodation necessary for assessment or instruction. </xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="03513"/>
+						<xs:enumeration value="00461"/>
+						<xs:enumeration value="00462"/>
+						<xs:enumeration value="03514"/>
+						<xs:enumeration value="13803"/>
+						<xs:enumeration value="13793"/>
+						<xs:enumeration value="03515"/>
+						<xs:enumeration value="03517"/>
+						<xs:enumeration value="75005"/>
+						<xs:enumeration value="03519"/>
+						<xs:enumeration value="03518"/>
+						<xs:enumeration value="75006"/>
+						<xs:enumeration value="13791"/>
+						<xs:enumeration value="00463"/>
+						<xs:enumeration value="03522"/>
+						<xs:enumeration value="75007"/>
+						<xs:enumeration value="03524"/>
+						<xs:enumeration value="13800"/>
+						<xs:enumeration value="03525"/>
+						<xs:enumeration value="03526"/>
+						<xs:enumeration value="03527"/>
+						<xs:enumeration value="03528"/>
+						<xs:enumeration value="03529"/>
+						<xs:enumeration value="75008"/>
+						<xs:enumeration value="03530"/>
+						<xs:enumeration value="03531"/>
+						<xs:enumeration value="03533"/>
+						<xs:enumeration value="13795"/>
+						<xs:enumeration value="00937"/>
+						<xs:enumeration value="00464"/>
+						<xs:enumeration value="03534"/>
+						<xs:enumeration value="00465"/>
+						<xs:enumeration value="13797"/>
+						<xs:enumeration value="03535"/>
+						<xs:enumeration value="13789"/>
+						<xs:enumeration value="03536"/>
+						<xs:enumeration value="03537"/>
+						<xs:enumeration value="03538"/>
+						<xs:enumeration value="03539"/>
+						<xs:enumeration value="13790"/>
+						<xs:enumeration value="13805"/>
+						<xs:enumeration value="13798"/>
+						<xs:enumeration value="13804"/>
+						<xs:enumeration value="75009"/>
+						<xs:enumeration value="13796"/>
+						<xs:enumeration value="75010"/>
+						<xs:enumeration value="03541"/>
+						<xs:enumeration value="75011"/>
+						<xs:enumeration value="13792"/>
+						<xs:enumeration value="03543"/>
+						<xs:enumeration value="03544"/>
+						<xs:enumeration value="00469"/>
+						<xs:enumeration value="03545"/>
+						<xs:enumeration value="13802"/>
+						<xs:enumeration value="03546"/>
+						<xs:enumeration value="09999"/>
+						<xs:enumeration value="03547"/>
+						<xs:enumeration value="03548"/>
+						<xs:enumeration value="00471"/>
+						<xs:enumeration value="13801"/>
+						<xs:enumeration value="03549"/>
+						<xs:enumeration value="03550"/>
+						<xs:enumeration value="13788"/>
+						<xs:enumeration value="13799"/>
+						<xs:enumeration value="03551"/>
+						<xs:enumeration value="00473"/>
+						<xs:enumeration value="03552"/>
+						<xs:enumeration value="73070"/>
+						<xs:enumeration value="03553"/>
+						<xs:enumeration value="00474"/>
+						<xs:enumeration value="03554"/>
+						<xs:enumeration value="03555"/>
+						<xs:enumeration value="00475"/>
+						<xs:enumeration value="00476"/>
+						<xs:enumeration value="03558"/>
+						<xs:enumeration value="03556"/>
+						<xs:enumeration value="03557"/>
+						<xs:enumeration value="13794"/>
+						<xs:enumeration value="03559"/>
+						<xs:enumeration value="03560"/>
+						<xs:enumeration value="75012"/>
+						<xs:enumeration value="13806"/>
+						<xs:enumeration value="03562"/>
+						<xs:enumeration value="75013"/>
+						<xs:enumeration value="03563"/>
+						<xs:enumeration value="03564"/>
+						<xs:enumeration value="03566"/>
+						<xs:enumeration value="00477"/>
+						<xs:enumeration value="03567"/>
+						<xs:enumeration value="09997"/>
+						<xs:enumeration value="00479"/>
+						<xs:enumeration value="03568"/>
+						<xs:enumeration value="75014"/>
+						<xs:enumeration value="03570"/>
+						<xs:enumeration value="03571"/>
+						<xs:enumeration value="03572"/>
+						<xs:enumeration value="03573"/>
+						<xs:enumeration value="75015"/>
+						<xs:enumeration value="75016"/>
+						<xs:enumeration value="75017"/>
+						<xs:enumeration value="75018"/>
+						<xs:enumeration value="75019"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="description" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Description </elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001685</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001685</cedsURL>
+						<definitionRefId>ddd66bab-92a5-4102-935f-fb8ef09a3690</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> Description of a specific accommodation or change to standards or practices that will be made. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rationale" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Alternative Assessment Rationale </elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001687</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001687</cedsURL>
+						<definitionRefId>74c59dbb-448f-4184-b740-39cc06728b89</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> A statement of why— (A) The child cannot participate in the regular assessment; and (B) The particular alternate assessment selected is appropriate for the child.
+					</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>

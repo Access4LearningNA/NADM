@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
-	<xs:complexType name='iepEligabilityEvaluationResultType'>
+	<xs:complexType name='iepEligibilityEvaluationResultType'>
 		<xs:sequence>
-			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0" >
+			<xs:element name="procedureDescription" type="xs:normalizedString" minOccurs="0" >
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
@@ -19,11 +18,10 @@
 						<sifChar>O</sifChar>
 						<cedsId>001730</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001730</cedsURL>
-
 						<definitionRefId>0c54f35a-58cf-4fb6-9d34-b32fab4bcfbe</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Description of evaluation procedure and nature of the result
+						Description of evaluation procedure and result used for determining eligibility.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -34,10 +32,9 @@
 						<sifChar>O</sifChar>
 						<cedsId>001729</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001729</cedsURL>
-
 						<definitionRefId>c15842a1-6d86-4f49-bed3-e313184be748</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation>Category of evaluation</xs:documentation>
+					<xs:documentation>Category of evaluation used for IDEA eligibility.</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
@@ -61,6 +58,22 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Explanation
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>aab84433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Explanation for choice of other or information refining type selection.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="date" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -70,7 +83,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001731</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001731</cedsURL>
-
 						<definitionRefId>25cb1adb-8153-4fb4-8f72-1dafc7ddc8b8</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>The date when the evaluation was conducted.</xs:documentation>
@@ -78,9 +90,8 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<!-- named type -->
-	<xs:complexType name='iepEligabilityEvaluationResultListType'>
+	<xs:complexType name='iepEligibilityEvaluationResultListType'>
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -96,7 +107,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepEligabilityEvaluationResultType' name="evaluationResult" minOccurs="0" maxOccurs="unbounded">
+			<xs:element type='iepEligibilityEvaluationResultType' name="evaluationResult" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
@@ -111,9 +122,7 @@
 						Results of one specific evaluation.
 					</xs:documentation>
 				</xs:annotation>
-
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>

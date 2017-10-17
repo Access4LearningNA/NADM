@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<xs:complexType name='iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListSpecialCategoryType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Special Category </elementName>
@@ -20,27 +18,32 @@
 			</xs:appinfo>
 			<xs:documentation> Category being fulfilled by this plan </xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
-			<xs:element name="currentCategory" minOccurs="0">
+			<xs:element name="programType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Current Category </elementName>
+						<elementName> Individualized Program Type </elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>000320</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000320</cedsURL>
-
 						<definitionRefId>9be6d7f8-08cf-4ce4-925a-5f7159e82f1f</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Special legal category
+					<xs:documentation> A designation of the type of program developed for a student.
 					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="IFSP" />
-						<xs:enumeration value="transition" />
-						<!-- is this the right list? tqii -->
+						<xs:enumeration value="05978"/>
+						<xs:enumeration value="89600"/>
+						<xs:enumeration value="05980"/>
+						<xs:enumeration value="02196"/>
+						<xs:enumeration value="02198"/>
+						<xs:enumeration value="02197"/>
+						<xs:enumeration value="05982"/>
+						<xs:enumeration value="02349"/>
+						<xs:enumeration value="05981"/>
+						<xs:enumeration value="05979"/>
+						<xs:enumeration value="09999"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -58,9 +61,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Special Category List </elementName>
@@ -71,15 +72,12 @@
 			</xs:appinfo>
 			<xs:documentation> Special categories applying to this plan </xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListSpecialCategoryType' name="specialCategory" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<!-- named type -->
 	<xs:complexType name='iepPlanPresentLevelPerformanceConsequenceOfDisabilityType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Consequence of Disability </elementName>
@@ -91,11 +89,9 @@
 			<xs:documentation> Summary of how disabilities effect the student�s ability to participate and learn
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="curriculum" type="xs:normalizedString" minOccurs="0" />
 			<xs:element type='iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListType' name="specialCategoryList" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>

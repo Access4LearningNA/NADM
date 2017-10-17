@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<!-- start redundant declaration  for SIF tool analysis -->
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<!-- end redundant declaration for SIF tool analysis -->
+	<xs:complexType name='iepPlanAnnualGoalCoursesListCourseType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Course
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>6a458f87-2a5e-4025-913d-0fb0620230b7</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Course to be made available to a student to help achieve the goal.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Course Name
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId />
+						<cedsURL />
+						<definitionRefId>9411f09a-ca7d-4e8f-b584-f3c3bd7b9e5e</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Reason that student did not participate in this service.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="timing" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Timing
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId />
+						<cedsURL />
+						<definitionRefId>6f2f69d8-e3a4-4cba-9061-b4c1a2b7e06c</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						The planned year or other description of the student's taking the course.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="courseContentDescription" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Course Content
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId />
+						<cedsURL />
+						<definitionRefId>a7fc4476-dad2-4869-b5b7-99c75674fd38</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Description of content of the course.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="courseUri" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Course URI </elementName>
+						<sifChar>O</sifChar>
+						<cedsId />
+						<cedsURL />
+						<definitionRefId>a5159cf5-bbbd-4654-bbe4-b8b8355dd50c</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation> The Uniform Resource Locator (URL) location of information about course content. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- named type -->
+	<xs:complexType name='iepPlanAnnualGoalCoursesListType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Course List
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>48937805-3221-4808-8c3f-026f563512e7</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				List of courses that will be made available to the student to help achieving the goal
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type='iepPlanAnnualGoalCoursesListCourseType' name="course" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

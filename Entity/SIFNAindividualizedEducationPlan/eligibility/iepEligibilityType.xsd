@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<xs:include schemaLocation="iepEligibilityBackgroundType.xsd" />
 	<xs:include schemaLocation="iepEligibilityEvaluationResultListType.xsd" />
 	<xs:include schemaLocation="iepEligibilityIdeaDisabilityType.xsd" />
 	<xs:include schemaLocation="iepEligibilityParticipantReportListType.xsd" />
-
 	<!-- local parent type -->
 	<xs:complexType name="iepEligibilityType">
 		<xs:annotation>
@@ -31,10 +29,10 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_BaseType">
 				<xs:sequence>
-					<xs:element type='iepEligabilityBackgroundType' name="background" minOccurs="0" maxOccurs="1" />
-					<xs:element type='iepEligabilityEvaluationResultListType' name="evaluationResultList" minOccurs="0" maxOccurs="unbounded" />
-					<xs:element type='iepEligabilityIdeaDisabilityType' name="ideaDisability" minOccurs="0" maxOccurs="1" />
-					<xs:element type='iepEligabilityParticipantReportListType' name="eligabilityParticipantReportList" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element type='iepEligibilityBackgroundType' name="background" minOccurs="0" maxOccurs="1" />
+					<xs:element type='iepEligibilityEvaluationResultListType' name="evaluationResultList" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element type='iepEligibilityIdeaDisabilityType' name="ideaDisability" minOccurs="0" maxOccurs="1" />
+					<xs:element type='iepEligibilityParticipantReportListType' name="eligibilityParticipantReportList" minOccurs="0" maxOccurs="unbounded" />
 					<xs:element name="lifecyclePurpose" nillable="true" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
@@ -73,5 +71,4 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	
 </xs:schema>

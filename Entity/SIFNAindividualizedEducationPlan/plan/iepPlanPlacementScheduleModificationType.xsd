@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<xs:complexType name='iepPlanPlacementScheduleModificationSchoolYearType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> School Year Modifications </elementName>
@@ -21,7 +19,6 @@
 			<xs:documentation> Modifications to the school year necessitated by the annual goals and services
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="category" minOccurs="0">
 				<xs:annotation>
@@ -38,6 +35,7 @@
 					<xs:restriction base="xs:normalizedString">
 						<xs:enumeration value="shorter" />
 						<xs:enumeration value="longer" />
+						<xs:enumeration value="ESY" />
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -67,9 +65,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPlacementScheduleModificationSchoolDayType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> School Day Modifications </elementName>
@@ -80,7 +76,6 @@
 			</xs:appinfo>
 			<xs:documentation> Schedule modifications to the standard school day </xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="category" minOccurs="0">
 				<xs:annotation>
@@ -126,10 +121,8 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<!-- named type -->
 	<xs:complexType name='iepPlanPlacementScheduleModificationType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Schedule Modification </elementName>
@@ -140,11 +133,9 @@
 			</xs:appinfo>
 			<xs:documentation> Changes to the standard education schedule demanded by the annual goals and services needed </xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanPlacementScheduleModificationSchoolDayType' name="schoolDay" minOccurs="0" maxOccurs="1" />
 			<xs:element type='iepPlanPlacementScheduleModificationSchoolYearType' name="schoolYear" minOccurs="0" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>

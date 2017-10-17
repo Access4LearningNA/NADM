@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<xs:complexType name='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationAchievementStandardType'>
-
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Achievement Standard </elementName>
@@ -21,7 +18,6 @@
 			</xs:appinfo>
 			<xs:documentation> Special assessment evaluation method, procedure or standard </xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="type" minOccurs="0">
 				<xs:annotation>
@@ -57,9 +53,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> accommodation </elementName>
@@ -72,38 +66,27 @@
 			</xs:appinfo>
 			<xs:documentation> Changes to the environment or assessment procedure necessitated the student’s disability </xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
-			<xs:element name="location" minOccurs="0">
+			<xs:element type='iepCommonAccommodationType' name="accommodation" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="location" type='xs:string' minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Location </elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>000597</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000597</cedsURL>
-
 						<definitionRefId>17211841-a2e3-4297-9b06-852e7215bd08</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Special location where student undergoes assessment compatible with the student’s disability </xs:documentation>
+					<xs:documentation> The description of the place where an assessment is administered. </xs:documentation>
 				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="GeneralLocation" />
-						<xs:enumeration value="DistrictWideLocation" />
-						<!-- is this list correct? tqii -->
-					</xs:restriction>
-				</xs:simpleType>
 			</xs:element>
 			<xs:element name="category" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Category </elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>000383</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000383</cedsURL>
-
 						<definitionRefId>daedb013-88fa-4d01-a5e1-aa36d4cfd9e0</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> A category of accommodations needed for a given assessment. </xs:documentation>
@@ -122,56 +105,29 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="type" minOccurs="0">
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Type </elementName>
+						<elementName>
+							Explanation
+						</elementName>
 						<sifChar>O</sifChar>
-
-						<cedsId>000385</cedsId>
-						<cedsURL>https://ceds.ed.gov/element/000385</cedsURL>
-
-						<definitionRefId>d8f47b45-6499-44ee-ba77-7eb411c11944</definitionRefId>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>aae84433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> The specific accommodation necessary for the administration of the assessment. </xs:documentation>
-				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="AdditionalExampleItems/tasks" />
-						<xs:enumeration value="AdjustableSwivelArm" />
-						<xs:enumeration value="AdjustableTableHeight" />
-						<xs:enumeration value="AdministrationInSeveralSessions" />
-						<xs:enumeration value="AlternateRepresentation" />
-						<xs:enumeration value="AnswerMasking" />
-						<xs:enumeration value="AnswersWrittenDirectlyInTest" />
-						<!-- is this the correct list? Do we need 'other'? tqii -->
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
-			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationAchievementStandardType' name="achievementStandard" minOccurs="0" />
-			<xs:element name="reason" type="xs:normalizedString" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName> Reason </elementName>
-						<sifChar>O</sifChar>
-
-						<cedsId>001687</cedsId>
-						<cedsURL>https://ceds.ed.gov/element/001687</cedsURL>
-
-						<definitionRefId>74c59dbb-448f-4184-b740-39cc06728b89</definitionRefId>
-					</xs:appinfo>
-					<xs:documentation> Why accommodation is needed
+					<xs:documentation>
+						Explanation for choice of other or information refining category selection.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationAchievementStandardType' name="achievementStandard" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListType'>
-
 		<xs:annotation>
 			<xs:appinfo>
-				<elementName> accommodation List </elementName>
+				<elementName> Accommodation List </elementName>
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
@@ -180,14 +136,11 @@
 			<xs:documentation> List of accommodations needed by student to complete assessments
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationType' name="accommodation" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultStandardsReferenceType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Standards Reference Info </elementName>
@@ -198,20 +151,17 @@
 			</xs:appinfo>
 			<xs:documentation> Documentation of the standard tool used for assessment </xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
-			<xs:element name="name" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="assessmentTitle" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Assessment Name </elementName>
+						<elementName> Assessment Title </elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>000028</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000028</cedsURL>
-
 						<definitionRefId>c9ea03ef-a2c5-4517-8440-c5877af15ad6</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Official name of assessment tool </xs:documentation>
+					<xs:documentation> The title or name of the assessment. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="subject" minOccurs="0">
@@ -219,43 +169,36 @@
 					<xs:appinfo>
 						<elementName> Subject </elementName>
 						<sifChar>O</sifChar>
-
-						<cedsId>001518</cedsId>
-						<cedsURL>https://ceds.ed.gov/element/001518</cedsURL>
-
+						<cedsId />
+						<cedsURL />
 						<definitionRefId>11805844-a4a1-41b3-a113-baf1a1e78e3f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> The topic category evaluated by this assessment </xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="English" />
+						<xs:enumeration value="Reading" />
 						<xs:enumeration value="Math" />
 						<xs:enumeration value="Sciences" />
 						<xs:enumeration value="SocialStudies" />
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="assessmentToolUri" type="xs:normalizedString" minOccurs="0">
-				<!-- is there an xml or sif data type for URI? tqii -->
+			<xs:element name="url" type="xs:anyURI" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Assessment Tool URI </elementName>
+						<elementName> Assessment Asset Content URL </elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001204</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001204</cedsURL>
-
 						<definitionRefId>c1d26303-9866-4844-83f2-24aae21dba62</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Location of the definition of the standardized assessment </xs:documentation>
+					<xs:documentation> The Uniform Resource Locator (URL) location of the external Assessment Asset content. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Standardized Assessment Result </elementName>
@@ -266,16 +209,13 @@
 			</xs:appinfo>
 			<xs:documentation> Results of a specific standardized assessment </xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultStandardsReferenceType' name="standardsReference" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListType' name="accommodationList" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<!-- local parent type -->
 	<xs:complexType name='iepPlanStandardizedAssessmentResultListType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Standardized Assessment Result List </elementName>
@@ -290,6 +230,4 @@
 			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultType' name="standardizedAssessmentResult" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-
-
 </xs:schema>

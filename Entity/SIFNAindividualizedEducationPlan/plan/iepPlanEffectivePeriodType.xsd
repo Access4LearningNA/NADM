@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<!-- named type -->
 	<xs:complexType name='iepPlanEffectivePeriodType'>
 		<xs:annotation>
@@ -16,9 +15,8 @@
 					Effective Period
 				</elementName>
 				<sifChar>O</sifChar>
-				<cedsId>001683</cedsId>
-				<cedsURL>https://ceds.ed.gov/element/001683</cedsURL>
-
+				<cedsId/>
+				<cedsURL/>
 				<definitionRefId>425d71f7-886a-4f87-a28f-6d6ae9f60a0f</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
@@ -30,19 +28,35 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Start
+							Individualized Program Service Plan Date
 						</elementName>
 						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
+						<cedsId>001236</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/1236</cedsURL>
 						<definitionRefId>5e7dc910-05b3-4f5a-947e-05a070b3ccb2</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Effective beginning of the IEP
+						The year, month and day on which the status of the service plan for a child is established or significantly altered.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="end" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Individualized Program Service Plan End Date
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>001683</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/001683</cedsURL>
+						<definitionRefId>0382a648-670b-4e98-9afc-e2e873ce5b7c</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						The year, month and day on which the status of the service plan for a child effectively ends.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="evaluationDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
@@ -51,14 +65,13 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>0382a648-670b-4e98-9afc-e2e873ce5b7c</definitionRefId>
+						<definitionRefId>ccc2a648-670b-4e98-9afc-e2e873ce5b7c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Effective end date of the IEP
+						Evaluation Date
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>

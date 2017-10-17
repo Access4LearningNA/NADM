@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
 	<xs:include schemaLocation="../../../SIFglobal.xsd" />
 	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 	<xs:include schemaLocation="../iepCommonTypes.xsd" />
-
 	<xs:include schemaLocation="../../../Entity/SIFNAEntityObjects.xsd" />
-
 	<!-- end redundant declaration for SIF tool analysis -->
-
 	<xs:include schemaLocation="iepAdministrativeDataCostSharingType.xsd" />
 	<xs:include schemaLocation="iepTransmitPermissionListType.xsd" />
 	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-
 	<!-- local parent type -->
 	<xs:complexType name="iepAdministrativeDataType">
 		<xs:annotation>
@@ -62,7 +59,6 @@
 							<xs:documentation>The date that the next evaluation is due based on the three year cycle.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-
 					<xs:element type="iepCommonParentGuardianListType" name="parentGuardianList" minOccurs="0" />
 					<xs:element type="iepAdministrativeDataCostSharingType" name="costSharing" minOccurs="0" />
 					<xs:element type="iepTransmitPermissionListType" name="transferPermissionList" minOccurs="0" />
@@ -70,5 +66,4 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-
 </xs:schema>

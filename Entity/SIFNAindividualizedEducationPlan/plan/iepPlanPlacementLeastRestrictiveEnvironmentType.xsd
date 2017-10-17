@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<!-- named type -->
 	<xs:complexType name='iepPlanPlacementLeastRestrictiveEnvironmentType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Least Restrictive Environment </elementName>
@@ -22,7 +20,6 @@
 			<xs:documentation> Documentation of learning environment
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="totalMinutesPerWeek" type="xs:integer" minOccurs="0">
 				<xs:annotation>
@@ -36,35 +33,30 @@
 					<xs:documentation> Total number of special education minutes per week </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="specialEducationSettingMinutesPerWeek" type="xs:integer" minOccurs="0">
+			<xs:element name="inclusionMinutesPerWeek" type="xs:integer" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Special Ed Setting Minutes per Week </elementName>
+						<elementName> Individualized Program Inclusion Minutes Per Week </elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001234</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001234</cedsURL>
-
 						<definitionRefId>f55594d5-cc0f-4c16-9e8e-9a8ef50bea77</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Number of minutes of special education conducted in a special education situation </xs:documentation>
+					<xs:documentation> The number of minutes per week that a student with disabilities is served in a special education setting separate from his or her non-disabled peers. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="generalEducationSettingMinutesPerWeek" type="xs:integer" minOccurs="0">
+			<xs:element name="nonInclusionMinutesPerWeek" type="xs:integer" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> General Ed Setting Minutes per Week </elementName>
+						<elementName> NonInclusion Minutes per Week </elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001233</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001233</cedsURL>
-
 						<definitionRefId>42f2de9d-b1f6-4d31-a115-dda5842680a9</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Number of minutes of special education conducted in a general education situation </xs:documentation>
+					<xs:documentation> The number of minutes per week that a student with disabilities is served in a regular classroom with his or her non-disabled peers. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>

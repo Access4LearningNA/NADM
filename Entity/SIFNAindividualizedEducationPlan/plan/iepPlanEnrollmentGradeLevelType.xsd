@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<!-- named type -->
 	<xs:complexType name='iepPlanEnrollmentGradeLevelType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -34,7 +32,6 @@
 						</elementName>
 						<cedsId>000100</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000100</cedsURL>
-
 						<definitionRefId>e677aa8b-f677-4b8d-9f62-60ee07a1504d</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
@@ -43,25 +40,31 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="P" />
-						<xs:enumeration value="K" />
-						<xs:enumeration value="1" />
-						<xs:enumeration value="2" />
-						<xs:enumeration value="3" />
-						<xs:enumeration value="4" />
-						<xs:enumeration value="5" />
-						<xs:enumeration value="6" />
-						<xs:enumeration value="7" />
-						<xs:enumeration value="8" />
-						<xs:enumeration value="9" />
+						<xs:enumeration value="IT" />
+						<xs:enumeration value="PR" />
+						<xs:enumeration value="PK" />
+						<xs:enumeration value="TK" />
+						<xs:enumeration value="KG" />
+						<xs:enumeration value="01" />
+						<xs:enumeration value="02" />
+						<xs:enumeration value="03" />
+						<xs:enumeration value="04" />
+						<xs:enumeration value="05" />
+						<xs:enumeration value="06" />
+						<xs:enumeration value="07" />
+						<xs:enumeration value="08" />
+						<xs:enumeration value="09" />
 						<xs:enumeration value="10" />
 						<xs:enumeration value="11" />
 						<xs:enumeration value="12" />
-						<!-- is this list correct? tqii -->
+						<xs:enumeration value="13" />
+						<xs:enumeration value="PS" />
+						<xs:enumeration value="UG" />
+						<xs:enumeration value="Other" />
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="other" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
@@ -70,14 +73,13 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>36484433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
+						<definitionRefId>aad84433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Text description of non-standard grade level designation
+						Explanation for choice of other or information refining grade level selection.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>

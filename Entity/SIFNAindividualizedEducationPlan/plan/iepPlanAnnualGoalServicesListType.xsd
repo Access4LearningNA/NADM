@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-		<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-		<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-		<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-		<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-
-
 	<xs:complexType name='iepPlanAnnualGoalServicesListServiceFrequencyDurationType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -24,7 +22,6 @@
 				Amount of time during cycle that student receives service
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="directMinutes" type="xs:integer" minOccurs="0">
 				<xs:annotation>
@@ -60,9 +57,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanAnnualGoalServicesListServiceFrequencyType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -77,7 +72,6 @@
 				Prescription for amount of service to be given.
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="cycle" minOccurs="0">
 				<xs:annotation>
@@ -107,9 +101,7 @@
 			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyDurationType' name="duration" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanAnnualGoalServicesListServiceType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -124,61 +116,109 @@
 				Support for student progress given by professional or para-professionals on a scheduled basis.
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
-			<xs:element name="category" minOccurs="0">
+			<xs:element name="type" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Category
+							Service Type
 						</elementName>
 						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
+						<cedsId>000273</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000273</cedsURL>
 						<definitionRefId>d10ecd43-4d6a-4400-b210-11f2d3ba139a</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Legal category of service
+						Type of related or ancillary services provided to a person or a group of persons within the formal educational system or offered by an outside agency which provides non-instructional services to support the general welfare of students. This includes physical and emotional health, the ability to select an appropriate course of study, admission to appropriate educational programs, and the ability to adjust to and remain in school through the completion of programs. In serving a student with an identified disability, related services include developmental, corrective, or supportive services required to ensure that the person benefits from special education.
 					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
 						<xs:enumeration value="SpecialInstruction" />
-						<xs:enumeration value="Speech" />
-						<xs:enumeration value="Motor" />
-						<xs:enumeration value="Counseling" />
-						<xs:enumeration value="Vision/hearing" />
-						<xs:enumeration value="Transportation" />
-						<xs:enumeration value="InterpretingServices" />
-						<xs:enumeration value="Orientation/mobility" />
-						<xs:enumeration value="ParentTraining" />
-						<!-- is this list correct? tqii -->
+						<xs:enumeration value="00290"/>
+						<xs:enumeration value="00291"/>
+						<xs:enumeration value="00292"/>
+						<xs:enumeration value="00293"/>
+						<xs:enumeration value="73050"/>
+						<xs:enumeration value="73051"/>
+						<xs:enumeration value="73052"/>
+						<xs:enumeration value="73053"/>
+						<xs:enumeration value="00878"/>
+						<xs:enumeration value="00295"/>
+						<xs:enumeration value="00881"/>
+						<xs:enumeration value="00882"/>
+						<xs:enumeration value="73048"/>
+						<xs:enumeration value="00334"/>
+						<xs:enumeration value="73047"/>
+						<xs:enumeration value="00297"/>
+						<xs:enumeration value="00298"/>
+						<xs:enumeration value="73054"/>
+						<xs:enumeration value="00299"/>
+						<xs:enumeration value="00333"/>
+						<xs:enumeration value="00303"/>
+						<xs:enumeration value="00883"/>
+						<xs:enumeration value="73049"/>
+						<xs:enumeration value="00304"/>
+						<xs:enumeration value="00332"/>
+						<xs:enumeration value="00305"/>
+						<xs:enumeration value="00884"/>
+						<xs:enumeration value="00306"/>
+						<xs:enumeration value="00300"/>
+						<xs:enumeration value="00308"/>
+						<xs:enumeration value="00335"/>
+						<xs:enumeration value="00336"/>
+						<xs:enumeration value="00309"/>
+						<xs:enumeration value="00310"/>
+						<xs:enumeration value="00311"/>
+						<xs:enumeration value="00312"/>
+						<xs:enumeration value="00313"/>
+						<xs:enumeration value="00331"/>
+						<xs:enumeration value="00314"/>
+						<xs:enumeration value="00315"/>
+						<xs:enumeration value="00318"/>
+						<xs:enumeration value="00885"/>
+						<xs:enumeration value="73046"/>
+						<xs:enumeration value="00319"/>
+						<xs:enumeration value="00302"/>
+						<xs:enumeration value="00320"/>
+						<xs:enumeration value="00294"/>
+						<xs:enumeration value="00337"/>
+						<xs:enumeration value="00321"/>
+						<xs:enumeration value="00322"/>
+						<xs:enumeration value="00323"/>
+						<xs:enumeration value="00324"/>
+						<xs:enumeration value="00886"/>
+						<xs:enumeration value="00887"/>
+						<xs:enumeration value="00325"/>
+						<xs:enumeration value="00326"/>
+						<xs:enumeration value="00327"/>
+						<xs:enumeration value="00888"/>
+						<xs:enumeration value="00329"/>
+						<xs:enumeration value="00330"/>
+						<xs:enumeration value="00889"/>
+						<xs:enumeration value="09999"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="setting" minOccurs="0">
+			<xs:element name="settingIndicator" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Setting
+							Inclusive Setting Indicator
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001634</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001634</cedsURL>
-
 						<definitionRefId>152a7b1d-691e-414e-93f0-7d6757b10f6f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Where service will be rendered
+						Indicates that services are provided to the child in a place where children of all abilities learn together.
 					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="General" />
-						<xs:enumeration value="Special" />
-						<!-- how to add other? tqii -->
-						<!-- is this list correct? tqii -->
+						<xs:enumeration value="Yes"/>
+						<xs:enumeration value="No"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -188,17 +228,15 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Start Date
+							Goal Start Date
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001165</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001165</cedsURL>
-
 						<definitionRefId>78adc225-ba26-433a-ba14-2642690d888a</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Date that work toward this goal will commence.
+						The date on which the goal becomes active.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -206,17 +244,15 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							End Date
+							Goal End Date
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001166</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001166</cedsURL>
-
 						<definitionRefId>097d92f3-4319-4672-8d12-d06aeda8af37</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Date that work toward this goal will end.
+						The date on which the goal expires or has been achieved.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -224,44 +260,44 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Non-Participation Reason
+							Reason for Declined Services
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001488</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001488</cedsURL>
-
 						<definitionRefId>f6e6860b-7d37-4083-bf45-d44b9a02e5d4</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						Reason that student did not participate in this service.
+						The reason given for declining the recommended services.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="extendsSchoolYear" type="xs:boolean" minOccurs="0">
+			<xs:element name="extendsSchoolYear" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Extends School Year
+							Service Extends Outside School Year
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId>001717</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001717</cedsURL>
-
 						<definitionRefId>0c6d36dc-df7b-463b-baf1-1f9fe810b4f6</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Determination if this service continues outside school year.
 					</xs:documentation>
 				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="Yes"/>
+						<xs:enumeration value="No"/>
+					</xs:restriction>
+				</xs:simpleType>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<!-- named type -->
 	<xs:complexType name='iepPlanAnnualGoalServicesListType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -276,10 +312,8 @@
 				List of supporting resources required for student to achieve a goal
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanAnnualGoalServicesListServiceType' name="service" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>
