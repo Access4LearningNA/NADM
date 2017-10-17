@@ -32,9 +32,8 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="Regular" />
-						<xs:enumeration value="Alternate" />
-						<!-- is this list correct? tqii -->
+						<xs:enumeration value="Yes" />
+						<xs:enumeration value="No" />
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>

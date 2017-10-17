@@ -7,6 +7,67 @@
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
+	<xs:complexType name='iepPlanAnnualGoalServicesListServiceFrequencyCycleType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Service Cycle
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+				<definitionRefId>ed5ded33-922e-48c9-97de-4a546187ba53</definitionRefId>
+			</xs:appinfo>
+			<xs:documentation>
+				Amount of time during cycle that student receives service
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="count" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Service Cycle Count
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>ccc7251a-8e93-48fa-b05e-ec33495015a5</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						The number of service events in a service repetition period.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="period" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Service Cycle Period
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>ccc22600-8500-42dd-b18b-40854b421f94</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						The period in which the service events must be repeated.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="day" />
+						<xs:enumeration value="week" />
+						<xs:enumeration value="month" />
+						<xs:enumeration value="quarter" />
+						<xs:enumeration value="term" />
+						<xs:enumeration value="year" />
+						<xs:enumeration value="school year" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name='iepPlanAnnualGoalServicesListServiceFrequencyDurationType'>
 		<xs:annotation>
 			<xs:appinfo>
@@ -73,31 +134,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="cycle" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName>
-							Cycle
-						</elementName>
-						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-						<definitionRefId>b3f22600-8500-42dd-b18b-40854b421f94</definitionRefId>
-					</xs:appinfo>
-					<xs:documentation>
-						How often service must be rendered
-					</xs:documentation>
-				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="5Day" />
-						<xs:enumeration value="6Day" />
-						<xs:enumeration value="10Day" />
-						<!-- How to add 'other'? tqii -->
-						<!-- is this list correct? tqii -->
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
+			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyCycleType' name="cycle" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyDurationType' name="duration" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>

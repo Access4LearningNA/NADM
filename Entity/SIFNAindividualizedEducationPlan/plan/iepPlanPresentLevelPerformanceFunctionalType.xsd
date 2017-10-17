@@ -111,49 +111,56 @@
 			<xs:documentation> Information about a specific functional disability </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="name" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="disabilityCodeList" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Disability Name </elementName>
+						<elementName>
+							Disability Categoryt
+						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>88e01654-95f1-42bb-ae33-ce9b1c0d09c1</definitionRefId>
+						<referenceUrl>http://www.parentcenterhub.org/categories/</referenceUrl>
+						<definitionRefId>9095b5ef-95d2-48cb-816d-c4955f9d664c</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Specific identification of educational activity impaired by disability
+					<xs:documentation>
+						Categories of Disability Under IDEA
 					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="AdaptedPhysicalEducation" />
-						<xs:enumeration value="BrailleNeedsBlind/visuallyImpaired" />
-						<xs:enumeration value="ExtraCurriculumActivities" />
-						<xs:enumeration value="Social/EmotionalNeeds" />
-						<xs:enumeration value="AssistiveTechDevices/services" />
-						<xs:enumeration value="CommunicationAllStudents" />
-						<xs:enumeration value="LanguageNeedsLEPStudents" />
-						<xs:enumeration value="TravelTraining" />
-						<xs:enumeration value="Behavior" />
-						<xs:enumeration value="CommunicationDeaf/hardOfHearingStudents" />
-						<xs:enumeration value="NonacademicActivities" />
-						<xs:enumeration value="SkillDevelopmentRelatedToVocationalPreparationOrExperience" />
-						<xs:enumeration value="ForChildrenAges3To5?ParticipationInAppropriateActivities" />
-						<xs:enumeration value="ForChildrenAges14+OrYoungerIfAppropriate?student'sCourseOfStudy" />
-						<xs:enumeration value="ForChildrenAges16OrYoungerIfAppropriateTo22?TransitionToPost-schoolActivitiesIncludingCommunityExperiencesEmploymentObjectivesOtherPostSchoolAdultLivingAndIfAppropriateDailyLivingSkills" />
-						<!-- this list is not right? tqii -->
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="Autism"/>
+						<xs:enumeration value="Deaf-blindness"/>
+						<xs:enumeration value="Deafness"/>
+						<xs:enumeration value="Developmental delay"/>
+						<xs:enumeration value="Emotional disturbance"/>
+						<xs:enumeration value="Hearing impairment"/>
+						<xs:enumeration value="Intellectual disability"/>
+						<xs:enumeration value="Multiple disabilities"/>
+						<xs:enumeration value="Orthopedic impairment"/>
+						<xs:enumeration value="Other health impairment"/>
+						<xs:enumeration value="Specific learning disability"/>
+						<xs:enumeration value="Speech or language impairment"/>
+						<xs:enumeration value="Traumatic brain injury"/>
+						<xs:enumeration value="Visual impairment, including blindness"/>
+						<xs:enumeration value="Student Needing Alternate Programming (SNAP)"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Explanation </elementName>
+						<elementName>
+							Explanation
+						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>5515b51f-939d-4eb4-aecf-9367ca64cd89</definitionRefId>
+						<definitionRefId>aac84433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Explanation of the specifics of disability in this category </xs:documentation>
+					<xs:documentation>
+						Explanation for choice of SNAP, other or information refining disabilty selection.
+					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="consequences" type="xs:normalizedString" minOccurs="0">

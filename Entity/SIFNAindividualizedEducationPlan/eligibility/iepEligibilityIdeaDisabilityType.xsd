@@ -501,37 +501,54 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Disability Code List
+							Disability Categoryt
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
+						<referenceUrl>http://www.parentcenterhub.org/categories/</referenceUrl>
 						<definitionRefId>9095b5ef-95d2-48cb-816d-c4955f9d664c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
-						List of legal identifiers for disabilities found.
+						Categories of Disability Under IDEA
 					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
-						<xs:enumeration value="autism"/>
-						<xs:enumeration value="deaf blindness"/>
-						<xs:enumeration value="developmental delay"/>
-						<xs:enumeration value="hearing impairment"/>
-						<xs:enumeration value="mental retardation"/>
-						<xs:enumeration value="multiple disabilities"/>
-						<xs:enumeration value="orthopedic impairment"/>
-						<xs:enumeration value="serious emotional disturbance"/>
-						<xs:enumeration value="specific learning disabilities"/>
-						<xs:enumeration value="speech or language impairment"/>
-						<xs:enumeration value="traumatic brain injury"/>
-						<xs:enumeration value="visual impairment"/>
+						<xs:enumeration value="Autism"/>
+						<xs:enumeration value="Deaf-blindness"/>
+						<xs:enumeration value="Deafness"/>
+						<xs:enumeration value="Developmental delay"/>
+						<xs:enumeration value="Emotional disturbance"/>
+						<xs:enumeration value="Hearing impairment"/>
+						<xs:enumeration value="Intellectual disability"/>
+						<xs:enumeration value="Multiple disabilities"/>
+						<xs:enumeration value="Orthopedic impairment"/>
+						<xs:enumeration value="Other health impairment"/>
+						<xs:enumeration value="Specific learning disability"/>
+						<xs:enumeration value="Speech or language impairment"/>
+						<xs:enumeration value="Traumatic brain injury"/>
+						<xs:enumeration value="Visual impairment, including blindness"/>
 						<xs:enumeration value="Student Needing Alternate Programming (SNAP)"/>
-						<xs:enumeration value="Other"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element type='xs:string' name="snapExplanation" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Explanation
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+						<definitionRefId>aac84433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
+					</xs:appinfo>
+					<xs:documentation>
+						Explanation for choice of SNAP, other or information refining disabilty selection.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element type='iepEligibilityIdeaDisabilityAnalysisType' name="analysis" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element type='iepEligibilityIdeaDisabilitySpecificLearningDisabilitySpecialDiagnosisJustificationsType' name="SpecialDiagnosisJustifications" minOccurs="0" />
 			<xs:element type='iepEligibilityIdeaDisabilityDecisionsType' name="decisions" minOccurs="0" />
