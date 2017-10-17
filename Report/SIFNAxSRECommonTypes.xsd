@@ -3,8 +3,6 @@
 	<xs:include schemaLocation="../Composite/SIFNAxPressCommonTypes.xsd"/>
 	<xs:include schemaLocation="../Composite/SIFNAxPress.xsd"/>
 	
-	<!-- xs:include schemaLocation="SIFNASpecialEducation.xsd"/ tqii -->
-	
 	<xs:complexType name="xTranscriptTermType">
 		<xs:sequence>
 			<xs:element name="school" type="xSchoolType" minOccurs="0">
@@ -1390,17 +1388,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="xProgramSummaryType">
-		<xs:sequence>
-<!--
-			<xs:element name="specialEducation" type="xSpecialEducationType" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Special education information, including eligibility, placement, and services.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-
-remove this, maybe 
-tqii -->
-			
+		<xs:sequence>	
 			<xs:element name="activities" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>A list of co-curricular or extracurricular activities that this student has participated in.</xs:documentation>
