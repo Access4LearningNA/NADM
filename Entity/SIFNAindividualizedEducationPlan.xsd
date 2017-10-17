@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!--
+	Developed for A4L by 
+		TQ White II
+			Central Minnesota Educational Research and Development Council
+			tqwhite@erdc.k12.mn.us
+			10/17/17
+	Significant contributions by
+		Jill Parkes, Quality Information Partners
+		Megan Gangl, Central Minnesota Educational Research and Development Council
+		John Lovell, Access for Learning
+-->
 <xs:schema
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
