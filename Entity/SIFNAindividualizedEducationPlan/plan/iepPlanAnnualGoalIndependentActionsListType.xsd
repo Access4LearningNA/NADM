@@ -17,7 +17,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>d4e373fb-2c33-483a-9492-e562887f13bf</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Activities or actions to be accomplished outside of a service context
@@ -33,7 +32,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>c0fff6d8-f25d-4b4e-9aa2-71cb1f7da905</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Activity or action to be accomplished outside of a service context

@@ -14,7 +14,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>f885aad8-34b4-4bf3-9df7-d0585db85233</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Category being fulfilled by this plan </xs:documentation>
 		</xs:annotation>
@@ -26,7 +25,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000320</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000320</cedsURL>
-						<definitionRefId>9be6d7f8-08cf-4ce4-925a-5f7159e82f1f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> A designation of the type of program developed for a student.
 					</xs:documentation>
@@ -54,7 +52,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>e0c897c1-baa9-42dd-b507-406ed4cb843e</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Reason student is included in this category </xs:documentation>
 				</xs:annotation>
@@ -68,7 +65,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>7ff36e1d-c693-4ff3-b817-ff27abf22a31</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Special categories applying to this plan </xs:documentation>
 		</xs:annotation>
@@ -84,7 +80,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>44c5d825-d522-4ae5-b305-92b8d3f2fa38</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Summary of how disabilities effect the student�s ability to participate and learn
 			</xs:documentation>

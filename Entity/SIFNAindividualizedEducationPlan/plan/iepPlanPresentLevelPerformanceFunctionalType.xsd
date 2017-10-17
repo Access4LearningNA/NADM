@@ -14,7 +14,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>47c51f79-3f2b-4155-b2cc-c4d4392dc22c</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Current accommodation in place
 			</xs:documentation>
@@ -27,7 +26,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>119cbb7d-3abc-49a4-ad4d-31b8f0973e35</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Current accommodation Category
 					</xs:documentation>
@@ -47,7 +45,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>eb774fae-d661-4ca4-9809-12cfc9945550</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Description of specific accommodation or change made to environment
 					</xs:documentation>
@@ -62,7 +59,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>f54b3033-5029-4eae-9f0a-8bc8c21e6c54</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> List of current accommodations
 			</xs:documentation>
@@ -78,7 +74,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>28008805-f321-4749-af73-b782fc330394</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Information about the specific ways that disability interferes
 			</xs:documentation>
@@ -91,7 +86,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001706</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001706</cedsURL>
-						<definitionRefId>334a21a2-85c8-4b1e-8bde-6e44aeabd587</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> How the child's disability affects the child's functional performance. </xs:documentation>
 				</xs:annotation>
@@ -106,7 +100,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>9568caf1-9f71-40e0-ba47-258759c0fc7c</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Information about a specific functional disability </xs:documentation>
 		</xs:annotation>
@@ -121,7 +114,6 @@
 						<cedsId/>
 						<cedsURL/>
 						<referenceUrl>http://www.parentcenterhub.org/categories/</referenceUrl>
-						<definitionRefId>9095b5ef-95d2-48cb-816d-c4955f9d664c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Categories of Disability Under IDEA
@@ -156,7 +148,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>aac84433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Explanation for choice of SNAP, other or information refining disabilty selection.
@@ -170,7 +161,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>6b4b59ae-d664-4682-afa4-1bb40efe9f75</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Analysis of the particular ways that the disability interferes with educational attainment </xs:documentation>
 				</xs:annotation>
@@ -185,7 +175,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>848e3e65-f6cd-4d4c-8e57-f59f1ccc4d6b</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Information about the child?s ability to operate in a classroom or other learning setting </xs:documentation>
 		</xs:annotation>
@@ -201,7 +190,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>438cfded-f069-4a3c-9481-37a947823544</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Information about the child�s ability to function in a classroom or other learning setting
 			</xs:documentation>

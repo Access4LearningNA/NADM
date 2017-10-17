@@ -20,7 +20,6 @@
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>0ef2e848-f613-4a4c-9899-743566f4a71c</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Information about a student's need and eligibility for special education services.
@@ -40,7 +39,6 @@
 								<sifChar>O</sifChar>
 								<cedsId>001728</cedsId>
 								<cedsURL>https://ceds.ed.gov/element/001728</cedsURL>
-								<definitionRefId>b7aa2611-ed5a-4268-ad89-a1f9a5cf40e5</definitionRefId>
 							</xs:appinfo>
 							<xs:documentation>Purpose within the IEP lifecycle for which the eligibility evaluation is conducted.</xs:documentation>
 						</xs:annotation>
@@ -60,7 +58,6 @@
 								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL/>
-								<definitionRefId>eee3677d-c721-4bd5-9ab4-f3556040f31b</definitionRefId>
 							</xs:appinfo>
 							<xs:documentation>
 								Explanation for how the student's condition meets the criteria for disability.

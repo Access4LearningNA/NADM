@@ -16,7 +16,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>3670dcee-b180-4a6d-a418-9d023b4f1509</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Specifies minimum of trials and success threshold
@@ -32,7 +31,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001694</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001694</cedsURL>
-						<definitionRefId>016e7c88-145b-4c4b-866f-baf695b4e529</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						The number of correct results that will be considered to represent successful achievement of a goal.
@@ -48,7 +46,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001692</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001692</cedsURL>
-						<definitionRefId>f4fe69d6-9cba-45dc-86ad-407a77218c13</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						The number of attempts representing a completed trial for assessing achievement of a goal.
@@ -66,7 +63,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>f41169ff-73e7-4d6b-866e-eff4f15be0d3</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Definition of the quantitative measurement by which success will be judged. Three structures are defined.
@@ -82,7 +78,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001691</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001691</cedsURL>
-						<definitionRefId>b3612f3f-b6f0-4529-87c8-541756b1fb4c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						The percent of correct results that will be considered to represent successful achievement of a goal.
@@ -106,7 +101,6 @@
 						<sifChar>O</sifChar>
 						<cedsId />
 						<cedsURL />
-						<definitionRefId>f7a7cd71-8379-474e-85e6-baef2aa95399</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Description of other specific success measurement method
@@ -124,7 +118,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>1ae44e99-0485-44eb-8bd3-7e076e9cc9a1</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Criterion used to determine success or progress toward mastering this objective
@@ -140,7 +133,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001695</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001695</cedsURL>
-						<definitionRefId>87285b28-d8dd-4a19-b33d-c4c008a4bd92</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						The procedures and/or instruments that will be used to measure achievement of a goal or short-term objective.
@@ -159,7 +151,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>e4c28b1b-b59e-4ac8-abdd-2877c5897fa8</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Definition of the way we will know the student has achieved the goal
@@ -178,7 +169,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>0dd5bd68-3eb9-4be3-a63d-8801218c8f07</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Person who will help the student achieve this goal
@@ -194,7 +184,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>804e41bd-e339-4fdf-8f23-41918155d5c5</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Facilitator Identity
@@ -210,7 +199,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>e97afbab-e3aa-4b53-a751-1e81793440da</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						The help this facilitor is asked to contribut to the achievement of this objective
@@ -228,7 +216,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>37b30b94-986a-49fc-a66c-bf8169a0dfb5</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				List of people who will help the student achieve this goal
@@ -247,7 +234,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>6543a5c9-90dd-4305-8a08-57e80df35907</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Specific objective that will be achieved in the pursuit of this goal
@@ -263,7 +249,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000692</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000692</cedsURL>
-						<definitionRefId>9afb5d48-c2e1-4c6b-8d00-b97c60aab8cd</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						A human-referenceable code designated by the publisher to identify the item in the hierarchy of competency framework items.
@@ -281,7 +266,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>4b023834-03c0-41d3-b59f-d0fa950ba5ff</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Parental agreement (or disagreement) with judging objective based on specified criterion
@@ -300,7 +284,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>da110056-de8a-4a21-8d19-a2f37444cb18</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Objectives that will be achieved in the pursuit of this goal

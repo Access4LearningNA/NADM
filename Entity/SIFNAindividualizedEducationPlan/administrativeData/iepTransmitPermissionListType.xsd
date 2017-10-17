@@ -14,7 +14,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>eeea91ef-4c7c-4a92-9465-8854c1ec89a4</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Explanation of the reason that sending the IEP was permitted </xs:documentation>
 		</xs:annotation>
@@ -26,7 +25,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>46ebb831-299c-4410-816a-7aae5e1e8f29</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Proved identity of parent giving transmit permission IEP
 					</xs:documentation>
@@ -41,7 +39,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>ddde6ff4-c8fa-4b9c-be66-232b618194e0</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Explanation of reason other than parent authorization that permission was given to transmit IEP.
@@ -57,7 +54,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>fffa91ef-4c7c-4a92-9465-8854c1ec89a4</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Person or organization that is the intended recipient </xs:documentation>
 		</xs:annotation>
@@ -69,7 +65,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>46ebb831-299c-4410-816a-7aae5e1e8f29</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Proved identity of parent giving transmit permission IEP
 					</xs:documentation>
@@ -82,7 +77,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>dddbb831-299c-4410-816a-7aae5e1e8f29</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Service provider that needs access to IEP
 					</xs:documentation>
@@ -95,7 +89,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>eeebb831-299c-4410-816a-7aae5e1e8f29</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Other person or organization (eg, court, prison, government) that needs access to IEP
 					</xs:documentation>
@@ -110,7 +103,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>ggga91ef-4c7c-4a92-9465-8854c1ec89a4</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Reason that the IEP was sent </xs:documentation>
 		</xs:annotation>
@@ -122,7 +114,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>dddbb831-299c-4410-816a-7aae5e1e8f29</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Intended purpose for sending the IEP
 					</xs:documentation>
@@ -144,7 +135,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>ddde6ff4-c8fa-4b9c-be66-232b618194e0</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Intended purpose for sending IEP
@@ -160,7 +150,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>ddda91ef-4c7c-4a92-9465-8854c1ec89a4</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Information that justifies the sending of the IEP to a destination </xs:documentation>
 		</xs:annotation>
@@ -172,7 +161,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>c211125b-5c71-4551-819a-3e2c4191cd57</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Proved identity of official authorizing transmit permission IEP
 					</xs:documentation>
@@ -185,7 +173,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>ddd13a0b-65fe-4cbf-9798-cff5dc5ac262</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Date that transmit permission was given by authority
 					</xs:documentation>
@@ -204,7 +191,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>dddba83a-36e0-466d-8293-dc8b912059fc</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> History List of Transmit Permissions </xs:documentation>
 		</xs:annotation>

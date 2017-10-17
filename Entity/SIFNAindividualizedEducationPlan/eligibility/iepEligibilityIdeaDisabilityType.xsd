@@ -13,7 +13,6 @@
 				<sifChar>OR</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>752bbce0-1b7a-4e71-b467-322fd9e0c222</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation/>
 		</xs:annotation>
@@ -27,7 +26,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>640e539d-0683-4eb0-ad00-482e0922d5a6</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Discussion of the educational problems that result from the disability
@@ -43,7 +41,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>0db3677d-c721-4bd5-9ab4-f3556040f31b</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Description of the overall changes needed for the student's educational program
@@ -59,7 +56,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>0db3677d-c721-4bd5-9ab4-f3556040f31b</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Description of the accommodation needed to optimize the student's potential for learning.
@@ -75,7 +71,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>3cce1481-ad27-432f-8493-32afd3812dff</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Additional information that explains how to improve the student�s educational outcome.
@@ -95,7 +90,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000577</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000577</cedsURL>
-						<definitionRefId>549fe64a-f3bb-4c7f-8290-ce5fabbbe4d3</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						An indication of whether a person is classified as disabled under the American's with Disability Act (ADA).
@@ -111,7 +105,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>6cf5cb6d-1437-442d-8a16-719d1dad68ea</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Official determination that the disability has adverse effects
@@ -127,7 +120,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000151</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000151</cedsURL>
-						<definitionRefId>a3a01a85-e0a0-4dde-8758-9ccc7f9859f4</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						A person having intellectual disability; hearing impairment, including deafness; speech or language impairment; visual impairment, including blindness; serious emotional disturbance (hereafter referred to as emotional disturbance); orthopedic impairment; autism; traumatic brain injury; developmental delay; other health impairment; specific learning disability; deaf-blindness; or multiple disabilities and who, by reason thereof, receive special education and related services under the Individuals with Disabilities Education Act (IDEA) according to an Individualized Education Program (IEP), Individual Family Service Plan (IFSP), or service plan.
@@ -153,7 +145,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>cff249ef-eb82-4295-8371-02328b9f6952</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Determination that there is a severe discrepancy between standard educational attainment and student performance
@@ -169,7 +160,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>092282e5-5793-4c6c-a006-15d79384b737</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Determination that student has not responded to intervention
@@ -185,7 +175,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>25780185-27f2-4080-bbfb-0c354a02f0dc</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Determination that this student is eligible for special education
@@ -203,7 +192,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>2622f6bf-5f4c-4904-9af7-f6e145fa5e5d</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Conditions whose presence disqualifies student from special education programs
@@ -219,7 +207,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>f7936b10-0ca2-4d2c-b79c-078fef1b32e0</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Insufficient Math Found
@@ -235,7 +222,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>e7f7fc07-19d6-44c6-aeaf-8e5998720406</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Insufficient Reading Found
@@ -251,7 +237,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>6468bda2-5dd0-4e58-92d9-aad29a7c883d</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Insufficient English Found
@@ -267,7 +252,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>5e17229b-d578-4fa9-a76f-4ac3082c5775</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Visual, Hearing Or Motor Disability Found
@@ -283,7 +267,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>bf47f2fd-8735-449c-b133-68d9090ff402</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Intellectual Disability Found
@@ -299,7 +282,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>4efd4532-a64d-4730-a9ac-daa7dee873ec</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Emotional Disability Found
@@ -315,7 +297,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>fa83cb35-d4be-454d-92f1-023492002fcf</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Cultural Factors Found
@@ -331,7 +312,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>228b8fcd-4fce-44cb-9cf6-380b2f296b1c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Environmental Or Economic Disadvantage Found
@@ -347,7 +327,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>f845d527-86a1-42f7-a068-3500cedf8571</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Limited English Proficiency Found
@@ -365,7 +344,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>735a48de-a01e-4b8c-bd23-b76ec39dea29</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Proof that the disability is not the the result of disqualified causes and is qualified for funding
@@ -382,7 +360,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>98654ed1-977f-443f-98f7-cf9844fc833e</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Medical reasons for determination that a potentially excluded factor is actually a disability
@@ -398,7 +375,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>aebf85c8-3c31-4adf-81d9-093896636b9b</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Other reasons that student should not be excluded from special education programs
@@ -416,7 +392,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>c2399b8d-5956-4472-a4a5-a0fa94d9d1ef</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				CEDS: Information supporting disability code ‘specific learning disability’
@@ -433,7 +408,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>37ce4a8a-9c97-4554-907f-9cac427fe2ef</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Description the specific educational shortcomings that lead to a disability diagnosis
@@ -449,7 +423,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>76366327-949a-4b45-9466-5d9974bea8a6</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Observations about the student’s performance in a practical learning setting
@@ -471,7 +444,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>4b10aab2-d9bf-4073-a902-df365cb55d2d</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Information supporting the disability code ‘Team Override’
@@ -490,7 +462,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>1937f429-6c49-4fe6-a071-28be5b97a76a</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Formal presentation of factors leading to conclusion that IDEA disability had been found or not
@@ -507,7 +478,6 @@
 						<cedsId/>
 						<cedsURL/>
 						<referenceUrl>http://www.parentcenterhub.org/categories/</referenceUrl>
-						<definitionRefId>9095b5ef-95d2-48cb-816d-c4955f9d664c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Categories of Disability Under IDEA
@@ -542,7 +512,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>aac84433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Explanation for choice of SNAP, other or information refining disabilty selection.

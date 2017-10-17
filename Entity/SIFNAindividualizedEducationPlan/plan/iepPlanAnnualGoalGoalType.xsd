@@ -16,7 +16,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>b9969e5b-823f-43d9-9efd-fcb5c2170782</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Reference for standard definition addressed by this goal
@@ -32,7 +31,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000874</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000874</cedsURL>
-						<definitionRefId>d8cee3d6-ec81-42e2-93a4-64813005d82d</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						A network-resolvable Uniform Resource Locator (URL) pointing to the authoritative reference for the competency framework item
@@ -48,7 +46,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000692</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000692</cedsURL>
-						<definitionRefId>4c4838ba-0d9a-474c-94ee-144bd29fbc62</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						A human-referenceable code designated by the publisher to identify the item in the hierarchy of competency framework items.
@@ -67,7 +64,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>295f99ab-5491-4cef-83a0-45d5ea144c60</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Category and reference information for goal
@@ -83,7 +79,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001698</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001698</cedsURL>
-						<definitionRefId>3c9278fe-457a-40cc-96e0-490b9661670f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Legal category for an IEP annual goal or short-term objectives.
@@ -106,7 +101,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>ddd278fe-457a-40cc-96e0-490b9661670f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Additional information about goal or why it fits this category.

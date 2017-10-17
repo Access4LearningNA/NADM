@@ -17,7 +17,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>899c3a61-b5f7-4d44-b1f3-b79c0a85c9ca</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				The student’s actual, age and experience appropriate grade level including advancement
@@ -32,7 +31,6 @@
 						</elementName>
 						<cedsId>000100</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000100</cedsURL>
-						<definitionRefId>e677aa8b-f677-4b8d-9f62-60ee07a1504d</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Standard Grade Level
@@ -73,7 +71,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>aad84433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Explanation for choice of other or information refining grade level selection.

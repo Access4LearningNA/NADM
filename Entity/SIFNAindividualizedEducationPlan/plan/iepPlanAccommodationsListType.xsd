@@ -14,7 +14,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>7b95b85e-7d81-41cd-bee6-1732b32438b5</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> List of circumstances in which the accommodation or change to standards or practices will be applied.
 			</xs:documentation>
@@ -27,7 +26,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001686</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001686</cedsURL>
-						<definitionRefId>39f28586-51ee-4b56-9743-63fa029d8a5d</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Circumstances in which the accommodation or change to standards or practices will be applied.
 					</xs:documentation>
@@ -42,7 +40,6 @@
 				<sifChar>O</sifChar>
 				<cedsId />
 				<cedsURL />
-				<definitionRefId>20f56dd7-a86b-44dc-a6da-38581e948a03</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> The specific accommodation necessary for assessment or instruction </xs:documentation>
 		</xs:annotation>
@@ -59,7 +56,6 @@
 				<sifChar>O</sifChar>
 				<cedsId>000273</cedsId>
 				<cedsURL>https://ceds.ed.gov/element/000273</cedsURL>
-				<definitionRefId>c1acd542-36fd-4531-9976-7ebd48d5fe59</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> List of accommodations to support effective learning
 			</xs:documentation>
