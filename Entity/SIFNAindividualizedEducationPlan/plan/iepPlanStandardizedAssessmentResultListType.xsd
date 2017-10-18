@@ -14,7 +14,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>7304a51d-46e0-49dd-93fb-a6497f2ea793</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Special assessment evaluation method, procedure or standard </xs:documentation>
 		</xs:annotation>
@@ -26,15 +25,13 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>f48fd527-cabd-4412-8474-bb7a43c5ddc4</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Indicator if special standard is required </xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="Regular" />
-						<xs:enumeration value="Alternate" />
-						<!-- is this list correct? tqii -->
+						<xs:enumeration value="Yes" />
+						<xs:enumeration value="No" />
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -45,7 +42,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>4caef890-56f2-46b7-807a-9d3832a7414a</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Name of alternative standard
 					</xs:documentation>
@@ -62,7 +58,6 @@
 				<cedsURL>
 					https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=7376
 				</cedsURL>
-				<definitionRefId>2bff5526-0faa-44d4-b252-e036ed0eb3de</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Changes to the environment or assessment procedure necessitated the student’s disability </xs:documentation>
 		</xs:annotation>
@@ -75,7 +70,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000597</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000597</cedsURL>
-						<definitionRefId>17211841-a2e3-4297-9b06-852e7215bd08</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> The description of the place where an assessment is administered. </xs:documentation>
 				</xs:annotation>
@@ -87,7 +81,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000383</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000383</cedsURL>
-						<definitionRefId>daedb013-88fa-4d01-a5e1-aa36d4cfd9e0</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> A category of accommodations needed for a given assessment. </xs:documentation>
 				</xs:annotation>
@@ -114,7 +107,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>aae84433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Explanation for choice of other or information refining category selection.
@@ -131,7 +123,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>d5b75ff3-41cf-425b-af9d-d3c78e945bd3</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> List of accommodations needed by student to complete assessments
 			</xs:documentation>
@@ -147,7 +138,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>e82bedb1-9efb-4c5f-a75c-9a182419f4a3</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Documentation of the standard tool used for assessment </xs:documentation>
 		</xs:annotation>
@@ -159,7 +149,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000028</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000028</cedsURL>
-						<definitionRefId>c9ea03ef-a2c5-4517-8440-c5877af15ad6</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> The title or name of the assessment. </xs:documentation>
 				</xs:annotation>
@@ -171,7 +160,6 @@
 						<sifChar>O</sifChar>
 						<cedsId />
 						<cedsURL />
-						<definitionRefId>11805844-a4a1-41b3-a113-baf1a1e78e3f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> The topic category evaluated by this assessment </xs:documentation>
 				</xs:annotation>
@@ -191,7 +179,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001204</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001204</cedsURL>
-						<definitionRefId>c1d26303-9866-4844-83f2-24aae21dba62</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> The Uniform Resource Locator (URL) location of the external Assessment Asset content. </xs:documentation>
 				</xs:annotation>
@@ -205,7 +192,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>0c0a0e89-4cbf-4267-9212-bd592a8d6256</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Results of a specific standardized assessment </xs:documentation>
 		</xs:annotation>
@@ -222,7 +208,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>1486fd26-85e3-46ce-8fa5-68af5bddf164</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Results of standardized assessments used to document current student performance </xs:documentation>
 		</xs:annotation>

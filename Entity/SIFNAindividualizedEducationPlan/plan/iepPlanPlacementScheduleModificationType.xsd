@@ -14,7 +14,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>e3b5693c-b9c1-4fef-ae95-a2052fe7b32c</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Modifications to the school year necessitated by the annual goals and services
 			</xs:documentation>
@@ -27,7 +26,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>b6085acd-5abe-44a4-ae92-1787beef7311</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Brief characterization of main change </xs:documentation>
 				</xs:annotation>
@@ -46,7 +44,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>123000ff-485b-4ce4-b0b6-10ba68ee573c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Explanation of exactly what change is needed </xs:documentation>
 				</xs:annotation>
@@ -58,7 +55,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>f2e34319-0343-43db-bea1-3983a55785fd</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Reason that the changes are needed </xs:documentation>
 				</xs:annotation>
@@ -72,7 +68,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>82943bb4-11a5-47e6-bd02-d2b49dd7e748</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Schedule modifications to the standard school day </xs:documentation>
 		</xs:annotation>
@@ -84,7 +79,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>0fdea2e6-03c6-4144-9a8a-84d3841174b6</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Brief characterization of main change </xs:documentation>
 				</xs:annotation>
@@ -102,7 +96,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>fde69c47-e92d-40b5-92be-4a837d1d3a83</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Explanation of exactly what change is needed </xs:documentation>
 				</xs:annotation>
@@ -114,7 +107,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>18304238-dce2-454a-86cf-b71ba2d4c9a3</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Reason that the changes are needed </xs:documentation>
 				</xs:annotation>
@@ -129,7 +121,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>1c00d4a5-3bdd-4e7a-a48f-7910dcb795ee</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Changes to the standard education schedule demanded by the annual goals and services needed </xs:documentation>
 		</xs:annotation>

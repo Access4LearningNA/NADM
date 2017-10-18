@@ -15,7 +15,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>58bff2d2-b2b9-4345-b541-ef3e5cb716a6</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> List of goals to be sought for a special education student </xs:documentation>
 		</xs:annotation>

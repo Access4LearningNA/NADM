@@ -14,7 +14,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>47c51f79-3f2b-4155-b2cc-c4d4392dc22c</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Current accommodation in place
 			</xs:documentation>
@@ -27,7 +26,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>119cbb7d-3abc-49a4-ad4d-31b8f0973e35</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Current accommodation Category
 					</xs:documentation>
@@ -47,7 +45,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>eb774fae-d661-4ca4-9809-12cfc9945550</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Description of specific accommodation or change made to environment
 					</xs:documentation>
@@ -62,7 +59,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>f54b3033-5029-4eae-9f0a-8bc8c21e6c54</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> List of current accommodations
 			</xs:documentation>
@@ -78,7 +74,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>28008805-f321-4749-af73-b782fc330394</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Information about the specific ways that disability interferes
 			</xs:documentation>
@@ -91,7 +86,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001706</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001706</cedsURL>
-						<definitionRefId>334a21a2-85c8-4b1e-8bde-6e44aeabd587</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> How the child's disability affects the child's functional performance. </xs:documentation>
 				</xs:annotation>
@@ -106,54 +100,58 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>9568caf1-9f71-40e0-ba47-258759c0fc7c</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Information about a specific functional disability </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="name" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="disabilityCodeList" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Disability Name </elementName>
+						<elementName>
+							Disability Categoryt
+						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>88e01654-95f1-42bb-ae33-ce9b1c0d09c1</definitionRefId>
+						<referenceUrl>http://www.parentcenterhub.org/categories/</referenceUrl>
 					</xs:appinfo>
-					<xs:documentation> Specific identification of educational activity impaired by disability
+					<xs:documentation>
+						Categories of Disability Under IDEA
 					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="AdaptedPhysicalEducation" />
-						<xs:enumeration value="BrailleNeedsBlind/visuallyImpaired" />
-						<xs:enumeration value="ExtraCurriculumActivities" />
-						<xs:enumeration value="Social/EmotionalNeeds" />
-						<xs:enumeration value="AssistiveTechDevices/services" />
-						<xs:enumeration value="CommunicationAllStudents" />
-						<xs:enumeration value="LanguageNeedsLEPStudents" />
-						<xs:enumeration value="TravelTraining" />
-						<xs:enumeration value="Behavior" />
-						<xs:enumeration value="CommunicationDeaf/hardOfHearingStudents" />
-						<xs:enumeration value="NonacademicActivities" />
-						<xs:enumeration value="SkillDevelopmentRelatedToVocationalPreparationOrExperience" />
-						<xs:enumeration value="ForChildrenAges3To5?ParticipationInAppropriateActivities" />
-						<xs:enumeration value="ForChildrenAges14+OrYoungerIfAppropriate?student'sCourseOfStudy" />
-						<xs:enumeration value="ForChildrenAges16OrYoungerIfAppropriateTo22?TransitionToPost-schoolActivitiesIncludingCommunityExperiencesEmploymentObjectivesOtherPostSchoolAdultLivingAndIfAppropriateDailyLivingSkills" />
-						<!-- this list is not right? tqii -->
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="Autism"/>
+						<xs:enumeration value="Deaf-blindness"/>
+						<xs:enumeration value="Deafness"/>
+						<xs:enumeration value="Developmental delay"/>
+						<xs:enumeration value="Emotional disturbance"/>
+						<xs:enumeration value="Hearing impairment"/>
+						<xs:enumeration value="Intellectual disability"/>
+						<xs:enumeration value="Multiple disabilities"/>
+						<xs:enumeration value="Orthopedic impairment"/>
+						<xs:enumeration value="Other health impairment"/>
+						<xs:enumeration value="Specific learning disability"/>
+						<xs:enumeration value="Speech or language impairment"/>
+						<xs:enumeration value="Traumatic brain injury"/>
+						<xs:enumeration value="Visual impairment, including blindness"/>
+						<xs:enumeration value="Student Needing Alternate Programming (SNAP)"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Explanation </elementName>
+						<elementName>
+							Explanation
+						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>5515b51f-939d-4eb4-aecf-9367ca64cd89</definitionRefId>
 					</xs:appinfo>
-					<xs:documentation> Explanation of the specifics of disability in this category </xs:documentation>
+					<xs:documentation>
+						Explanation for choice of SNAP, other or information refining disabilty selection.
+					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="consequences" type="xs:normalizedString" minOccurs="0">
@@ -163,7 +161,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>6b4b59ae-d664-4682-afa4-1bb40efe9f75</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Analysis of the particular ways that the disability interferes with educational attainment </xs:documentation>
 				</xs:annotation>
@@ -178,7 +175,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>848e3e65-f6cd-4d4c-8e57-f59f1ccc4d6b</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Information about the child?s ability to operate in a classroom or other learning setting </xs:documentation>
 		</xs:annotation>
@@ -194,7 +190,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>438cfded-f069-4a3c-9481-37a947823544</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Information about the child�s ability to function in a classroom or other learning setting
 			</xs:documentation>

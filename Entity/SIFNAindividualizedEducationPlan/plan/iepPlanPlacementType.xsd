@@ -18,7 +18,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>d39b8860-6452-4bee-9901-2bf7e39445e4</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Physical location where special education will take place </xs:documentation>
 		</xs:annotation>
@@ -30,7 +29,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000535</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000535</cedsURL>
-						<definitionRefId>6d7347d9-f011-481c-abe8-4fa07d8f3c80</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> The setting in which children ages 6 through 21, receive special education and related services. </xs:documentation>
 				</xs:annotation>
@@ -54,7 +52,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000559</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000559</cedsURL>
-						<definitionRefId>6d7347d9-f011-481c-abe8-4fa07d8f3c80</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> The program in which children ages 3 through 5 attend and in which these children receive special education and related services. </xs:documentation>
 				</xs:annotation>
@@ -79,7 +76,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001704</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001704</cedsURL>
-						<definitionRefId>468d89f8-6a4e-403c-ae67-ac9b2e2c29bf</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> The rationale for the placement decision and if applicable, an explanation of the extent, if any, to which the child will not participate with nondisabled children in the regular class and in the activities described in paragraph (a)(4) of CFR. §300.320. </xs:documentation>
 				</xs:annotation>

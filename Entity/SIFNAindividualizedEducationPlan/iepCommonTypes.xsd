@@ -19,7 +19,6 @@
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>b4512e48-2ff9-41cf-8433-428ca1b9d1d8</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Proved Identity Information
@@ -34,7 +33,6 @@
 						<sifChar>O</sifChar>
 						<cedsId />
 						<cedsURL />
-						<definitionRefId>ddd98d1f-7779-46e8-8b4c-77a4466e5037</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>Qualification to participate in the authorization of this plan.</xs:documentation>
 				</xs:annotation>
@@ -46,7 +44,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001725</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001725</cedsURL>
-						<definitionRefId>aaa98d1f-7779-46e8-8b4c-77a4466e5037</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>The date the authorization occurred.</xs:documentation>
 				</xs:annotation>
@@ -59,7 +56,6 @@
 						<sifChar>O</sifChar>
 						<cedsId />
 						<cedsURL />
-						<definitionRefId>bbb98d1f-7779-46e8-8b4c-77a4466e5037</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>Role of the person (eg, teacher, parent, principal, student, etc).</xs:documentation>
 				</xs:annotation>
@@ -75,7 +71,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>cccd8379-e693-4cd7-805c-41b82271395f</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Documentation produced by people who have participated in the eligibility determination
@@ -104,7 +99,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>0e9264b4-ff0e-4011-aa57-39ef0594a7df</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Identity and role of person rendering support services
@@ -120,7 +114,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>0a77dcf2-5895-42b4-b547-f1e9101ea9be</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Service Provider Identity
@@ -136,7 +129,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000558</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000558</cedsURL>
-						<definitionRefId>05e2d887-6dbf-4bfb-bd91-f050b818f106</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Titles of personnel employed and contracted to provide special education and related services for children with disabilities.
@@ -169,7 +161,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>ccc264b4-ff0e-4011-aa57-39ef0594a7df</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				The specific accommodation necessary for assessment or instruction
@@ -183,7 +174,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000385</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000385</cedsURL>
-						<definitionRefId>ccc699fa-9e69-4d22-a608-df104f06d850</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> The specific accommodation necessary for assessment or instruction. </xs:documentation>
 				</xs:annotation>
@@ -301,7 +291,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001685</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001685</cedsURL>
-						<definitionRefId>ddd66bab-92a5-4102-935f-fb8ef09a3690</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Description of a specific accommodation or change to standards or practices that will be made. </xs:documentation>
 				</xs:annotation>
@@ -313,7 +302,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001687</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001687</cedsURL>
-						<definitionRefId>74c59dbb-448f-4184-b740-39cc06728b89</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> A statement of why— (A) The child cannot participate in the regular assessment; and (B) The particular alternate assessment selected is appropriate for the child.
 					</xs:documentation>

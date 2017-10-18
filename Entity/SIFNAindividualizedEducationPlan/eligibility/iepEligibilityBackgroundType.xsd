@@ -7,7 +7,6 @@
 		<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
 
-
 	<xs:complexType name='iepEligibilityBackgroundConsentToEvaluateType'>
 		<xs:sequence>
 			<xs:element name="accepted" type="xs:normalizedString" minOccurs="0">
@@ -18,7 +17,6 @@
 						<cedsId>001726</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001726</cedsURL>
 
-						<definitionRefId>149d7cb7-0b7c-45d4-82c5-005f173b9791</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Indication parent agreed to evaluate student.
@@ -32,11 +30,9 @@
 							Identity of Consenting Person
 						</elementName>
 						<sifChar>O</sifChar>
-
 						<cedsId />
 						<cedsURL />
 
-						<definitionRefId>c9c25b67-3f63-43f8-870b-7313f6cd6d58</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Identity of Consenting Person
@@ -45,7 +41,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepEligibilityBackgroundReferralType'>
 		<xs:sequence>
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
@@ -57,7 +52,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001483</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001483</cedsURL>
-						<definitionRefId>874e6ff4-c8fa-4b9c-be66-232b618194e0</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						The reason for the referral.
@@ -67,7 +61,6 @@
 			<xs:element type='iepEligibilityBackgroundReferralReferrerType' name="referrer" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepEligibilityBackgroundReferralReferrerType'>
 		<xs:sequence>
 			<xs:element name="identity" type="xs:date" minOccurs="0">
@@ -79,7 +72,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>343addc7-f23b-4f94-962a-ab767ee018d1</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Parent or official referring student for evaluation
@@ -96,7 +88,6 @@
 						<cedsId>001481</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001481</cedsURL>
 
-						<definitionRefId>04b85c4a-76f3-43b8-87a7-ec240ec9897b</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						The date of referral.
@@ -116,7 +107,6 @@
 								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL/>
-								<definitionRefId>1e5936e1-5024-445a-97a5-bc647b6b4127</definitionRefId>
 							</xs:appinfo>
 							<xs:documentation>
 								Information and history establishing context of student evaluation for Special Education services
@@ -133,7 +123,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>8c07a849-72c0-4e82-8338-96df64da018b</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Historical information significant to special education evaluation
@@ -149,7 +138,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>0977d7f0-da88-4415-8c7a-b9f555718a61</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Description of the current placement of student
@@ -166,7 +154,6 @@
 						<cedsId>001732</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001732</cedsURL>
 
-						<definitionRefId>e2f3d4a7-f327-49d7-8865-c08ffe9504d0</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Explanation of parent's observations of student’s characteristics and history used for determining eligibility.
@@ -182,15 +169,12 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>d4668a20-7694-4aa0-9b27-4ac2fa312eaa</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Legal authorization to conduct evaluation
 					</xs:documentation>
 				</xs:annotation>
-
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>

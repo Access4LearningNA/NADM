@@ -7,21 +7,17 @@
 		<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
 
-
 	<xs:complexType name='iepPlanPlacementTransportationInsideSchoolType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Inside of School </elementName>
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>7e973efe-7ed2-4842-8b76-cece53f92f3f</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Special accommodations for student movement inside of a school
 			</xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="category" minOccurs="0">
 				<xs:annotation>
@@ -30,7 +26,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>4dbf479e-fb02-4a21-814c-d16b34a6fafa</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Annotation of whether special transportation is needed </xs:documentation>
 				</xs:annotation>
@@ -48,27 +43,22 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>e71e2e2e-5e3e-4229-a21b-30af907ffc36</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Explanation of the particular accommodation(s) needed </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name='iepPlanPlacementTransportationOutsideSchoolType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Outside of School </elementName>
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>6966b250-e4ba-4807-a98b-c3a593280990</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Special vehicles or other transportation accommodations to help student move between settings </xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element name="category" minOccurs="0">
 				<xs:annotation>
@@ -77,7 +67,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>a9f26030-b2f7-43ce-ae46-060960d74d6f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Annotation of whether special transportation is needed </xs:documentation>
 				</xs:annotation>
@@ -95,32 +84,26 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>e268f9ab-f32e-4028-929c-32670fc277c4</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Explanation of the particular accommodation(s) needed </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-
 	<!-- named type -->
 	<xs:complexType name='iepPlanPlacementTransportationType'>
-
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Transportation </elementName>
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>75ffa9cc-9918-4a51-ac73-193da707ff6e</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Accommodations to help student move between settings </xs:documentation>
 		</xs:annotation>
-
 		<xs:sequence>
 			<xs:element type='iepPlanPlacementTransportationOutsideSchoolType' name="outsideSchool" minOccurs="0" />
 			<xs:element type='iepPlanPlacementTransportationInsideSchoolType' name="insideSchool" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-
 </xs:schema>

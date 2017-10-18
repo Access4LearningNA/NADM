@@ -17,7 +17,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>ddde92a9-0521-472f-971d-547a274a3cfa</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Information about funding sources for plan implementation
@@ -33,7 +32,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>5201310e-c36c-42b1-9fa0-6be95502cd96</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>Plan has cost sharing available.</xs:documentation>
 				</xs:annotation>
@@ -47,7 +45,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>00be92a9-0521-472f-971d-547a274a3cfa</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Government agency contributing funds to the support of this student.

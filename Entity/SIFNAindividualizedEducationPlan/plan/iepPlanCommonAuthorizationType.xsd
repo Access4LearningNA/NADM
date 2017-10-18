@@ -14,7 +14,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>378695cd-4ece-463c-a114-da0f51d145c7</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Specific goals, services, modifications or other elements that the parent/guardian does not want implemented </xs:documentation>
 		</xs:annotation>
@@ -26,7 +25,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001723</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001723</cedsURL>
-						<definitionRefId>cf6b074a-2204-45d8-847f-7fd08ac4d5b4</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Portion the authorizer does not want executed. </xs:documentation>
 				</xs:annotation>
@@ -38,7 +36,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001724</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001724</cedsURL>
-						<definitionRefId>764e1b36-969f-44b3-8999-842acbbd2f40</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Authorizer's explanation for rejected portions. </xs:documentation>
 				</xs:annotation>
@@ -52,7 +49,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>d85ae803-a719-4963-ad6b-3fbc316c4cd1</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Elements parent/guardian does not want executed.
 			</xs:documentation>
@@ -66,7 +62,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>16f2f348-ee66-4cf7-8c36-58a0245944d4</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Parent/guardian explanation of perspective of rejection not specific to an element </xs:documentation>
 				</xs:annotation>
@@ -80,7 +75,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>8eda91ef-4c7c-4a92-9465-8854c1ec89a4</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Parent/guardian input and signoff </xs:documentation>
 		</xs:annotation>
@@ -94,7 +88,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001721</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001721</cedsURL>
-						<definitionRefId>a86999db-6823-401c-9d89-7c1aad6206e2</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Indicates authorizer agreement to a document or plan, such as plan for delivery of student services, program, or improvement plan.
@@ -115,7 +108,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>46ebb831-299c-4410-816a-7aae5e1e8f29</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Proved identity of authorizing parent or guardian
 					</xs:documentation>
@@ -128,7 +120,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001725</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001725</cedsURL>
-						<definitionRefId>c3913a0b-65fe-4cbf-9798-cff5dc5ac262</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>The date the authorization occurred.
 					</xs:documentation>
@@ -143,7 +134,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>a15d56bd-c48b-476e-a123-1b4d38b9432f</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Education officials authorizing </xs:documentation>
 		</xs:annotation>
@@ -155,7 +145,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>c211125b-5c71-4551-819a-3e2c4191cd57</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Proved identity of authorizing official
 					</xs:documentation>
@@ -171,7 +160,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>b95e66a5-c13b-4256-8ad6-15edeb6515be</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Legal response and authorization to implement all or part of a plan </xs:documentation>
 		</xs:annotation>
@@ -185,7 +173,6 @@
 						<sifChar>O</sifChar>
 						<cedsId />
 						<cedsURL />
-						<definitionRefId>ccc13a0b-65fe-4cbf-9798-cff5dc5ac262</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Date that student over seventeen years old was notified of his or her right to sign IEP.
 					</xs:documentation>

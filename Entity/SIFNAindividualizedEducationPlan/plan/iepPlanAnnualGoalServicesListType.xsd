@@ -7,6 +7,64 @@
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
+	<xs:complexType name='iepPlanAnnualGoalServicesListServiceFrequencyCycleType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Service Cycle
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>
+				Amount of time during cycle that student receives service
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="count" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Service Cycle Count
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>
+						The number of service events in a service repetition period.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="period" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Service Cycle Period
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>
+						The period in which the service events must be repeated.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="day" />
+						<xs:enumeration value="week" />
+						<xs:enumeration value="month" />
+						<xs:enumeration value="quarter" />
+						<xs:enumeration value="term" />
+						<xs:enumeration value="year" />
+						<xs:enumeration value="school year" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name='iepPlanAnnualGoalServicesListServiceFrequencyDurationType'>
 		<xs:annotation>
 			<xs:appinfo>
@@ -16,7 +74,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>ed5ded33-922e-48c9-97de-4a546187ba53</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Amount of time during cycle that student receives service
@@ -32,7 +89,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>feb7251a-8e93-48fa-b05e-ec33495015a5</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Time spent directly with the student.
@@ -48,7 +104,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>2f9a640d-6502-42aa-8c77-4e3612cc4bbf</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Service provider time spent on other service activities that are not with the student.
@@ -66,38 +121,13 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>56432805-5753-4e35-bfbc-af81e7bc7f4b</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Prescription for amount of service to be given.
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="cycle" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName>
-							Cycle
-						</elementName>
-						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-						<definitionRefId>b3f22600-8500-42dd-b18b-40854b421f94</definitionRefId>
-					</xs:appinfo>
-					<xs:documentation>
-						How often service must be rendered
-					</xs:documentation>
-				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="5Day" />
-						<xs:enumeration value="6Day" />
-						<xs:enumeration value="10Day" />
-						<!-- How to add 'other'? tqii -->
-						<!-- is this list correct? tqii -->
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
+			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyCycleType' name="cycle" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyDurationType' name="duration" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
@@ -110,7 +140,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>6a458f87-2a5e-4025-913d-0fb0620230b7</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Support for student progress given by professional or para-professionals on a scheduled basis.
@@ -126,7 +155,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000273</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000273</cedsURL>
-						<definitionRefId>d10ecd43-4d6a-4400-b210-11f2d3ba139a</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Type of related or ancillary services provided to a person or a group of persons within the formal educational system or offered by an outside agency which provides non-instructional services to support the general welfare of students. This includes physical and emotional health, the ability to select an appropriate course of study, admission to appropriate educational programs, and the ability to adjust to and remain in school through the completion of programs. In serving a student with an identified disability, related services include developmental, corrective, or supportive services required to ensure that the person benefits from special education.
@@ -209,7 +237,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001634</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001634</cedsURL>
-						<definitionRefId>152a7b1d-691e-414e-93f0-7d6757b10f6f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Indicates that services are provided to the child in a place where children of all abilities learn together.
@@ -233,7 +260,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001165</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001165</cedsURL>
-						<definitionRefId>78adc225-ba26-433a-ba14-2642690d888a</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						The date on which the goal becomes active.
@@ -249,7 +275,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001166</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001166</cedsURL>
-						<definitionRefId>097d92f3-4319-4672-8d12-d06aeda8af37</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						The date on which the goal expires or has been achieved.
@@ -265,7 +290,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001488</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001488</cedsURL>
-						<definitionRefId>f6e6860b-7d37-4083-bf45-d44b9a02e5d4</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						The reason given for declining the recommended services.
@@ -281,7 +305,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001717</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001717</cedsURL>
-						<definitionRefId>0c6d36dc-df7b-463b-baf1-1f9fe810b4f6</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Determination if this service continues outside school year.
@@ -306,7 +329,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>6dda3e9f-afe9-44b9-a50e-ce3f80b8da8d</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				List of supporting resources required for student to achieve a goal

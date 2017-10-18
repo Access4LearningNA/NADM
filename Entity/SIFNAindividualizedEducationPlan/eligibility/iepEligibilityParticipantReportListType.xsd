@@ -16,7 +16,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>67b87382-9a64-4664-83a1-07f349473a15</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Reports and comments by participants in the eligibility study
@@ -32,7 +31,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>c2b5ed70-e50d-40ef-8833-cdec6316ecaa</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Proved identity of report author
@@ -48,7 +46,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>335c4d7d-12c8-4265-bbde-716865cb3e24</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Professional occupation category or relationship to student
@@ -84,7 +81,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>aac84433-8a3a-4196-b535-dbbc1594a61f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Explanation for choice of other or information refining category selection.
@@ -100,7 +96,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>15200d31-c606-4dcd-9803-f83dcbb37a37</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						What the participant did with the student
@@ -116,7 +111,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>2d940e6b-e619-4930-8509-33a0b07aa177</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						What the participant observed during evaluation
@@ -132,7 +126,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>4d56325f-ad9f-4c7a-8fcc-78e38b4ed326</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Conclusions reached as a result of the evaluation
@@ -151,7 +144,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>511d8379-e693-4cd7-805c-41b82271395f</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Documentation produced by people who have participated in the eligibility determination

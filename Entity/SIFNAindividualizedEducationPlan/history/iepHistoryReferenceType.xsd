@@ -18,7 +18,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001236</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001236</cedsURL>
-						<definitionRefId>aaa17330-ba01-4ca6-908b-fec06fc3255c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						The year, month and day on which the status of the service plan for a child is established or significantly altered
@@ -34,7 +33,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001683</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001683</cedsURL>
-						<definitionRefId>aaa17330-ba01-4ca6-908b-fec06fc3255c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						The year, month and day on which the status of the service plan for a child effectively ends.
@@ -55,7 +53,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>2953cd16-b19d-4bb8-a1e9-6db238450a1e</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						School where the IEP was created
@@ -71,7 +68,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>3c62a3ec-702e-4ba9-977a-94ca31af67db</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Period that IEP is in effect
@@ -87,7 +83,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>3e917330-ba01-4ca6-908b-fec06fc3255c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Contact information for additional information about this IEP

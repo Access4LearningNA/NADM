@@ -16,7 +16,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>6b7a2ee0-5055-45b0-b3f6-b1f738c8bec2</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				A specific achievement the student wants to achieve
@@ -32,7 +31,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>de1ef5c5-2ea3-4f50-9118-f72587639f04</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Category of achievement
@@ -55,7 +53,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>f948b733-52bc-4b8a-898f-f28a007f64d5</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Brief characterization of achievement
@@ -71,7 +68,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>15556b55-50a1-4f0a-a2f2-31705918ad29</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Specific details that would be recognized as successful achievement for this intention
@@ -87,7 +83,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>19d6f38c-181a-4378-abd9-69326e6c195f</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Explanation of when this achievement should take place
@@ -105,7 +100,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>addb1fbe-5f05-4393-9296-80764dcfaa4a</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				List of specific life achievements desired by student
@@ -124,7 +118,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>f71309b7-94bd-4294-8c44-3ed3e2f19a8e</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				The student's own intentions and aspirations
@@ -140,7 +133,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>46f4b7ef-7035-46c0-89e7-6a5deee0b865</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Explanation of what the student wants to accomplish in life
@@ -159,7 +151,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>3aa776f2-68bf-4a95-91ce-c0750c5dfd23</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Specific goal
@@ -175,7 +166,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000903</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000903</cedsURL>
-						<definitionRefId>8c7fe68d-844f-4a59-aa91-7420d22a3fcd</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						A statement that describes the desired outcomes.
@@ -191,7 +181,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>000902</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/000902</cedsURL>
-						<definitionRefId>42ebcb5b-338b-40d1-a364-e4569eea3b72</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						One or more statements that describes the criteria used by teachers and students to check for attainment of a goal.
@@ -209,7 +198,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>8ed32aec-000c-44ad-92b1-5199413821d2</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				List of goals that student wants to achieve
@@ -228,7 +216,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>4ca971e8-f3f4-4b84-931d-14719b5134b7</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Anecdotal list of previous testing and evaluation of student's performance
@@ -244,7 +231,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001219</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001219</cedsURL>
-						<definitionRefId>746dc807-f57a-4b1d-bc1e-99f63e6ceb44</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						A statement intended for use by education professionals, using professional terminology, to interpret learner needs based on the scored/evaluated portion of an assessment. This statement may inform Descriptive Feedback given to the learner.
@@ -262,7 +248,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>2e2e8bb5-e845-47ee-ad9e-da31f6c9506e</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Non-technical list of student's performance shortcomings
@@ -278,7 +263,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001707</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001707</cedsURL>
-						<definitionRefId>16e1dc07-c0ef-4703-882b-46a949632466</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						How the child's disability affects the child's involvement and progress in the general education curriculum.
@@ -297,7 +281,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>a71a60d7-4553-4a9a-bb97-8a06f4258e78</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Non-technical list of student's perceived educational special needs
@@ -313,7 +296,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>2da06ca3-dedc-40b1-b436-8c79514a83fd</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Characterization of a deficit, disability or problem.
@@ -331,7 +313,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>538a864e-cb4a-4d90-a9e2-713d7495c334</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Anecdotal background information about performance
@@ -352,7 +333,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>3a140e60-f67e-4376-9de8-a1e64a727f7e</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Justification for student's involvement in special education process
@@ -368,7 +348,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>aa99d3ad-689a-49ef-812f-0aee221394b2</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Explanation of the primary reasons that an IEP should be developed
@@ -384,7 +363,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001710</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001710</cedsURL>
-						<definitionRefId>1f250a71-3d4b-4729-9a8a-aee9a9a18811</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Parent's explanation of their interest in student's participation in special education
@@ -400,7 +378,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001711</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001711</cedsURL>
-						<definitionRefId>a53760e7-82c9-47e9-85f9-1df5961e188e</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Student's explanation of his or her interest in participation in special education
@@ -416,7 +393,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>ccc760e7-82c9-47e9-85f9-1df5961e188e</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Other useful information
@@ -435,7 +411,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>0f6e57c4-c556-4184-87a0-4fbf41845f4e</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				Information about student�s personal views, background, goals and home culture
@@ -452,7 +427,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001709</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001709</cedsURL>
-						<definitionRefId>9a6c7d5d-82c1-49ed-9b8a-ab2cfdc6dba5</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Explanation of perceived strengths and abilities of the student
@@ -468,7 +442,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>d5105fe3-452b-413b-a808-07219d3552df</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation>
 						Explanation of the goals and interests of the student

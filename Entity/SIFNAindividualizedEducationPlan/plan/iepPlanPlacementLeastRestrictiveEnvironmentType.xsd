@@ -15,7 +15,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>949107b0-b1f2-4653-bc33-5e65faeb6af9</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Documentation of learning environment
 			</xs:documentation>
@@ -28,7 +27,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>cbdd40e3-97e9-4041-b229-c2c582495d8c</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Total number of special education minutes per week </xs:documentation>
 				</xs:annotation>
@@ -40,7 +38,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001234</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001234</cedsURL>
-						<definitionRefId>f55594d5-cc0f-4c16-9e8e-9a8ef50bea77</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> The number of minutes per week that a student with disabilities is served in a special education setting separate from his or her non-disabled peers. </xs:documentation>
 				</xs:annotation>
@@ -52,7 +49,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001233</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001233</cedsURL>
-						<definitionRefId>42f2de9d-b1f6-4d31-a115-dda5842680a9</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> The number of minutes per week that a student with disabilities is served in a regular classroom with his or her non-disabled peers. </xs:documentation>
 				</xs:annotation>

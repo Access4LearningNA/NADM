@@ -25,7 +25,6 @@
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>74f0dc3e-dc3f-42ae-acae-8b09a5ff9604</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Administrative and demographic data supporting Special Education students </xs:documentation>
 		</xs:annotation>

@@ -17,7 +17,6 @@
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>bf51bd0a-e81a-4520-b0ee-cf7b84ad3dda</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation>
 				List of previous IEPs and contact information for additional research.
@@ -35,7 +34,6 @@
 								<sifChar>O</sifChar>
 								<cedsId/>
 								<cedsURL/>
-								<definitionRefId>abd9bdda-b638-4d11-aed4-1732525ab8b5</definitionRefId>
 							</xs:appinfo>
 							<xs:documentation>
 								Documentation of existence of previous IEP and information about where to find out more information

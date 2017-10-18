@@ -15,7 +15,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>d0f69da1-4361-47e2-ae7a-edcd46aba60a</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> A specific detail of the changes made on this revision </xs:documentation>
 		</xs:annotation>
@@ -27,7 +26,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001689</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001689</cedsURL>
-						<definitionRefId>20865d2a-0234-42d2-bf4e-36a6aaf55e95</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Description of the changes made to the individualized program service plan. </xs:documentation>
 				</xs:annotation>
@@ -39,7 +37,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001688</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001688</cedsURL>
-						<definitionRefId>5c2c7788-cd05-48cb-bf09-24e2bd8bc3d8</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Description of the reason changes were made to the individualized program service plan. </xs:documentation>
 				</xs:annotation>
@@ -53,7 +50,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>f22dea85-df9e-408d-ac9c-917700d81b95</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> List of changes included in this amendment </xs:documentation>
 		</xs:annotation>
@@ -68,7 +64,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>fbff891d-06f9-4d1e-a9b8-8466949812b4</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> Change to the IEP </xs:documentation>
 		</xs:annotation>
@@ -81,7 +76,6 @@
 						<sifChar>O</sifChar>
 						<cedsId>001688</cedsId>
 						<cedsURL>https://ceds.ed.gov/element/001688</cedsURL>
-						<definitionRefId>8461d7da-10f7-4fac-92a0-fc162be76867</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Description of the reason changes were made to the individualized program service plan. </xs:documentation>
 				</xs:annotation>
@@ -93,7 +87,6 @@
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
-						<definitionRefId>5fa4d0ba-33ff-4af9-a24f-a9da16ee6cc4</definitionRefId>
 					</xs:appinfo>
 					<xs:documentation> Legal response and authorization to changes to an existing plan
 					</xs:documentation>
@@ -109,7 +102,6 @@
 				<sifChar>O</sifChar>
 				<cedsId/>
 				<cedsURL/>
-				<definitionRefId>2a8ba83a-36e0-466d-8293-dc8b912059fc</definitionRefId>
 			</xs:appinfo>
 			<xs:documentation> History List of Amendments to IEP </xs:documentation>
 		</xs:annotation>
