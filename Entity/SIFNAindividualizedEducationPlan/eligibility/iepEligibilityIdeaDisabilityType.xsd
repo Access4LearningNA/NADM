@@ -7,10 +7,6 @@
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-	
-	<xs:include schemaLocation="../../../Report/SIFNAxSRECommonTypes.xsd" />
-
-	
 	<xs:complexType name='iepEligibilityIdeaDisabilityAnalysisType'>
 		<xs:annotation>
 			<xs:appinfo>
