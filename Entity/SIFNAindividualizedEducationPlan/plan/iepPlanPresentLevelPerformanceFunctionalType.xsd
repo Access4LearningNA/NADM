@@ -7,6 +7,9 @@
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
+	
+	<xs:include schemaLocation="../../../Report/SIFNAxSRECommonTypes.xsd" />
+	
 	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalSummaryAccommodationListAccommodationType'>
 		<xs:annotation>
 			<xs:appinfo>
@@ -104,7 +107,7 @@
 			<xs:documentation> Information about a specific functional disability </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="disabilityCodeList" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="disabilityCodeList" type="xDisabilityType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
@@ -119,25 +122,6 @@
 						Categories of Disability Under IDEA
 					</xs:documentation>
 				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:token">
-						<xs:enumeration value="Autism"/>
-						<xs:enumeration value="Deaf-blindness"/>
-						<xs:enumeration value="Deafness"/>
-						<xs:enumeration value="Developmental delay"/>
-						<xs:enumeration value="Emotional disturbance"/>
-						<xs:enumeration value="Hearing impairment"/>
-						<xs:enumeration value="Intellectual disability"/>
-						<xs:enumeration value="Multiple disabilities"/>
-						<xs:enumeration value="Orthopedic impairment"/>
-						<xs:enumeration value="Other health impairment"/>
-						<xs:enumeration value="Specific learning disability"/>
-						<xs:enumeration value="Speech or language impairment"/>
-						<xs:enumeration value="Traumatic brain injury"/>
-						<xs:enumeration value="Visual impairment, including blindness"/>
-						<xs:enumeration value="Student Needing Alternate Programming (SNAP)"/>
-					</xs:restriction>
-				</xs:simpleType>
 			</xs:element>
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
