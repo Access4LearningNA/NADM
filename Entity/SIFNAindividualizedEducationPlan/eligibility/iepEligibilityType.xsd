@@ -44,8 +44,17 @@
 						</xs:annotation>
 						<xs:simpleType>
 							<xs:restriction base="xs:normalizedString">
-								<xs:enumeration value="Initial" />
-								<xs:enumeration value="Reevaluation" />
+								<xs:enumeration value="Initial">
+									<xs:annotation>
+										<xs:appinfo>Initial is the purpose within the IEP lifecycle for which the eligibility evaluation is conducted.</xs:appinfo>
+									</xs:annotation>
+								</xs:enumeration>
+								
+								<xs:enumeration value="Reevaluation">
+									<xs:annotation>
+										<xs:appinfo>Reevaluation is the purpose within the IEP lifecycle for which the eligibility evaluation is conducted.</xs:appinfo>
+									</xs:annotation>
+								</xs:enumeration>
 							</xs:restriction>
 						</xs:simpleType>
 					</xs:element>

@@ -86,9 +86,24 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="academic" />
-						<xs:enumeration value="functional" />
-						<xs:enumeration value="transitional" />
+						<xs:enumeration value="Academic">
+							<xs:annotation>
+								<xs:appinfo>Academic is the legal category for an IEP annual goal or short-term objectives.</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="Functional">
+							<xs:annotation>
+								<xs:appinfo>Functional is the legal category for an IEP annual goal or short-term objectives.</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="Transitional">
+							<xs:annotation>
+								<xs:appinfo>Transitional is the legal category for an IEP annual goal or short-term objectives.</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>

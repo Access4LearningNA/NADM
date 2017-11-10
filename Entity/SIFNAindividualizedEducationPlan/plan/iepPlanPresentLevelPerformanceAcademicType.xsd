@@ -118,29 +118,145 @@
 					<xs:restriction base="xs:normalizedString">
 						<xs:minLength value="2"/>
 						<xs:maxLength value="2"/>
-						<xs:enumeration value="01"/>
-						<xs:enumeration value="02"/>
-						<xs:enumeration value="03"/>
-						<xs:enumeration value="04"/>
-						<xs:enumeration value="05"/>
-						<xs:enumeration value="07"/>
-						<xs:enumeration value="08"/>
-						<xs:enumeration value="09"/>
-						<xs:enumeration value="10"/>
-						<xs:enumeration value="11"/>
-						<xs:enumeration value="12"/>
-						<xs:enumeration value="13"/>
-						<xs:enumeration value="14"/>
-						<xs:enumeration value="15"/>
-						<xs:enumeration value="16"/>
-						<xs:enumeration value="17"/>
-						<xs:enumeration value="18"/>
-						<xs:enumeration value="19"/>
-						<xs:enumeration value="20"/>
-						<xs:enumeration value="21"/>
-						<xs:enumeration value="22"/>
-						<xs:enumeration value="23"/>
-						<xs:enumeration value="24"/>
+
+						<xs:enumeration value="01">
+							<xs:annotation>
+								<xs:appinfo>English Language and Literature</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="02">
+							<xs:annotation>
+								<xs:appinfo>Mathematics</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="03">
+							<xs:annotation>
+								<xs:appinfo>Life and Physical Sciences</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="04">
+							<xs:annotation>
+								<xs:appinfo>Social Sciences and History</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="05">
+							<xs:annotation>
+								<xs:appinfo>Visual and Performing Arts</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="07">
+							<xs:annotation>
+								<xs:appinfo>Religious Education and Theology</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="08">
+							<xs:annotation>
+								<xs:appinfo>Physical, Health, and Safety Education</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="09">
+							<xs:annotation>
+								<xs:appinfo>Military Science</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="10">
+							<xs:annotation>
+								<xs:appinfo>Information Technology</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="11">
+							<xs:annotation>
+								<xs:appinfo>Communication and Audio/Visual Technology</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="12">
+							<xs:annotation>
+								<xs:appinfo>Business and Marketing</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="13">
+							<xs:annotation>
+								<xs:appinfo>Manufacturing</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="14">
+							<xs:annotation>
+								<xs:appinfo>Health Care Sciences</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="15">
+							<xs:annotation>
+								<xs:appinfo>Public, Protective, and Government Service</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="16">
+							<xs:annotation>
+								<xs:appinfo>Hospitality and Tourism</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="17">
+							<xs:annotation>
+								<xs:appinfo>Architecture and Construction</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="18">
+							<xs:annotation>
+								<xs:appinfo>Agriculture, Food, and Natural Resources</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="19">
+							<xs:annotation>
+								<xs:appinfo>Human Services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="20">
+							<xs:annotation>
+								<xs:appinfo>Transportation, Distribution and Logistics</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="21">
+							<xs:annotation>
+								<xs:appinfo>Engineering and Technology</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="22">
+							<xs:annotation>
+								<xs:appinfo>Miscellaneous</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="23">
+							<xs:annotation>
+								<xs:appinfo>Non-Subject-Specific</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="24">
+							<xs:annotation>
+								<xs:appinfo>World Languages</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>

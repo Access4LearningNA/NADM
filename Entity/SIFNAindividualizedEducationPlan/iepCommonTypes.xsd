@@ -136,17 +136,72 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="PSYCH"/>
-						<xs:enumeration value="SOCIALWORK"/>
-						<xs:enumeration value="OCCTHERAP"/>
-						<xs:enumeration value="AUDIO"/>
-						<xs:enumeration value="PEANDREC"/>
-						<xs:enumeration value="PHYSTHERAP"/>
-						<xs:enumeration value="SPEECHPATH"/>
-						<xs:enumeration value="INTERPRET"/>
-						<xs:enumeration value="COUNSELOR"/>
-						<xs:enumeration value="ORIENTMOBIL"/>
-						<xs:enumeration value="MEDNURSE"/>
+
+						<xs:enumeration value="PSYCH">
+							<xs:annotation>
+								<xs:appinfo>Psychologists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="SOCIALWORK">
+							<xs:annotation>
+								<xs:appinfo>Social Workers</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="OCCTHERAP">
+							<xs:annotation>
+								<xs:appinfo>Occupational Therapists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="AUDIO">
+							<xs:annotation>
+								<xs:appinfo>Audiologists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="PEANDREC">
+							<xs:annotation>
+								<xs:appinfo>Physical Education Teachers and Recreation and Therapeutic Recreation Specialists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="PHYSTHERAP">
+							<xs:annotation>
+								<xs:appinfo>Physical Therapists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="SPEECHPATH">
+							<xs:annotation>
+								<xs:appinfo>Speech-Language Pathologists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="INTERPRET">
+							<xs:annotation>
+								<xs:appinfo>Interpreters</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="COUNSELOR">
+							<xs:annotation>
+								<xs:appinfo>Counselors and Rehabilitation Counselors</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="ORIENTMOBIL">
+							<xs:annotation>
+								<xs:appinfo>Orientation and Mobility Specialists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="MEDNURSE">
+							<xs:annotation>
+								<xs:appinfo>Medical/Nursing Service Staff</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
