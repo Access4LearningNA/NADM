@@ -61,12 +61,12 @@
 			<xs:element name="lea" type="xLeaType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Permitting Parent </elementName>
+						<elementName> Educational Agency </elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
-					<xs:documentation> Proved identity of parent giving transmit permission IEP
+					<xs:documentation> School district or other Local Educational Agency that needs access to IEP
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>

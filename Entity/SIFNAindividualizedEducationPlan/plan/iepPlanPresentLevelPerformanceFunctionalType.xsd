@@ -108,7 +108,7 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Disability Categoryt
+							Disability Category
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>

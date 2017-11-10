@@ -21,7 +21,7 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Evaluation Result Explanation
+							Adverse Effects Explanation
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
@@ -36,7 +36,7 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Evaluation Result Explanation
+							Education Needs Explanation
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
@@ -66,14 +66,14 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Evaluation Result Explanation
+							Additional IDEA Explanation
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>
-						Additional information that explains how to improve the student�s educational outcome.
+						Additional information that explains how to improve the student's educational outcome.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -472,7 +472,7 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Disability Categoryt
+							Disability Category
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
