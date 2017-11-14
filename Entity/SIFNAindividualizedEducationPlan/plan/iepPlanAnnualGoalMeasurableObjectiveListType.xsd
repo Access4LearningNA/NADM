@@ -22,17 +22,17 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="contactRefId" type="iepContactRefIdPointerType" minOccurs="0">
+			<xs:element name="contactRefId" type="iepCommonContactRefIdPointerType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Pointer to xContact object when facilitator is a contact </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="staffRefId" type="iepStaffRefIdPointerType" minOccurs="0">
+			<xs:element name="staffRefId" type="iepCommonStaffRefIdPointerType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Pointer to xStaff object when facilitator is a staff member </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="parentGuardianRefId" type="iepStudentContactRefIdPointerType" minOccurs="0">
+			<xs:element name="parentGuardianRefId" type="iepCommonStudentContactRefIdPointerType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Pointer to studentContacts xContact object when facilitator is a studentContact </xs:documentation>
 				</xs:annotation>

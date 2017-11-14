@@ -27,7 +27,7 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_BaseType">
 				<xs:sequence>
-					<xs:element name="studentRefId" type="iepStudentRefIdPointerType" minOccurs="0">
+					<xs:element name="studentRefId" type="iepCommonStudentRefIdPointerType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Student Reference Identifier</elementName>

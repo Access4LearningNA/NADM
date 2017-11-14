@@ -58,7 +58,7 @@
 			<xs:documentation> Person or organization that is the intended recipient </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="lea" type="iepLeaRefIdPointerType" minOccurs="0">
+			<xs:element name="lea" type="iepCommonLeaRefIdPointerType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Educational Agency </elementName>

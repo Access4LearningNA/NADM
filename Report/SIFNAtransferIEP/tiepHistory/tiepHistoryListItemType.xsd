@@ -44,7 +44,7 @@
 	<!-- named type -->
 	<xs:complexType name='tiepHistoryListItemType'>
 		<xs:sequence>
-			<xs:element name="lea" type="iepLeaRefIdPointerType" minOccurs="0">
+			<xs:element name="lea" type="iepCommonLeaRefIdPointerType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
@@ -74,7 +74,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="contactInfoRefId" type="iepContactRefIdPointerType" minOccurs="0">
+			<xs:element name="contactInfoRefId" type="iepCommonContactRefIdPointerType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
