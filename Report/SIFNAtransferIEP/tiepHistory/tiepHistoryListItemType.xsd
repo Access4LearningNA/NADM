@@ -5,9 +5,9 @@
 	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
 	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-	<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Entity/SIFNAindividualizedEducationPlan/iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-	<xs:complexType name='iepHistoryReferenceIepDatesType'>
+	<xs:complexType name='tiepHistoryItemIepDatesType'>
 		<xs:sequence>
 			<xs:element name="start" type="xs:date" minOccurs="0">
 				<xs:annotation>
@@ -42,24 +42,24 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- named type -->
-	<xs:complexType name='iepHistoryReferenceType'>
+	<xs:complexType name='tiepHistoryListItemType'>
 		<xs:sequence>
-			<xs:element name="lea" type="xLeaType" minOccurs="0">
+			<xs:element name="lea" type="iepLeaRefIdPointerType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							LEA
+							LEA Reference
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>
-						School where the IEP was created
+						Pointer to school or other LEA where this historical IEP was created
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepHistoryReferenceIepDatesType' name="iepDates" minOccurs="0" >
+			<xs:element type='tiepHistoryItemIepDatesType' name="iepDates" minOccurs="0" >
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
@@ -74,18 +74,18 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="contactInfo" type="xContactType" minOccurs="0">
+			<xs:element name="contactInfoRefId" type="iepContactRefIdPointerType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Contact Info
+							Contact Info Reference
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>
-						Contact information for additional information about this IEP
+						Pointer to a person who has additional information about this IEP
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>

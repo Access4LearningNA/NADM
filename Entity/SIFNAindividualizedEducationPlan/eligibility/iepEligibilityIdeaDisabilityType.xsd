@@ -7,6 +7,10 @@
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
+	
+	<!-- ><xs:include schemaLocation="../../../Report/SIFNAxSRECommonTypes.xsd" /> -->
+	
+	
 	<xs:complexType name='iepEligibilityIdeaDisabilityAnalysisType'>
 		<xs:annotation>
 			<xs:appinfo>
@@ -494,7 +498,7 @@
 						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>
-						Explanation for choice of SNAP, other or information refining disabilty selection.
+						Explanation or information refining disabilty selection.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>

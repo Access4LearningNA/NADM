@@ -58,7 +58,7 @@
 			<xs:documentation> Person or organization that is the intended recipient </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="lea" type="xLeaType" minOccurs="0">
+			<xs:element name="lea" type="iepLeaRefIdPointerType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Educational Agency </elementName>
@@ -66,7 +66,7 @@
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
-					<xs:documentation> School district or other Local Educational Agency that needs access to IEP
+					<xs:documentation> Pointer to school district or other Local Educational Agency that needs access to IEP
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -82,7 +82,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="other" type="xPartyType" minOccurs="0">
+			<xs:element name="other" type="iepCommonExternalPartyType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Other Recipient </elementName>

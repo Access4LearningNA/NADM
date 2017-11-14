@@ -162,73 +162,444 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="SpecialInstruction" />
-						<xs:enumeration value="00290"/>
-						<xs:enumeration value="00291"/>
-						<xs:enumeration value="00292"/>
-						<xs:enumeration value="00293"/>
-						<xs:enumeration value="73050"/>
-						<xs:enumeration value="73051"/>
-						<xs:enumeration value="73052"/>
-						<xs:enumeration value="73053"/>
-						<xs:enumeration value="00878"/>
-						<xs:enumeration value="00295"/>
-						<xs:enumeration value="00881"/>
-						<xs:enumeration value="00882"/>
-						<xs:enumeration value="73048"/>
-						<xs:enumeration value="00334"/>
-						<xs:enumeration value="73047"/>
-						<xs:enumeration value="00297"/>
-						<xs:enumeration value="00298"/>
-						<xs:enumeration value="73054"/>
-						<xs:enumeration value="00299"/>
-						<xs:enumeration value="00333"/>
-						<xs:enumeration value="00303"/>
-						<xs:enumeration value="00883"/>
-						<xs:enumeration value="73049"/>
-						<xs:enumeration value="00304"/>
-						<xs:enumeration value="00332"/>
-						<xs:enumeration value="00305"/>
-						<xs:enumeration value="00884"/>
-						<xs:enumeration value="00306"/>
-						<xs:enumeration value="00300"/>
-						<xs:enumeration value="00308"/>
-						<xs:enumeration value="00335"/>
-						<xs:enumeration value="00336"/>
-						<xs:enumeration value="00309"/>
-						<xs:enumeration value="00310"/>
-						<xs:enumeration value="00311"/>
-						<xs:enumeration value="00312"/>
-						<xs:enumeration value="00313"/>
-						<xs:enumeration value="00331"/>
-						<xs:enumeration value="00314"/>
-						<xs:enumeration value="00315"/>
-						<xs:enumeration value="00318"/>
-						<xs:enumeration value="00885"/>
-						<xs:enumeration value="73046"/>
-						<xs:enumeration value="00319"/>
-						<xs:enumeration value="00302"/>
-						<xs:enumeration value="00320"/>
-						<xs:enumeration value="00294"/>
-						<xs:enumeration value="00337"/>
-						<xs:enumeration value="00321"/>
-						<xs:enumeration value="00322"/>
-						<xs:enumeration value="00323"/>
-						<xs:enumeration value="00324"/>
-						<xs:enumeration value="00886"/>
-						<xs:enumeration value="00887"/>
-						<xs:enumeration value="00325"/>
-						<xs:enumeration value="00326"/>
-						<xs:enumeration value="00327"/>
-						<xs:enumeration value="00888"/>
-						<xs:enumeration value="00329"/>
-						<xs:enumeration value="00330"/>
-						<xs:enumeration value="00889"/>
-						<xs:enumeration value="09999"/>
+
+						<xs:enumeration value="00290">
+							<xs:annotation>
+								<xs:appinfo>Adaptive physical education</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00291">
+							<xs:annotation>
+								<xs:appinfo>Art therapy</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00292">
+							<xs:annotation>
+								<xs:appinfo>Assistive technology services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00293">
+							<xs:annotation>
+								<xs:appinfo>Audiological services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="73050">
+							<xs:annotation>
+								<xs:appinfo>Augmentative Communication Service</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="73051">
+							<xs:annotation>
+								<xs:appinfo>Autism Spectrum Disorder Service</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="73052">
+							<xs:annotation>
+								<xs:appinfo>Behavior and Behavioral Consultation Service</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="73053">
+							<xs:annotation>
+								<xs:appinfo>Braille Service</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00878">
+							<xs:annotation>
+								<xs:appinfo>Case management services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00295">
+							<xs:annotation>
+								<xs:appinfo>Children's protective services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00881">
+							<xs:annotation>
+								<xs:appinfo>Communication services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00882">
+							<xs:annotation>
+								<xs:appinfo>Community recreational services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="73048">
+							<xs:annotation>
+								<xs:appinfo>Curriculum planning</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00334">
+							<xs:annotation>
+								<xs:appinfo>Developmental childcare program</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="73047">
+							<xs:annotation>
+								<xs:appinfo>Early Intervention / Early Childhood Special Education Special Service</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00297">
+							<xs:annotation>
+								<xs:appinfo>Early intervention services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00298">
+							<xs:annotation>
+								<xs:appinfo>Educational therapy</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="73054">
+							<xs:annotation>
+								<xs:appinfo>ESL/Migrant Service</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00299">
+							<xs:annotation>
+								<xs:appinfo>Family counseling</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00333">
+							<xs:annotation>
+								<xs:appinfo>Family training, counseling, and home visits</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00303">
+							<xs:annotation>
+								<xs:appinfo>Health care</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00883">
+							<xs:annotation>
+								<xs:appinfo>Independent living</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="73049">
+							<xs:annotation>
+								<xs:appinfo>Instructional Aide/Assistant/Intervener Service</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00304">
+							<xs:annotation>
+								<xs:appinfo>Interpretation for the hearing impaired</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00332">
+							<xs:annotation>
+								<xs:appinfo>Medical services only for diagnostic or evaluation purposes</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00305">
+							<xs:annotation>
+								<xs:appinfo>Mental health counseling</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00884">
+							<xs:annotation>
+								<xs:appinfo>Mental health services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00306">
+							<xs:annotation>
+								<xs:appinfo>Music therapy</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00300">
+							<xs:annotation>
+								<xs:appinfo>National School Nutrition programs</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00308">
+							<xs:annotation>
+								<xs:appinfo>Note-taking assistance</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00335">
+							<xs:annotation>
+								<xs:appinfo>Nursing service</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00336">
+							<xs:annotation>
+								<xs:appinfo>Nutrition services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00309">
+							<xs:annotation>
+								<xs:appinfo>Occupational therapy</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00310">
+							<xs:annotation>
+								<xs:appinfo>Orientation and mobility services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00311">
+							<xs:annotation>
+								<xs:appinfo>Parenting skills assistance</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00312">
+							<xs:annotation>
+								<xs:appinfo>Peer services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00313">
+							<xs:annotation>
+								<xs:appinfo>Physical therapy</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00331">
+							<xs:annotation>
+								<xs:appinfo>Psychological services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00314">
+							<xs:annotation>
+								<xs:appinfo>Reader service</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00315">
+							<xs:annotation>
+								<xs:appinfo>Recreation service</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00318">
+							<xs:annotation>
+								<xs:appinfo>Rehabilitation counseling services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00885">
+							<xs:annotation>
+								<xs:appinfo>Residential services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="73046">
+							<xs:annotation>
+								<xs:appinfo>Respite Care</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00319">
+							<xs:annotation>
+								<xs:appinfo>School clothing</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00302">
+							<xs:annotation>
+								<xs:appinfo>School counseling</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00320">
+							<xs:annotation>
+								<xs:appinfo>School health nursing services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00294">
+							<xs:annotation>
+								<xs:appinfo>Service coordination (case management services)</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00337">
+							<xs:annotation>
+								<xs:appinfo>Social work services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00321">
+							<xs:annotation>
+								<xs:appinfo>Special transportation</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00322">
+							<xs:annotation>
+								<xs:appinfo>Speech-language therapy</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00323">
+							<xs:annotation>
+								<xs:appinfo>Study skills assistance</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00324">
+							<xs:annotation>
+								<xs:appinfo>Substance abuse education/prevention</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00886">
+							<xs:annotation>
+								<xs:appinfo>Supported employment services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00887">
+							<xs:annotation>
+								<xs:appinfo>Technological aids</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00325">
+							<xs:annotation>
+								<xs:appinfo>Teen/adolescent family planning</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00326">
+							<xs:annotation>
+								<xs:appinfo>Test assistance</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00327">
+							<xs:annotation>
+								<xs:appinfo>Translation/interpreter services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00888">
+							<xs:annotation>
+								<xs:appinfo>Transportation services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00329">
+							<xs:annotation>
+								<xs:appinfo>Tutoring services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00330">
+							<xs:annotation>
+								<xs:appinfo>Vision services</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="00889">
+							<xs:annotation>
+								<xs:appinfo>Career and technical education rehabilitation training and job placement</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+
+						<xs:enumeration value="09999">
+							<xs:annotation>
+								<xs:appinfo>Other</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="settingIndicator" minOccurs="0">
+			<xs:element name="inclusiveSettingIndicator" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>

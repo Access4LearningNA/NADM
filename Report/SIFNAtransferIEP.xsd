@@ -15,18 +15,21 @@
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
 	<xs:include schemaLocation="../Composite/SIFNAxPressCommonTypes.xsd" />
 	<xs:include schemaLocation="../Composite/SIFNAxPress.xsd" />
+	<xs:include schemaLocation="../Entity/SIFNAindividualizedEducationPlan/iepCommonTypes.xsd" />
 	
-	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/iepCommonTypes.xsd" />
 	
-	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/eligibility/iepEligibilityType.xsd" />
-	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/plan/iepPlanType.xsd" />
 	
-	<xs:include schemaLocation="SIFNAindividualizedEducationPlan/administrativeData/iepAdministrativeDataType.xsd" />
+	<xs:include schemaLocation="../Entity/SIFNAindividualizedEducationPlan.xsd" />
+	<xs:include schemaLocation="../Entity/SIFNAindividualizedEducationPlan/eligibility/iepEligibilityType.xsd" />
+	<xs:include schemaLocation="../Entity/SIFNAindividualizedEducationPlan/plan/iepPlanType.xsd" />
 	
-	<xs:complexType name="xIepType">
+	<xs:include schemaLocation="SIFNAtransferIEP/tiepHistory/tiepHistoryList.xsd" />
+	<xs:include schemaLocation="SIFNAtransferIEP/tiepReferenceObjects/tiepReferenceObjects.xsd" />
+	
+	<xs:complexType name="xTransferIepType">
 		<xs:annotation>
 			<xs:appinfo>
-				<elementName>Individualize Education Plan (IEP)</elementName>
+				<elementName>Transfer IEP</elementName>
 				<events>no</events>
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
@@ -39,9 +42,9 @@
 		<xs:complexContent>
 			<xs:extension base="gOtherSIFType">
 				<xs:sequence>
-					<xs:element name="iepAdministrativeData" type="iepAdministrativeDataType" minOccurs="0" />
-					<xs:element name="iepEligibility" type="iepEligibilityType" minOccurs="0" />
-					<xs:element name="iepPlan" type="iepPlanType" minOccurs="0" />
+					<xs:element name="referenceObjects" type="tiepReferenceObjectsType" minOccurs="0" />
+					<xs:element name="iep" type="xIepType" minOccurs="0" />
+					<xs:element name="historyList" type="tiepHistoryList" minOccurs="0" />
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

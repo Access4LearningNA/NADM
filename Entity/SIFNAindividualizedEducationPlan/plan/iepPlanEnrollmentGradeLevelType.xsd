@@ -33,7 +33,7 @@
 						<cedsURL>https://ceds.ed.gov/element/000100</cedsURL>
 					</xs:appinfo>
 					<xs:documentation>
-						Standard Grade Level
+						Grade level at beginning of the IEP effective period
 					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
