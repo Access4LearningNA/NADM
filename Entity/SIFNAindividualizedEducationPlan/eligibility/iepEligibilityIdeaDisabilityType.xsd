@@ -10,7 +10,6 @@
 	
 	<!-- ><xs:include schemaLocation="../../../Report/SIFNAxSRECommonTypes.xsd" /> -->
 	
-	
 	<xs:complexType name='iepEligibilityIdeaDisabilityAnalysisType'>
 		<xs:annotation>
 			<xs:appinfo>
@@ -135,6 +134,22 @@
 						<xs:enumeration value="No"/>
 					</xs:restriction>
 				</xs:simpleType>
+			</xs:element>
+			<xs:element name="identity" type="iepCommonAuthorizingPersonType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Identity of Deciding Person
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId />
+						<cedsURL />
+
+					</xs:appinfo>
+					<xs:documentation>
+						Identity of Person Responsible for Eligibility Determination
+					</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>

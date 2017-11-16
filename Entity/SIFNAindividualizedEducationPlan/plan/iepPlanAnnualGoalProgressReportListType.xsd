@@ -179,7 +179,7 @@
 						<cedsURL>https://ceds.ed.gov/element/001700</cedsURL>
 					</xs:appinfo>
 					<xs:documentation>
-						A description of the progress report used to notify parents of the student’s progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
+						A description of the progress made toward achievement of the student’s progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -255,6 +255,22 @@
 					<xs:documentation>
 						The date parents are notified of the student’s progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
 						</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="identity" type="iepCommonAuthorizingPersonType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Reporter Identity
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId />
+						<cedsURL />
+
+					</xs:appinfo>
+					<xs:documentation>
+						Identity of Person Making the Report
+					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

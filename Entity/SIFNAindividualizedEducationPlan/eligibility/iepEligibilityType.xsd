@@ -73,6 +73,22 @@
 							</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="identity" type="iepCommonAuthorizingPersonType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>
+									Identity of Determining Person
+								</elementName>
+								<sifChar>O</sifChar>
+								<cedsId />
+								<cedsURL />
+
+							</xs:appinfo>
+							<xs:documentation>
+								Identity of Person Making the Determination
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

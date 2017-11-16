@@ -69,7 +69,7 @@
 	</xs:complexType>
 	<xs:complexType name='iepEligibilityBackgroundReferralReferrerType'>
 		<xs:sequence>
-			<xs:element name="identity" type="xs:date" minOccurs="0">
+			<xs:element name="identity" type="iepCommonAuthorizingPersonType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
