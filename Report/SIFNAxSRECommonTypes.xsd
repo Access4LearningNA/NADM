@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<xs:include schemaLocation="../Composite/SIFNAxPressCommonTypes.xsd"/>
 	<xs:include schemaLocation="../Composite/SIFNAxPress.xsd"/>
 	
@@ -1500,7 +1500,7 @@
 			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="xIncidentBehaviorType" final="">
+	<xs:simpleType name="xIncidentBehaviorType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="04618">
 				<xs:annotation>
@@ -1654,7 +1654,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xSubtestScoreMetricType" final="">
+	<xs:simpleType name="xSubtestScoreMetricType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="00512">
 				<xs:annotation>
@@ -1808,7 +1808,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xWeaponType" final="">
+	<xs:simpleType name="xWeaponType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="Firearm"/>
 			<xs:enumeration value="Handgun"/>
@@ -1827,7 +1827,7 @@
 			<xs:enumeration value="Unknown"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xCreditTypeEarnedType" final="">
+	<xs:simpleType name="xCreditTypeEarnedType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="00585">
 				<xs:annotation>
@@ -1911,7 +1911,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xCourseSubjectAreaType" final="">
+	<xs:simpleType name="xCourseSubjectAreaType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="01">
 				<xs:annotation>
@@ -2025,7 +2025,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xImmunizationTypeType" final="">
+	<xs:simpleType name="xImmunizationTypeType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="HaemophilusInfluenzae"/>
 			<xs:enumeration value="HepatitisA"/>
@@ -2047,7 +2047,7 @@
 			<xs:enumeration value="ParentOptOut"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xDisabilityType" final="">
+	<xs:simpleType name="xDisabilityType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="AUT">
 				<xs:annotation>
@@ -2116,7 +2116,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xDisciplinaryActionCodeType" final="">
+	<xs:simpleType name="xDisciplinaryActionCodeType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="03071">
 				<xs:annotation>
@@ -2350,7 +2350,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xAttendanceEventTypeType" final="">
+	<xs:simpleType name="xAttendanceEventTypeType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="DailyAttendance">
 				<xs:annotation>
@@ -2374,7 +2374,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xAttendanceStatusType" final="">
+	<xs:simpleType name="xAttendanceStatusType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="Present">
 				<xs:annotation>
@@ -2403,7 +2403,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xPresentAttendanceCategoryType" final="">
+	<xs:simpleType name="xPresentAttendanceCategoryType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="13290">
 				<xs:annotation>
@@ -2432,7 +2432,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xIdeaEnvironmentEarlyChildhoodType" final="">
+	<xs:simpleType name="xIdeaEnvironmentEarlyChildhoodType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="REC09YOTHLOC">
 				<xs:annotation>
@@ -2481,7 +2481,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xIdeaEnvironmentSchoolAgeType" final="">
+	<xs:simpleType name="xIdeaEnvironmentSchoolAgeType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="RC80">
 				<xs:annotation>
@@ -2525,7 +2525,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xStudentSupportServiceType" final="">
+	<xs:simpleType name="xStudentSupportServiceType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="00290">
 				<xs:annotation>
@@ -2839,7 +2839,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xSpecialEducationExitReasonType" final="">
+	<xs:simpleType name="xSpecialEducationExitReasonType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="HighSchoolDiploma">
 				<xs:annotation>
@@ -2923,7 +2923,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xTitle3AccountabilityProgressStatusType" final="">
+	<xs:simpleType name="xTitle3AccountabilityProgressStatusType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="PROGRESS">
 				<xs:annotation>
@@ -2942,7 +2942,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xFoodServiceEnrollmentType" final="">
+	<xs:simpleType name="xFoodServiceEnrollmentType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="FreeBreakfast">
 				<xs:annotation>
@@ -3021,7 +3021,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xFoodServiceEligibilityType" final="">
+	<xs:simpleType name="xFoodServiceEligibilityType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="Free">
 				<xs:annotation>
@@ -3045,7 +3045,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xGiftedTalentedEligibilityType" final="">
+	<xs:simpleType name="xGiftedTalentedEligibilityType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="13452">
 				<xs:annotation>
@@ -3124,7 +3124,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xMigrantEnrollmentType" final="">
+	<xs:simpleType name="xMigrantEnrollmentType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="01">
 				<xs:annotation>
@@ -3158,7 +3158,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xAssessmentAccommodationType" final="">
+	<xs:simpleType name="xAssessmentAccommodationType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="03513">
 				<xs:annotation>
@@ -3652,7 +3652,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xAssessmentAccommodationCategory" final="">
+	<xs:simpleType name="xAssessmentAccommodationCategory" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="Scheduling">
 				<xs:annotation>
@@ -3701,7 +3701,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xAssessmentAttemptCodeType" final="">
+	<xs:simpleType name="xAssessmentAttemptCodeType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="TS">
 				<xs:annotation>
@@ -3780,7 +3780,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xScreeningStatus" final="">
+	<xs:simpleType name="xScreeningStatus" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="Passed">
 				<xs:annotation>
@@ -3794,7 +3794,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xAbsentAttendanceCategoryType" final="">
+	<xs:simpleType name="xAbsentAttendanceCategoryType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="13297">
 				<xs:annotation>
@@ -3853,7 +3853,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xAcademicSubjectType" final="">
+	<xs:simpleType name="xAcademicSubjectType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="13371">
 				<xs:annotation>
@@ -3947,7 +3947,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="xCourseLevelCharacteristicType" final="">
+	<xs:simpleType name="xCourseLevelCharacteristicType" >
 		<xs:restriction base="xs:token">
 			<xs:enumeration value="00568">
 				<xs:annotation>

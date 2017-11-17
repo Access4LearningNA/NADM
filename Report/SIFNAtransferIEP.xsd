@@ -17,8 +17,6 @@
 	<xs:include schemaLocation="../Composite/SIFNAxPress.xsd" />
 	<xs:include schemaLocation="../Entity/SIFNAindividualizedEducationPlan/iepCommonTypes.xsd" />
 	
-	
-	
 	<xs:include schemaLocation="../Entity/SIFNAindividualizedEducationPlan.xsd" />
 	<xs:include schemaLocation="../Entity/SIFNAindividualizedEducationPlan/eligibility/iepEligibilityType.xsd" />
 	<xs:include schemaLocation="../Entity/SIFNAindividualizedEducationPlan/plan/iepPlanType.xsd" />

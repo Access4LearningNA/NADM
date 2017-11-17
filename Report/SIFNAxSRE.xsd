@@ -2,7 +2,7 @@
 <!--version 3.03.01-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<xs:include schemaLocation="../SIFglobal.xsd"/>
-	<xs:include schemaLocation="SIFNAxSreCommonTypes.xsd"/>
+	<xs:include schemaLocation="SIFNAxSRECommonTypes.xsd"/>
 	<xs:include schemaLocation="../Composite/SIFNAxPress.xsd"/>
 	<xs:complexType name="xSreType">
 		<xs:annotation>
