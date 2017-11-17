@@ -7,6 +7,9 @@
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
+	
+	<!-- ><xs:include schemaLocation="../../../Report/SIFNAxSRECommonTypes.xsd" /> -->
+	
 	<xs:complexType name='iepEligibilityIdeaDisabilityAnalysisType'>
 		<xs:annotation>
 			<xs:appinfo>
@@ -21,7 +24,7 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Evaluation Result Explanation
+							Adverse Effects Explanation
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
@@ -36,7 +39,7 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Evaluation Result Explanation
+							Education Needs Explanation
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
@@ -66,14 +69,14 @@
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Evaluation Result Explanation
+							Additional IDEA Explanation
 						</elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>
-						Additional information that explains how to improve the student�s educational outcome.
+						Additional information that explains how to improve the student's educational outcome.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -131,6 +134,22 @@
 						<xs:enumeration value="No"/>
 					</xs:restriction>
 				</xs:simpleType>
+			</xs:element>
+			<xs:element name="identity" type="iepCommonAuthorizingPersonType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Identity of Deciding Person
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId />
+						<cedsURL />
+
+					</xs:appinfo>
+					<xs:documentation>
+						Identity of Person Responsible for Eligibility Determination
+					</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
@@ -468,40 +487,20 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="disabilityCodeList" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="disabilityCodeList" type="xDisabilityType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
-							Disability Categoryt
+							Disability Category
 						</elementName>
 						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-						<referenceUrl>http://www.parentcenterhub.org/categories/</referenceUrl>
+						<cedsId>000218</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000218/</cedsURL>
 					</xs:appinfo>
 					<xs:documentation>
 						Categories of Disability Under IDEA
 					</xs:documentation>
 				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:token">
-						<xs:enumeration value="Autism"/>
-						<xs:enumeration value="Deaf-blindness"/>
-						<xs:enumeration value="Deafness"/>
-						<xs:enumeration value="Developmental delay"/>
-						<xs:enumeration value="Emotional disturbance"/>
-						<xs:enumeration value="Hearing impairment"/>
-						<xs:enumeration value="Intellectual disability"/>
-						<xs:enumeration value="Multiple disabilities"/>
-						<xs:enumeration value="Orthopedic impairment"/>
-						<xs:enumeration value="Other health impairment"/>
-						<xs:enumeration value="Specific learning disability"/>
-						<xs:enumeration value="Speech or language impairment"/>
-						<xs:enumeration value="Traumatic brain injury"/>
-						<xs:enumeration value="Visual impairment, including blindness"/>
-						<xs:enumeration value="Student Needing Alternate Programming (SNAP)"/>
-					</xs:restriction>
-				</xs:simpleType>
 			</xs:element>
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -514,7 +513,7 @@
 						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>
-						Explanation for choice of SNAP, other or information refining disabilty selection.
+						Explanation or information refining disabilty selection.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>

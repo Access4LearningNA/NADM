@@ -7,6 +7,38 @@
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
+	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorIdentityType'>
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Facilitator Identity
+				</elementName>
+				<sifChar>O</sifChar>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>
+				Pointer to identity information for a person who will help the student achieve this goal
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="contactRefId" type="iepCommonContactRefIdPointerType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Pointer to xContact object when facilitator is a contact </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="staffRefId" type="iepCommonStaffRefIdPointerType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Pointer to xStaff object when facilitator is a staff member </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="parentGuardianRefId" type="iepCommonStudentContactRefIdPointerType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Pointer to studentContacts xContact object when facilitator is a studentContact </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveMeasurementCriterionMetricTrialCountEvaluationType'>
 		<xs:annotation>
 			<xs:appinfo>
@@ -175,7 +207,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="identity" type="xContactType" minOccurs="0">
+			<xs:element name="identity" type="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorIdentityType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>

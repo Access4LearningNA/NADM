@@ -84,6 +84,22 @@
 					<xs:documentation>The date when the evaluation was conducted.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="identity" type="iepCommonServiceProviderType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Evaluator Identity
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId />
+						<cedsURL />
+
+					</xs:appinfo>
+					<xs:documentation>
+						Identity of person making the evaluation
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<!-- named type -->

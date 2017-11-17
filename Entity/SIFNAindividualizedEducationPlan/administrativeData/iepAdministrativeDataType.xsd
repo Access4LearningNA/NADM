@@ -10,7 +10,6 @@
 	<!-- end redundant declaration for SIF tool analysis -->
 	<xs:include schemaLocation="iepAdministrativeDataCostSharingType.xsd" />
 	<xs:include schemaLocation="iepTransmitPermissionListType.xsd" />
-	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 	<!-- local parent type -->
 	<xs:complexType name="iepAdministrativeDataType">
@@ -28,12 +27,7 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_BaseType">
 				<xs:sequence>
-					<xs:element type="xStudentType" name="xStudent" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>Provided to allow a complete data structure when the xIndividualizeEducationPlan is used for transfer. This is an alternative to the studentRefId though both may be present.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="studentRefId" type="gRefIdPointerType" minOccurs="0">
+					<xs:element name="studentRefId" type="iepCommonStudentRefIdPointerType" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>Student Reference Identifier</elementName>
@@ -57,7 +51,6 @@
 							<xs:documentation>The date that the next evaluation is due based on the three year cycle.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element type="iepCommonParentGuardianListType" name="parentGuardianList" minOccurs="0" />
 					<xs:element type="iepAdministrativeDataCostSharingType" name="costSharing" minOccurs="0" />
 					<xs:element type="iepTransmitPermissionListType" name="transferPermissionList" minOccurs="0" />
 				</xs:sequence>

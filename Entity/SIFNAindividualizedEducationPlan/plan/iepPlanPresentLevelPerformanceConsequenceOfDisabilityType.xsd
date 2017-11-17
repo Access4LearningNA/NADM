@@ -31,17 +31,73 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="05978"/>
-						<xs:enumeration value="89600"/>
-						<xs:enumeration value="05980"/>
-						<xs:enumeration value="02196"/>
-						<xs:enumeration value="02198"/>
-						<xs:enumeration value="02197"/>
-						<xs:enumeration value="05982"/>
-						<xs:enumeration value="02349"/>
-						<xs:enumeration value="05981"/>
-						<xs:enumeration value="05979"/>
-						<xs:enumeration value="09999"/>
+
+						<xs:enumeration value="05978">
+							<xs:annotation>
+								<xs:appinfo>504 plan</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="89600">
+							<xs:annotation>
+								<xs:appinfo>College and Career Ready Learning Plan</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="05980">
+							<xs:annotation>
+								<xs:appinfo>GIEP - Individualized education program for gifted student</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="02196">
+							<xs:annotation>
+								<xs:appinfo>Individualized education program (IEP)</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="02198">
+							<xs:annotation>
+								<xs:appinfo>Individualized family service plan (IFSP)</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="02197">
+							<xs:annotation>
+								<xs:appinfo>Individualized learning program (ILP)</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="05982">
+							<xs:annotation>
+								<xs:appinfo>Individualized transition plan</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="02349">
+							<xs:annotation>
+								<xs:appinfo>Limited English proficient/English language learner</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="05981">
+							<xs:annotation>
+								<xs:appinfo>Literacy plan</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="05979">
+							<xs:annotation>
+								<xs:appinfo>Student intervention/support plan</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="09999">
+							<xs:annotation>
+								<xs:appinfo>Other</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+			
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>

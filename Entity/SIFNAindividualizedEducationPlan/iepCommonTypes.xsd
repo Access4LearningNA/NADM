@@ -9,6 +9,83 @@
 	<xs:include schemaLocation="../../SIFglobalBaseTypes.xsd" />
 	<xs:include schemaLocation="../../SIFglobalCommonTypes.xsd" />
 	<xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd" />
+	
+	<xs:simpleType name="iepCommonStudentRefIdPointerType">
+		<xs:annotation>
+			<xs:documentation>A refId that refers to an instance of a SIF xStudent object. The RefId points to the object instance. </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="gUUIDType"/>
+	</xs:simpleType>
+	<xs:simpleType name="iepCommonContactRefIdPointerType">
+		<xs:annotation>
+			<xs:documentation>A refId that refers to an instance of a SIF xContact object. The RefId points to the object instance. </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="gUUIDType"/>
+	</xs:simpleType>
+	<xs:simpleType name="iepCommonStaffRefIdPointerType">
+		<xs:annotation>
+			<xs:documentation>A refId that refers to an instance of a SIF xStaff object. The RefId points to the object instance. </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="gUUIDType"/>
+	</xs:simpleType>
+	<xs:simpleType name="iepCommonStudentContactRefIdPointerType">
+		<xs:annotation>
+			<xs:documentation>A refId that refers to an instance of xStudent/studentContacts/xStudentContactListType/xContact object. The RefId points to the object instance. </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="gUUIDType"/>
+	</xs:simpleType>
+	<xs:simpleType name="iepCommonLeaRefIdPointerType">
+		<xs:annotation>
+			<xs:documentation>A refId that refers to an instance of xLeaType object. The RefId points to the object instance. </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="gUUIDType"/>
+	</xs:simpleType>
+	<xs:simpleType name="iepCommonOrganizationRefIdPointerType">
+		<xs:annotation>
+			<xs:documentation>A refId that refers to an instance of xOrganization object. The RefId points to the object instance. </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="gUUIDType"/>
+	</xs:simpleType>
+	
+	<xs:complexType name="iepCommonExternalPartyType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>
+					Authorization
+				</elementName>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>
+				Information about a person who authorizes an aspect of an IEP
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="contactRefId" type="iepCommonContactRefIdPointerType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Pointer to xContact object when external party is a contact </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="organizationRefId" type="iepCommonOrganizationRefIdPointerType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Pointer to xOrganization object when external party is an organization </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="explanation" type='xs:string' minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName> Explanation </elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation> Explanation of the role of this party in this IEP </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="iepCommonAuthorizingPersonType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -21,7 +98,7 @@
 				<cedsURL/>
 			</xs:appinfo>
 			<xs:documentation>
-				Proved Identity Information
+				Information about a person who authorizes an aspect of an IEP
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
@@ -48,7 +125,26 @@
 					<xs:documentation>The date the authorization occurred.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="contactInfo" type="xs:normalizedString" minOccurs="0" />
+			<xs:element name="contactRefId" type="iepCommonContactRefIdPointerType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Pointer to xContact object when authorizing person is a contact </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="staffRefId" type="iepCommonStaffRefIdPointerType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Pointer to xStaff object when authorizing person is a staff member </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="parentGuardianRefId" type="iepCommonStudentContactRefIdPointerType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Pointer to studentContacts xContact object when authorizing person is a studentContact </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="studentRefId" type="iepCommonStudentRefIdPointerType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Pointer to xStudent object when authorizing person is the student him or herself </xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="intrinsicRole" type="xs:normalizedString" minOccurs="0" >
 				<xs:annotation>
 					<xs:appinfo>
@@ -105,19 +201,19 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="identity" type="xContactType" minOccurs="0">
+			<xs:element name="contactRefId" type="iepCommonContactRefIdPointerType" minOccurs="0">
 				<xs:annotation>
-					<xs:appinfo>
-						<elementName>
-							Identity
-						</elementName>
-						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-					</xs:appinfo>
-					<xs:documentation>
-						Service Provider Identity
-					</xs:documentation>
+					<xs:documentation>Pointer to xContact object when service provider is a contact </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="organizationRefId" type="iepCommonOrganizationRefIdPointerType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Pointer to xOrganization when service provider is an organization </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="staffRefId" type="iepCommonStaffRefIdPointerType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Pointer to xStaff when service provider is a staff member </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="role" minOccurs="0">
@@ -136,17 +232,61 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="PSYCH"/>
-						<xs:enumeration value="SOCIALWORK"/>
-						<xs:enumeration value="OCCTHERAP"/>
-						<xs:enumeration value="AUDIO"/>
-						<xs:enumeration value="PEANDREC"/>
-						<xs:enumeration value="PHYSTHERAP"/>
-						<xs:enumeration value="SPEECHPATH"/>
-						<xs:enumeration value="INTERPRET"/>
-						<xs:enumeration value="COUNSELOR"/>
-						<xs:enumeration value="ORIENTMOBIL"/>
-						<xs:enumeration value="MEDNURSE"/>
+						<xs:enumeration value="PSYCH">
+							<xs:annotation>
+								<xs:appinfo>Psychologists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="SOCIALWORK">
+							<xs:annotation>
+								<xs:appinfo>Social Workers</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="OCCTHERAP">
+							<xs:annotation>
+								<xs:appinfo>Occupational Therapists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="AUDIO">
+							<xs:annotation>
+								<xs:appinfo>Audiologists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="PEANDREC">
+							<xs:annotation>
+								<xs:appinfo>Physical Education Teachers and Recreation and Therapeutic Recreation Specialists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="PHYSTHERAP">
+							<xs:annotation>
+								<xs:appinfo>Physical Therapists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="SPEECHPATH">
+							<xs:annotation>
+								<xs:appinfo>Speech-Language Pathologists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="INTERPRET">
+							<xs:annotation>
+								<xs:appinfo>Interpreters</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="COUNSELOR">
+							<xs:annotation>
+								<xs:appinfo>Counselors and Rehabilitation Counselors</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="ORIENTMOBIL">
+							<xs:annotation>
+								<xs:appinfo>Orientation and Mobility Specialists</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="MEDNURSE">
+							<xs:annotation>
+								<xs:appinfo>Medical/Nursing Service Staff</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -179,108 +319,516 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="03513"/>
-						<xs:enumeration value="00461"/>
-						<xs:enumeration value="00462"/>
-						<xs:enumeration value="03514"/>
-						<xs:enumeration value="13803"/>
-						<xs:enumeration value="13793"/>
-						<xs:enumeration value="03515"/>
-						<xs:enumeration value="03517"/>
-						<xs:enumeration value="75005"/>
-						<xs:enumeration value="03519"/>
-						<xs:enumeration value="03518"/>
-						<xs:enumeration value="75006"/>
-						<xs:enumeration value="13791"/>
-						<xs:enumeration value="00463"/>
-						<xs:enumeration value="03522"/>
-						<xs:enumeration value="75007"/>
-						<xs:enumeration value="03524"/>
-						<xs:enumeration value="13800"/>
-						<xs:enumeration value="03525"/>
-						<xs:enumeration value="03526"/>
-						<xs:enumeration value="03527"/>
-						<xs:enumeration value="03528"/>
-						<xs:enumeration value="03529"/>
-						<xs:enumeration value="75008"/>
-						<xs:enumeration value="03530"/>
-						<xs:enumeration value="03531"/>
-						<xs:enumeration value="03533"/>
-						<xs:enumeration value="13795"/>
-						<xs:enumeration value="00937"/>
-						<xs:enumeration value="00464"/>
-						<xs:enumeration value="03534"/>
-						<xs:enumeration value="00465"/>
-						<xs:enumeration value="13797"/>
-						<xs:enumeration value="03535"/>
-						<xs:enumeration value="13789"/>
-						<xs:enumeration value="03536"/>
-						<xs:enumeration value="03537"/>
-						<xs:enumeration value="03538"/>
-						<xs:enumeration value="03539"/>
-						<xs:enumeration value="13790"/>
-						<xs:enumeration value="13805"/>
-						<xs:enumeration value="13798"/>
-						<xs:enumeration value="13804"/>
-						<xs:enumeration value="75009"/>
-						<xs:enumeration value="13796"/>
-						<xs:enumeration value="75010"/>
-						<xs:enumeration value="03541"/>
-						<xs:enumeration value="75011"/>
-						<xs:enumeration value="13792"/>
-						<xs:enumeration value="03543"/>
-						<xs:enumeration value="03544"/>
-						<xs:enumeration value="00469"/>
-						<xs:enumeration value="03545"/>
-						<xs:enumeration value="13802"/>
-						<xs:enumeration value="03546"/>
-						<xs:enumeration value="09999"/>
-						<xs:enumeration value="03547"/>
-						<xs:enumeration value="03548"/>
-						<xs:enumeration value="00471"/>
-						<xs:enumeration value="13801"/>
-						<xs:enumeration value="03549"/>
-						<xs:enumeration value="03550"/>
-						<xs:enumeration value="13788"/>
-						<xs:enumeration value="13799"/>
-						<xs:enumeration value="03551"/>
-						<xs:enumeration value="00473"/>
-						<xs:enumeration value="03552"/>
-						<xs:enumeration value="73070"/>
-						<xs:enumeration value="03553"/>
-						<xs:enumeration value="00474"/>
-						<xs:enumeration value="03554"/>
-						<xs:enumeration value="03555"/>
-						<xs:enumeration value="00475"/>
-						<xs:enumeration value="00476"/>
-						<xs:enumeration value="03558"/>
-						<xs:enumeration value="03556"/>
-						<xs:enumeration value="03557"/>
-						<xs:enumeration value="13794"/>
-						<xs:enumeration value="03559"/>
-						<xs:enumeration value="03560"/>
-						<xs:enumeration value="75012"/>
-						<xs:enumeration value="13806"/>
-						<xs:enumeration value="03562"/>
-						<xs:enumeration value="75013"/>
-						<xs:enumeration value="03563"/>
-						<xs:enumeration value="03564"/>
-						<xs:enumeration value="03566"/>
-						<xs:enumeration value="00477"/>
-						<xs:enumeration value="03567"/>
-						<xs:enumeration value="09997"/>
-						<xs:enumeration value="00479"/>
-						<xs:enumeration value="03568"/>
-						<xs:enumeration value="75014"/>
-						<xs:enumeration value="03570"/>
-						<xs:enumeration value="03571"/>
-						<xs:enumeration value="03572"/>
-						<xs:enumeration value="03573"/>
-						<xs:enumeration value="75015"/>
-						<xs:enumeration value="75016"/>
-						<xs:enumeration value="75017"/>
-						<xs:enumeration value="75018"/>
-						<xs:enumeration value="75019"/>
+						<xs:enumeration value="03513">
+							<xs:annotation>
+								<xs:appinfo>Additional example items/tasks</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00461">
+							<xs:annotation>
+								<xs:appinfo>Adjustable swivel arm</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00462">
+							<xs:annotation>
+								<xs:appinfo>Adjustable table height</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03514">
+							<xs:annotation>
+								<xs:appinfo>Administration in several sessions</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13803">
+							<xs:annotation>
+								<xs:appinfo>Alternate representation</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13793">
+							<xs:annotation>
+								<xs:appinfo>Answer masking</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03515">
+							<xs:annotation>
+								<xs:appinfo>Answers written directly in test booklet</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03517">
+							<xs:annotation>
+								<xs:appinfo>Arithmetic table (math or science)</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75005">
+							<xs:annotation>
+								<xs:appinfo>Native language</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03519">
+							<xs:annotation>
+								<xs:appinfo>Assistive device that does interfere with independent work of the student</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03518">
+							<xs:annotation>
+								<xs:appinfo>Assistive device that does not interfere with independent work of the student</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75006">
+							<xs:annotation>
+								<xs:appinfo>Audio recordings</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13791">
+							<xs:annotation>
+								<xs:appinfo>Auditory calming</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00463">
+							<xs:annotation>
+								<xs:appinfo>Braille</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03522">
+							<xs:annotation>
+								<xs:appinfo>Braille writer, no thesaurus, spell- or grammar-checker</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75007">
+							<xs:annotation>
+								<xs:appinfo>Breaks</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03524">
+							<xs:annotation>
+								<xs:appinfo>Calculator (math or science)</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13800">
+							<xs:annotation>
+								<xs:appinfo>Chunking</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03525">
+							<xs:annotation>
+								<xs:appinfo>Clarify directions</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03526">
+							<xs:annotation>
+								<xs:appinfo>Colored lenses</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03527">
+							<xs:annotation>
+								<xs:appinfo>Computer administration</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03528">
+							<xs:annotation>
+								<xs:appinfo>Cranmer abacus</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03529">
+							<xs:annotation>
+								<xs:appinfo>Cueing</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75008">
+							<xs:annotation>
+								<xs:appinfo>Dictated oral response</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03530">
+							<xs:annotation>
+								<xs:appinfo>Dictionary in English</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03531">
+							<xs:annotation>
+								<xs:appinfo>Dictionary in native language</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03533">
+							<xs:annotation>
+								<xs:appinfo>Directions read aloud or explained</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13795">
+							<xs:annotation>
+								<xs:appinfo>Encouraging prompts</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00937">
+							<xs:annotation>
+								<xs:appinfo>Enlarged keyboard</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00464">
+							<xs:annotation>
+								<xs:appinfo>Enlarged monitor view</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03534">
+							<xs:annotation>
+								<xs:appinfo>Examiner familiarity</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00465">
+							<xs:annotation>
+								<xs:appinfo>Extra time</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13797">
+							<xs:annotation>
+								<xs:appinfo>Flagging</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03535">
+							<xs:annotation>
+								<xs:appinfo>Font enlarged beyond print version requirements</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13789">
+							<xs:annotation>
+								<xs:appinfo>Foreground/Background colors</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03536">
+							<xs:annotation>
+								<xs:appinfo>Foreign language interpreter</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03537">
+							<xs:annotation>
+								<xs:appinfo>Foreign language interpreter for instructions, ask questions</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03538">
+							<xs:annotation>
+								<xs:appinfo>Format</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03539">
+							<xs:annotation>
+								<xs:appinfo>Hospital/home testing</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13790">
+							<xs:annotation>
+								<xs:appinfo>Increase white space</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13805">
+							<xs:annotation>
+								<xs:appinfo>Item translation</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13798">
+							<xs:annotation>
+								<xs:appinfo>Keyword highlighting</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13804">
+							<xs:annotation>
+								<xs:appinfo>Keyword translation</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75009">
+							<xs:annotation>
+								<xs:appinfo>Large print</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13796">
+							<xs:annotation>
+								<xs:appinfo>Line reader</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75010">
+							<xs:annotation>
+								<xs:appinfo>Linguistic modification of directions</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03541">
+							<xs:annotation>
+								<xs:appinfo>Magnification device</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75011">
+							<xs:annotation>
+								<xs:appinfo>Manually coded English or American Sign Language to present questions</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13792">
+							<xs:annotation>
+								<xs:appinfo>Masking</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03543">
+							<xs:annotation>
+								<xs:appinfo>Math manipulatives (math or science)</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03544">
+							<xs:annotation>
+								<xs:appinfo>Modification of linguistic complexity</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00469">
+							<xs:annotation>
+								<xs:appinfo>Multi-day administration</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03545">
+							<xs:annotation>
+								<xs:appinfo>Multiple test sessions</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13802">
+							<xs:annotation>
+								<xs:appinfo>Negatives removed</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03546">
+							<xs:annotation>
+								<xs:appinfo>Oral directions in the native language</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="09999">
+							<xs:annotation>
+								<xs:appinfo>Other</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03547">
+							<xs:annotation>
+								<xs:appinfo>Paraphrasing</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03548">
+							<xs:annotation>
+								<xs:appinfo>Physical supports</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00471">
+							<xs:annotation>
+								<xs:appinfo>Recorder or amanuensis</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13801">
+							<xs:annotation>
+								<xs:appinfo>Reduced answer choices</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03549">
+							<xs:annotation>
+								<xs:appinfo>Response dictated in American Sign Language</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03550">
+							<xs:annotation>
+								<xs:appinfo>Response in native language</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13788">
+							<xs:annotation>
+								<xs:appinfo>Reverse contrast</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13799">
+							<xs:annotation>
+								<xs:appinfo>Scaffolding</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03551">
+							<xs:annotation>
+								<xs:appinfo>Scheduled extended time</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00473">
+							<xs:annotation>
+								<xs:appinfo>Separate room</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03552">
+							<xs:annotation>
+								<xs:appinfo>Separate room with other English Learners under supervision of district employee</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="73070">
+							<xs:annotation>
+								<xs:appinfo>Sign Language Video</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03553">
+							<xs:annotation>
+								<xs:appinfo>Signer/sign language for instructions, ask questions</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00474">
+							<xs:annotation>
+								<xs:appinfo>Signer/sign language interpreter</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03554">
+							<xs:annotation>
+								<xs:appinfo>Simplified language</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03555">
+							<xs:annotation>
+								<xs:appinfo>Small-group or individual administration</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00475">
+							<xs:annotation>
+								<xs:appinfo>Special furniture</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00476">
+							<xs:annotation>
+								<xs:appinfo>Special lighting</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03558">
+							<xs:annotation>
+								<xs:appinfo>Specialized setting</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03556">
+							<xs:annotation>
+								<xs:appinfo>Speech recognition system</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03557">
+							<xs:annotation>
+								<xs:appinfo>Spell-checker</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13794">
+							<xs:annotation>
+								<xs:appinfo>Structured masking</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03559">
+							<xs:annotation>
+								<xs:appinfo>Student read aloud</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03560">
+							<xs:annotation>
+								<xs:appinfo>Student-requested extended time</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75012">
+							<xs:annotation>
+								<xs:appinfo>Supervised breaks</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="13806">
+							<xs:annotation>
+								<xs:appinfo>Tactile</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03562">
+							<xs:annotation>
+								<xs:appinfo>Technological aid</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75013">
+							<xs:annotation>
+								<xs:appinfo>Test administered at best time of day for student</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03563">
+							<xs:annotation>
+								<xs:appinfo>Test administrator marked / wrote test at student's direction</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03564">
+							<xs:annotation>
+								<xs:appinfo>Test administrator read questions aloud</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03566">
+							<xs:annotation>
+								<xs:appinfo>Text changes in vocabulary</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00477">
+							<xs:annotation>
+								<xs:appinfo>Track ball</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03567">
+							<xs:annotation>
+								<xs:appinfo>Translation dictionary</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="09997">
+							<xs:annotation>
+								<xs:appinfo>Unknown</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="00479">
+							<xs:annotation>
+								<xs:appinfo>Untimed</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03568">
+							<xs:annotation>
+								<xs:appinfo>Verbalized problem-solving</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75014">
+							<xs:annotation>
+								<xs:appinfo>Video recordings</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03570">
+							<xs:annotation>
+								<xs:appinfo>Visual cues</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03571">
+							<xs:annotation>
+								<xs:appinfo>Word processor</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03572">
+							<xs:annotation>
+								<xs:appinfo>Word processor - grammar-checker turned off</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="03573">
+							<xs:annotation>
+								<xs:appinfo>Word processor - grammar-checker enabled on essay response portion of test</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75015">
+							<xs:annotation>
+								<xs:appinfo>Alternate assignments or goals</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75016">
+							<xs:annotation>
+								<xs:appinfo>Behavior management program</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75017">
+							<xs:annotation>
+								<xs:appinfo>Check for understanding</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75018">
+							<xs:annotation>
+								<xs:appinfo>Frequent feedback</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="75019">
+							<xs:annotation>
+								<xs:appinfo>Peer support</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>

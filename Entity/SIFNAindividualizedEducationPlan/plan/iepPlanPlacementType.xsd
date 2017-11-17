@@ -34,14 +34,54 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="RC80"/>
-						<xs:enumeration value="RC79TO40"/>
-						<xs:enumeration value="RC39"/>
-						<xs:enumeration value="SS"/>
-						<xs:enumeration value="RF"/>
-						<xs:enumeration value="HH"/>
-						<xs:enumeration value="CF"/>
-						<xs:enumeration value="PPPS"/>
+						<xs:enumeration value="RC80">
+							<xs:annotation>
+								<xs:appinfo>Inside regular class 80% or more of the day</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="RC79TO40">
+							<xs:annotation>
+								<xs:appinfo>Inside regular class 40% through 79% of the day</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="RC39">
+							<xs:annotation>
+								<xs:appinfo>Inside regular class less than 40% of the day</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="SS">
+							<xs:annotation>
+								<xs:appinfo>Separate school</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="RF">
+							<xs:annotation>
+								<xs:appinfo>Residential facility</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="HH">
+							<xs:annotation>
+								<xs:appinfo>Homebound/hospital</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="CF">
+							<xs:annotation>
+								<xs:appinfo>Correctional facility</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="PPPS">
+							<xs:annotation>
+								<xs:appinfo>Parentally placed in private school</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+			
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>

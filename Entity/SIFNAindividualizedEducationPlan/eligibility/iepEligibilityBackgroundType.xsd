@@ -9,7 +9,7 @@
 
 	<xs:complexType name='iepEligibilityBackgroundConsentToEvaluateType'>
 		<xs:sequence>
-			<xs:element name="accepted" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="accepted" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Accepted </elementName>
@@ -22,6 +22,12 @@
 						Indication parent agreed to evaluate student.
 					</xs:documentation>
 				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="Yes"/>
+						<xs:enumeration value="No"/>
+					</xs:restriction>
+				</xs:simpleType>
 			</xs:element>
 			<xs:element name="identity" type="iepCommonAuthorizingPersonType" minOccurs="0">
 				<xs:annotation>
@@ -63,7 +69,7 @@
 	</xs:complexType>
 	<xs:complexType name='iepEligibilityBackgroundReferralReferrerType'>
 		<xs:sequence>
-			<xs:element name="identity" type="xs:date" minOccurs="0">
+			<xs:element name="identity" type="iepCommonAuthorizingPersonType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>

@@ -58,15 +58,15 @@
 			<xs:documentation> Person or organization that is the intended recipient </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="lea" type="xLeaType" minOccurs="0">
+			<xs:element name="lea" type="iepCommonLeaRefIdPointerType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
-						<elementName> Permitting Parent </elementName>
+						<elementName> Educational Agency </elementName>
 						<sifChar>O</sifChar>
 						<cedsId/>
 						<cedsURL/>
 					</xs:appinfo>
-					<xs:documentation> Proved identity of parent giving transmit permission IEP
+					<xs:documentation> Pointer to school district or other Local Educational Agency that needs access to IEP
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -82,7 +82,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="other" type="xPartyType" minOccurs="0">
+			<xs:element name="other" type="iepCommonExternalPartyType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Other Recipient </elementName>
@@ -120,9 +120,23 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="report" />
-						<xs:enumeration value="service" />
-						<xs:enumeration value="transfer" />
+						<xs:enumeration value="report">
+							<xs:annotation>
+								<xs:appinfo>For information purposes</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						
+						<xs:enumeration value="service">
+							<xs:annotation>
+								<xs:appinfo>To help the recipient serve the student better</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+						
+						<xs:enumeration value="transfer">
+							<xs:annotation>
+								<xs:appinfo>The IEP is being handed over to the recipient.</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>

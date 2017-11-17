@@ -5,14 +5,14 @@
 	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
 	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-	<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Entity/SIFNAindividualizedEducationPlan/iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-	<xs:include schemaLocation="iepHistoryReferenceType.xsd" />
+	<xs:include schemaLocation="tiepHistoryListItemType.xsd" />
 	<!-- local parent type -->
-	<xs:complexType name="iepHistory">
+	<xs:complexType name="tiepHistoryList">
 		<xs:annotation>
 			<xs:appinfo>
-				<elementName>IEP History</elementName>
+				<elementName>IEP History List</elementName>
 				<events>no</events>
 				<isSIFObject>yes</isSIFObject>
 				<cedsId/>
@@ -25,11 +25,11 @@
 		<xs:complexContent>
 			<xs:extension base="gSIF_BaseType">
 				<xs:sequence>
-					<xs:element type='iepHistoryReferenceType' name="iepHistoryReference" minOccurs="0" maxOccurs="unbounded">
+					<xs:element type='tiepHistoryListItemType' name="historyItem" minOccurs="0" maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:appinfo>
 								<elementName>
-									IEP History Reference
+									IEP History Item
 								</elementName>
 								<sifChar>O</sifChar>
 								<cedsId/>

@@ -33,32 +33,138 @@
 						<cedsURL>https://ceds.ed.gov/element/000100</cedsURL>
 					</xs:appinfo>
 					<xs:documentation>
-						Standard Grade Level
+						Grade level at beginning of the IEP effective period
 					</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="IT" />
-						<xs:enumeration value="PR" />
-						<xs:enumeration value="PK" />
-						<xs:enumeration value="TK" />
-						<xs:enumeration value="KG" />
-						<xs:enumeration value="01" />
-						<xs:enumeration value="02" />
-						<xs:enumeration value="03" />
-						<xs:enumeration value="04" />
-						<xs:enumeration value="05" />
-						<xs:enumeration value="06" />
-						<xs:enumeration value="07" />
-						<xs:enumeration value="08" />
-						<xs:enumeration value="09" />
-						<xs:enumeration value="10" />
-						<xs:enumeration value="11" />
-						<xs:enumeration value="12" />
-						<xs:enumeration value="13" />
-						<xs:enumeration value="PS" />
-						<xs:enumeration value="UG" />
-						<xs:enumeration value="Other" />
+
+						<xs:enumeration value="IT">
+							<xs:annotation>
+								<xs:appinfo>Infant/toddler</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="PR">
+							<xs:annotation>
+								<xs:appinfo>Preschool</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="PK">
+							<xs:annotation>
+								<xs:appinfo>Prekindergarten</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="TK">
+							<xs:annotation>
+								<xs:appinfo>Transitional Kindergarten</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="KG">
+							<xs:annotation>
+								<xs:appinfo>Kindergarten</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="01">
+							<xs:annotation>
+								<xs:appinfo>First grade</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="02">
+							<xs:annotation>
+								<xs:appinfo>Second grade</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="03">
+							<xs:annotation>
+								<xs:appinfo>Third grade</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="04">
+							<xs:annotation>
+								<xs:appinfo>Fourth grade</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="05">
+							<xs:annotation>
+								<xs:appinfo>Fifth grade</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="06">
+							<xs:annotation>
+								<xs:appinfo>Sixth grade</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="07">
+							<xs:annotation>
+								<xs:appinfo>Seventh grade</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="08">
+							<xs:annotation>
+								<xs:appinfo>Eighth grade</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="09">
+							<xs:annotation>
+								<xs:appinfo>Ninth grade</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="10">
+							<xs:annotation>
+								<xs:appinfo>Tenth grade</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="11">
+							<xs:annotation>
+								<xs:appinfo>Eleventh grade</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="12">
+							<xs:annotation>
+								<xs:appinfo>Twelfth grade</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="13">
+							<xs:annotation>
+								<xs:appinfo>Grade 13</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="PS">
+							<xs:annotation>
+								<xs:appinfo>Postsecondary</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="UG">
+							<xs:annotation>
+								<xs:appinfo>Ungraded</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="Other">
+							<xs:annotation>
+								<xs:appinfo>Other</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>

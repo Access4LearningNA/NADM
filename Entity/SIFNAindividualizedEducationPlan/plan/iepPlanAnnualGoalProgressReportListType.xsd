@@ -179,7 +179,7 @@
 						<cedsURL>https://ceds.ed.gov/element/001700</cedsURL>
 					</xs:appinfo>
 					<xs:documentation>
-						A description of the progress report used to notify parents of the student’s progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
+						A description of the progress made toward achievement of the student’s progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
@@ -200,10 +200,30 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="SatisfactoryProgress" />
-						<xs:enumeration value="UnsatisfactoryProgress" />
-						<xs:enumeration value="Completed" />
-						<xs:enumeration value="Other" />
+						<xs:enumeration value="SatisfactoryProgress">
+							<xs:annotation>
+								<xs:appinfo>Satisfactory Progress is specified as the status toward achievement of the annual goal or short-term objectives.</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="UnsatisfactoryProgress">
+							<xs:annotation>
+								<xs:appinfo>Unsatisfactory Progress is specified as the status toward achievement of the annual goal or short-term objectives.</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="Completed">
+							<xs:annotation>
+								<xs:appinfo>Completed is specified as the status toward achievement of the annual goal or short-term objectives.</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="Other">
+							<xs:annotation>
+								<xs:appinfo>The status toward achievement of the annual goal or short-term objectives is in a category not yet defined in CEDS.</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+			
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -235,6 +255,22 @@
 					<xs:documentation>
 						The date parents are notified of the student’s progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
 						</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="identity" type="iepCommonAuthorizingPersonType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Reporter Identity
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId />
+						<cedsURL />
+
+					</xs:appinfo>
+					<xs:documentation>
+						Identity of Person Making the Report
+					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

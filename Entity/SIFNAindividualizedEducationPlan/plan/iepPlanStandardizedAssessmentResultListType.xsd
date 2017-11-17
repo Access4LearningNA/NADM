@@ -86,15 +86,61 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="SchedulingAccommodations" />
-						<xs:enumeration value="SettingsAccommodations" />
-						<xs:enumeration value="StudentEquipment/technology" />
-						<xs:enumeration value="TestAdministrationAccommodation" />
-						<xs:enumeration value="TestMaterialAccommodations" />
-						<xs:enumeration value="TestResponseAccommodation" />
-						<xs:enumeration value="EnglishLanguageLearnerAccommodation" />
-						<xs:enumeration value="504Accommodation" />
-						<xs:enumeration value="Other" />
+
+						<xs:enumeration value="Scheduling">
+							<xs:annotation>
+								<xs:appinfo>Scheduling accommodations</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="Setting">
+							<xs:annotation>
+								<xs:appinfo>Settings accommodations</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="EquipmentOrTechnology">
+							<xs:annotation>
+								<xs:appinfo>Student equipment/technology</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="TestAdministration">
+							<xs:annotation>
+								<xs:appinfo>Test administration accommodation</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="TestMaterial">
+							<xs:annotation>
+								<xs:appinfo>Test material accommodations</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="TestResponse">
+							<xs:annotation>
+								<xs:appinfo>Test response accommodation</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="ELL">
+							<xs:annotation>
+								<xs:appinfo>English language learner accommodation</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="504">
+							<xs:annotation>
+								<xs:appinfo>504 accommodation</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+
+						<xs:enumeration value="Other">
+							<xs:annotation>
+								<xs:appinfo>Other</xs:appinfo>
+							</xs:annotation>
+						</xs:enumeration>
+			
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>

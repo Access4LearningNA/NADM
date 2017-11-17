@@ -3393,13 +3393,4 @@
 			<xs:element name="phone" type="xTelephoneType" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="xPartyType">
-		<xs:annotation>
-			<xs:documentation>A person or an organization</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="person" type="xContactType" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element name="organization" type="xOrganizationType" minOccurs="0" maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
 </xs:schema>
