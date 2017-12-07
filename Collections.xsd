@@ -9,7 +9,7 @@
 	<xs:include schemaLocation="Jobs/StudentLocator/StudentLocatorResponse.xsd"/>
 	
 	<xs:include schemaLocation="Entity/SIFNAindividualizedEducationPlan.xsd"/>
-	<xs:include schemaLocation="Report/SIFNAtransferIEP.xsd"/>
+	<xs:include schemaLocation="Report/SIFNAtransferIep.xsd"/>
 
 	<!--This file is made up of the so-called Collection Objects. Each Collection is a wrapper for multiple instances of a single object. This is done to make REST calls more REST-like. -->
 	<!--Entity Objects-->
@@ -602,7 +602,7 @@
 	
 	<xs:complexType name="xTransferIepCollectionType">
 		<xs:sequence>
-			<xs:element name="xTransferIEP" type="xTransferIepType" minOccurs="0"
+			<xs:element name="xTransferIep" type="xTransferIepType" minOccurs="0"
 				maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
