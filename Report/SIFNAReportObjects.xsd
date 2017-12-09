@@ -14,5 +14,5 @@
 	<xs:include schemaLocation="aggregateStatisticFact.xsd"/>
 	<xs:include schemaLocation="studentAttendanceSummary.xsd"/>
 	<!--3.5 new objects> -->
-	<xs:include schemaLocation="SIFNAtransferIEP.xsd"/>
+	<xs:include schemaLocation="SIFNAtransferIep.xsd"/>
 </xs:schema>
