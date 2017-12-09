@@ -8,7 +8,10 @@
 	<xs:include schemaLocation="Composite/SIFNACompositeObjects.xsd"/>
 	<xs:include schemaLocation="Report/SIFNAReportObjects.xsd"/>
 	<xs:include schemaLocation="Jobs/StudentLocator/StudentLocatorResponse.xsd"/>
-	<!-- Service payloads come from these files. --> 
+	<xs:include schemaLocation="Entity/SIFNAindividualizedEducationPlan.xsd"/>
+	
+	<!-- Service payloads come from these files. -->
+	<xs:include schemaLocation="Report/SIFNAtransferIep.xsd"/>
 	<xs:include schemaLocation="Jobs/StudentRecordExchange/sreInitialization.xsd"/>
 	<xs:include schemaLocation="Jobs/StudentRecordExchange/srePermissionRequest.xsd"/>
 	<xs:include schemaLocation="Jobs/StudentRecordExchange/sreReceipt.xsd"/>
@@ -600,7 +603,7 @@
 	
 	<xs:complexType name="xTransferIepCollectionType">
 		<xs:sequence>
-			<xs:element name="xTransferIEP" type="xTransferIepType" minOccurs="0"
+			<xs:element name="xTransferIep" type="xTransferIepType" minOccurs="0"
 				maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>

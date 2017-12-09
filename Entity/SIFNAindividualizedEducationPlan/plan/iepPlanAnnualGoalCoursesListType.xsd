@@ -33,7 +33,7 @@
 						<cedsURL />
 					</xs:appinfo>
 					<xs:documentation>
-						Reason that student did not participate in this service.
+						Name of class.
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
