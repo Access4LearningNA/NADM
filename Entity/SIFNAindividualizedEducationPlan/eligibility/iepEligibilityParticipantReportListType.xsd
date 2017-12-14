@@ -37,7 +37,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="role" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="role" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>

@@ -106,7 +106,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListDesiredOutcomeType' name="desiredOutcome" minOccurs="0" />
+			<xs:element type='iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListDesiredOutcomeType' name="desiredOutcome" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalIntentionType'>
@@ -139,7 +139,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListType' name="desiredOutcomeList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformancePersonalIntentionDesiredOutcomeListType' name="desiredOutcomeList" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListPersonalGoalType'>
@@ -204,10 +204,10 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListPersonalGoalType' name="personalGoal" minOccurs="0" />
+			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListPersonalGoalType' name="personalGoal" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanPresentLevelPerformancePersonalEvaluationPerformanceTestResultListType'>
+	<xs:complexType name='iepPlanPresentLevelPerformancePersonalEvaluationPerformanceDiagnosticStatementListType'>
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -222,7 +222,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="diagnosticStatement" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="diagnosticStatement" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
@@ -269,7 +269,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPerformanceTestResultListType' name="testResultList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPerformanceDiagnosticStatementListType' name="testResultList" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalEvaluationNeedsListType'>
@@ -287,7 +287,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="need" type="xs:normalizedString" minOccurs="0">
+			<xs:element name="need" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
@@ -319,9 +319,9 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationNeedsListType' name="needsList" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPerformanceType' name="performance" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListType' name="personalGoalsList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationNeedsListType' name="needsList" minOccurs="0" />
+			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPerformanceType' name="performance" minOccurs="0" />
+			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationPersonalGoalsListType' name="personalGoalsList" />
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name='iepPlanPresentLevelPerformancePersonalConcernsType'>
@@ -417,7 +417,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformancePersonalConcernsType' name="concerns" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformancePersonalConcernsType' name="concerns" minOccurs="0" />
 			<xs:element name="strengthsDescription" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -448,8 +448,8 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationType' name="evaluation" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type='iepPlanPresentLevelPerformancePersonalIntentionType' name="intention" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformancePersonalEvaluationType' name="evaluation" minOccurs="0" minOccurs="0" />
+			<xs:element type='iepPlanPresentLevelPerformancePersonalIntentionType' name="intention" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

@@ -108,22 +108,7 @@
 			<xs:documentation> Information about a specific functional disability </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="disabilityCodeList" type="xDisabilityType" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName>
-							Disability Category
-						</elementName>
-						<sifChar>O</sifChar>
-						<cedsId/>
-						<cedsURL/>
-						<referenceUrl>http://www.parentcenterhub.org/categories/</referenceUrl>
-					</xs:appinfo>
-					<xs:documentation>
-						Categories of Disability Under IDEA
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			<xs:element name="disabilityCodeList" type="iepCommonIdeaDisabilityCodeListType" minOccurs="0" />
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -150,7 +135,7 @@
 					<xs:documentation> Analysis of the particular ways that the disability interferes with educational attainment </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepCommonAccommodationType' name="accommodation" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepCommonAccommodationType' name="accommodation" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name='iepPlanPresentLevelPerformanceFunctionalDisabilityListType'>
@@ -164,7 +149,7 @@
 			<xs:documentation> Information about the child?s ability to operate in a classroom or other learning setting </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType' name="disability" minOccurs="0" />
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListDisabilityType' name="disability" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 	<!-- named type -->
@@ -180,8 +165,8 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListType' name="disabilityList" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryType' name="summary" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalDisabilityListType' name="disabilityList" minOccurs="0" />
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalSummaryType' name="summary" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

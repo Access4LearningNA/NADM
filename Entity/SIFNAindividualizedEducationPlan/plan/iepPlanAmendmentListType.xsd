@@ -68,7 +68,7 @@
 			<xs:documentation> Change to the IEP </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAmendmentListAmendmentChangeListType' name="changeList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanAmendmentListAmendmentChangeListType' name="changeList" minOccurs="0" />
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -106,7 +106,7 @@
 			<xs:documentation> History List of Amendments to IEP </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAmendmentListAmendmentType' name="amendment" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element type='iepPlanAmendmentListAmendmentType' name="amendment" minOccurs="0"></xs:element>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

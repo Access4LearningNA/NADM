@@ -7,9 +7,7 @@
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-	
 	<!-- ><xs:include schemaLocation="../../../Report/SIFNAxSRECommonTypes.xsd" /> -->
-	
 	<xs:complexType name='iepEligibilityIdeaDisabilityAnalysisType'>
 		<xs:annotation>
 			<xs:appinfo>
@@ -144,7 +142,6 @@
 						<sifChar>O</sifChar>
 						<cedsId />
 						<cedsURL />
-
 					</xs:appinfo>
 					<xs:documentation>
 						Identity of Person Responsible for Eligibility Determination
@@ -487,21 +484,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="disabilityCodeList" type="xDisabilityType" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName>
-							Disability Category
-						</elementName>
-						<sifChar>O</sifChar>
-						<cedsId>000218</cedsId>
-						<cedsURL>https://ceds.ed.gov/element/000218/</cedsURL>
-					</xs:appinfo>
-					<xs:documentation>
-						Categories of Disability Under IDEA
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			<xs:element name="disabilityCodeList" type="iepCommonIdeaDisabilityCodeListType" minOccurs="0" />
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -517,7 +500,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepEligibilityIdeaDisabilityAnalysisType' name="analysis" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepEligibilityIdeaDisabilityAnalysisType' name="analysis" minOccurs="0" />
 			<xs:element type='iepEligibilityIdeaDisabilitySpecificLearningDisabilitySpecialDiagnosisJustificationsType' name="SpecialDiagnosisJustifications" minOccurs="0" />
 			<xs:element type='iepEligibilityIdeaDisabilityDecisionsType' name="decisions" minOccurs="0" />
 		</xs:sequence>

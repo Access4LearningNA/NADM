@@ -29,9 +29,9 @@
 			<xs:extension base="gSIF_BaseType">
 				<xs:sequence>
 					<xs:element type='iepEligibilityBackgroundType' name="background" minOccurs="0" maxOccurs="1" />
-					<xs:element type='iepEligibilityEvaluationResultListType' name="evaluationResultList" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element type='iepEligibilityEvaluationResultListType' name="evaluationResultList" minOccurs="0" />
 					<xs:element type='iepEligibilityIdeaDisabilityType' name="ideaDisability" minOccurs="0" maxOccurs="1" />
-					<xs:element type='iepEligibilityParticipantReportListType' name="eligibilityParticipantReportList" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element type='iepEligibilityParticipantReportListType' name="eligibilityParticipantReportList" minOccurs="0" />
 					<xs:element name="lifecyclePurpose" nillable="true" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>

@@ -125,7 +125,7 @@
 			<xs:documentation> Special categories applying to this plan </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListSpecialCategoryType' name="specialCategory" minOccurs="0" />
+			<xs:element type='iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListSpecialCategoryType' name="specialCategory" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<!-- named type -->
@@ -142,7 +142,7 @@
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="curriculum" type="xs:normalizedString" minOccurs="0" />
-			<xs:element type='iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListType' name="specialCategoryList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformanceConsequenceOfDisabilitySpecialCategoryListType' name="specialCategoryList" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
