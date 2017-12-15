@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--version 3.02.01-->
+<!--This file is made up of the so-called Collection Objects. Each Collection is a wrapper for multiple instances of a single object. This is done to make REST calls more REST-like. -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns="http://www.sifassociation.org/datamodel/na/3.5"
 	targetNamespace="http://www.sifassociation.org/datamodel/na/3.5" elementFormDefault="qualified">
+	<!-- Object types come from these files. -->
 	<xs:include schemaLocation="Entity/SIFNAEntityObjects.xsd"/>
 	<xs:include schemaLocation="Composite/SIFNACompositeObjects.xsd"/>
 	<xs:include schemaLocation="Report/SIFNAReportObjects.xsd"/>
 	<xs:include schemaLocation="Jobs/StudentLocator/StudentLocatorResponse.xsd"/>
-	
 	<xs:include schemaLocation="Entity/SIFNAindividualizedEducationPlan.xsd"/>
+	
+	<!-- Service payloads come from these files. -->
 	<xs:include schemaLocation="Report/SIFNAtransferIep.xsd"/>
-
-	<!--This file is made up of the so-called Collection Objects. Each Collection is a wrapper for multiple instances of a single object. This is done to make REST calls more REST-like. -->
-	<!--Entity Objects-->
 	<xs:include schemaLocation="Jobs/StudentRecordExchange/sreInitialization.xsd"/>
 	<xs:include schemaLocation="Jobs/StudentRecordExchange/srePermissionRequest.xsd"/>
 	<xs:include schemaLocation="Jobs/StudentRecordExchange/sreReceipt.xsd"/>
+	
+	<!--Entity Objects-->
 	<xs:complexType name="applicationCollectionType">
 		<xs:sequence>
 			<xs:element name="application" type="gApplicationType" minOccurs="0"
