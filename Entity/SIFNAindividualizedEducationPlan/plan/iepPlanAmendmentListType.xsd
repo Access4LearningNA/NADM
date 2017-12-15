@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
 	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-	<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd"/>
+	<xs:include schemaLocation="../iepCommonTypes.xsd"/>
 	<!-- end redundant declaration for SIF tool analysis -->
-	<xs:include schemaLocation="iepPlanCommonAuthorizationType.xsd" />
-	<xs:complexType name='iepPlanAmendmentListAmendmentChangeListChangeType'>
+	<xs:include schemaLocation="iepPlanCommonAuthorizationType.xsd"/>
+	<xs:complexType name="iepPlanAmendmentListAmendmentChangeListChangeType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Change Detail </elementName>
@@ -43,7 +42,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAmendmentListAmendmentChangeListType'>
+	<xs:complexType name="iepPlanAmendmentListAmendmentChangeListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Change List </elementName>
@@ -54,10 +53,11 @@
 			<xs:documentation> List of changes included in this amendment </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAmendmentListAmendmentChangeListChangeType' name="change" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type="iepPlanAmendmentListAmendmentChangeListChangeType" name="change"
+				minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAmendmentListAmendmentType'>
+	<xs:complexType name="iepPlanAmendmentListAmendmentType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Amendment </elementName>
@@ -68,7 +68,8 @@
 			<xs:documentation> Change to the IEP </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAmendmentListAmendmentChangeListType' name="changeList" minOccurs="0" />
+			<xs:element type="iepPlanAmendmentListAmendmentChangeListType" name="changeList"
+				minOccurs="0"/>
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -80,7 +81,8 @@
 					<xs:documentation> Description of the reason changes were made to the individualized program service plan. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="authorization" type="iepPlanCommonAuthorizationType" minOccurs="0" maxOccurs="1">
+			<xs:element name="authorization" type="iepPlanCommonAuthorizationType" minOccurs="0"
+				maxOccurs="1">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Authorization to Change Plan </elementName>
@@ -95,7 +97,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- local parent type -->
-	<xs:complexType name='iepPlanAmendmentListType'>
+	<xs:complexType name="iepPlanAmendmentListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Amendments </elementName>
@@ -106,7 +108,8 @@
 			<xs:documentation> History List of Amendments to IEP </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAmendmentListAmendmentType' name="amendment" minOccurs="0"></xs:element>
+			<xs:element type="iepPlanAmendmentListAmendmentType" name="amendment" minOccurs="0"
+				maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

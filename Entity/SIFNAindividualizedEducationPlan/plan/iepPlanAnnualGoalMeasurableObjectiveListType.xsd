@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
 	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-	<xs:include schemaLocation="../iepCommonTypes.xsd" />
-	<xs:include schemaLocation="iepPlanAnnualGoalType.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd"/>
+	<xs:include schemaLocation="../iepCommonTypes.xsd"/>
+	<xs:include schemaLocation="iepPlanAnnualGoalType.xsd"/>
 	<!-- end redundant declaration for SIF tool analysis -->
-	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorIdentityType'>
+	<xs:complexType
+		name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorIdentityType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -33,14 +33,16 @@
 					<xs:documentation>Pointer to xStaff object when facilitator is a staff member </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="parentGuardianRefId" type="iepCommonStudentContactRefIdPointerType" minOccurs="0">
+			<xs:element name="parentGuardianRefId" type="iepCommonStudentContactRefIdPointerType"
+				minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Pointer to studentContacts xContact object when facilitator is a studentContact </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveMeasurementCriterionMetricTrialCountEvaluationType'>
+	<xs:complexType
+		name="iepPlanAnnualGoalMeasurableObjectiveMeasurementCriterionMetricTrialCountEvaluationType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -87,7 +89,8 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementMetricType'>
+	<xs:complexType
+		name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementMetricType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -124,7 +127,9 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveMeasurementCriterionMetricTrialCountEvaluationType' name="trialCountEvaluation" minOccurs="0" />
+			<xs:element
+				type="iepPlanAnnualGoalMeasurableObjectiveMeasurementCriterionMetricTrialCountEvaluationType"
+				name="trialCountEvaluation" minOccurs="0"/>
 			<xs:element name="otherEvaluation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -132,8 +137,8 @@
 							Other Evaluation Method
 						</elementName>
 						<sifChar>O</sifChar>
-						<cedsId />
-						<cedsURL />
+						<cedsId/>
+						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>
 						Description of other specific success measurement method
@@ -142,7 +147,8 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementType'>
+	<xs:complexType
+		name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -172,10 +178,13 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementMetricType' name="metric" minOccurs="0" />
+			<xs:element
+				type="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementMetricType"
+				name="metric" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementListType'>
+	<xs:complexType
+		name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -190,10 +199,13 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementType' name="criterion" minOccurs="0" />
+			<xs:element
+				type="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementType"
+				name="criterion" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorType'>
+	<xs:complexType
+		name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -208,7 +220,9 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="identity" type="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorIdentityType" minOccurs="0">
+			<xs:element name="identity"
+				type="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorIdentityType"
+				minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
@@ -240,7 +254,8 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListType'>
+	<xs:complexType
+		name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -255,10 +270,12 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorType' name="facilitator" minOccurs="0" />
+			<xs:element
+				type="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListFacilitatorType"
+				name="facilitator" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType'>
+	<xs:complexType name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -288,9 +305,14 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListType' name="facilitatorList" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementListType' name="measurement" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element name="parentAcceptance" type="iepPlanAnnualGoalListParentAcceptanceType" minOccurs="0" maxOccurs="1">
+			<xs:element
+				type="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListType"
+				name="facilitatorList" minOccurs="0"/>
+			<xs:element
+				type="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementListType"
+				name="measurement" minOccurs="0"/>
+			<xs:element name="parentAcceptance" type="iepPlanAnnualGoalListParentAcceptanceType"
+				minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>
@@ -308,7 +330,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- named type -->
-	<xs:complexType name='iepPlanAnnualGoalMeasurableObjectiveListType'>
+	<xs:complexType name="iepPlanAnnualGoalMeasurableObjectiveListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -323,7 +345,8 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType' name="measurableObjective" minOccurs="0" />
+			<xs:element type="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveType"
+				name="measurableObjective" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

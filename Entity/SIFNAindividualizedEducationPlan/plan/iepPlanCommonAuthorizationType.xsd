@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
-	<xs:include schemaLocation="../../../SIFglobal.xsd" />
-	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-	<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd"/>
+	<xs:include schemaLocation="../iepCommonTypes.xsd"/>
 	<!-- end redundant declaration for SIF tool analysis -->
-	
-	
-	<xs:complexType name='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementTypeRejectedDetailListRejectedDetailType'>
+
+
+	<xs:complexType
+		name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementTypeRejectedDetailListRejectedDetailType">
 		<xs:sequence>
 			<xs:element name="description" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
@@ -35,8 +35,9 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	
-	<xs:complexType name='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementTypeRejectedDetailList'>
+
+	<xs:complexType
+		name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementTypeRejectedDetailList">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Rejected Details </elementName>
@@ -47,11 +48,14 @@
 			<xs:documentation> Specific goals, services, modifications or other elements that the parent/guardian does not want implemented </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name='rejectedDetail' type='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementTypeRejectedDetailListRejectedDetailType' minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="rejectedDetail"
+				type="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementTypeRejectedDetailListRejectedDetailType"
+				minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	
-	<xs:complexType name='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementType'>
+
+	<xs:complexType
+		name="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Rejected Elements </elementName>
@@ -63,7 +67,9 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementTypeRejectedDetailList' name="rejectedDetailList" minOccurs="0" />
+			<xs:element
+				type="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementTypeRejectedDetailList"
+				name="rejectedDetailList" minOccurs="0"/>
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -77,8 +83,8 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	
-	<xs:complexType name='iepPlanCommonAuthorizationParentGuardianAuthorization'>
+
+	<xs:complexType name="iepPlanCommonAuthorizationParentGuardianAuthorization">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Parent/Guardian Authorization </elementName>
@@ -110,8 +116,11 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element type='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementType' name="rejectedPlanElements" minOccurs="0" />
-			<xs:element name="authorizingParentGuardian" type="iepCommonAuthorizingPersonType" minOccurs="0">
+			<xs:element
+				type="iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementType"
+				name="rejectedPlanElements" minOccurs="0"/>
+			<xs:element name="authorizingParentGuardian" type="iepCommonAuthorizingPersonType"
+				minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Authorizing Parent or Guardian </elementName>
@@ -137,7 +146,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='authorizingOfficialsList'>
+	<xs:complexType name="authorizingOfficialsList">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Authorizing Officials List </elementName>
@@ -148,7 +157,8 @@
 			<xs:documentation> Education officials authorizing </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="authorizingOfficial" type="iepCommonAuthorizingPersonType" minOccurs="0">
+			<xs:element name="authorizingOfficial" type="iepCommonAuthorizingPersonType"
+				minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Authorizing Official </elementName>
@@ -174,15 +184,17 @@
 			<xs:documentation> Legal response and authorization to implement all or part of a plan </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='authorizingOfficialsList' name="authorizingOfficialsList" minOccurs="0" />
-			<xs:element type='iepPlanCommonAuthorizationParentGuardianAuthorization' name="parentGuardianAuthorization" minOccurs="0" maxOccurs="1" />
+			<xs:element type="authorizingOfficialsList" name="authorizingOfficialsList"
+				minOccurs="0"/>
+			<xs:element type="iepPlanCommonAuthorizationParentGuardianAuthorization"
+				name="parentGuardianAuthorization" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="transferOfRightsNotificationDate" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Rights Notification Date </elementName>
 						<sifChar>O</sifChar>
-						<cedsId />
-						<cedsURL />
+						<cedsId/>
+						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation> Date that student over seventeen years old was notified of his or her right to sign IEP.
 					</xs:documentation>
