@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
 	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-	<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd"/>
+	<xs:include schemaLocation="../iepCommonTypes.xsd"/>
 	<!-- end redundant declaration for SIF tool analysis -->
-	<xs:complexType name='iepPlanAnnualGoalServicesListServiceFrequencyCycleType'>
+	<xs:complexType name="iepPlanAnnualGoalServicesListServiceFrequencyCycleType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -53,19 +52,19 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="day" />
-						<xs:enumeration value="week" />
-						<xs:enumeration value="month" />
-						<xs:enumeration value="quarter" />
-						<xs:enumeration value="term" />
-						<xs:enumeration value="year" />
-						<xs:enumeration value="school year" />
+						<xs:enumeration value="day"/>
+						<xs:enumeration value="week"/>
+						<xs:enumeration value="month"/>
+						<xs:enumeration value="quarter"/>
+						<xs:enumeration value="term"/>
+						<xs:enumeration value="year"/>
+						<xs:enumeration value="school year"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalServicesListServiceFrequencyDurationType'>
+	<xs:complexType name="iepPlanAnnualGoalServicesListServiceFrequencyDurationType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -112,7 +111,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalServicesListServiceFrequencyType'>
+	<xs:complexType name="iepPlanAnnualGoalServicesListServiceFrequencyType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -127,11 +126,13 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyCycleType' name="cycle" minOccurs="0" />
-			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyDurationType' name="duration" minOccurs="0" />
+			<xs:element type="iepPlanAnnualGoalServicesListServiceFrequencyCycleType" name="cycle"
+				minOccurs="0"/>
+			<xs:element type="iepPlanAnnualGoalServicesListServiceFrequencyDurationType"
+				name="duration" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalServicesListServiceType'>
+	<xs:complexType name="iepPlanAnnualGoalServicesListServiceType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -620,8 +621,9 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element type='iepCommonServiceProviderType' name="serviceProvider" minOccurs="0" />
-			<xs:element type='iepPlanAnnualGoalServicesListServiceFrequencyType' name="frequency" minOccurs="0" />
+			<xs:element type="iepCommonServiceProviderType" name="serviceProvider" minOccurs="0"/>
+			<xs:element type="iepPlanAnnualGoalServicesListServiceFrequencyType" name="frequency"
+				minOccurs="0"/>
 			<xs:element name="startDate" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -691,7 +693,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- named type -->
-	<xs:complexType name='iepPlanAnnualGoalServicesListType'>
+	<xs:complexType name="iepPlanAnnualGoalServicesListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -706,7 +708,8 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalServicesListServiceType' name="service" minOccurs="0" />
+			<xs:element type="iepPlanAnnualGoalServicesListServiceType" name="service" minOccurs="0"
+				maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

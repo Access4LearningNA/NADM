@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
 	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-	<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd"/>
+	<xs:include schemaLocation="../iepCommonTypes.xsd"/>
 	<!-- end redundant declaration for SIF tool analysis -->
-	<xs:complexType name='iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListAccommodationType'>
+	<xs:complexType
+		name="iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListAccommodationType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Accommodation </elementName>
@@ -32,9 +32,9 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="Content" />
-						<xs:enumeration value="MethodologyDelivery" />
-						<xs:enumeration value="PerformanceCriteria" />
+						<xs:enumeration value="Content"/>
+						<xs:enumeration value="MethodologyDelivery"/>
+						<xs:enumeration value="PerformanceCriteria"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -52,7 +52,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListType'>
+	<xs:complexType name="iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Accommodation List </elementName>
@@ -64,10 +64,12 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListAccommodationType' name="accommodation" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element
+				type="iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListAccommodationType"
+				name="accommodation" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanPresentLevelPerformanceAcademicSummaryType'>
+	<xs:complexType name="iepPlanPresentLevelPerformanceAcademicSummaryType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Summary </elementName>
@@ -90,10 +92,11 @@
 					<xs:documentation> How the child's disability affects the child's academic achievement. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListType' name="accommodationList" minOccurs="0" />
+			<xs:element type="iepPlanPresentLevelPerformanceAcademicSummaryAccommodationListType"
+				name="accommodationList" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanPresentLevelPerformanceAcademicDeficitListDeficitType'>
+	<xs:complexType name="iepPlanPresentLevelPerformanceAcademicDeficitListDeficitType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Specific Academic Category </elementName>
@@ -284,10 +287,10 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepCommonAccommodationType' name="accommodation" minOccurs="0" />
+			<xs:element type="iepCommonAccommodationType" name="accommodation" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanPresentLevelPerformanceAcademicDeficitListType'>
+	<xs:complexType name="iepPlanPresentLevelPerformanceAcademicDeficitListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Academic Deficit </elementName>
@@ -299,11 +302,12 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformanceAcademicDeficitListDeficitType' name="deficit" minOccurs="0" />
+			<xs:element type="iepPlanPresentLevelPerformanceAcademicDeficitListDeficitType"
+				name="deficit" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<!-- named type -->
-	<xs:complexType name='iepPlanPresentLevelPerformanceAcademicType'>
+	<xs:complexType name="iepPlanPresentLevelPerformanceAcademicType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Functional Impairment </elementName>
@@ -315,8 +319,10 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformanceAcademicDeficitListType' name="deficitList" minOccurs="0" />
-			<xs:element type='iepPlanPresentLevelPerformanceAcademicSummaryType' name="summary" minOccurs="0" />
+			<xs:element type="iepPlanPresentLevelPerformanceAcademicDeficitListType"
+				name="deficitList" minOccurs="0"/>
+			<xs:element type="iepPlanPresentLevelPerformanceAcademicSummaryType" name="summary"
+				minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

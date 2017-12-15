@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
 	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-	<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd"/>
+	<xs:include schemaLocation="../iepCommonTypes.xsd"/>
 	<!-- end redundant declaration for SIF tool analysis -->
-	<xs:complexType name='iepEligibilityParticipantReportListParticipantReportType'>
+	<xs:complexType name="iepEligibilityParticipantReportListParticipantReportType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -53,22 +52,22 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:enumeration value="OccupationalTherapist" />
-						<xs:enumeration value="PhysicalTherapist" />
-						<xs:enumeration value="SchoolNurse" />
-						<xs:enumeration value="AdminDesignee" />
-						<xs:enumeration value="DevelopmentalAdaptivePhysicalEducation" />
-						<xs:enumeration value="Parent" />
-						<xs:enumeration value="Student" />
-						<xs:enumeration value="LeaRep" />
-						<xs:enumeration value="GeneralEdTeacher" />
-						<xs:enumeration value="SpecialEdTeacher" />
-						<xs:enumeration value="SchoolPsychologist" />
-						<xs:enumeration value="SchoolSocialWorker" />
-						<xs:enumeration value="SpeechLanguagePathologist" />
-						<xs:enumeration value="BilingualSpecialist" />
-						<xs:enumeration value="Physician" />
-						<xs:enumeration value="Other" />
+						<xs:enumeration value="OccupationalTherapist"/>
+						<xs:enumeration value="PhysicalTherapist"/>
+						<xs:enumeration value="SchoolNurse"/>
+						<xs:enumeration value="AdminDesignee"/>
+						<xs:enumeration value="DevelopmentalAdaptivePhysicalEducation"/>
+						<xs:enumeration value="Parent"/>
+						<xs:enumeration value="Student"/>
+						<xs:enumeration value="LeaRep"/>
+						<xs:enumeration value="GeneralEdTeacher"/>
+						<xs:enumeration value="SpecialEdTeacher"/>
+						<xs:enumeration value="SchoolPsychologist"/>
+						<xs:enumeration value="SchoolSocialWorker"/>
+						<xs:enumeration value="SpeechLanguagePathologist"/>
+						<xs:enumeration value="BilingualSpecialist"/>
+						<xs:enumeration value="Physician"/>
+						<xs:enumeration value="Other"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -135,7 +134,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- named type -->
-	<xs:complexType name='iepEligibilityParticipantReportListType'>
+	<xs:complexType name="iepEligibilityParticipantReportListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -150,7 +149,8 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepEligibilityParticipantReportListParticipantReportType' name="participantReport" minOccurs="0" maxOccurs="1" />
+			<xs:element type="iepEligibilityParticipantReportListParticipantReportType"
+				name="participantReport" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

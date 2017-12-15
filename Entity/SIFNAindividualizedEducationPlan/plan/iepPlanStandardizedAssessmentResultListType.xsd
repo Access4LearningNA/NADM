@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
 	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-	<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd"/>
+	<xs:include schemaLocation="../iepCommonTypes.xsd"/>
 	<!-- end redundant declaration for SIF tool analysis -->
-	<xs:complexType name='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationAchievementStandardType'>
+	<xs:complexType
+		name="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationAchievementStandardType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Achievement Standard </elementName>
@@ -30,8 +30,8 @@
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="Yes" />
-						<xs:enumeration value="No" />
+						<xs:enumeration value="Yes"/>
+						<xs:enumeration value="No"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -49,7 +49,8 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationType'>
+	<xs:complexType
+		name="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> accommodation </elementName>
@@ -62,8 +63,8 @@
 			<xs:documentation> Changes to the environment or assessment procedure necessitated the student’s disability </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepCommonAccommodationType' name="accommodation" minOccurs="0" />
-			<xs:element name="location" type='xs:string' minOccurs="0">
+			<xs:element type="iepCommonAccommodationType" name="accommodation" minOccurs="0"/>
+			<xs:element name="location" type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Location </elementName>
@@ -140,7 +141,7 @@
 								<xs:appinfo>Other</xs:appinfo>
 							</xs:annotation>
 						</xs:enumeration>
-			
+
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -159,10 +160,13 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationAchievementStandardType' name="achievementStandard" minOccurs="0" />
+			<xs:element
+				type="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationAchievementStandardType"
+				name="achievementStandard" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListType'>
+	<xs:complexType
+		name="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Accommodation List </elementName>
@@ -174,10 +178,13 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationType' name="accommodation" minOccurs="0" />
+			<xs:element
+				type="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListAccommodationType"
+				name="accommodation" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultStandardsReferenceType'>
+	<xs:complexType
+		name="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultStandardsReferenceType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Standards Reference Info </elementName>
@@ -204,17 +211,17 @@
 					<xs:appinfo>
 						<elementName> Subject </elementName>
 						<sifChar>O</sifChar>
-						<cedsId />
-						<cedsURL />
+						<cedsId/>
+						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation> The topic category evaluated by this assessment </xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:normalizedString">
-						<xs:enumeration value="Reading" />
-						<xs:enumeration value="Math" />
-						<xs:enumeration value="Sciences" />
-						<xs:enumeration value="SocialStudies" />
+						<xs:enumeration value="Reading"/>
+						<xs:enumeration value="Math"/>
+						<xs:enumeration value="Sciences"/>
+						<xs:enumeration value="SocialStudies"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -231,7 +238,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultType'>
+	<xs:complexType name="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Standardized Assessment Result </elementName>
@@ -242,12 +249,16 @@
 			<xs:documentation> Results of a specific standardized assessment </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultStandardsReferenceType' name="standardsReference" minOccurs="0" />
-			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListType' name="accommodationList" minOccurs="0" />
+			<xs:element
+				type="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultStandardsReferenceType"
+				name="standardsReference" minOccurs="0"/>
+			<xs:element
+				type="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultAccommodationListType"
+				name="accommodationList" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 	<!-- local parent type -->
-	<xs:complexType name='iepPlanStandardizedAssessmentResultListType'>
+	<xs:complexType name="iepPlanStandardizedAssessmentResultListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Standardized Assessment Result List </elementName>
@@ -258,7 +269,9 @@
 			<xs:documentation> Results of standardized assessments used to document current student performance </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultType' name="standardizedAssessmentResult" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element
+				type="iepPlanStandardizedAssessmentResultListStandardizedAssessmentResultType"
+				name="standardizedAssessmentResult" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

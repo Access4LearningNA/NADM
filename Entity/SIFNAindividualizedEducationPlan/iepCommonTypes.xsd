@@ -9,6 +9,7 @@
 	<xs:include schemaLocation="../../SIFglobalBaseTypes.xsd" />
 	<xs:include schemaLocation="../../SIFglobalCommonTypes.xsd" />
 	<xs:include schemaLocation="../../Composite/SIFNAxPressCommonTypes.xsd" />
+	<xs:include schemaLocation="../../Report/SIFNAxSRECommonTypes.xsd" />
 	
 	<xs:simpleType name="iepCommonStudentRefIdPointerType">
 		<xs:annotation>
@@ -873,8 +874,9 @@
 						Categories of Disability Under IDEA
 					</xs:documentation>
 				</xs:annotation>
-				<xs:element name="disabilityCodeList" type="xDisabilityType" minOccurs="0" maxOccurs="unbounded">
-			</xs:element>
+				<xs:sequence>
+					<xs:element name="disabilityCode" type="xDisabilityType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
 	</xs:complexType>
 	
 	
