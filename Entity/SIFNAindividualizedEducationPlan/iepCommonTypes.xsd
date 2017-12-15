@@ -857,4 +857,25 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	
+	
+	<xs:complexType name='iepCommonIdeaDisabilityCodeListType'>
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							Disability Category List
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId>000218</cedsId>
+						<cedsURL>https://ceds.ed.gov/element/000218/</cedsURL>
+					</xs:appinfo>
+					<xs:documentation>
+						Categories of Disability Under IDEA
+					</xs:documentation>
+				</xs:annotation>
+				<xs:element name="disabilityCodeList" type="xDisabilityType" minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+	</xs:complexType>
+	
+	
 </xs:schema>

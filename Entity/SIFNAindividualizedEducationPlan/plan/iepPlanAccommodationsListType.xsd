@@ -19,7 +19,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="applicability" type="xs:string" minOccurs="0">
+			<xs:element name="applicability" type="xs:string" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName> Applicability </elementName>
@@ -44,8 +44,8 @@
 			<xs:documentation> The specific accommodation necessary for assessment or instruction </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepCommonAccommodationType' name="accommodation" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type='iepPlanAccommodationsListAccommodationApplicabiltyListType' name="applicabilityList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepCommonAccommodationType' name="accommodation" minOccurs="0" />
+			<xs:element type='iepPlanAccommodationsListAccommodationApplicabiltyListType' name="applicabilityList" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 	<!-- named type -->

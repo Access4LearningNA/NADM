@@ -7,7 +7,36 @@
 	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
 	<xs:include schemaLocation="../iepCommonTypes.xsd" />
 	<!-- end redundant declaration for SIF tool analysis -->
-	<xs:complexType name='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailList'>
+	
+	
+	<xs:complexType name='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementTypeRejectedDetailListRejectedDetailType'>
+				<ELEMENT name='rejectedDetail'>
+							<xs:element name="description" type="xs:normalizedString" minOccurs="0">
+								<xs:annotation>
+									<xs:appinfo>
+										<elementName> Rejected Portion Description </elementName>
+										<sifChar>O</sifChar>
+										<cedsId>001723</cedsId>
+										<cedsURL>https://ceds.ed.gov/element/001723</cedsURL>
+									</xs:appinfo>
+									<xs:documentation> Portion the authorizer does not want executed. </xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
+								<xs:annotation>
+									<xs:appinfo>
+										<elementName> Rejected Portion Explanation </elementName>
+										<sifChar>O</sifChar>
+										<cedsId>001724</cedsId>
+										<cedsURL>https://ceds.ed.gov/element/001724</cedsURL>
+									</xs:appinfo>
+									<xs:documentation> Authorizer's explanation for rejected portions. </xs:documentation>
+								</xs:annotation>
+							</xs:element>
+				</ELEMENT>
+	</xs:complexType>
+	
+	<xs:complexType name='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementTypeRejectedDetailList'>
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Rejected Details </elementName>
@@ -18,31 +47,11 @@
 			<xs:documentation> Specific goals, services, modifications or other elements that the parent/guardian does not want implemented </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="description" type="xs:normalizedString" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName> Rejected Portion Description </elementName>
-						<sifChar>O</sifChar>
-						<cedsId>001723</cedsId>
-						<cedsURL>https://ceds.ed.gov/element/001723</cedsURL>
-					</xs:appinfo>
-					<xs:documentation> Portion the authorizer does not want executed. </xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
-				<xs:annotation>
-					<xs:appinfo>
-						<elementName> Rejected Portion Explanation </elementName>
-						<sifChar>O</sifChar>
-						<cedsId>001724</cedsId>
-						<cedsURL>https://ceds.ed.gov/element/001724</cedsURL>
-					</xs:appinfo>
-					<xs:documentation> Authorizer's explanation for rejected portions. </xs:documentation>
-				</xs:annotation>
-			</xs:element>
+			<ELEMENT name='rejectedDetail' type='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementTypeRejectedDetailListRejectedDetailType'  maxOccurs="unbounded">
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElements'>
+	
+	<xs:complexType name='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementType'>
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName> Rejected Elements </elementName>
@@ -54,7 +63,7 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementsRejectedDetailList' name="rejectedDetailList" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementTypeRejectedDetailList' name="rejectedDetailList" minOccurs="0" />
 			<xs:element name="explanation" type="xs:normalizedString" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -68,6 +77,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	
 	<xs:complexType name='iepPlanCommonAuthorizationParentGuardianAuthorization'>
 		<xs:annotation>
 			<xs:appinfo>
@@ -100,7 +110,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element type='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElements' name="rejectedPlanElements" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanCommonAuthorizationParentGuardianAuthorizationRejectedPlanElementType' name="rejectedPlanElements" minOccurs="0" />
 			<xs:element name="authorizingParentGuardian" type="iepCommonAuthorizingPersonType" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>

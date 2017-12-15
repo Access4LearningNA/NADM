@@ -166,7 +166,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepEligibilityBackgroundConsentToEvaluateType' name="consentToEvaluation" minOccurs="0" maxOccurs="unbounded">
+			<xs:element type='iepEligibilityBackgroundConsentToEvaluateType' name="consentToEvaluation" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
 						<elementName>

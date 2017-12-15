@@ -22,9 +22,9 @@
 			<xs:documentation> Baseline performance </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanPresentLevelPerformancePersonalType' name="personal" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type='iepPlanPresentLevelPerformanceAcademicType' name="academic" minOccurs="0" maxOccurs="unbounded" />
-			<xs:element type='iepPlanPresentLevelPerformanceFunctionalType' name="functional" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element type='iepPlanPresentLevelPerformancePersonalType' name="personal" minOccurs="0" />
+			<xs:element type='iepPlanPresentLevelPerformanceAcademicType' name="academic" minOccurs="0" />
+			<xs:element type='iepPlanPresentLevelPerformanceFunctionalType' name="functional" minOccurs="0" />
 			<xs:element type='iepPlanPresentLevelPerformanceConsequenceOfDisabilityType' name="consequenceOfDisability" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
