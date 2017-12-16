@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 	<!-- start redundant declaration  for SIF tool analysis -->
 	<xs:include schemaLocation="../../../SIFglobal.xsd"/>
-	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd" />
-	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd" />
-	<xs:include schemaLocation="../iepCommonTypes.xsd" />
+	<xs:include schemaLocation="../../../Composite/SIFNAxPressCommonTypes.xsd"/>
+	<xs:include schemaLocation="../../../Composite/SIFNAxPress.xsd"/>
+	<xs:include schemaLocation="../iepCommonTypes.xsd"/>
 	<!-- end redundant declaration for SIF tool analysis -->
-	<xs:complexType name='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListDataValueType'>
+	<xs:complexType
+		name="iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListDataValueType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -54,7 +54,8 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListType'>
+	<xs:complexType
+		name="iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -69,10 +70,12 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListDataValueType' name="dataValue" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element
+				type="iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListDataValueType"
+				name="dataValue" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataNamesType'>
+	<xs:complexType name="iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataNamesType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -119,7 +122,7 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalProgressReportListProgressReportMeasurementType'>
+	<xs:complexType name="iepPlanAnnualGoalProgressReportListProgressReportMeasurementType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -149,11 +152,15 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataNamesType' name="dataNames" minOccurs="0" />
-			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListType' name="dataValuesList" minOccurs="0" />
+			<xs:element
+				type="iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataNamesType"
+				name="dataNames" minOccurs="0"/>
+			<xs:element
+				type="iepPlanAnnualGoalProgressReportListProgressReportMeasurementDataValuesListType"
+				name="dataValuesList" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name='iepPlanAnnualGoalProgressReportListProgressReportType'>
+	<xs:complexType name="iepPlanAnnualGoalProgressReportListProgressReportType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -183,7 +190,8 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportMeasurementType' name="measurement" minOccurs="0" />
+			<xs:element type="iepPlanAnnualGoalProgressReportListProgressReportMeasurementType"
+				name="measurement" minOccurs="0"/>
 			<xs:element name="status" minOccurs="0">
 				<xs:annotation>
 					<xs:appinfo>
@@ -223,7 +231,7 @@
 								<xs:appinfo>The status toward achievement of the annual goal or short-term objectives is in a category not yet defined in CEDS.</xs:appinfo>
 							</xs:annotation>
 						</xs:enumeration>
-			
+
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
@@ -264,8 +272,8 @@
 							Reporter Identity
 						</elementName>
 						<sifChar>O</sifChar>
-						<cedsId />
-						<cedsURL />
+						<cedsId/>
+						<cedsURL/>
 
 					</xs:appinfo>
 					<xs:documentation>
@@ -276,7 +284,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- named type -->
-	<xs:complexType name='iepPlanAnnualGoalProgressReportListType'>
+	<xs:complexType name="iepPlanAnnualGoalProgressReportListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -291,7 +299,8 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element type='iepPlanAnnualGoalProgressReportListProgressReportType' name="progressReport" minOccurs="0" />
+			<xs:element type="iepPlanAnnualGoalProgressReportListProgressReportType"
+				name="progressReport" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
