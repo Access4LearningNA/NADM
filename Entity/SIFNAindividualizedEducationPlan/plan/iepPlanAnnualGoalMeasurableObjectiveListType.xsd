@@ -184,7 +184,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType
-		name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementListType">
+		name="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveCriterionListType">
 		<xs:annotation>
 			<xs:appinfo>
 				<elementName>
@@ -201,7 +201,7 @@
 		<xs:sequence>
 			<xs:element
 				type="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementType"
-				name="criterion" minOccurs="0"/>
+				name="criterion" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType
@@ -309,8 +309,8 @@
 				type="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveFacilitatorListType"
 				name="facilitatorList" minOccurs="0"/>
 			<xs:element
-				type="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveMeasurementListType"
-				name="measurement" minOccurs="0"/>
+				type="iepPlanAnnualGoalMeasurableObjectiveListMeasurableObjectiveCriterionListType"
+				name="criterionList" minOccurs="0"/>
 			<xs:element name="parentAcceptance" type="iepPlanAnnualGoalListParentAcceptanceType"
 				minOccurs="0" maxOccurs="1">
 				<xs:annotation>
