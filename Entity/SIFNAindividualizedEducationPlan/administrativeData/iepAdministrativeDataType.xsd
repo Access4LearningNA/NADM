@@ -38,6 +38,17 @@
 							<xs:documentation>This is the reference identifier of the student who is the subject of the IEP.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="schoolRefId" type="iepCommonSchoolRefIdPointerType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>School Reference Identifier</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL></cedsURL>
+							</xs:appinfo>
+							<xs:documentation>This is the reference identifier of the school that administers the IEP (especially for cases where the student is attending a different school).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element type="xs:date" name="reevaluationDueDate" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
