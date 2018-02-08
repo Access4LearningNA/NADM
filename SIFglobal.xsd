@@ -1169,7 +1169,7 @@ CEDS Equivalent: Charter School Indicator 000039, Charter School Type 000710.</x
 	</xs:complexType>
 	<xs:complexType name="gSIF_RelaxedType">
 		<xs:annotation>
-			<xs:documentation>The root object of relaxed SIF objects. The refId for relaxed-type objects may be omitted.  That is, the value may or may not be known by the returning system. </xs:documentation>
+			<xs:documentation>The root object of relaxed SIF objects. The refId for relaxed-type objects is omitted and should be defined elsewhere as optional or required.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence minOccurs="0">
 			<xs:any namespace="##other" processContents="lax" maxOccurs="unbounded">
@@ -1178,7 +1178,6 @@ CEDS Equivalent: Charter School Indicator 000039, Charter School Type 000710.</x
 				</xs:annotation>
 			</xs:any>
 		</xs:sequence>
-		<xs:attribute name="refId" type="gRefIdType" use="optional"/>
 	</xs:complexType>
 	<xs:complexType name="gStaffPersonType">
 		<xs:annotation>
