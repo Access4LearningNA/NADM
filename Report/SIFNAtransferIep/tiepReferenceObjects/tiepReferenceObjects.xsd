@@ -183,6 +183,41 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="tiepReferenceObjectPdfFileListType">
+		<xs:annotation>
+			<xs:appinfo>
+				<elementName>PDF File Reference List</elementName>
+				<events>no</events>
+				<isSIFObject>yes</isSIFObject>
+				<cedsId/>
+				<cedsURL/>
+			</xs:appinfo>
+			<xs:documentation>
+				List of PDFs referenced in the IEP
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="gSIF_BaseType">
+				<xs:sequence>
+					<xs:element type='gPdfFileType' name="pdf" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>
+									PDF File
+								</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>
+								PDF File
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:complexType name="tiepReferenceObjectsType">
 		<xs:annotation>
 			<xs:appinfo>
@@ -249,6 +284,19 @@
 								<cedsURL/>
 							</xs:appinfo>
 							<xs:documentation>List of xStaff objects for staff members who participate in this IEP</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element type="tiepReferenceObjectPdfFileListType" name="pdfList" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>
+									PDF File Reference List
+								</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL/>
+							</xs:appinfo>
+							<xs:documentation>List of gPdfFileType objects for PDFs that participate in this IEP</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element type="tiepReferenceObjectOrganizationListType" name="organizationList" minOccurs="0">

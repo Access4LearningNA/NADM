@@ -53,6 +53,12 @@
 		</xs:annotation>
 		<xs:restriction base="gUUIDType"/>
 	</xs:simpleType>
+	<xs:simpleType name="iepCommonPdfRefIdPointerType">
+		<xs:annotation>
+			<xs:documentation>A refId that refers to a gPdfFileType. The RefId points to the object instance. </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="gUUIDType"/>
+	</xs:simpleType>
 	
 	<xs:complexType name="iepCommonExternalPartyType">
 		<xs:annotation>

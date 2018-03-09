@@ -49,6 +49,17 @@
 							<xs:documentation>This is the reference identifier of the school that administers the IEP (especially for cases where the student is attending a different school).</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="planPdfRefId" type="iepCommonPdfRefIdPointerType" minOccurs="0">
+						<xs:annotation>
+							<xs:appinfo>
+								<elementName>Plan PDF Identifier</elementName>
+								<sifChar>O</sifChar>
+								<cedsId/>
+								<cedsURL></cedsURL>
+							</xs:appinfo>
+							<xs:documentation>This is the reference identifier of the PDF corresponding to this plan.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element type="xs:date" name="reevaluationDueDate" minOccurs="0">
 						<xs:annotation>
 							<xs:appinfo>
