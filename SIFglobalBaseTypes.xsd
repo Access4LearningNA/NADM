@@ -89,7 +89,7 @@
 			<xs:element name="hexValue" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>As of version 3.4 hex values are not published with the code sets.</xs:documentation>
-				</xs:annotation>				
+				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:hexBinary">
 						<xs:length value="4"/>
@@ -219,7 +219,7 @@
 			<xs:element name="hexValue" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>As of version 3.4 hex values are not published with the code sets.</xs:documentation>
-				</xs:annotation>				
+				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:hexBinary">
 						<xs:length value="4"/>
@@ -349,4 +349,40 @@
 			<xs:enumeration value="Yes"/>
 		</xs:restriction>
 	</xs:simpleType>
+
+	<xs:simpleType name="gBaseFileDataType">
+		<xs:annotation>
+			<xs:documentation>Encoded contents of a file</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:base64Binary"/>
+	</xs:simpleType>
+
+	<xs:complexType name="gPdfFileType">
+		<xs:annotation>
+			<xs:documentation>PDF Document.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fileData" type='gBaseFileDataType' />
+			<xs:element name="mimeType" type='xs:string'>
+				<xs:annotation>
+					<xs:documentation>MIME type</xs:documentation>
+					<xs:appinfo>
+						<sifChar>M</sifChar>
+						<referenceURL>
+							https://www.iana.org/assignments/media-types/media-types.xhtml
+						</referenceURL>
+					</xs:appinfo>
+				</xs:annotation>
+				<xs:restriction>
+					<xs:enumeration value="application/pdf"/>
+				</xs:restriction>
+			</xs:element>
+			<xs:element name="fileName" type='xs:string'>
+				<xs:annotation>
+					<xs:documentation>Name of the file</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
 </xs:schema>

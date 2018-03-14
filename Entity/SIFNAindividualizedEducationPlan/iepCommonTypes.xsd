@@ -41,9 +41,21 @@
 		</xs:annotation>
 		<xs:restriction base="gUUIDType"/>
 	</xs:simpleType>
+	<xs:simpleType name="iepCommonSchoolRefIdPointerType">
+		<xs:annotation>
+			<xs:documentation>A refId that refers to an instance of xSchoolType object. The RefId points to the object instance. </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="gUUIDType"/>
+	</xs:simpleType>
 	<xs:simpleType name="iepCommonOrganizationRefIdPointerType">
 		<xs:annotation>
 			<xs:documentation>A refId that refers to an instance of xOrganization object. The RefId points to the object instance. </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="gUUIDType"/>
+	</xs:simpleType>
+	<xs:simpleType name="iepCommonPdfRefIdPointerType">
+		<xs:annotation>
+			<xs:documentation>A refId that refers to a gPdfFileType. The RefId points to the object instance. </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="gUUIDType"/>
 	</xs:simpleType>

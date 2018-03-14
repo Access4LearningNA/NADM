@@ -55,7 +55,22 @@
 						<cedsURL/>
 					</xs:appinfo>
 					<xs:documentation>
-						Pointer to school or other LEA where this historical IEP was created
+						Pointer to LEA where this historical IEP was created
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="school" type="iepCommonSchoolRefIdPointerType" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<elementName>
+							School Reference
+						</elementName>
+						<sifChar>O</sifChar>
+						<cedsId/>
+						<cedsURL/>
+					</xs:appinfo>
+					<xs:documentation>
+						Pointer to school or building where this historical IEP was created
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
